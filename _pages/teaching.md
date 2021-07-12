@@ -2,6 +2,7 @@
 layout: page
 permalink: /teaching/
 title: Teaching
+nav: True
 description: "Education is what remains after one has forgotten what one has learned in school."
 ---
 

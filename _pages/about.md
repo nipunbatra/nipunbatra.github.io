@@ -3,7 +3,7 @@ layout: about
 permalink: /
 title: <strong>Nipun</strong> Batra
 description: Assistant Professor, Computer Science and Engineering
-
+nav: True
 profile:
   align: right
   image: nipun_4.jpg
