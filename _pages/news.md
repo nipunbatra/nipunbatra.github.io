@@ -7,6 +7,7 @@ description: An excerpt from Kung Fu Panda - Oogway says "Ah, Shifu, there is ju
 ---
 
 * May 2021: Completed the ML course this semester with feedback 3.83/4 :)
+* Jan 2021: Completed the Introduction to Programming course this semester with feedback 3.73/4 :)
 * Nov 2020: Got a grant from CISCO on edge non-intrusive load monitoring
 * Oct 2020: Got a grant from SERB on AI and sensor networks for air quality
 * Sep 2020: Got a grant from Google on COVID and air quality linkages
