@@ -6,6 +6,10 @@ nav: True
 description: An excerpt from Kung Fu Panda - Oogway says "Ah, Shifu, there is just news. There is no good or bad." 
 ---
 
+* May 2021: Completed the ML course this semester with feedback 3.83/4 :)
+* Nov 2020: Got a grant from CISCO on edge non-intrusive load monitoring
+* Oct 2020: Got a grant from SERB on AI and sensor networks for air quality
+* Sep 2020: Got a grant from Google on COVID and air quality linkages
 * May 2020: Our Distill article on Bayesian Optimization got accepted
 * Feb 2020: Organised a faculty development program on data science and analytics under the aegis of TEQIP (Pic with the group)
 * Feb 2020: CSE@IITGN organised ACM India annual event. (Pic with Yann LeCun (Turing award), Shwetak Patel (ACM Compute Prize))
