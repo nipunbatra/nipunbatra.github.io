@@ -29,12 +29,12 @@ In: The 28th ACM International Conference on Information and Knowledge Managemen
 ##### Demo Abstract: A demonstration of reproducible state-of-the-art energy disaggregation using NILMTK
 
 Nipun Batra, Rithwik Kukunuri, Ayush Pandey, Raktim Malakar, Rajat Kumar, Odysseas Krystalakos, Mingjun Zhong, Paulo Meira, Oliver Parson.  
-In: The 6th ACM International Conference on Systems for Energy-Efficient Buildings, Cities, and Transportation (BuildSys ’19)\[[PDF](../papers/2019/batra_buildsys_19.pdf)\]
+In: The 6th ACM International Conference on Systems for Energy-Efficient Buildings, Cities, and Transportation (BuildSys ’19)\[[PDF](../papers/2019/batra_buildsys19demo.pdf)\]
 
 ##### Towards reproducible state-of-the-art energy disaggregation
 
 Nipun Batra, Rithwik Kukunuri, Ayush Pandey, Raktim Malakar, Rajat Kumar, Odysseas Krystalakos, Mingjun Zhong, Paulo Meira, Oliver Parson.  
-In: The 6th ACM International Conference on Systems for Energy-Efficient Buildings, Cities, and Transportation (BuildSys ’19)\[[PDF](../papers/2019/batra_buildsys19demo.pdf)\]
+In: The 6th ACM International Conference on Systems for Energy-Efficient Buildings, Cities, and Transportation (BuildSys ’19)\[[PDF](../papers/2019/batra_buildsys_19.pdf)\]
 
 ##### A Tree-Structured Neural Network Model for Household Energy Breakdown
 
