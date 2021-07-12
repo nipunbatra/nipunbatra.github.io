@@ -62,7 +62,7 @@ In: AAAI 2018, Thirty-Second AAAI Conference on Artificial Intelligence (AAAI-18
 Nipun Batra  
 In: Ph.D. Thesis.\[[PDF](../papers/2017/batra_thesis.pdf)\]
 
-#### Matrix Factorisation for Scalable Energy Breakdown
+##### Matrix Factorisation for Scalable Energy Breakdown
 
 Nipun Batra, Hongning Wang, Amarjeet Singh, Kamin Whitehouse.  
 In: AAAI 2017, Thirty-First AAAI Conference on Artificial Intelligence (AAAI-17).\[[PDF](../papers/2017/batra_aaai2017.pdf)\]\[[Github](https://github.com/nipunbatra/mf-energybreakdown)\]\[[Poster](../slides/2017/aaai_poster_2017.pdf)\]
@@ -151,4 +151,3 @@ In: ISSNIP 2013\[[PDF](../papers/2013/batra_issnip_2013.pdf)\]
 
 Pandarasamy Arjunan, Nipun Batra, Haksoo Choi, Amarjeet Singh, Pushpendra Singh, Mani Srivastava  
 In: Buildsys 2012\[[PDF](../papers/2013/batra_buildsys_2012.pdf)\]
->>>>>>> 9b2a489 (added all)
