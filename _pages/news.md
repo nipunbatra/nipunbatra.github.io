@@ -2,6 +2,7 @@
 layout: page
 permalink: /news/
 title: News
+nav: True
 description: An excerpt from Kung Fu Panda - Oogway says "Ah, Shifu, there is just news. There is no good or bad." 
 ---
 
