@@ -8,8 +8,6 @@ title: Publications
 
 Vibhuti Bansal, Rohit Khoiwal, Hetvi Shastri, Haikoo Khandor, Nipun Batra. In ACM Buildsys 2022 [[PDF](../papers/2022/buildsys22-nilm.pdf)][[Github](https://github.com/VibhutiBansal-11/NILM_Uncertainty)]
 
-Karm Patel, Rishiraj Adhikary, Zeel B Patel, Nipun Batra, Sarath Guttikunda. In ACM SIGCAS/SIGCHI Conference on Computing and Sustainable Societies (COMPASS) (COMPASS '22)
-\[[PDF](../papers/2022/compass22-samachaar.pdf)\]\[[Github](https://github.com/karm-patel/Samachar-News-media-on-air-pollution)\]
 
 #### Samachar: Print News Media on Air Pollution in India
 
