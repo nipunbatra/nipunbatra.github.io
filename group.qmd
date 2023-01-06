@@ -1,0 +1,43 @@
+---
+title: Group
+---
+
+### Current
+
+#### PhD 
+
+- Rishiraj Adhikary (July 2019 - present)
+- Zeel Patel (Jan 2020 - present)
+
+#### Research Assistant
+
+- Kaushal Modi
+
+#### BTech
+
+- Chris Francis
+- Dhruvi Lodhavia
+- Hetvi Shastri
+- Harsh Patel
+- Palak Purohit
+- Shivam Sahni
+
+### Alumni
+
+#### Research Assistant
+
+- Prerna Khanna: Now a PhD student at Stony Brook
+- Tanmay Srivastava: Now a PhD student at Stony Brook
+- Rohit Patil: First job at Publicis Sapient
+
+#### BTech
+
+- Apoorv Agnihotri (BTech 2020): First job at Wadhwani AI
+- Deepak Narayanan (BTech 2020): First job at Microsoft Research India -> MS at ETH Zurich
+- Kukunuri Rithwik (BTech 2020): First job at Jio
+- Soham Pachpande (BTech 2020): First job at  -> MS at UCSD
+
+#### MTech
+
+- Karan Kumar (MTech 2020): First job at Trading Technologies
+- Souvik Roy (MTech 2020): First job at eClerx

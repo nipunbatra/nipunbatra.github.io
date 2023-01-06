@@ -1,0 +1,20 @@
+---
+title: Teaching
+---
+
+* [Spring 2022 Machine Learning](https://nipunbatra.github.io/ml2023/)
+* [Winter 2022 Computing](https://nipunbatra.github.io/comp22/)
+* [Fall 2022 Probabilistic Machine Learning](https://nipunbatra.github.io/pml2022/)
+* [Spring 2022 Machine Learning](https://nipunbatra.github.io/ml2022/)
+* [Winter 2021 Computing](https://nipunbatra.notion.site/ES-102-Introduction-to-Computing-2021-Winter-5aa842ce18d34e0e9b2cc646b5325868)
+* [Fall 2021 Ubiquitous Computing](https://www.craft.do/s/MAdQrLOO9ErCvc)
+* [Spring 2021 Machine Learning](https://nipunbatra.github.io/ml2021/)
+* [Winter 2020 Introduction to Computing](https://www.notion.so/ES-102-Introduction-to-Computing-7535a00a1b124c5cb6f2a46eb979540b)
+* [Fall 2020 Operating Systems](https://nipunbatra.github.io/os2020/)
+* [Fall 2020 Graduate Systems]()
+* [Spring 2020 Machine Learning](https://nipunbatra.github.io/ml2020/)
+* [Fall 2019 Operating Systems](https://nipunbatra.github.io/os2019/)
+* [Fall 2019 Graduate Systems]
+* [Spring 2019 Machine Learning](https://nipunbatra.github.io/ml2019/)
+* [Fall 2018 Operating Systems](https://nipunbatra.github.io/os2018/)
+* [Fall 2018 Graduate Systems]()
