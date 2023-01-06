@@ -3,11 +3,13 @@ project:
   output-dir: docs
 
 website:
-  title: "ES654"
+  title: "Nipun Batra"
   navbar:
     right:
       - href: index.qmd
         text: Home
+      - href: publications.qmd
+        text: Publications
 
 format:
   html:
