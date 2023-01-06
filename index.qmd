@@ -12,6 +12,15 @@ about:
     - icon: github
       text: Github
       href: https://github.com/nipunbatra
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/nipunbatra0/  
+    - icon: envelope
+      text: Email
+      href: mailto:nipun.batra@iitgn.ac.in
+    - icon: book
+      text: Google Scholar
+      href: https://scholar.google.co.in/citations?user=rFGzHlIAAAAJ&hl=en   
 ---
 
 Nipun Batra is an Assistant Professor in Computer Science at IIT Gandhinagar. He previously completed his postdoc from University of Virginia. He completed his PhD. from IIIT Delhi where he was a TCS PhD fellow. His group broadly works on machine learning/AI/sensors/IoT for computational sustainability problems like smart buildings and air quality.
