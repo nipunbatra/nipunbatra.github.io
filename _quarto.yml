@@ -3,32 +3,22 @@ project:
   output-dir: docs
 
 website:
-  title: "Course Title"
-  sidebar:
-    background: primary
-    # logo: "images/logo.png"
-    pinned: true
-    align: center
-    tools:
-      - icon: github
-        href: https://github.com/Pakillo/quarto-course-website-template
-        text: GitHub
-    style: docked
-    contents:
+  title: "ES654"
+  navbar:
+    right:
       - href: index.qmd
         text: Home
-      - href: schedule.qmd
-        text: Schedule
-      - href: materials.qmd
-        text: Materials
-      - href: https://github.com/Pakillo/quarto-course-website-template/discussions
-        text: Forum
 
 format:
   html:
-    theme: cosmo
-    # css: styles.css
-    toc: true
+    theme:
+      light: [litera, styles.scss]
+      dark: [darkly, styles-dark.scss]
+    highlight-style: a11y-dark
+    mainfont: "Roboto"
+    code-copy: true
+    code-overflow: wrap
+
 
 execute:
   freeze: auto
