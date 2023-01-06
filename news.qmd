@@ -1,0 +1,38 @@
+---
+title: News
+---
+
+* Dec 2021: Our AAAI 2022 paper on Accurate and Scalable Non-Stationary GPs gets accepted to AAAI 2022 :)
+* Nov 2021: Received a 5000 USD cloud credit grant from Google Research
+* Oct 2021: Rishiraj gets the prestigious USIEF Fullbright Fellowship
+* Oct 2021: Rishiraj wins the prestigious PMRF fellowship!
+* Sep 2021: Notes paper on adding neural network approaches to NILMTK-contrib accepted at Buildsys 2021
+* Sep 2021: Explainable on HMMs accepted to IEEE VisxAI workshop [Link](https://nipunbatra.github.io/hmm/)
+* Aug 2021: Teaching a course on Ubiquitous computing this semester [Link](https://www.craft.do/s/MAdQrLOO9ErCvc)
+* May 2021: Completed the ML course this semester with feedback 3.83/4 :)
+* Jan 2021: Completed the Introduction to Programming course this semester with feedback 3.73/4 :)
+* Feb 2021: Serving as the publication chair for CODS-COMAD 2022
+* Dec 2020: Our paper on understanding air quality perceptions from social media accepted at ACM CSCW :)
+* Nov 2020: Got a grant from CISCO on edge non-intrusive load monitoring
+* Oct 2020: Got a grant from SERB on AI and sensor networks for air quality
+* Sep 2020: Got a grant from Google on COVID and air quality linkages
+* May 2020: Our Distill article on Bayesian Optimization got accepted
+* Feb 2020: Organised a faculty development program on data science and analytics under the aegis of TEQIP (Pic with the group)
+* Feb 2020: CSE@IITGN organised ACM India annual event. ([Pic with Yann LeCun (Turing award)](../assets/img/lecun.jpeg), [Shwetak Patel (ACM Compute Prize)](../assets/img/patel.jpeg))
+* Jan 2020: Members of our lab attended and presented four posters at CODS COMAD 2020
+* Nov 2019: Spoke at INS Valsura on Machine Learning. Honoured to speak in front of officers from Indian Navy, Army and Air Force
+* Nov 2019: Gave a talk about our energy dis-aggregation work at ACM Buildsys 2019 in NYC!
+* Nov 2019: Gave a talk about our air quality work at Google, Bangalore
+* Apr 2019: Giving a talk on Computational Sustainability at Nirma University.
+* Mar 2019: Giving a talk on Computational Sustainability at ROCS 2019.
+* Jan 2019: Paper accepted in WWW! Details soon on Publications page.
+* Jan 2019: Teaching machine learning this semester. Class URL
+* Nov 2018: Haroon presented our paper in Buildsys 18!
+* Nov 2018: Awarded an Microsoft AI for Earth grant worth $15000 in Azure credits
+* Aug 2018: Took a research methods for CS bootcamp at IITGN. Slides,Youtube
+* July 2018: Received a Titan XP GPU from NVidia via their grant program. Thanks, NVidia!
+* July 2018: Teaching operating systems in the current semester at IITGN
+* July 2018: Joined CSE at IITGN as an Assistant Professor
+* June 2018: Completed my postdoc at UVa. Been great working with Kamin, Hongning, and Yiling!
+* Feb 2018: I'm presenting our work at AAAI in New Orleans
+* Nov 2017: I'm presenting our work on scalable energy breakdown at NSF CPS meeting
