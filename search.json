@@ -1,73 +1,10 @@
 [
   {
-    "objectID": "publications.html",
-    "href": "publications.html",
-    "title": "Publications",
+    "objectID": "news.html",
+    "href": "news.html",
+    "title": "News",
     "section": "",
-    "text": "Vibhuti Bansal, Rohit Khoiwal, Hetvi Shastri, Haikoo Khandor, Nipun Batra. In ACM Buildsys 2022 [PDF][Github]\n\n\n\nKarm Patel, Rishiraj Adhikary, Zeel B Patel, Nipun Batra, Sarath Guttikunda. In ACM SIGCAS/SIGCHI Conference on Computing and Sustainable Societies (COMPASS) (COMPASS ’22) [PDF][Github]\n\n\n\nZeel B Patel, Palak Purohit, Harsh Patel, Shivam Sahni, and Nipun Batra. In: AAAI 2022, Thirty-Sixth AAAI Conference on Artificial Intelligence (AAAI-22).[PDF][Github]\n\n\n\nShastri, Hetvi; Lodhavia, Dhruvi; Purohit, Palak; Kaoshik, Ronak; Batra, Nipun. In CODS COMAD 2022."
-  },
-  {
-    "objectID": "publications.html#section-1",
-    "href": "publications.html#section-1",
-    "title": "Publications",
-    "section": "2021",
-    "text": "2021\n\nVartalaap: what drives #airquality discussions: politics, pollution or pseudo-science?\nRishiraj Adhikary, Zeel B. Patel, Tanmay Srivastava, Nipun Batra, Mayank Singh, Udit Bhatia, and Sarath Guttikunda. Proceedings of the ACM on Human-Computer Interaction 5, no. CSCW1 (2021)[PDF]\n\n\nNeural network approaches and dataset parser for NILM toolkit\nShastri, Hetvi; Batra, Nipun. In Proceedings of the 8th ACM International Conference on Systems for Energy-Efficient Buildings, Cities, and Transportation (Buildsys)[PDF]\n\n\nExploring Hidden Markov Models\nKukunuri Rithwik, Rishiraj Adhikary, Mahika Om Jaguste, Nipun Batra and Ashish Tendulkar The 4th Workshop on Visualization for AI Explainability (VISxAI’21) [Link]"
-  },
-  {
-    "objectID": "publications.html#section-2",
-    "href": "publications.html#section-2",
-    "title": "Publications",
-    "section": "2020",
-    "text": "2020\n\nActive Learning: A Visual Tour\nZeel B Patel, Nipun Batra. In VisXAI workshop at IEEE VIS. [Link]\n\n\nEdgeNILM: towards NILM on edge devices\nKukunuri, Rithwik, Anup Aglawe, Jainish Chauhan, Kratika Bhagtani, Rohan Patil, Sumit Walia, and Nipun Batra. In Proceedings of the 7th ACM International Conference on Systems for Energy-Efficient Buildings, Cities, and Transportation, pp. 90-99. 2020.[PDF]\n\n\nExploring Bayesian Optimization.\nApoorv Agnihotri, Nipun Batra In: Distill Journal 2020 [link]\n\n\nPlantDoc: A Dataset for Visual Plant Disease Detection.\nDavinder Singh, Naman Jain, Pranjali Jain, Pratik Kayal, Sudhakar Kumawat, Nipun Batra In: ACM India Joint International Conference on Data Science & Management of Data (CODS-COMAD 2020)[PDF]"
-  },
-  {
-    "objectID": "publications.html#section-3",
-    "href": "publications.html#section-3",
-    "title": "Publications",
-    "section": "2019",
-    "text": "2019\n\nActive Collaborative Sensing for Energy Breakdown\nYiling Jia, Nipun Batra, Hongning Wang, Kamin Whitehouse.\nIn: The 28th ACM International Conference on Information and Knowledge Management (CIKM’2019)[PDF]\n\n\nDemo Abstract: A demonstration of reproducible state-of-the-art energy disaggregation using NILMTK\nNipun Batra, Rithwik Kukunuri, Ayush Pandey, Raktim Malakar, Rajat Kumar, Odysseas Krystalakos, Mingjun Zhong, Paulo Meira, Oliver Parson.\nIn: The 6th ACM International Conference on Systems for Energy-Efficient Buildings, Cities, and Transportation (BuildSys ’19)[PDF]\n\n\nTowards reproducible state-of-the-art energy disaggregation\nNipun Batra, Rithwik Kukunuri, Ayush Pandey, Raktim Malakar, Rajat Kumar, Odysseas Krystalakos, Mingjun Zhong, Paulo Meira, Oliver Parson.\nIn: The 6th ACM International Conference on Systems for Energy-Efficient Buildings, Cities, and Transportation (BuildSys ’19)[PDF]\n\n\nA Tree-Structured Neural Network Model for Household Energy Breakdown\nYiling Jia, Nipun Batra, Hongning Wang, Kamin Whitehouse\nIn: Proceedings of the 2019 World Wide Web Conference (WWW ’19)[PDF]"
-  },
-  {
-    "objectID": "publications.html#section-4",
-    "href": "publications.html#section-4",
-    "title": "Publications",
-    "section": "2018",
-    "text": "2018\n\nRimor: Towards Identifying Anomalous Appliances in Buildings\nHaroon Rashid, Nipun Batra, Pushpendra Singh\nIn: Proceedings of the 5th Conference on Systems for Built Environments (Buildsys 18).[PDF]\n\n\nTransferring Decomposed Tensors for Scalable Energy Breakdown across Regions\nNipun Batra, Yiling Jia, Hongning Wang, Kamin Whitehouse\nIn: AAAI 2018, Thirty-Second AAAI Conference on Artificial Intelligence (AAAI-18).[PDF][Github]"
-  },
-  {
-    "objectID": "publications.html#section-5",
-    "href": "publications.html#section-5",
-    "title": "Publications",
-    "section": "2017",
-    "text": "2017\n\nSystems and Analytical Techniques Towards Practical Energy Breakdown for Homes\nNipun Batra\nIn: Ph.D. Thesis.[PDF]\n\n\nMatrix Factorisation for Scalable Energy Breakdown\nNipun Batra, Hongning Wang, Amarjeet Singh, Kamin Whitehouse.\nIn: AAAI 2017, Thirty-First AAAI Conference on Artificial Intelligence (AAAI-17).[PDF][Github][Poster]"
-  },
-  {
-    "objectID": "publications.html#section-6",
-    "href": "publications.html#section-6",
-    "title": "Publications",
-    "section": "2016",
-    "text": "2016\n\nGemello: Creating a Detailed Energy Breakdown from just the Monthly Electricity Bill\nNipun Batra, Amarjeet Singh, Kamin Whitehouse.\nIn: KDD 2016, 22nd ACM SIGKDD conference on knowledge discovery and data mining.[PDF][Github][Poster][Video]\n\n\nExploring The Value of Energy Disaggregation Through Actionable Feedback\nNipun Batra, Amarjeet Singh, Kamin Whitehouse.\nIn: 3rd International Workshop on Non-Intrusive Load Monitoring.[PDF][Slides][Talk]\n\n\nCreating a Detailed Energy Breakdown from just the Monthly Electricity Bill\nNipun Batra, Amarjeet Singh, Kamin Whitehouse.\nIn: 3rd International Workshop on Non-Intrusive Load Monitoring.[PDF][Slides][Talk]"
-  },
-  {
-    "objectID": "publications.html#section-7",
-    "href": "publications.html#section-7",
-    "title": "Publications",
-    "section": "2015",
-    "text": "2015\n\nIf You Measure It, Can You Improve It? Exploring The Value of Energy Disaggregation.\nNipun Batra, Amarjeet Singh, Kamin Whitehouse.\nIn: 2nd ACM International Conference on Embedded Systems For Energy-Efficient Built Environments (Buildsys 2015)[PDF][Github][Slides (.key)][Slides (.pdf)]\n\n\nNon Intrusive Load Monitoring: Systems, Metrics and Use Cases.\nNipun Batra\nIn: Doctoral Colloqium of the 13th ACM Conference on Embedded Networked Sensor Systems (SenSys 2015)[PDF][Slides (.key)][Slides (.pdf)][Best presentation award]\n\n\nDataport and NILMTK: A Building Data Set Designed for Non-intrusive Load Monitoring\nOliver Parson, Grant Fisher, April Hersey, Nipun Batra, Jack Kelly, Amarjeet Singh, William Knottenbelt, Alex Rogers.\nIn: 1st International Symposium on Signal Processing Applications in Smart Buildings at 3rd IEEE Global Conference on Signal and Information Processing, Orlando, FL, USA, 14-16 December, 2015. [PDF]"
-  },
-  {
-    "objectID": "publications.html#section-8",
-    "href": "publications.html#section-8",
-    "title": "Publications",
-    "section": "2014",
-    "text": "2014\n\nNILMTK v0. 2: A Non-intrusive Load Monitoring Toolkit for Large Scale Data Sets\nJack Kelly, Nipun Batra, Oliver Parson, Haimonti Dutta, William Knottenbelt, Alex Rogers, Amarjeet Singh, Mani Srivastava.\nIn: First ACM International Conference on Embedded Systems For Energy-Efficient Built Environments (Buildsys 2014)[PDF][Demo notebook][Poster][Best demo award]\n\n\nBits and Watts: Improving energy disaggregation performance using power line communication modems\nNipun Batra, Manoj Gulati, Puneet Jain, Kamin Whitehouse, Amarjeet Singh.\nIn: First ACM International Conference on Embedded Systems For Energy-Efficient Built Environments (Buildsys 2014)[PDF][Poster]\n\n\nNILMTK: An Open Source Toolkit for Non-intrusive Load Monitoring\nNipun Batra, Jack Kelly, Oliver Parson, Haimonti Dutta, William Knottenbelt, Alex Rogers, Amarjeet Singh, Mani Srivastava\nIn: 5th International Conference on Future Energy Systems (ACM e-Energy), Cambridge, UK. 2014[PDF][Slides (.pptx)][Slides (.pdf)]\n\n\nA comparison of non-intrusive load monitoring methods for commercial and residential buildings\nNipun Batra, Oliver Parson, Mario Berges, Amarjeet Singh, Alex Rogers\nTech. report[PDF]\n\n\nData Driven Energy Efficiency in Buildings\nNipun Batra, Amarjeet Singh, Pushpendra Singh, Haimonti Dutta, Venkatesh Sarangan, Mani Srivastava\nIn: PhD. qualifiers report, IIIT Delhi[PDF][Slides (.pdf)]"
-  },
-  {
-    "objectID": "publications.html#and-before",
-    "href": "publications.html#and-before",
-    "title": "Publications",
-    "section": "2013 and before",
-    "text": "2013 and before\n\nIt’s Different: Insights into home energy consumption in India\nNipun Batra, Manoj Gulati, Amarjeet Singh, Mani Srivastava.\nIn: 5th ACM Workshop On Embedded Systems For Energy-Efficient Buildings (Buildsys 2013)[PDF][Github][Dataset][Slides (.pptx)][Slides (.pdf)]\n\n\nINDiC: Improved Non-Intrusive load monitoring using load Division and Calibration\nNipun Batra, Haimonti Dutta, Amarjeet Singh\nIn: ICMLA 2013[PDF][Slides (.pptx)][Slides (.pdf)]\n\n\nExperiences with Occupancy Based Building Management Systems\nNipun Batra, Pandarasamy Arjunan, Amarjeet Singh, Pushpendra Singh\nIn: ISSNIP 2013[PDF]\n\n\nSensorAct: A Privacy and Security Aware Federated Middleware for Building Management\nPandarasamy Arjunan, Nipun Batra, Haksoo Choi, Amarjeet Singh, Pushpendra Singh, Mani Srivastava\nIn: Buildsys 2012[PDF]"
+    "text": "Dec 2021: Our AAAI 2022 paper on Accurate and Scalable Non-Stationary GPs gets accepted to AAAI 2022 :)\nNov 2021: Received a 5000 USD cloud credit grant from Google Research\nOct 2021: Rishiraj gets the prestigious USIEF Fullbright Fellowship\nOct 2021: Rishiraj wins the prestigious PMRF fellowship!\nSep 2021: Notes paper on adding neural network approaches to NILMTK-contrib accepted at Buildsys 2021\nSep 2021: Explainable on HMMs accepted to IEEE VisxAI workshop Link\nAug 2021: Teaching a course on Ubiquitous computing this semester Link\nMay 2021: Completed the ML course this semester with feedback 3.83/4 :)\nJan 2021: Completed the Introduction to Programming course this semester with feedback 3.73/4 :)\nFeb 2021: Serving as the publication chair for CODS-COMAD 2022\nDec 2020: Our paper on understanding air quality perceptions from social media accepted at ACM CSCW :)\nNov 2020: Got a grant from CISCO on edge non-intrusive load monitoring\nOct 2020: Got a grant from SERB on AI and sensor networks for air quality\nSep 2020: Got a grant from Google on COVID and air quality linkages\nMay 2020: Our Distill article on Bayesian Optimization got accepted\nFeb 2020: Organised a faculty development program on data science and analytics under the aegis of TEQIP (Pic with the group)\nFeb 2020: CSE@IITGN organised ACM India annual event. (Pic with Yann LeCun (Turing award), Shwetak Patel (ACM Compute Prize))\nJan 2020: Members of our lab attended and presented four posters at CODS COMAD 2020\nNov 2019: Spoke at INS Valsura on Machine Learning. Honoured to speak in front of officers from Indian Navy, Army and Air Force\nNov 2019: Gave a talk about our energy dis-aggregation work at ACM Buildsys 2019 in NYC!\nNov 2019: Gave a talk about our air quality work at Google, Bangalore\nApr 2019: Giving a talk on Computational Sustainability at Nirma University.\nMar 2019: Giving a talk on Computational Sustainability at ROCS 2019.\nJan 2019: Paper accepted in WWW! Details soon on Publications page.\nJan 2019: Teaching machine learning this semester. Class URL\nNov 2018: Haroon presented our paper in Buildsys 18!\nNov 2018: Awarded an Microsoft AI for Earth grant worth $15000 in Azure credits\nAug 2018: Took a research methods for CS bootcamp at IITGN. Slides,Youtube\nJuly 2018: Received a Titan XP GPU from NVidia via their grant program. Thanks, NVidia!\nJuly 2018: Teaching operating systems in the current semester at IITGN\nJuly 2018: Joined CSE at IITGN as an Assistant Professor\nJune 2018: Completed my postdoc at UVa. Been great working with Kamin, Hongning, and Yiling!\nFeb 2018: I’m presenting our work at AAAI in New Orleans\nNov 2017: I’m presenting our work on scalable energy breakdown at NSF CPS meeting"
   },
   {
     "objectID": "schedule.html",
@@ -82,6 +19,76 @@
     "title": "Course Materials",
     "section": "",
     "text": "Datasets\nSlides"
+  },
+  {
+    "objectID": "papers/index.html",
+    "href": "papers/index.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Vibhuti Bansal, Rohit Khoiwal, Hetvi Shastri, Haikoo Khandor, Nipun Batra. In ACM Buildsys 2022 [PDF][Github]\n\n\n\nKarm Patel, Rishiraj Adhikary, Zeel B Patel, Nipun Batra, Sarath Guttikunda. In ACM SIGCAS/SIGCHI Conference on Computing and Sustainable Societies (COMPASS) (COMPASS ’22) [PDF][Github]\n\n\n\nZeel B Patel, Palak Purohit, Harsh Patel, Shivam Sahni, and Nipun Batra. In: AAAI 2022, Thirty-Sixth AAAI Conference on Artificial Intelligence (AAAI-22).[PDF][Github]\n\n\n\nShastri, Hetvi; Lodhavia, Dhruvi; Purohit, Palak; Kaoshik, Ronak; Batra, Nipun. In CODS COMAD 2022."
+  },
+  {
+    "objectID": "papers/index.html#section-1",
+    "href": "papers/index.html#section-1",
+    "title": "Publications",
+    "section": "2021",
+    "text": "2021\n\nVartalaap: what drives #airquality discussions: politics, pollution or pseudo-science?\nRishiraj Adhikary, Zeel B. Patel, Tanmay Srivastava, Nipun Batra, Mayank Singh, Udit Bhatia, and Sarath Guttikunda. Proceedings of the ACM on Human-Computer Interaction 5, no. CSCW1 (2021)[PDF]\n\n\nNeural network approaches and dataset parser for NILM toolkit\nShastri, Hetvi; Batra, Nipun. In Proceedings of the 8th ACM International Conference on Systems for Energy-Efficient Buildings, Cities, and Transportation (Buildsys)[PDF]\n\n\nExploring Hidden Markov Models\nKukunuri Rithwik, Rishiraj Adhikary, Mahika Om Jaguste, Nipun Batra and Ashish Tendulkar The 4th Workshop on Visualization for AI Explainability (VISxAI’21) [Link]"
+  },
+  {
+    "objectID": "papers/index.html#section-2",
+    "href": "papers/index.html#section-2",
+    "title": "Publications",
+    "section": "2020",
+    "text": "2020\n\nActive Learning: A Visual Tour\nZeel B Patel, Nipun Batra. In VisXAI workshop at IEEE VIS. [Link]\n\n\nEdgeNILM: towards NILM on edge devices\nKukunuri, Rithwik, Anup Aglawe, Jainish Chauhan, Kratika Bhagtani, Rohan Patil, Sumit Walia, and Nipun Batra. In Proceedings of the 7th ACM International Conference on Systems for Energy-Efficient Buildings, Cities, and Transportation, pp. 90-99. 2020.[PDF]\n\n\nExploring Bayesian Optimization.\nApoorv Agnihotri, Nipun Batra In: Distill Journal 2020 [link]\n\n\nPlantDoc: A Dataset for Visual Plant Disease Detection.\nDavinder Singh, Naman Jain, Pranjali Jain, Pratik Kayal, Sudhakar Kumawat, Nipun Batra In: ACM India Joint International Conference on Data Science & Management of Data (CODS-COMAD 2020)[PDF]"
+  },
+  {
+    "objectID": "papers/index.html#section-3",
+    "href": "papers/index.html#section-3",
+    "title": "Publications",
+    "section": "2019",
+    "text": "2019\n\nActive Collaborative Sensing for Energy Breakdown\nYiling Jia, Nipun Batra, Hongning Wang, Kamin Whitehouse.\nIn: The 28th ACM International Conference on Information and Knowledge Management (CIKM’2019)[PDF]\n\n\nDemo Abstract: A demonstration of reproducible state-of-the-art energy disaggregation using NILMTK\nNipun Batra, Rithwik Kukunuri, Ayush Pandey, Raktim Malakar, Rajat Kumar, Odysseas Krystalakos, Mingjun Zhong, Paulo Meira, Oliver Parson.\nIn: The 6th ACM International Conference on Systems for Energy-Efficient Buildings, Cities, and Transportation (BuildSys ’19)[PDF]\n\n\nTowards reproducible state-of-the-art energy disaggregation\nNipun Batra, Rithwik Kukunuri, Ayush Pandey, Raktim Malakar, Rajat Kumar, Odysseas Krystalakos, Mingjun Zhong, Paulo Meira, Oliver Parson.\nIn: The 6th ACM International Conference on Systems for Energy-Efficient Buildings, Cities, and Transportation (BuildSys ’19)[PDF]\n\n\nA Tree-Structured Neural Network Model for Household Energy Breakdown\nYiling Jia, Nipun Batra, Hongning Wang, Kamin Whitehouse\nIn: Proceedings of the 2019 World Wide Web Conference (WWW ’19)[PDF]"
+  },
+  {
+    "objectID": "papers/index.html#section-4",
+    "href": "papers/index.html#section-4",
+    "title": "Publications",
+    "section": "2018",
+    "text": "2018\n\nRimor: Towards Identifying Anomalous Appliances in Buildings\nHaroon Rashid, Nipun Batra, Pushpendra Singh\nIn: Proceedings of the 5th Conference on Systems for Built Environments (Buildsys 18).[PDF]\n\n\nTransferring Decomposed Tensors for Scalable Energy Breakdown across Regions\nNipun Batra, Yiling Jia, Hongning Wang, Kamin Whitehouse\nIn: AAAI 2018, Thirty-Second AAAI Conference on Artificial Intelligence (AAAI-18).[PDF][Github]"
+  },
+  {
+    "objectID": "papers/index.html#section-5",
+    "href": "papers/index.html#section-5",
+    "title": "Publications",
+    "section": "2017",
+    "text": "2017\n\nSystems and Analytical Techniques Towards Practical Energy Breakdown for Homes\nNipun Batra\nIn: Ph.D. Thesis.[PDF]\n\n\nMatrix Factorisation for Scalable Energy Breakdown\nNipun Batra, Hongning Wang, Amarjeet Singh, Kamin Whitehouse.\nIn: AAAI 2017, Thirty-First AAAI Conference on Artificial Intelligence (AAAI-17).[PDF][Github][Poster]"
+  },
+  {
+    "objectID": "papers/index.html#section-6",
+    "href": "papers/index.html#section-6",
+    "title": "Publications",
+    "section": "2016",
+    "text": "2016\n\nGemello: Creating a Detailed Energy Breakdown from just the Monthly Electricity Bill\nNipun Batra, Amarjeet Singh, Kamin Whitehouse.\nIn: KDD 2016, 22nd ACM SIGKDD conference on knowledge discovery and data mining.[PDF][Github][Poster][Video]\n\n\nExploring The Value of Energy Disaggregation Through Actionable Feedback\nNipun Batra, Amarjeet Singh, Kamin Whitehouse.\nIn: 3rd International Workshop on Non-Intrusive Load Monitoring.[PDF][Slides][Talk]\n\n\nCreating a Detailed Energy Breakdown from just the Monthly Electricity Bill\nNipun Batra, Amarjeet Singh, Kamin Whitehouse.\nIn: 3rd International Workshop on Non-Intrusive Load Monitoring.[PDF][Slides][Talk]"
+  },
+  {
+    "objectID": "papers/index.html#section-7",
+    "href": "papers/index.html#section-7",
+    "title": "Publications",
+    "section": "2015",
+    "text": "2015\n\nIf You Measure It, Can You Improve It? Exploring The Value of Energy Disaggregation.\nNipun Batra, Amarjeet Singh, Kamin Whitehouse.\nIn: 2nd ACM International Conference on Embedded Systems For Energy-Efficient Built Environments (Buildsys 2015)[PDF][Github][Slides (.key)][Slides (.pdf)]\n\n\nNon Intrusive Load Monitoring: Systems, Metrics and Use Cases.\nNipun Batra\nIn: Doctoral Colloqium of the 13th ACM Conference on Embedded Networked Sensor Systems (SenSys 2015)[PDF][Slides (.key)][Slides (.pdf)][Best presentation award]\n\n\nDataport and NILMTK: A Building Data Set Designed for Non-intrusive Load Monitoring\nOliver Parson, Grant Fisher, April Hersey, Nipun Batra, Jack Kelly, Amarjeet Singh, William Knottenbelt, Alex Rogers.\nIn: 1st International Symposium on Signal Processing Applications in Smart Buildings at 3rd IEEE Global Conference on Signal and Information Processing, Orlando, FL, USA, 14-16 December, 2015. [PDF]"
+  },
+  {
+    "objectID": "papers/index.html#section-8",
+    "href": "papers/index.html#section-8",
+    "title": "Publications",
+    "section": "2014",
+    "text": "2014\n\nNILMTK v0. 2: A Non-intrusive Load Monitoring Toolkit for Large Scale Data Sets\nJack Kelly, Nipun Batra, Oliver Parson, Haimonti Dutta, William Knottenbelt, Alex Rogers, Amarjeet Singh, Mani Srivastava.\nIn: First ACM International Conference on Embedded Systems For Energy-Efficient Built Environments (Buildsys 2014)[PDF][Demo notebook][Poster][Best demo award]\n\n\nBits and Watts: Improving energy disaggregation performance using power line communication modems\nNipun Batra, Manoj Gulati, Puneet Jain, Kamin Whitehouse, Amarjeet Singh.\nIn: First ACM International Conference on Embedded Systems For Energy-Efficient Built Environments (Buildsys 2014)[PDF][Poster]\n\n\nNILMTK: An Open Source Toolkit for Non-intrusive Load Monitoring\nNipun Batra, Jack Kelly, Oliver Parson, Haimonti Dutta, William Knottenbelt, Alex Rogers, Amarjeet Singh, Mani Srivastava\nIn: 5th International Conference on Future Energy Systems (ACM e-Energy), Cambridge, UK. 2014[PDF][Slides (.pptx)][Slides (.pdf)]\n\n\nA comparison of non-intrusive load monitoring methods for commercial and residential buildings\nNipun Batra, Oliver Parson, Mario Berges, Amarjeet Singh, Alex Rogers\nTech. report[PDF]\n\n\nData Driven Energy Efficiency in Buildings\nNipun Batra, Amarjeet Singh, Pushpendra Singh, Haimonti Dutta, Venkatesh Sarangan, Mani Srivastava\nIn: PhD. qualifiers report, IIIT Delhi[PDF][Slides (.pdf)]"
+  },
+  {
+    "objectID": "papers/index.html#and-before",
+    "href": "papers/index.html#and-before",
+    "title": "Publications",
+    "section": "2013 and before",
+    "text": "2013 and before\n\nIt’s Different: Insights into home energy consumption in India\nNipun Batra, Manoj Gulati, Amarjeet Singh, Mani Srivastava.\nIn: 5th ACM Workshop On Embedded Systems For Energy-Efficient Buildings (Buildsys 2013)[PDF][Github][Dataset][Slides (.pptx)][Slides (.pdf)]\n\n\nINDiC: Improved Non-Intrusive load monitoring using load Division and Calibration\nNipun Batra, Haimonti Dutta, Amarjeet Singh\nIn: ICMLA 2013[PDF][Slides (.pptx)][Slides (.pdf)]\n\n\nExperiences with Occupancy Based Building Management Systems\nNipun Batra, Pandarasamy Arjunan, Amarjeet Singh, Pushpendra Singh\nIn: ISSNIP 2013[PDF]\n\n\nSensorAct: A Privacy and Security Aware Federated Middleware for Building Management\nPandarasamy Arjunan, Nipun Batra, Haksoo Choi, Amarjeet Singh, Pushpendra Singh, Mani Srivastava\nIn: Buildsys 2012[PDF]"
   },
   {
     "objectID": "index.html",
