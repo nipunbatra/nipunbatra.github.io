@@ -1,5 +1,19 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Nipun Batra",
+    "section": "",
+    "text": "Nipun Batra is an Assistant Professor in Computer Science at IIT Gandhinagar. He previously completed his postdoc from University of Virginia. He completed his PhD. from IIIT Delhi where he was a TCS PhD fellow. His group broadly works on machine learning/AI/sensors/IoT for computational sustainability problems like smart buildings and air quality.\nHis work has been awarded several awards, including, the best PhD presentation at ACM Sensys, best demo at ACM Buildsys, and a best video nominee at ACM KDD.\nHe is working with his team towards a Jupyter book on code first understanding machine learning."
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "Spring 2022 Machine Learning\nWinter 2022 Computing\nFall 2022 Probabilistic Machine Learning\nSpring 2022 Machine Learning\nWinter 2021 Computing\nFall 2021 Ubiquitous Computing\nSpring 2021 Machine Learning\nWinter 2020 Introduction to Computing\nFall 2020 Operating Systems\nFall 2020 Graduate Systems\nSpring 2020 Machine Learning\nFall 2019 Operating Systems\n[Fall 2019 Graduate Systems]\nSpring 2019 Machine Learning\nFall 2018 Operating Systems\nFall 2018 Graduate Systems"
+  },
+  {
     "objectID": "news.html",
     "href": "news.html",
     "title": "News",
@@ -7,11 +21,11 @@
     "text": "Dec 2021: Our AAAI 2022 paper on Accurate and Scalable Non-Stationary GPs gets accepted to AAAI 2022 :)\nNov 2021: Received a 5000 USD cloud credit grant from Google Research\nOct 2021: Rishiraj gets the prestigious USIEF Fullbright Fellowship\nOct 2021: Rishiraj wins the prestigious PMRF fellowship!\nSep 2021: Notes paper on adding neural network approaches to NILMTK-contrib accepted at Buildsys 2021\nSep 2021: Explainable on HMMs accepted to IEEE VisxAI workshop Link\nAug 2021: Teaching a course on Ubiquitous computing this semester Link\nMay 2021: Completed the ML course this semester with feedback 3.83/4 :)\nJan 2021: Completed the Introduction to Programming course this semester with feedback 3.73/4 :)\nFeb 2021: Serving as the publication chair for CODS-COMAD 2022\nDec 2020: Our paper on understanding air quality perceptions from social media accepted at ACM CSCW :)\nNov 2020: Got a grant from CISCO on edge non-intrusive load monitoring\nOct 2020: Got a grant from SERB on AI and sensor networks for air quality\nSep 2020: Got a grant from Google on COVID and air quality linkages\nMay 2020: Our Distill article on Bayesian Optimization got accepted\nFeb 2020: Organised a faculty development program on data science and analytics under the aegis of TEQIP (Pic with the group)\nFeb 2020: CSE@IITGN organised ACM India annual event. (Pic with Yann LeCun (Turing award), Shwetak Patel (ACM Compute Prize))\nJan 2020: Members of our lab attended and presented four posters at CODS COMAD 2020\nNov 2019: Spoke at INS Valsura on Machine Learning. Honoured to speak in front of officers from Indian Navy, Army and Air Force\nNov 2019: Gave a talk about our energy dis-aggregation work at ACM Buildsys 2019 in NYC!\nNov 2019: Gave a talk about our air quality work at Google, Bangalore\nApr 2019: Giving a talk on Computational Sustainability at Nirma University.\nMar 2019: Giving a talk on Computational Sustainability at ROCS 2019.\nJan 2019: Paper accepted in WWW! Details soon on Publications page.\nJan 2019: Teaching machine learning this semester. Class URL\nNov 2018: Haroon presented our paper in Buildsys 18!\nNov 2018: Awarded an Microsoft AI for Earth grant worth $15000 in Azure credits\nAug 2018: Took a research methods for CS bootcamp at IITGN. Slides,Youtube\nJuly 2018: Received a Titan XP GPU from NVidia via their grant program. Thanks, NVidia!\nJuly 2018: Teaching operating systems in the current semester at IITGN\nJuly 2018: Joined CSE at IITGN as an Assistant Professor\nJune 2018: Completed my postdoc at UVa. Been great working with Kamin, Hongning, and Yiling!\nFeb 2018: I’m presenting our work at AAAI in New Orleans\nNov 2017: I’m presenting our work on scalable energy breakdown at NSF CPS meeting"
   },
   {
-    "objectID": "schedule.html",
-    "href": "schedule.html",
-    "title": "Schedule",
+    "objectID": "group.html",
+    "href": "group.html",
+    "title": "Group",
     "section": "",
-    "text": "Example schedule:\n\n\n\n\n\n\n\n\n\nMorning\nAfternoon\n\n\n\n\nL\nIntro + Data manipulation\ngit / GitHub\n\n\nM\nGeneralised Linear Models\nData visualisation\n\n\nX\nMixed models / GAM / Bayes\nFunctional programming + Students work\n\n\nJ\nMultivariate analyses\nReproducible workflows\n\n\nV\nUsing R as GIS + Students work\nProject presentations"
+    "text": "Current\n\nPhD\n\nRishiraj Adhikary (July 2019 - present)\nZeel Patel (Jan 2020 - present)\n\n\n\nMTech\n\nAnkita Jain (July 2021 - present)\nSuraj Jaiswal (July 2022 - present)\nAyush Srivastava (July 2022 - present)\n\n\n\nBTech\n\nEshan Gujarathi (BTech 2023)\nSaagar Parikh (BTech 2023)\nHitarth Gandhi (BTech 2023)\nAadesh Desai (BTech 2023)\nGautam Vasistha (BTech 2023)\nDhruv Patel (BTech 2024)\nHaikoo Khandor (BTech 2024)\nProgyan Das (BTech 2024)\nMadhav Kanda (BTech 2024)\nAditi Agarwal (BTech 2024)\n\n\n\n\nAlumni\n\nResearch Assistant\n\nKaushal Modi\nPrerna Khanna: Now a PhD student at Stony Brook\nTanmay Srivastava: Now a PhD student at Stony Brook\nRohit Patil: First job at Publicis Sapient\n\n\n\nBTech\n\nChris Francis (BTech 2022): MS at UCSD\nDhruvi Lodhavia (BTech 2022): MS at UCSD\nHetvi Shastri (BTech 2022): PhD at UMass Amherst\nHarsh Patel (BTech 2022): MS at UCSD\nPalak Purohit (BTech 2022): MS at Caltech\nShivam Sahni (BTech 2022): MS at UCSD\nApoorv Agnihotri (BTech 2020): First job at Wadhwani AI -> Data Scientist at Rephrase.ai\nDeepak Narayanan (BTech 2020): First job at Microsoft Research India -> MS at ETH Zurich\nKukunuri Rithwik (BTech 2020): First job at Jio -> Data Scientist at Nykaa\nSoham Pachpande (BTech 2020): First job at -> MS at UCSD\n\n\n\nMTech\n\nKaran Kumar (MTech 2020): First job at Trading Technologies\nSouvik Roy (MTech 2020): First job at eClerx\n\n\n\n\nOutside IITGn Interns\n\nVibhuti Bansal (Summer 2022)\nRohit Khoiwal (Summer 2022)\nAnand Hegde (Summer 2022):\nShobhit Belwal (Summer 2022):\nAryan Varshney (Summer 2022):"
   },
   {
     "objectID": "materials.html",
@@ -91,24 +105,10 @@
     "text": "2013 and before\n\nIt’s Different: Insights into home energy consumption in India\nNipun Batra, Manoj Gulati, Amarjeet Singh, Mani Srivastava.\nIn: 5th ACM Workshop On Embedded Systems For Energy-Efficient Buildings (Buildsys 2013)[PDF][Github][Dataset][Slides (.pptx)][Slides (.pdf)]\n\n\nINDiC: Improved Non-Intrusive load monitoring using load Division and Calibration\nNipun Batra, Haimonti Dutta, Amarjeet Singh\nIn: ICMLA 2013[PDF][Slides (.pptx)][Slides (.pdf)]\n\n\nExperiences with Occupancy Based Building Management Systems\nNipun Batra, Pandarasamy Arjunan, Amarjeet Singh, Pushpendra Singh\nIn: ISSNIP 2013[PDF]\n\n\nSensorAct: A Privacy and Security Aware Federated Middleware for Building Management\nPandarasamy Arjunan, Nipun Batra, Haksoo Choi, Amarjeet Singh, Pushpendra Singh, Mani Srivastava\nIn: Buildsys 2012[PDF]"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Nipun Batra",
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Schedule",
     "section": "",
-    "text": "Nipun Batra is an Assistant Professor in Computer Science at IIT Gandhinagar. He previously completed his postdoc from University of Virginia. He completed his PhD. from IIIT Delhi where he was a TCS PhD fellow. His group broadly works on machine learning/AI/sensors/IoT for computational sustainability problems like smart buildings and air quality.\nHis work has been awarded several awards, including, the best PhD presentation at ACM Sensys, best demo at ACM Buildsys, and a best video nominee at ACM KDD.\nHe is working with his team towards a Jupyter book on code first understanding machine learning."
-  },
-  {
-    "objectID": "group.html",
-    "href": "group.html",
-    "title": "Group",
-    "section": "",
-    "text": "Current\n\nPhD\n\nRishiraj Adhikary (July 2019 - present)\nZeel Patel (Jan 2020 - present)\n\n\n\nResearch Assistant\n\nKaushal Modi\n\n\n\nBTech\n\nChris Francis\nDhruvi Lodhavia\nHetvi Shastri\nHarsh Patel\nPalak Purohit\nShivam Sahni\n\n\n\n\nAlumni\n\nResearch Assistant\n\nPrerna Khanna: Now a PhD student at Stony Brook\nTanmay Srivastava: Now a PhD student at Stony Brook\nRohit Patil: First job at Publicis Sapient\n\n\n\nBTech\n\nApoorv Agnihotri (BTech 2020): First job at Wadhwani AI\nDeepak Narayanan (BTech 2020): First job at Microsoft Research India -> MS at ETH Zurich\nKukunuri Rithwik (BTech 2020): First job at Jio\nSoham Pachpande (BTech 2020): First job at -> MS at UCSD\n\n\n\nMTech\n\nKaran Kumar (MTech 2020): First job at Trading Technologies\nSouvik Roy (MTech 2020): First job at eClerx"
-  },
-  {
-    "objectID": "teaching.html",
-    "href": "teaching.html",
-    "title": "Teaching",
-    "section": "",
-    "text": "Spring 2022 Machine Learning\nWinter 2022 Computing\nFall 2022 Probabilistic Machine Learning\nSpring 2022 Machine Learning\nWinter 2021 Computing\nFall 2021 Ubiquitous Computing\nSpring 2021 Machine Learning\nWinter 2020 Introduction to Computing\nFall 2020 Operating Systems\nFall 2020 Graduate Systems\nSpring 2020 Machine Learning\nFall 2019 Operating Systems\n[Fall 2019 Graduate Systems]\nSpring 2019 Machine Learning\nFall 2018 Operating Systems\nFall 2018 Graduate Systems"
+    "text": "Example schedule:\n\n\n\n\n\n\n\n\n\nMorning\nAfternoon\n\n\n\n\nL\nIntro + Data manipulation\ngit / GitHub\n\n\nM\nGeneralised Linear Models\nData visualisation\n\n\nX\nMixed models / GAM / Bayes\nFunctional programming + Students work\n\n\nJ\nMultivariate analyses\nReproducible workflows\n\n\nV\nUsing R as GIS + Students work\nProject presentations"
   }
 ]
