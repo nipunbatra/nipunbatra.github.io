@@ -9,35 +9,57 @@ title: Group
 - Rishiraj Adhikary (July 2019 - present)
 - Zeel Patel (Jan 2020 - present)
 
-#### Research Assistant
+#### MTech
 
-- Kaushal Modi
+- Ankita Jain (July 2021 - present)
+- Suraj Jaiswal (July 2022 - present)
+- Ayush Srivastava (July 2022 - present)
 
 #### BTech
 
-- Chris Francis
-- Dhruvi Lodhavia
-- Hetvi Shastri
-- Harsh Patel
-- Palak Purohit
-- Shivam Sahni
+- Eshan Gujarathi (BTech 2023)
+- Saagar Parikh (BTech 2023)
+- Hitarth Gandhi (BTech 2023)
+- Aadesh Desai (BTech 2023)
+- Gautam Vasistha (BTech 2023)
+- Dhruv Patel (BTech 2024)
+- Haikoo Khandor (BTech 2024)
+- Progyan Das (BTech 2024)
+- Madhav Kanda (BTech 2024)
+- Aditi Agarwal (BTech 2024)
+
 
 ### Alumni
 
 #### Research Assistant
 
+- Kaushal Modi
 - Prerna Khanna: Now a PhD student at Stony Brook
 - Tanmay Srivastava: Now a PhD student at Stony Brook
 - Rohit Patil: First job at Publicis Sapient
 
 #### BTech
 
-- Apoorv Agnihotri (BTech 2020): First job at Wadhwani AI
+- Chris Francis (BTech 2022): MS at UCSD
+- Dhruvi Lodhavia (BTech 2022): MS at UCSD
+- Hetvi Shastri (BTech 2022): PhD at UMass Amherst
+- Harsh Patel (BTech 2022): MS at UCSD
+- Palak Purohit (BTech 2022): MS at Caltech
+- Shivam Sahni (BTech 2022): MS at UCSD
+- Apoorv Agnihotri (BTech 2020): First job at Wadhwani AI -> Data Scientist at Rephrase.ai
 - Deepak Narayanan (BTech 2020): First job at Microsoft Research India -> MS at ETH Zurich
-- Kukunuri Rithwik (BTech 2020): First job at Jio
+- Kukunuri Rithwik (BTech 2020): First job at Jio -> Data Scientist at Nykaa
 - Soham Pachpande (BTech 2020): First job at  -> MS at UCSD
 
 #### MTech
 
 - Karan Kumar (MTech 2020): First job at Trading Technologies
 - Souvik Roy (MTech 2020): First job at eClerx
+
+### Outside IITGn Interns
+
+- Vibhuti Bansal (Summer 2022)
+- Rohit Khoiwal (Summer 2022)
+- Anand Hegde (Summer 2022):
+- Shobhit Belwal (Summer 2022): 
+- Aryan Varshney (Summer 2022): 
