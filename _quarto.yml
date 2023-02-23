@@ -14,7 +14,7 @@ website:
         text: Teaching
       - href: group.qmd
         text: Group
-      - href: blog.html
+      - href: blog
         text: Blog
       - href: news.qmd
         text: News
