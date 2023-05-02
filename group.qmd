@@ -1,6 +1,33 @@
 ---
 title: Group
+output:
+  html_document:
+    self_contained: false
+quarto:
+  dependencies:
+    - name: slick-carousel
+      version: 1.8.1
+      source: cdnjs
 ---
+
+# Image Carousel with Slick in Quarto
+
+<div class="slick">
+  <div><img src="images/nipun.jpg"></div>
+  <div><img src="images/nipun.jpg"></div>
+  <div><img src="images/nipun.jpg"></div>
+</div>
+
+<script>
+  $(document).ready(function(){
+    $('.slick').slick();
+  });
+</script>
+
+---
+
+<!-- Add a slider for showing group photos -->
+
 
 ### Current
 
