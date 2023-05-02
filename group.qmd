@@ -3,30 +3,90 @@ title: Group
 output:
   html_document:
     self_contained: false
-quarto:
-  dependencies:
-    - name: slick-carousel
-      version: 1.8.1
-      source: cdnjs
 ---
+### Some group photos and memories (to come soon..)
 
-# Image Carousel with Slick in Quarto
-
-<div class="slick">
-  <div><img src="images/nipun.jpg"></div>
-  <div><img src="images/nipun.jpg"></div>
-  <div><img src="images/nipun.jpg"></div>
+```{=html}
+<!-- Image Carousel with CSS in Quarto
+<div class="carousel">
+  <input type="radio" id="slide-1" name="carousel-radio" checked>
+  <input type="radio" id="slide-2" name="carousel-radio">
+  <input type="radio" id="slide-3" name="carousel-radio">
+  <div class="slides">
+    <div class="slide">
+      <img src="images/nipun.jpg">
+    </div>
+    <div class="slide">
+      <img src="image2.jpg">
+    </div>
+    <div class="slide">
+      <img src="image3.jpg">
+    </div>
+  </div>
+  <div class="indicators">
+    <label for="slide-1"></label>
+    <label for="slide-2"></label>
+    <label for="slide-3"></label>
+  </div>
 </div>
 
-<script>
-  $(document).ready(function(){
-    $('.slick').slick();
-  });
-</script>
+<style>
+  .carousel {
+    position: relative;
+  }
 
----
+  .slides {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
 
-<!-- Add a slider for showing group photos -->
+  .slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .indicators label {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+
+  .indicators label:hover {
+    background-color: #000;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  input[type="radio"]:checked ~ .slides {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+    overflow-x: visible;
+  }
+
+  input[type="radio"]:checked ~ .slides .slide {
+    scroll-snap-align: none;
+  }
+</style>
+ -->
+```
 
 
 ### Current
