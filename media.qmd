@@ -1,0 +1,18 @@
+---
+title: Media Coverage
+---
+
+### SpiroMask project
+SpiroMask was covered comprehensively by The Ahmedabad Mirror ([link](https://www.ahmedabadmirror.com/iit-gn-researchers-devise-mask-to-measure-lung-health/81846808.html)) on 3rd November 2022
+![](images/spiromask-news-1.jpeg)
+
+### PhD student Rishiraj's Fullbright Nehru Fellowship
+Our PhD student, [Rishiraj Adhikary](https://rishi-a.github.io) won the prestigious Fullbright Nehru fellowship and visited CMU to work with Prof. Mayank Goel for 9 months. 
+
+![](images/educationtimes-fulbright.png)
+
+1. [Education Times](https://www.educationtimes.com/article/scholarships/91766182/cross-domain-knowledge-helped-phd-student-get-fullbright-nehru-doctoral-research-fellowship)
+2. [Indian Express](https://indianexpress.com/article/cities/ahmedabad/iitgn-phd-scholar-bags-fulbright-nehru-fellowship-7928541/)
+3. [Ahmedabad Mirror](https://ahmedabadmirror.com/iitgns-phd-scholar-awarded-fellowship/81833150.html)
+4. [India Education Diary](https://indiaeducationdiary.in/iit-gandhinagar-phd-scholar-bags-the-prestigious-fulbright-nehru-doctoral-research-fellowship-2022-23/)
+5. [Careers 360](https://news.careers360.com/iit-gandhinagar-computer-science-engineering-phd-scholar-wins-fulbright-nehru-doctoral-research-fellowship-2022-23)

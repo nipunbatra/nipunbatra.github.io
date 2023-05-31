@@ -18,6 +18,8 @@ website:
         text: Blog
       - href: news.qmd
         text: News
+      - href: media.qmd
+        text: Media
       - href: files/cv.pdf
         text: CV
 
