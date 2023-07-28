@@ -4,37 +4,34 @@ author: "John Doe"
 format: revealjs
 ---
 
-## Slide 1
+## 2 May 2023
 
-![2023-group](images/group/2023-group.jpg)
+![](images/group/2023-group.jpg)
 
-* Date: 2 May 2023
-* Description: Batch of 2023 (Saagar, Aadesh, Xhitij, Nipun, Zeel (not batch of 2023), Ankita, Eshan, Hitarth, Gautam)
 
-## Slide 2
+Batch of 2023 (Saagar, Aadesh, Xhitij, Nipun, Zeel (not batch of 2023), Ankita, Eshan, Hitarth, Gautam)
 
-![2023-cake](images/group/2023-cake.jpg)
+## 2 May 2023
 
-* Date: 2 May 2023
-* Description: Cake by batch of 2023
+![](images/group/2023-cake.jpg)
 
-## Slide 3
+Cake by batch of 2023
 
-![2021-Nov-Apoorv](images/group/2021-Nov-Apoorv.jpg)
+## Nov 2021
 
-* Date: Nov 2021
-* Description: Apoorv's "re" visit to the campus (others in frame: Rishiraj and Zeel)
+![](images/group/2021-Nov-Apoorv.jpg)
 
-## Slide 4
 
-![2021-AAAI](images/group/2021-AAAI.jpg)
+Apoorv's "re" visit to the campus (others in frame: Rishiraj and Zeel)
 
-* Date: Dec 2021
-* Description: Celebrating AAAI paper acceptance
+## Dec 2021
 
-## Slide 5
+![](images/group/2021-AAAI.jpg)
 
-![2022-group-subset](images/group/2022-group-subset.jpg)
+Celebrating AAAI paper acceptance
 
-* Date: July 2022
-* Description: With a subset of the batch of 2022 (Harsh, Hetvi, Nipun, Dhruvi, Palak)
+## July 2022
+
+![](images/group/2022-group-subset.jpg)
+
+With a subset of the batch of 2022 (Harsh, Hetvi, Nipun, Dhruvi, Palak)
