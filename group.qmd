@@ -7,7 +7,8 @@ output:
 ### Some group photos and memories (to come soon..)
 
 ```{=html}
-<iframe src="./group_pics.html" title="Quarto revealjs Documentation" style="width: 100%;"></iframe>
+<iframe src="./group_pics.html" title="Quarto revealjs Documentation" style="width: 100%; height: 75%;"></iframe>
+
 ```
 
 ### Current
