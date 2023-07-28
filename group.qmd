@@ -43,7 +43,7 @@ output:
 - Aadesh Desai (BTech 2023): MS at CMU
 - Eshan Gujarathi (BTech 2023): Predoc at IIT Madras
 - Gautam Vasistha (BTech 2023): Data Scientist as Skan.AI
-- Hitarth Gandhi (BTech 2023): 
+- Hitarth Gandhi (BTech 2023): MS at UC Irvine
 - Saagar Parikh (BTech 2023): MS at CMU
 - Xhitij Choudhary (BTech 2023): Data Scientist at Skan.AI
 - Chris Francis (BTech 2022): MS at UCSD
@@ -65,14 +65,14 @@ output:
 
 #### Research Assistant
 
-- Kaushal Modi
+- Kaushal Modi: Now a data scientist at InfiBeam
 - Prerna Khanna: Now a PhD student at Stony Brook
 - Tanmay Srivastava: Now a PhD student at Stony Brook
 - Rohit Patil: First job at Publicis Sapient
 
 ### Outside IITGn Interns
 
-- Vibhuti Bansal (Summer 2022)
+- Vibhuti Bansal (Summer 2022): Now at CRED
 - Rohit Khoiwal (Summer 2022)
 - Anand Hegde (Summer 2022)
 - Shobhit Belwal (Summer 2022)
