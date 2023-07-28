@@ -1,6 +1,6 @@
 ---
-title: "Habits"
-author: "John Doe"
+title: "Group Photos"
+author: "Nipun Batra"
 format: revealjs
 ---
 
