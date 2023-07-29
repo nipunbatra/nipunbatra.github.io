@@ -1,6 +1,6 @@
 ---
 title: "Group Photos"
-author: "Nipun Batra"
+author: ""
 format: revealjs
 ---
 
