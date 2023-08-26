@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bivariate Gaussian Visualization</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div>
+        <label for="mu_0">μ₀:</label>
+        <input type="range" id="mu_0" min="-2" max="2" step="0.1" value="0">
+        <span id="mu_0_value">0.0</span>
+    </div>
+    <div>
+        <label for="mu_1">μ₁:</label>
+        <input type="range" id="mu_1" min="-2" max="2" step="0.1" value="0">
+        <span id="mu_1_value">0.0</span>
+    </div>
+    <div>
+        <label for="cov_00">σ₀₀:</label>
+        <input type="range" id="cov_00" min="0.1" max="2" step="0.1" value="1">
+        <span id="cov_00_value">1.0</span>
+    </div>
+    <div>
+        <label for="cov_01">σ₀₁:</label>
+        <input type="range" id="cov_01" min="-1" max="1" step="0.1" value="0.5">
+        <span id="cov_01_value">0.5</span>
+    </div>
+    <div>
+        <label for="cov_11">σ₁₁:</label>
+        <input type="range" id="cov_11" min="0.1" max="2" step="0.1" value="1">
+        <span id="cov_11_value">1.0</span>
+    </div>
+    <div id="plotly-plot"></div>
+    <script>
+        const plotDiv = document.getElementById('plotly-plot');
+        const mu_0_range = document.getElementById('mu_0');
+        const mu_1_range = document.getElementById('mu_1');
+        const cov_00_range = document.getElementById('cov_00');
+        const cov_01_range = document.getElementById('cov_01');
+        const cov_11_range = document.getElementById('cov_11');
+        const mu_0_value = document.getElementById('mu_0_value');
+        const mu_1_value = document.getElementById('mu_1_value');
+        const cov_00_value = document.getElementById('cov_00_value');
+        const cov_01_value = document.getElementById('cov_01_value');
+        const cov_11_value = document.getElementById('cov_11_value');
+
+        function updatePlot() {
+            const mu_0 = parseFloat(mu_0_range.value);
+            const mu_1 = parseFloat(mu_1_range.value);
+            const cov_00 = parseFloat(cov_00_range.value);
+            const cov_01 = parseFloat(cov_01_range.value);
+            const cov_11 = parseFloat(cov_11_range.value);
+
+            mu_0_value.textContent = mu_0.toFixed(1);
+            mu_1_value.textContent = mu_1.toFixed(1);
+            cov_00_value.textContent = cov_00.toFixed(1);
+            cov_01_value.textContent = cov_01.toFixed(1);
+            cov_11_value.textContent = cov_11.toFixed(1);
+
+            const N = 200;
+            const theta_0 = Array.from({ length: N }, (_, i) => -3 + (i * 6) / (N - 1));
+            const theta_1 = Array.from({ length: N }, (_, i) => -3 + (i * 6) / (N - 1));
+
+            const density = new Array(N).fill(null).map((_, i) =>
+                theta_0.map((_, j) => {
+                    const x = theta_0[j];
+                    const y = theta_1[i];
+                    const diff = [x - mu_0, y - mu_1];
+                    const invCov = [[1 / cov_00, cov_01 / cov_00], [cov_01 / cov_00, cov_11 / cov_00]];
+                    const exponent = -0.5 * (
+                        (diff[0] * diff[0] * invCov[0][0] + 2 * diff[0] * diff[1] * invCov[0][1] + diff[1] * diff[1] * invCov[1][1])
+                    );
+                    return Math.exp(exponent) / (2 * Math.PI * Math.sqrt(cov_00 * cov_11));
+                })
+            );
+
+            const data = [{
+                type: 'contour',
+                z: density,
+                x: theta_0,
+                y: theta_1,
+                colorscale: 'Viridis',
+                contours: { showlabels: true }
+            }];
+
+            const layout = {
+                title: `Bivariate Gaussian Contour\nμ = [${mu_0}, ${mu_1}], Covariance = [[${cov_00}, ${cov_01}], [${cov_01}, ${cov_11}]]`,
+                xaxis: { title: 'θ₀', scaleanchor: 'y', scaleratio: 1 },
+                yaxis: { title: 'θ₁' },
+                aspectratio: { x: 1, y: 1 }
+            };
+
+            Plotly.newPlot(plotDiv, data, layout);
+        }
+
+        mu_0_range.addEventListener('input', updatePlot);
+        mu_1_range.addEventListener('input', updatePlot);
+        cov_00_range.addEventListener('input', updatePlot);
+        cov_01_range.addEventListener('input', updatePlot);
+        cov_11_range.addEventListener('input', updatePlot);
+
+        updatePlot();
+    </script>
+</body>
+</html>
