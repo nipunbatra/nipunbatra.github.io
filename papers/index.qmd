@@ -2,6 +2,18 @@
 title: Publications
 ---
 
+## 2023
+
+#### "Fine-Grained Spatio-Temporal Particulate Matter Dataset From Delhi For ML based Modeling"
+
+Sachin Chauhan,Zeel Patel,Sayan Ranu,Rijurekha Sen,and Nipun Batra. In NeurIPS, 2023
+
+#### "SpiroMask: measuring Lung function using consumer-grade masks"
+
+Rishiraj Adhikary, Dhruvi Lodhavia, Chris Francis, Rohit Patil, Tanmay Srivastava, Prerna Khanna, Nipun Batra, Joseph Breda, Jacob Peplinski, Shwetak Patel. In ACM Transactions on Health
+
+
+
 ## 2022
 
 #### "I do not know": Quantifying Uncertainty in Neural Network Based Approaches for Non-Intrusive Load Monitoring
