@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1696825357 "/Users/nipun/git/nipunbatra.github.io/files/cv.tex" "cv.pdf" "cv" 1696825358 0
+["pdflatex"] 1696825619 "/Users/nipun/git/nipunbatra.github.io/files/cv.tex" "cv.pdf" "cv" 1696825619 0
   "/Users/nipun/Library/TinyTeX/texmf-dist/fonts/enc/dvips/sourcesanspro/a_cqavns.enc" 1587936753 3284 5a8d0b8b875ab0a6051fa7a49b1da55e ""
   "/Users/nipun/Library/TinyTeX/texmf-dist/fonts/enc/dvips/sourcesanspro/a_ktnhmk.enc" 1587936753 3058 7872ec9665c3dbaa1067778152b4bf36 ""
   "/Users/nipun/Library/TinyTeX/texmf-dist/fonts/tfm/adobe/sourcesanspro/SourceSansPro-Bold-tosf-sc-t1--base.tfm" 1587936753 1624 40f3bbc3c83777c8854b4572cc8ae3ef ""
@@ -105,10 +105,10 @@
   "/Users/nipun/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1696825351 809591 2b02e26af1097418e000f66a0741455a ""
   "/Users/nipun/Library/TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt" 1678950801 6484162 17bb2968ef42cb572352c64dc28f9a71 ""
   "/Users/nipun/Library/TinyTeX/texmf.cnf" 1671333305 637 edd806fb06a89761a6034e1968af9017 ""
-  "/Users/nipun/git/nipunbatra.github.io/files/cv.tex" 1696825354 22979 9363c8564e1ef07b4a9ae07b256e53a9 ""
-  "cv.aux" 1696825358 554 1946bb2d40f231db7fb58bc3ffb28649 "pdflatex"
-  "cv.out" 1696825358 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "cv.tex" 1696825354 22979 9363c8564e1ef07b4a9ae07b256e53a9 ""
+  "/Users/nipun/git/nipunbatra.github.io/files/cv.tex" 1696825618 23101 82b1defff054690d6e73ec8657c1dbef ""
+  "cv.aux" 1696825619 554 1946bb2d40f231db7fb58bc3ffb28649 "pdflatex"
+  "cv.out" 1696825619 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "cv.tex" 1696825618 23101 82b1defff054690d6e73ec8657c1dbef ""
   "trophy.eps" 1696825158 760830 ab64f0e60049c0cbeef1088e0eda73ab ""
   (generated)
   "cv.aux"
