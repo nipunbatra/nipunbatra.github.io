@@ -12,8 +12,8 @@ website:
         text: Publications
       - href: teaching.qmd
         text: Teaching
-      - href: group.qmd
-        text: Group
+      - href: https://nipunbatra.github.io/lab/
+        text: Lab (+Handbook)
       - href: blog
         text: Blog
       - href: news.qmd

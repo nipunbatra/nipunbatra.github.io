@@ -10,7 +10,7 @@ Sachin Chauhan,Zeel Patel,Sayan Ranu,Rijurekha Sen,and Nipun Batra. In NeurIPS, 
 
 #### "SpiroMask: measuring Lung function using consumer-grade masks"
 
-Rishiraj Adhikary, Dhruvi Lodhavia, Chris Francis, Rohit Patil, Tanmay Srivastava, Prerna Khanna, Nipun Batra, Joseph Breda, Jacob Peplinski, Shwetak Patel. In ACM Transactions on Health
+Rishiraj Adhikary, Dhruvi Lodhavia, Chris Francis, Rohit Patil, Tanmay Srivastava, Prerna Khanna, Nipun Batra, Joseph Breda, Jacob Peplinski, Shwetak Patel. In ACM Transactions on Health 
 
 
 
