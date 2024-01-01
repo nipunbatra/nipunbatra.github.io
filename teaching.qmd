@@ -2,6 +2,7 @@
 title: Teaching
 ---
 
+* [Spring 2024 Machine Learning](https://nipunbatra.github.io/ml2024/)
 * [Fall 2023 Probabilistic Machine Learning](https://nipunbatra.github.io/pml2023/)
 * [Spring 2023 Machine Learning](https://nipunbatra.github.io/ml2023/)
 * [Winter 2022 Computing](https://nipunbatra.github.io/comp22/)
