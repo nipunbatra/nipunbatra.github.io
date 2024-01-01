@@ -1,52 +1,17 @@
 [
   {
-    "objectID": "group_pics.html#may-2023",
-    "href": "group_pics.html#may-2023",
-    "title": "Group Photos",
-    "section": "2 May 2023",
-    "text": "2 May 2023\n\nBatch of 2023 (Saagar, Aadesh, Xhitij, Nipun, Zeel (not batch of 2023), Ankita, Eshan, Hitarth, Gautam)"
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "Spring 2024 Machine Learning\nFall 2023 Probabilistic Machine Learning\nSpring 2023 Machine Learning\nWinter 2022 Computing\nFall 2022 Probabilistic Machine Learning\nSpring 2022 Machine Learning\nWinter 2021 Computing\nFall 2021 Ubiquitous Computing\nSpring 2021 Machine Learning\nWinter 2020 Introduction to Computing\nFall 2020 Operating Systems\nFall 2020 Graduate Systems\nSpring 2020 Machine Learning\nFall 2019 Operating Systems\n[Fall 2019 Graduate Systems]\nSpring 2019 Machine Learning\nFall 2018 Operating Systems\nFall 2018 Graduate Systems"
   },
   {
-    "objectID": "group_pics.html#may-2023-1",
-    "href": "group_pics.html#may-2023-1",
-    "title": "Group Photos",
-    "section": "2 May 2023",
-    "text": "2 May 2023\n\nCake by batch of 2023"
-  },
-  {
-    "objectID": "group_pics.html#nov-2021",
-    "href": "group_pics.html#nov-2021",
-    "title": "Group Photos",
-    "section": "Nov 2021",
-    "text": "Nov 2021\n\nApoorv’s “re” visit to the campus (others in frame: Rishiraj and Zeel)"
-  },
-  {
-    "objectID": "group_pics.html#dec-2021",
-    "href": "group_pics.html#dec-2021",
-    "title": "Group Photos",
-    "section": "Dec 2021",
-    "text": "Dec 2021\n\nCelebrating AAAI paper acceptance"
-  },
-  {
-    "objectID": "group_pics.html#july-2022",
-    "href": "group_pics.html#july-2022",
-    "title": "Group Photos",
-    "section": "July 2022",
-    "text": "July 2022\n\nWith a subset of the batch of 2022 (Harsh, Hetvi, Nipun, Dhruvi, Palak)"
-  },
-  {
-    "objectID": "group_pics.html#may-2023-2",
-    "href": "group_pics.html#may-2023-2",
-    "title": "Group Photos",
-    "section": "May 2023",
-    "text": "May 2023\n\nMay 2023 dinner"
-  },
-  {
-    "objectID": "group_pics.html#july-2023",
-    "href": "group_pics.html#july-2023",
-    "title": "Group Photos",
-    "section": "July 2023",
-    "text": "July 2023\n\nJuly 2023 at the 2023 batch convocation (and celebration of multiple awards!)"
+    "objectID": "media.html",
+    "href": "media.html",
+    "title": "Media Coverage",
+    "section": "",
+    "text": "SpiroMask project\nSpiroMask was covered comprehensively by The Ahmedabad Mirror (link) on 3rd November 2022 \n\n\nPhD student Rishiraj’s Fullbright Nehru Fellowship\nOur PhD student, Rishiraj Adhikary won the prestigious Fullbright Nehru fellowship and visited CMU to work with Prof. Mayank Goel for 9 months.\n\n\nEducation Times\nIndian Express\nAhmedabad Mirror\nIndia Education Diary\nCareers 360"
   },
   {
     "objectID": "papers/index.html",
@@ -133,11 +98,53 @@
     "text": "2013 and before\n\nIt’s Different: Insights into home energy consumption in India\nNipun Batra, Manoj Gulati, Amarjeet Singh, Mani Srivastava.\nIn: 5th ACM Workshop On Embedded Systems For Energy-Efficient Buildings (Buildsys 2013)[PDF][Github][Dataset][Slides (.pptx)][Slides (.pdf)]\n\n\nINDiC: Improved Non-Intrusive load monitoring using load Division and Calibration\nNipun Batra, Haimonti Dutta, Amarjeet Singh\nIn: ICMLA 2013[PDF][Slides (.pptx)][Slides (.pdf)]\n\n\nExperiences with Occupancy Based Building Management Systems\nNipun Batra, Pandarasamy Arjunan, Amarjeet Singh, Pushpendra Singh\nIn: ISSNIP 2013[PDF]\n\n\nSensorAct: A Privacy and Security Aware Federated Middleware for Building Management\nPandarasamy Arjunan, Nipun Batra, Haksoo Choi, Amarjeet Singh, Pushpendra Singh, Mani Srivastava\nIn: Buildsys 2012[PDF]"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Nipun Batra",
-    "section": "",
-    "text": "Nipun Batra is an Assistant Professor in Computer Science at IIT Gandhinagar. He previously completed his postdoc from University of Virginia. He completed his PhD. from IIIT Delhi where he was a TCS PhD fellow. His group broadly works on machine learning/AI/sensors/IoT for computational sustainability problems like smart buildings and air quality.\nHis work has been awarded several awards, including, the best PhD presentation at ACM Sensys, best demo at ACM Buildsys, and a best video nominee at ACM KDD.\nHe is working with his team towards a Jupyter book on code first understanding machine learning."
+    "objectID": "group_pics.html#may-2023",
+    "href": "group_pics.html#may-2023",
+    "title": "Group Photos",
+    "section": "2 May 2023",
+    "text": "2 May 2023\n\nBatch of 2023 (Saagar, Aadesh, Xhitij, Nipun, Zeel (not batch of 2023), Ankita, Eshan, Hitarth, Gautam)"
+  },
+  {
+    "objectID": "group_pics.html#may-2023-1",
+    "href": "group_pics.html#may-2023-1",
+    "title": "Group Photos",
+    "section": "2 May 2023",
+    "text": "2 May 2023\n\nCake by batch of 2023"
+  },
+  {
+    "objectID": "group_pics.html#nov-2021",
+    "href": "group_pics.html#nov-2021",
+    "title": "Group Photos",
+    "section": "Nov 2021",
+    "text": "Nov 2021\n\nApoorv’s “re” visit to the campus (others in frame: Rishiraj and Zeel)"
+  },
+  {
+    "objectID": "group_pics.html#dec-2021",
+    "href": "group_pics.html#dec-2021",
+    "title": "Group Photos",
+    "section": "Dec 2021",
+    "text": "Dec 2021\n\nCelebrating AAAI paper acceptance"
+  },
+  {
+    "objectID": "group_pics.html#july-2022",
+    "href": "group_pics.html#july-2022",
+    "title": "Group Photos",
+    "section": "July 2022",
+    "text": "July 2022\n\nWith a subset of the batch of 2022 (Harsh, Hetvi, Nipun, Dhruvi, Palak)"
+  },
+  {
+    "objectID": "group_pics.html#may-2023-2",
+    "href": "group_pics.html#may-2023-2",
+    "title": "Group Photos",
+    "section": "May 2023",
+    "text": "May 2023\n\nMay 2023 dinner"
+  },
+  {
+    "objectID": "group_pics.html#july-2023",
+    "href": "group_pics.html#july-2023",
+    "title": "Group Photos",
+    "section": "July 2023",
+    "text": "July 2023\n\nJuly 2023 at the 2023 batch convocation (and celebration of multiple awards!)"
   },
   {
     "objectID": "news.html",
@@ -147,18 +154,11 @@
     "text": "Dec 2021: Our AAAI 2022 paper on Accurate and Scalable Non-Stationary GPs gets accepted to AAAI 2022 :)\nNov 2021: Received a 5000 USD cloud credit grant from Google Research\nOct 2021: Rishiraj gets the prestigious USIEF Fullbright Fellowship\nOct 2021: Rishiraj wins the prestigious PMRF fellowship!\nSep 2021: Notes paper on adding neural network approaches to NILMTK-contrib accepted at Buildsys 2021\nSep 2021: Explainable on HMMs accepted to IEEE VisxAI workshop Link\nAug 2021: Teaching a course on Ubiquitous computing this semester Link\nMay 2021: Completed the ML course this semester with feedback 3.83/4 :)\nJan 2021: Completed the Introduction to Programming course this semester with feedback 3.73/4 :)\nFeb 2021: Serving as the publication chair for CODS-COMAD 2022\nDec 2020: Our paper on understanding air quality perceptions from social media accepted at ACM CSCW :)\nNov 2020: Got a grant from CISCO on edge non-intrusive load monitoring\nOct 2020: Got a grant from SERB on AI and sensor networks for air quality\nSep 2020: Got a grant from Google on COVID and air quality linkages\nMay 2020: Our Distill article on Bayesian Optimization got accepted\nFeb 2020: Organised a faculty development program on data science and analytics under the aegis of TEQIP (Pic with the group)\nFeb 2020: CSE@IITGN organised ACM India annual event. (Pic with Yann LeCun (Turing award), Shwetak Patel (ACM Compute Prize))\nJan 2020: Members of our lab attended and presented four posters at CODS COMAD 2020\nNov 2019: Spoke at INS Valsura on Machine Learning. Honoured to speak in front of officers from Indian Navy, Army and Air Force\nNov 2019: Gave a talk about our energy dis-aggregation work at ACM Buildsys 2019 in NYC!\nNov 2019: Gave a talk about our air quality work at Google, Bangalore\nApr 2019: Giving a talk on Computational Sustainability at Nirma University.\nMar 2019: Giving a talk on Computational Sustainability at ROCS 2019.\nJan 2019: Paper accepted in WWW! Details soon on Publications page.\nJan 2019: Teaching machine learning this semester. Class URL\nNov 2018: Haroon presented our paper in Buildsys 18!\nNov 2018: Awarded an Microsoft AI for Earth grant worth $15000 in Azure credits\nAug 2018: Took a research methods for CS bootcamp at IITGN. Slides,Youtube\nJuly 2018: Received a Titan XP GPU from NVidia via their grant program. Thanks, NVidia!\nJuly 2018: Teaching operating systems in the current semester at IITGN\nJuly 2018: Joined CSE at IITGN as an Assistant Professor\nJune 2018: Completed my postdoc at UVa. Been great working with Kamin, Hongning, and Yiling!\nFeb 2018: I’m presenting our work at AAAI in New Orleans\nNov 2017: I’m presenting our work on scalable energy breakdown at NSF CPS meeting"
   },
   {
-    "objectID": "teaching.html",
-    "href": "teaching.html",
-    "title": "Teaching",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Nipun Batra",
     "section": "",
-    "text": "Fall 2023 Probabilistic Machine Learning\nSpring 2023 Machine Learning\nWinter 2022 Computing\nFall 2022 Probabilistic Machine Learning\nSpring 2022 Machine Learning\nWinter 2021 Computing\nFall 2021 Ubiquitous Computing\nSpring 2021 Machine Learning\nWinter 2020 Introduction to Computing\nFall 2020 Operating Systems\nFall 2020 Graduate Systems\nSpring 2020 Machine Learning\nFall 2019 Operating Systems\n[Fall 2019 Graduate Systems]\nSpring 2019 Machine Learning\nFall 2018 Operating Systems\nFall 2018 Graduate Systems"
-  },
-  {
-    "objectID": "media.html",
-    "href": "media.html",
-    "title": "Media Coverage",
-    "section": "",
-    "text": "SpiroMask project\nSpiroMask was covered comprehensively by The Ahmedabad Mirror (link) on 3rd November 2022 \n\n\nPhD student Rishiraj’s Fullbright Nehru Fellowship\nOur PhD student, Rishiraj Adhikary won the prestigious Fullbright Nehru fellowship and visited CMU to work with Prof. Mayank Goel for 9 months.\n\n\nEducation Times\nIndian Express\nAhmedabad Mirror\nIndia Education Diary\nCareers 360"
+    "text": "Nipun Batra is an Assistant Professor in Computer Science at IIT Gandhinagar. He previously completed his postdoc from University of Virginia. He completed his PhD. from IIIT Delhi where he was a TCS PhD fellow. His group broadly works on machine learning/AI/sensors/IoT for computational sustainability problems like smart buildings and air quality.\nHis work has been awarded several awards, including, the best PhD presentation at ACM Sensys, best demo at ACM Buildsys, and a best video nominee at ACM KDD.\nHe is working with his team towards a Jupyter book on code first understanding machine learning."
   },
   {
     "objectID": "group.html",
