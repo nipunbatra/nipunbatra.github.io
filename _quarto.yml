@@ -8,18 +8,14 @@ website:
     right:
       - href: index.qmd
         text: Home
-      - href: papers
+      - href: https://sustainability-lab.github.io/papers/
         text: Publications
       - href: teaching.qmd
         text: Teaching
-      - href: https://nipunbatra.github.io/lab/
+      - href: https://sustainability-lab.github.io
         text: Lab (+Handbook)
       - href: blog
         text: Blog
-      - href: news.qmd
-        text: News
-      - href: media.qmd
-        text: Media
       - href: files/cv.pdf
         text: CV
 
