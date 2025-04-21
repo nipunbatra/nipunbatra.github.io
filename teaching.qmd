@@ -2,6 +2,10 @@
 title: Teaching
 ---
 
+
+* [Spring 2025 AI for Social Good](https://nipunbatra.github.io/aisg25/)
+* [Spring 2025 Probability, Statistics, and Data Visualization](https://nipunbatra.github.io/psdv25/)
+* [Fall 2024 Machine Learning](https://nipunbatra.github.io/ml2024-fall/)
 * [Spring 2024 Machine Learning](https://nipunbatra.github.io/ml2024/)
 * [Fall 2023 Probabilistic Machine Learning](https://nipunbatra.github.io/pml2023/)
 * [Spring 2023 Machine Learning](https://nipunbatra.github.io/ml2023/)

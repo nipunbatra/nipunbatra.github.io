@@ -23,7 +23,7 @@ about:
       href: https://scholar.google.co.in/citations?user=rFGzHlIAAAAJ&hl=en   
 ---
 
-Nipun Batra is an Assistant Professor in Computer Science at IIT Gandhinagar. He previously completed his postdoc from University of Virginia. He completed his PhD. from IIIT Delhi where he was a TCS PhD fellow. His group called the Sustainability Lab broadly works on machine learning and sensing for computational sustainability problems like smart buildings, air quality and wearable healthcare.
+Nipun Batra is an Associate Professor in Computer Science at IIT Gandhinagar. He previously completed his postdoc from University of Virginia. He completed his PhD. from IIIT Delhi where he was a TCS PhD fellow. His group called the Sustainability Lab broadly works on machine learning and sensing for computational sustainability problems like smart buildings, air quality and wearable healthcare.
 
 His work has been awarded several awards, including, young alumni award from IIIT Delhi, the best PhD presentation at ACM Sensys, best demo at ACM Buildsys, and a best video nominee at ACM KDD. 
 
