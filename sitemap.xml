@@ -1,31 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://nipunbatra.github.io/group_pics.html</loc>
-    <lastmod>2025-01-25T09:17:23.398Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nipunbatra.github.io/group.html</loc>
-    <lastmod>2025-01-25T09:17:23.398Z</lastmod>
-  </url>
-  <url>
     <loc>https://nipunbatra.github.io/teaching.html</loc>
-    <lastmod>2025-01-25T09:17:24.461Z</lastmod>
+    <lastmod>2025-06-04T09:14:36.869Z</lastmod>
   </url>
   <url>
     <loc>https://nipunbatra.github.io/media.html</loc>
-    <lastmod>2025-01-25T09:17:23.440Z</lastmod>
+    <lastmod>2025-06-04T09:14:35.855Z</lastmod>
   </url>
   <url>
     <loc>https://nipunbatra.github.io/news.html</loc>
-    <lastmod>2025-01-25T09:17:23.440Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nipunbatra.github.io/index.html</loc>
-    <lastmod>2025-01-25T09:17:23.440Z</lastmod>
+    <lastmod>2025-06-04T09:14:35.855Z</lastmod>
   </url>
   <url>
     <loc>https://nipunbatra.github.io/papers/index.html</loc>
-    <lastmod>2025-01-25T09:17:23.732Z</lastmod>
+    <lastmod>2025-06-04T09:14:36.144Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nipunbatra.github.io/index.html</loc>
+    <lastmod>2025-06-04T09:14:35.855Z</lastmod>
   </url>
 </urlset>
