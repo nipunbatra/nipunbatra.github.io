@@ -3,7 +3,7 @@ title: Nipun Batra
 image: images/nipun.jpg
 about:
   template: trestles
-  image-width: 10em
+  image-width: 12em
   image-shape: rounded
   links:
     - icon: twitter
@@ -23,9 +23,43 @@ about:
       href: https://scholar.google.co.in/citations?user=rFGzHlIAAAAJ&hl=en   
 ---
 
-Nipun Batra is an Associate Professor in Computer Science at IIT Gandhinagar. He previously completed his postdoc from University of Virginia. He completed his PhD. from IIIT Delhi where he was a TCS PhD fellow. His group called the Sustainability Lab broadly works on machine learning and sensing for computational sustainability problems like smart buildings, air quality and wearable healthcare.
+<style>
+.lab-cta {
+    background-color: #d1ecf1;
+    border: 1px solid #bee5eb;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 25px 0;
+    text-align: center;
+}
 
-His work has been awarded several awards, including, young alumni award from IIIT Delhi, the best PhD presentation at ACM Sensys, best demo at ACM Buildsys, and a best video nominee at ACM KDD. 
+.lab-cta h4 {
+    color: #0c5460;
+    margin-bottom: 10px;
+}
 
+.lab-cta a {
+    display: inline-block;
+    background-color: #17a2b8;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px 10px;
+    font-weight: 500;
+}
 
+.lab-cta a:hover {
+    background-color: #138496;
+    text-decoration: none;
+}
+</style>
 
+Nipun Batra is an Associate Professor in [Computer Science](https://cs.iitgn.ac.in/) at [IIT Gandhinagar](https://iitgn.ac.in/), where he leads the [Sustainability Lab](https://sustainability-lab.github.io/). He previously completed his postdoc from University of Virginia and his PhD from IIIT Delhi as a TCS PhD fellow. His group develops AI-powered solutions for critical sustainability challenges including smart buildings, air quality monitoring, and wearable healthcare technologies. His work has been awarded several [awards](https://sustainability-lab.github.io/awards.html), including ACM SigEnergy Rising Star Award 2025, Excellence in Teaching Award IITGN 2024, Young Alumni Award IIIT Delhi 2023, Best PhD Presentation ACM SenSys 2015, Best Demo ACM BuildSys 2014, and Best Video Nominee ACM KDD 2016.
+
+<div class="lab-cta">
+<h4>🚀 Join the Sustainability Lab</h4>
+<p>Interested in AI for sustainability and health? We're looking for motivated students and researchers.</p>
+<a href="https://sustainability-lab.github.io/openings.html">View Open Positions</a>
+<a href="https://sustainability-lab.github.io">Lab Website</a>
+</div>
