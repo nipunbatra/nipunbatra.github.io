@@ -34,6 +34,18 @@ kbd,
                 transform: translateX(5px);
             }
             
+            // Special styling for courses with YouTube recordings
+            &:has(.youtube-course) {
+                background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+                border-left-color: #ff6b6b;
+                box-shadow: 0 2px 4px rgba(255, 107, 107, 0.1);
+                
+                &:hover {
+                    background: linear-gradient(135deg, #ffecb3 0%, #ffd93d 100%);
+                    box-shadow: 0 4px 8px rgba(255, 107, 107, 0.2);
+                }
+            }
+            
             a {
                 text-decoration: none;
                 color: #333;
