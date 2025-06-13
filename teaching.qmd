@@ -8,10 +8,10 @@ title: Teaching
 
 ::: {.teaching-list}
 - **[Spring 2025 AI for Social Good](https://nipunbatra.github.io/aisg25/)**
-- [**Spring 2025 Probability, Statistics, and Data Visualization**](https://nipunbatra.github.io/psdv25/) 🎥{.youtube-course}
+- **[Spring 2025 Probability, Statistics, and Data Visualization](https://nipunbatra.github.io/psdv25/)** <span class="youtube-course">🎥</span>
 - [Fall 2024 Machine Learning](https://nipunbatra.github.io/ml2024-fall/)
-- [**Spring 2024 Machine Learning**](https://nipunbatra.github.io/ml2024/) 🎥{.youtube-course}
-- [**Fall 2023 Probabilistic Machine Learning**](https://nipunbatra.github.io/pml2023/) 🎥{.youtube-course}
+- **[Spring 2024 Machine Learning](https://nipunbatra.github.io/ml2024/)** <span class="youtube-course">🎥</span>
+- **[Fall 2023 Probabilistic Machine Learning](https://nipunbatra.github.io/pml2023/)** <span class="youtube-course">🎥</span>
 - [Spring 2023 Machine Learning](https://nipunbatra.github.io/ml2023/)
 - [Winter 2022 Computing](https://nipunbatra.github.io/comp22/)
 - [Fall 2022 Probabilistic Machine Learning](https://nipunbatra.github.io/pml2022/)
@@ -21,8 +21,8 @@ title: Teaching
 - [Spring 2021 Machine Learning](https://nipunbatra.github.io/ml2021/)
 - [Winter 2020 Introduction to Computing](https://www.notion.so/ES-102-Introduction-to-Computing-7535a00a1b124c5cb6f2a46eb979540b)
 - [Fall 2020 Operating Systems](https://nipunbatra.github.io/os2020/)
-- [**Spring 2020 Machine Learning**](https://nipunbatra.github.io/ml2020/) 🎥{.youtube-course}
+- **[Spring 2020 Machine Learning](https://nipunbatra.github.io/ml2020/)** <span class="youtube-course">🎥</span>
 - [Fall 2019 Operating Systems](https://nipunbatra.github.io/os2019/)
 - [Spring 2019 Machine Learning](https://nipunbatra.github.io/ml2019/)
-- [**Fall 2018 Operating Systems**](https://nipunbatra.github.io/os2018/) 🎥{.youtube-course}
+- **[Fall 2018 Operating Systems](https://nipunbatra.github.io/os2018/)** <span class="youtube-course">🎥</span>
 :::
