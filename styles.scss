@@ -15,3 +15,45 @@ kbd,
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 }
+
+.teaching-list {
+    ul {
+        list-style: none;
+        padding-left: 0;
+        
+        li {
+            padding: 0.7rem 1rem;
+            margin: 0.5rem 0;
+            background-color: #f8f9fa;
+            border-left: 4px solid #007bff;
+            border-radius: 0.25rem;
+            transition: all 0.2s ease;
+            
+            &:hover {
+                background-color: #e9ecef;
+                transform: translateX(5px);
+            }
+            
+            // Special styling for courses with YouTube recordings
+            &:has(.youtube-course) {
+                background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+                border-left-color: #ff6b6b;
+                box-shadow: 0 2px 4px rgba(255, 107, 107, 0.1);
+                
+                &:hover {
+                    background: linear-gradient(135deg, #ffecb3 0%, #ffd93d 100%);
+                    box-shadow: 0 4px 8px rgba(255, 107, 107, 0.2);
+                }
+            }
+            
+            a {
+                text-decoration: none;
+                color: #333;
+                
+                &:hover {
+                    color: #007bff;
+                }
+            }
+        }
+    }
+}
