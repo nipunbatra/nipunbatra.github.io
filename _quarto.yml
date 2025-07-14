@@ -16,14 +16,13 @@ website:
         text: Research Group
       - href: blog
         text: Blog
-      - href: files/cv.pdf
+      - href: https://nipunbatra.github.io/cv/cv.pdf
         text: CV
 
 format:
   html:
     theme:
       light: [litera, styles.scss]
-      #dark: [darkly, styles-dark.scss]
     highlight-style: a11y-dark
     mainfont: "Roboto"
     code-copy: true

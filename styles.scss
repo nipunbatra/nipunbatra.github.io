@@ -1,59 +1,339 @@
 /*-- scss:defaults --*/
 
-@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap';
 
 $font-family: "Roboto", sans-serif;
 $font-family-serif: "Roboto", sans-serif;
 
 /*-- scss:rules --*/
+
+// Clean, minimal styling inspired by sustainability lab
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+// Clean keyboard styling
 kbd,
 .kbd {
     background-color: #f6f5f5 !important;
 }
 
+// Minimal navbar
 .navbar {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    
+    .navbar-brand {
+        font-weight: 500;
+        color: #333 !important;
+    }
+    
+    .nav-link {
+        color: #666 !important;
+        font-weight: 400;
+        
+        &:hover {
+            color: #333 !important;
+        }
+        
+        &.active {
+            color: #333 !important;
+            font-weight: 500;
+        }
+    }
 }
 
+// Profile section with clean layout
+.quarto-about-trestles {
+    .about-entity {
+        margin-bottom: 2rem;
+        
+        .about-image img {
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    }
+    
+    .about-contents {
+        font-size: 1rem;
+        line-height: 1.6;
+        font-weight: 300;
+        
+        p {
+            margin-bottom: 1.5rem;
+        }
+    }
+    
+    .about-links {
+        margin-top: 2rem;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 0.75rem;
+        align-items: center;
+        flex-direction: row !important;
+        
+        .about-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.6rem 1.2rem;
+            background-color: #ffffff;
+            color: #555;
+            text-decoration: none;
+            border-radius: 6px;
+            border: 1px solid #e1e5e9;
+            transition: all 0.2s ease;
+            font-weight: 400;
+            font-size: 0.9rem;
+            
+            i {
+                margin-right: 0.5rem;
+                font-size: 1rem;
+            }
+            
+            &:hover {
+                background-color: #f8f9fa;
+                color: #333;
+                text-decoration: none;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                transform: translateY(-1px);
+            }
+            
+            // Specific social media colors on hover
+            &[href*="twitter"]:hover {
+                background-color: #e8f4fd;
+                border-color: #1da1f2;
+                color: #1da1f2;
+            }
+            
+            &[href*="github"]:hover {
+                background-color: #f6f8fa;
+                border-color: #333;
+                color: #333;
+            }
+            
+            &[href*="linkedin"]:hover {
+                background-color: #e8f4fd;
+                border-color: #0077b5;
+                color: #0077b5;
+            }
+            
+            &[href*="mailto"]:hover {
+                background-color: #fef7ff;
+                border-color: #e879f9;
+                color: #e879f9;
+            }
+            
+            &[href*="scholar"]:hover {
+                background-color: #f0f9ff;
+                border-color: #0284c7;
+                color: #0284c7;
+            }
+        }
+    }
+}
+
+// Clean teaching list styling
 .teaching-list {
     ul {
         list-style: none;
         padding-left: 0;
         
         li {
-            padding: 0.7rem 1rem;
+            padding: 1rem;
             margin: 0.5rem 0;
-            background-color: #f8f9fa;
-            border-left: 4px solid #007bff;
-            border-radius: 0.25rem;
+            background-color: #ffffff;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
             transition: all 0.2s ease;
             
             &:hover {
-                background-color: #e9ecef;
-                transform: translateX(5px);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                transform: translateY(-2px);
             }
             
             // Special styling for courses with YouTube recordings
             &:has(.youtube-course) {
-                background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
-                border-left-color: #ff6b6b;
-                box-shadow: 0 2px 4px rgba(255, 107, 107, 0.1);
+                background-color: #fef7ff;
+                border-color: #e879f9;
                 
                 &:hover {
-                    background: linear-gradient(135deg, #ffecb3 0%, #ffd93d 100%);
-                    box-shadow: 0 4px 8px rgba(255, 107, 107, 0.2);
+                    background-color: #fdf4ff;
+                    box-shadow: 0 4px 12px rgba(232, 121, 249, 0.15);
                 }
             }
             
             a {
                 text-decoration: none;
                 color: #333;
+                font-weight: 400;
                 
                 &:hover {
-                    color: #007bff;
+                    color: #333;
                 }
             }
+        }
+    }
+}
+
+// Clean CTA section
+.lab-cta {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 2rem 0;
+    text-align: center;
+    
+    h4 {
+        color: #333;
+        margin-bottom: 1rem;
+        font-weight: 500;
+    }
+    
+    p {
+        color: #666;
+        margin-bottom: 1.5rem;
+    }
+    
+    a {
+        display: inline-block;
+        background-color: #333;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        text-decoration: none;
+        border-radius: 4px;
+        margin: 0.25rem;
+        font-weight: 500;
+        transition: all 0.2s ease;
+        
+        &:hover {
+            background-color: #555;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+    .content {
+        padding: 1rem;
+    }
+    
+    // Reduce mobile whitespace
+    .quarto-about-trestles {
+        .about-entity {
+            margin-bottom: 1rem;
+        }
+        
+        .about-contents {
+            p {
+                margin-bottom: 1rem;
+            }
+        }
+        
+        .about-links {
+            margin-top: 1rem;
+        }
+    }
+    
+    // Improve hamburger menu visibility
+    .navbar-toggler {
+        border: 2px solid #333 !important;
+        border-radius: 4px !important;
+        padding: 0.5rem !important;
+        
+        &:focus {
+            box-shadow: 0 0 0 2px rgba(51, 51, 51, 0.2) !important;
+        }
+        
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 33, 33, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+        }
+    }
+    
+    .quarto-about-trestles .about-links {
+        justify-content: center !important;
+        gap: 0.75rem !important;
+        flex-wrap: wrap !important;
+        flex-direction: row !important;
+        display: flex !important;
+        
+        .about-link {
+            flex: 0 0 auto !important;
+            min-width: auto !important;
+            padding: 0.6rem !important;
+            font-size: 0 !important;
+            justify-content: center !important;
+            width: 2.5rem !important;
+            height: 2.5rem !important;
+            border-radius: 50% !important;
+            display: inline-flex !important;
+            
+            i {
+                margin-right: 0 !important;
+                font-size: 1.1rem !important;
+            }
+            
+            .about-link-text {
+                display: none !important;
+            }
+        }
+    }
+}
+
+// Extra small screens
+@media (max-width: 576px) {
+    // Further reduce whitespace on small screens
+    .quarto-about-trestles {
+        .about-entity {
+            margin-bottom: 0.75rem;
+        }
+        
+        .about-contents {
+            p {
+                margin-bottom: 0.75rem;
+            }
+        }
+        
+        .about-links {
+            margin-top: 0.75rem;
+        }
+    }
+    
+    .quarto-about-trestles .about-links {
+        justify-content: center !important;
+        gap: 0.5rem !important;
+        flex-wrap: wrap !important;
+        flex-direction: row !important;
+        display: flex !important;
+        
+        .about-link {
+            padding: 0.5rem !important;
+            width: 2.2rem !important;
+            height: 2.2rem !important;
+            
+            i {
+                font-size: 1rem !important;
+            }
+        }
+    }
+    
+    .teaching-list ul li {
+        padding: 0.8rem;
+    }
+    
+    .lab-cta {
+        padding: 1.5rem;
+        
+        a {
+            display: block;
+            margin: 0.5rem 0;
         }
     }
 }
