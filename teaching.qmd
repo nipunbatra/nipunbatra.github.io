@@ -7,6 +7,7 @@ title: Teaching
 </div>
 
 ::: {.teaching-list}
+- [Fall 2025 Machine Learning](https://nipunbatra.github.io/ml2025/)
 - **[Spring 2025 AI for Social Good](https://nipunbatra.github.io/aisg25/)**
 - **[Spring 2025 Probability, Statistics, and Data Visualization](https://nipunbatra.github.io/psdv25/)** <span class="youtube-course">🎥</span>
 - [Fall 2024 Machine Learning](https://nipunbatra.github.io/ml2024-fall/)
