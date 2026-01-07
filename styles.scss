@@ -135,47 +135,134 @@ kbd,
     }
 }
 
-// Clean teaching list styling
-.teaching-list {
-    ul {
-        list-style: none;
-        padding-left: 0;
-        
-        li {
-            padding: 1rem;
-            margin: 0.5rem 0;
-            background-color: #ffffff;
-            border: 1px solid #e9ecef;
-            border-radius: 8px;
-            transition: all 0.2s ease;
-            
-            &:hover {
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-                transform: translateY(-2px);
-            }
-            
-            // Special styling for courses with YouTube recordings
-            &:has(.youtube-course) {
-                background-color: #fef7ff;
-                border-color: #e879f9;
-                
-                &:hover {
-                    background-color: #fdf4ff;
-                    box-shadow: 0 4px 12px rgba(232, 121, 249, 0.15);
-                }
-            }
-            
-            a {
-                text-decoration: none;
-                color: #333;
-                font-weight: 400;
-                
-                &:hover {
-                    color: #333;
-                }
+// Teaching card grid layout
+.teaching-grid,
+.teaching-compact {
+    display: grid;
+    gap: 1.25rem;
+    margin: 1.5rem 0;
+}
+
+.teaching-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.teaching-compact {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.teaching-card {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.25s ease;
+
+    &:hover {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        transform: translateY(-3px);
+        border-color: #dee2e6;
+    }
+
+    // Featured card styling
+    &.featured {
+        border-color: #e879f9;
+        background: linear-gradient(135deg, #fef7ff 0%, #ffffff 100%);
+
+        &:hover {
+            box-shadow: 0 8px 24px rgba(232, 121, 249, 0.2);
+        }
+    }
+
+    // YouTube card styling
+    &.youtube {
+        border-color: #ef4444;
+        background: linear-gradient(135deg, #fef2f2 0%, #ffffff 100%);
+
+        &:hover {
+            box-shadow: 0 8px 24px rgba(239, 68, 68, 0.15);
+        }
+    }
+
+    .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 1rem;
+        background: #f8f9fa;
+        border-bottom: 1px solid #e9ecef;
+
+        .semester {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge {
+            font-size: 0.7rem;
+            padding: 0.25rem 0.6rem;
+            border-radius: 4px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .featured-badge {
+            background: #e879f9;
+            color: white;
+        }
+
+        .youtube-badge {
+            background: #ef4444;
+            color: white;
+
+            i {
+                font-size: 0.8rem;
             }
         }
     }
+
+    .card-body {
+        padding: 1rem;
+
+        .course-title {
+            margin: 0 0 0.5rem 0;
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 1.4;
+
+            a {
+                color: #333;
+                text-decoration: none;
+
+                &:hover {
+                    color: #e879f9;
+                }
+            }
+        }
+
+        .course-desc {
+            margin: 0;
+            font-size: 0.85rem;
+            color: #666;
+            line-height: 1.5;
+            font-weight: 300;
+        }
+    }
+}
+
+// Section heading styling
+#teaching h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #333;
+    margin-top: 2.5rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e9ecef;
 }
 
 // Clean CTA section
@@ -326,6 +413,13 @@ kbd,
     
     .teaching-list ul li {
         padding: 0.8rem;
+    }
+
+    // Teaching cards on mobile
+    .teaching-grid,
+    .teaching-compact {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
     
     .lab-cta {
