@@ -1,17 +1,10 @@
 [
   {
-    "objectID": "media.html",
-    "href": "media.html",
-    "title": "Media Coverage",
+    "objectID": "news.html",
+    "href": "news.html",
+    "title": "News",
     "section": "",
-    "text": "SpiroMask project\nSpiroMask was covered comprehensively by The Ahmedabad Mirror (link) on 3rd November 2022 \n\n\nPhD student Rishiraj’s Fullbright Nehru Fellowship\nOur PhD student, Rishiraj Adhikary won the prestigious Fullbright Nehru fellowship and visited CMU to work with Prof. Mayank Goel for 9 months.\n\n\nEducation Times\nIndian Express\nAhmedabad Mirror\nIndia Education Diary\nCareers 360"
-  },
-  {
-    "objectID": "teaching.html",
-    "href": "teaching.html",
-    "title": "Teaching",
-    "section": "",
-    "text": "🎥 YouTube Recordings Available - Courses marked with this icon have video lectures available on YouTube\n\n\n\nFall 2025 Machine Learning\nSpring 2025 AI for Social Good\nSpring 2025 Probability, Statistics, and Data Visualization 🎥\nFall 2024 Machine Learning\nSpring 2024 Machine Learning 🎥\nFall 2023 Probabilistic Machine Learning 🎥\nSpring 2023 Machine Learning\nWinter 2022 Computing\nFall 2022 Probabilistic Machine Learning\nSpring 2022 Machine Learning\nWinter 2021 Computing\nFall 2021 Ubiquitous Computing\nSpring 2021 Machine Learning\nWinter 2020 Introduction to Computing\nFall 2020 Operating Systems\nSpring 2020 Machine Learning 🎥\nFall 2019 Operating Systems\nSpring 2019 Machine Learning\nFall 2018 Operating Systems 🎥"
+    "text": "Dec 2021: Our AAAI 2022 paper on Accurate and Scalable Non-Stationary GPs gets accepted to AAAI 2022 :)\nNov 2021: Received a 5000 USD cloud credit grant from Google Research\nOct 2021: Rishiraj gets the prestigious USIEF Fullbright Fellowship\nOct 2021: Rishiraj wins the prestigious PMRF fellowship!\nSep 2021: Notes paper on adding neural network approaches to NILMTK-contrib accepted at Buildsys 2021\nSep 2021: Explainable on HMMs accepted to IEEE VisxAI workshop Link\nAug 2021: Teaching a course on Ubiquitous computing this semester Link\nMay 2021: Completed the ML course this semester with feedback 3.83/4 :)\nJan 2021: Completed the Introduction to Programming course this semester with feedback 3.73/4 :)\nFeb 2021: Serving as the publication chair for CODS-COMAD 2022\nDec 2020: Our paper on understanding air quality perceptions from social media accepted at ACM CSCW :)\nNov 2020: Got a grant from CISCO on edge non-intrusive load monitoring\nOct 2020: Got a grant from SERB on AI and sensor networks for air quality\nSep 2020: Got a grant from Google on COVID and air quality linkages\nMay 2020: Our Distill article on Bayesian Optimization got accepted\nFeb 2020: Organised a faculty development program on data science and analytics under the aegis of TEQIP (Pic with the group)\nFeb 2020: CSE@IITGN organised ACM India annual event. (Pic with Yann LeCun (Turing award), Shwetak Patel (ACM Compute Prize))\nJan 2020: Members of our lab attended and presented four posters at CODS COMAD 2020\nNov 2019: Spoke at INS Valsura on Machine Learning. Honoured to speak in front of officers from Indian Navy, Army and Air Force\nNov 2019: Gave a talk about our energy dis-aggregation work at ACM Buildsys 2019 in NYC!\nNov 2019: Gave a talk about our air quality work at Google, Bangalore\nApr 2019: Giving a talk on Computational Sustainability at Nirma University.\nMar 2019: Giving a talk on Computational Sustainability at ROCS 2019.\nJan 2019: Paper accepted in WWW! Details soon on Publications page.\nJan 2019: Teaching machine learning this semester. Class URL\nNov 2018: Haroon presented our paper in Buildsys 18!\nNov 2018: Awarded an Microsoft AI for Earth grant worth $15000 in Azure credits\nAug 2018: Took a research methods for CS bootcamp at IITGN. Slides,Youtube\nJuly 2018: Received a Titan XP GPU from NVidia via their grant program. Thanks, NVidia!\nJuly 2018: Teaching operating systems in the current semester at IITGN\nJuly 2018: Joined CSE at IITGN as an Assistant Professor\nJune 2018: Completed my postdoc at UVa. Been great working with Kamin, Hongning, and Yiling!\nFeb 2018: I’m presenting our work at AAAI in New Orleans\nNov 2017: I’m presenting our work on scalable energy breakdown at NSF CPS meeting"
   },
   {
     "objectID": "papers/index.html",
@@ -112,10 +105,38 @@
     "text": "Nipun Batra is an Associate Professor in Computer Science at IIT Gandhinagar, where he leads the Sustainability Lab. He previously completed his postdoc from University of Virginia and his PhD from IIIT Delhi as a TCS PhD fellow. His group develops AI-powered solutions for critical sustainability challenges including smart buildings, air quality monitoring, and wearable healthcare technologies. His work has been awarded several awards, including ACM SigEnergy Rising Star Award 2025, Excellence in Teaching Award IITGN 2024, Young Alumni Award IIIT Delhi 2023, Best PhD Presentation ACM SenSys 2015, Best Demo ACM BuildSys 2014, and Best Video Nominee ACM KDD 2016.\n\n\n🚀 Join the Sustainability Lab\n\n\nInterested in AI for sustainability and health? We’re looking for motivated students and researchers.\n\nView Open Positions Lab Website"
   },
   {
-    "objectID": "news.html",
-    "href": "news.html",
-    "title": "News",
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
     "section": "",
-    "text": "Dec 2021: Our AAAI 2022 paper on Accurate and Scalable Non-Stationary GPs gets accepted to AAAI 2022 :)\nNov 2021: Received a 5000 USD cloud credit grant from Google Research\nOct 2021: Rishiraj gets the prestigious USIEF Fullbright Fellowship\nOct 2021: Rishiraj wins the prestigious PMRF fellowship!\nSep 2021: Notes paper on adding neural network approaches to NILMTK-contrib accepted at Buildsys 2021\nSep 2021: Explainable on HMMs accepted to IEEE VisxAI workshop Link\nAug 2021: Teaching a course on Ubiquitous computing this semester Link\nMay 2021: Completed the ML course this semester with feedback 3.83/4 :)\nJan 2021: Completed the Introduction to Programming course this semester with feedback 3.73/4 :)\nFeb 2021: Serving as the publication chair for CODS-COMAD 2022\nDec 2020: Our paper on understanding air quality perceptions from social media accepted at ACM CSCW :)\nNov 2020: Got a grant from CISCO on edge non-intrusive load monitoring\nOct 2020: Got a grant from SERB on AI and sensor networks for air quality\nSep 2020: Got a grant from Google on COVID and air quality linkages\nMay 2020: Our Distill article on Bayesian Optimization got accepted\nFeb 2020: Organised a faculty development program on data science and analytics under the aegis of TEQIP (Pic with the group)\nFeb 2020: CSE@IITGN organised ACM India annual event. (Pic with Yann LeCun (Turing award), Shwetak Patel (ACM Compute Prize))\nJan 2020: Members of our lab attended and presented four posters at CODS COMAD 2020\nNov 2019: Spoke at INS Valsura on Machine Learning. Honoured to speak in front of officers from Indian Navy, Army and Air Force\nNov 2019: Gave a talk about our energy dis-aggregation work at ACM Buildsys 2019 in NYC!\nNov 2019: Gave a talk about our air quality work at Google, Bangalore\nApr 2019: Giving a talk on Computational Sustainability at Nirma University.\nMar 2019: Giving a talk on Computational Sustainability at ROCS 2019.\nJan 2019: Paper accepted in WWW! Details soon on Publications page.\nJan 2019: Teaching machine learning this semester. Class URL\nNov 2018: Haroon presented our paper in Buildsys 18!\nNov 2018: Awarded an Microsoft AI for Earth grant worth $15000 in Azure credits\nAug 2018: Took a research methods for CS bootcamp at IITGN. Slides,Youtube\nJuly 2018: Received a Titan XP GPU from NVidia via their grant program. Thanks, NVidia!\nJuly 2018: Teaching operating systems in the current semester at IITGN\nJuly 2018: Joined CSE at IITGN as an Assistant Professor\nJune 2018: Completed my postdoc at UVa. Been great working with Kamin, Hongning, and Yiling!\nFeb 2018: I’m presenting our work at AAAI in New Orleans\nNov 2017: I’m presenting our work on scalable energy breakdown at NSF CPS meeting"
+    "text": "Video Lectures YouTube recordings available for selected courses"
+  },
+  {
+    "objectID": "teaching.html#section",
+    "href": "teaching.html#section",
+    "title": "Teaching",
+    "section": "2025-26",
+    "text": "2025-26\n\n\n\nSpring 2026\n\n\n\nSTT-AI: Statistical Topics in AI\n\n\nAdvanced statistical methods for modern AI systems\n\n\n\n\n\nSpring 2026\n\n\n\nPrinciples of AI\n\n\nFoundational concepts in artificial intelligence"
+  },
+  {
+    "objectID": "teaching.html#section-1",
+    "href": "teaching.html#section-1",
+    "title": "Teaching",
+    "section": "2024-25",
+    "text": "2024-25\n\n\n\nFall 2025\n\n\n\nMachine Learning\n\n\nIntroduction to machine learning algorithms and applications\n\n\n\n\n\nSpring 2025\n\n\n\nAI for Social Good\n\n\nApplying AI to address societal challenges\n\n\n\n\n\nSpring 2025  Videos\n\n\n\nProbability, Statistics, and Data Visualization\n\n\nStatistical foundations and visual data communication"
+  },
+  {
+    "objectID": "teaching.html#earlier-courses",
+    "href": "teaching.html#earlier-courses",
+    "title": "Teaching",
+    "section": "Earlier Courses",
+    "text": "Earlier Courses\n\n\n\nFall 2024\n\n\n\nMachine Learning\n\n\n\n\n\nSpring 2024 \n\n\n\nMachine Learning\n\n\n\n\n\nFall 2023 \n\n\n\nProbabilistic Machine Learning\n\n\n\n\n\nSpring 2023\n\n\n\nMachine Learning\n\n\n\n\n\nWinter 2022\n\n\n\nComputing\n\n\n\n\n\nFall 2022\n\n\n\nProbabilistic Machine Learning\n\n\n\n\n\nSpring 2022\n\n\n\nMachine Learning\n\n\n\n\n\nWinter 2021\n\n\n\nComputing\n\n\n\n\n\nFall 2021\n\n\n\nUbiquitous Computing\n\n\n\n\n\nSpring 2021\n\n\n\nMachine Learning\n\n\n\n\n\nWinter 2020\n\n\n\nIntroduction to Computing\n\n\n\n\n\nFall 2020\n\n\n\nOperating Systems\n\n\n\n\n\nSpring 2020 \n\n\n\nMachine Learning\n\n\n\n\n\nFall 2019\n\n\n\nOperating Systems\n\n\n\n\n\nSpring 2019\n\n\n\nMachine Learning\n\n\n\n\n\nFall 2018 \n\n\n\nOperating Systems"
+  },
+  {
+    "objectID": "media.html",
+    "href": "media.html",
+    "title": "Media Coverage",
+    "section": "",
+    "text": "SpiroMask project\nSpiroMask was covered comprehensively by The Ahmedabad Mirror (link) on 3rd November 2022 \n\n\nPhD student Rishiraj’s Fullbright Nehru Fellowship\nOur PhD student, Rishiraj Adhikary won the prestigious Fullbright Nehru fellowship and visited CMU to work with Prof. Mayank Goel for 9 months.\n\n\nEducation Times\nIndian Express\nAhmedabad Mirror\nIndia Education Diary\nCareers 360"
   }
 ]
