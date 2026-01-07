@@ -65,13 +65,16 @@ title: Teaching
 :::
 :::
 
-## Earlier Courses
+## 2023-24
 
-::: {.teaching-compact}
+::: {.teaching-grid}
 ::: {.teaching-card}
-<div class="card-header"><span class="semester">Fall 2024</span></div>
+<div class="card-header">
+  <span class="semester">Fall 2024</span>
+</div>
 <div class="card-body">
   <h3 class="course-title">[Machine Learning](https://nipunbatra.github.io/ml2024-fall/)</h3>
+  <p class="course-desc">Introduction to machine learning algorithms and applications</p>
 </div>
 :::
 
@@ -82,9 +85,14 @@ title: Teaching
 </div>
 <div class="card-body">
   <h3 class="course-title">[Machine Learning](https://nipunbatra.github.io/ml2024/)</h3>
+  <p class="course-desc">Introduction to machine learning algorithms and applications</p>
 </div>
 :::
+:::
 
+## 2022-23
+
+::: {.teaching-grid}
 ::: {.teaching-card .youtube}
 <div class="card-header">
   <span class="semester">Fall 2023</span>
@@ -92,69 +100,109 @@ title: Teaching
 </div>
 <div class="card-body">
   <h3 class="course-title">[Probabilistic Machine Learning](https://nipunbatra.github.io/pml2023/)</h3>
+  <p class="course-desc">Bayesian methods and probabilistic models</p>
 </div>
 :::
 
 ::: {.teaching-card}
-<div class="card-header"><span class="semester">Spring 2023</span></div>
+<div class="card-header">
+  <span class="semester">Spring 2023</span>
+</div>
 <div class="card-body">
   <h3 class="course-title">[Machine Learning](https://nipunbatra.github.io/ml2023/)</h3>
+  <p class="course-desc">Introduction to machine learning algorithms and applications</p>
 </div>
 :::
 
 ::: {.teaching-card}
-<div class="card-header"><span class="semester">Winter 2022</span></div>
+<div class="card-header">
+  <span class="semester">Winter 2022</span>
+</div>
 <div class="card-body">
   <h3 class="course-title">[Computing](https://nipunbatra.github.io/comp22/)</h3>
+  <p class="course-desc">Introduction to programming and computing</p>
 </div>
 :::
+:::
 
+## 2021-22
+
+::: {.teaching-grid}
 ::: {.teaching-card}
-<div class="card-header"><span class="semester">Fall 2022</span></div>
+<div class="card-header">
+  <span class="semester">Fall 2022</span>
+</div>
 <div class="card-body">
   <h3 class="course-title">[Probabilistic Machine Learning](https://nipunbatra.github.io/pml2022/)</h3>
+  <p class="course-desc">Bayesian methods and probabilistic models</p>
 </div>
 :::
 
 ::: {.teaching-card}
-<div class="card-header"><span class="semester">Spring 2022</span></div>
+<div class="card-header">
+  <span class="semester">Spring 2022</span>
+</div>
 <div class="card-body">
   <h3 class="course-title">[Machine Learning](https://nipunbatra.github.io/ml2022/)</h3>
+  <p class="course-desc">Introduction to machine learning algorithms and applications</p>
 </div>
 :::
 
 ::: {.teaching-card}
-<div class="card-header"><span class="semester">Winter 2021</span></div>
+<div class="card-header">
+  <span class="semester">Winter 2021</span>
+</div>
 <div class="card-body">
   <h3 class="course-title">[Computing](https://nipunbatra.notion.site/ES-102-Introduction-to-Computing-2021-Winter-5aa842ce18d34e0e9b2cc646b5325868)</h3>
+  <p class="course-desc">Introduction to programming and computing</p>
 </div>
 :::
+:::
 
+## 2020-21
+
+::: {.teaching-grid}
 ::: {.teaching-card}
-<div class="card-header"><span class="semester">Fall 2021</span></div>
+<div class="card-header">
+  <span class="semester">Fall 2021</span>
+</div>
 <div class="card-body">
   <h3 class="course-title">[Ubiquitous Computing](https://www.craft.do/s/MAdQrLOO9ErCvc)</h3>
+  <p class="course-desc">Pervasive computing systems and applications</p>
 </div>
 :::
 
 ::: {.teaching-card}
-<div class="card-header"><span class="semester">Spring 2021</span></div>
+<div class="card-header">
+  <span class="semester">Spring 2021</span>
+</div>
 <div class="card-body">
   <h3 class="course-title">[Machine Learning](https://nipunbatra.github.io/ml2021/)</h3>
+  <p class="course-desc">Introduction to machine learning algorithms and applications</p>
 </div>
 :::
 
 ::: {.teaching-card}
-<div class="card-header"><span class="semester">Winter 2020</span></div>
+<div class="card-header">
+  <span class="semester">Winter 2020</span>
+</div>
 <div class="card-body">
   <h3 class="course-title">[Introduction to Computing](https://www.notion.so/ES-102-Introduction-to-Computing-7535a00a1b124c5cb6f2a46eb979540b)</h3>
+  <p class="course-desc">Introduction to programming and computing</p>
 </div>
 :::
+:::
 
+## 2019-20
+
+::: {.teaching-grid}
 ::: {.teaching-card}
-<div class="card-header"><span class="semester">Fall 2020</span></div>
+<div class="card-header">
+  <span class="semester">Fall 2020</span>
+</div>
 <div class="card-body">
   <h3 class="course-title">[Operating Systems](https://nipunbatra.github.io/os2020/)</h3>
+  <p class="course-desc">Process management, memory, and file systems</p>
 </div>
 :::
 
@@ -165,23 +213,38 @@ title: Teaching
 </div>
 <div class="card-body">
   <h3 class="course-title">[Machine Learning](https://nipunbatra.github.io/ml2020/)</h3>
+  <p class="course-desc">Introduction to machine learning algorithms and applications</p>
 </div>
 :::
+:::
 
+## 2018-19
+
+::: {.teaching-grid}
 ::: {.teaching-card}
-<div class="card-header"><span class="semester">Fall 2019</span></div>
+<div class="card-header">
+  <span class="semester">Fall 2019</span>
+</div>
 <div class="card-body">
   <h3 class="course-title">[Operating Systems](https://nipunbatra.github.io/os2019/)</h3>
+  <p class="course-desc">Process management, memory, and file systems</p>
 </div>
 :::
 
 ::: {.teaching-card}
-<div class="card-header"><span class="semester">Spring 2019</span></div>
+<div class="card-header">
+  <span class="semester">Spring 2019</span>
+</div>
 <div class="card-body">
   <h3 class="course-title">[Machine Learning](https://nipunbatra.github.io/ml2019/)</h3>
+  <p class="course-desc">Introduction to machine learning algorithms and applications</p>
 </div>
 :::
+:::
 
+## 2017-18
+
+::: {.teaching-grid}
 ::: {.teaching-card .youtube}
 <div class="card-header">
   <span class="semester">Fall 2018</span>
@@ -189,6 +252,7 @@ title: Teaching
 </div>
 <div class="card-body">
   <h3 class="course-title">[Operating Systems](https://nipunbatra.github.io/os2018/)</h3>
+  <p class="course-desc">Process management, memory, and file systems</p>
 </div>
 :::
 :::
