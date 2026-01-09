@@ -18,7 +18,7 @@ let courses = [];
 const youtubeIconHtml = '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1024px-YouTube_full-color_icon_%282017%29.svg.png" alt="YouTube" style="height: 1em; vertical-align: middle;">';
 
 async function loadCourses() {
-  const response = await fetch('teaching.json');
+  const response = await fetch('/static/teaching.json');
   courses = await response.json();
   renderCourses();
 }
