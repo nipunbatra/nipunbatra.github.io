@@ -9,7 +9,7 @@ title: Teaching
 | 2025-26 | Jan 2026 | CS203 | Software Tools and Techniques for AI | [Link](https://nipunbatra.github.io/stt-ai-26/) <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1024px-YouTube_full-color_icon_%282017%29.svg.png" alt="YouTube" style="height: 1em; vertical-align: middle;"> |
 | 2025-26 | Jan 2026 | ES119 | Principles of AI | [Link](https://sites.google.com/iitgn.ac.in/principles-ai-2026/home) |
 | 2025-26 | Aug 2025 | ES335 | Machine Learning | [Link](https://nipunbatra.github.io/ml2025/) |
-| 2024-25 | Jan 2025 | | AI for Social Good | [Link](https://nipunbatra.github.io/aisg25/) |
+| 2024-25 | Jan 2025 | CS691 | AI for Social Good | [Link](https://nipunbatra.github.io/aisg25/) |
 | 2024-25 | Jan 2025 | ES114 | Probability, Statistics, and Data Visualization | [Link](https://nipunbatra.github.io/psdv25/) <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1024px-YouTube_full-color_icon_%282017%29.svg.png" alt="YouTube" style="height: 1em; vertical-align: middle;"> |
 | 2024-25 | Aug 2024 | ES335 | Machine Learning | [Link](https://nipunbatra.github.io/ml2024-fall/) |
 | 2023-24 | Jan 2024 | ES335 | Machine Learning | [Link](https://nipunbatra.github.io/ml2024/) <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1024px-YouTube_full-color_icon_%282017%29.svg.png" alt="YouTube" style="height: 1em; vertical-align: middle;"> |
@@ -23,7 +23,10 @@ title: Teaching
 | 2020-21 | Jan 2021 | ES654 | Machine Learning | [Link](https://nipunbatra.github.io/ml2021/) |
 | 2020-21 | Winter 2020 | ES112 | Introduction to Computing | [Link](https://www.notion.so/ES-102-Introduction-to-Computing-7535a00a1b124c5cb6f2a46eb979540b) |
 | 2020-21 | Aug 2020 | CS301 | Operating Systems | [Link](https://nipunbatra.github.io/os2020/) |
+| 2020-21 | Aug 2020 | CS612 | Graduate Systems | [Link](https://nipunbatra.github.io/os2020/) |
 | 2019-20 | Jan 2020 | ES654 | Machine Learning | [Link](https://nipunbatra.github.io/ml2020/) <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1024px-YouTube_full-color_icon_%282017%29.svg.png" alt="YouTube" style="height: 1em; vertical-align: middle;"> |
 | 2019-20 | Aug 2019 | CS301 | Operating Systems | [Link](https://nipunbatra.github.io/os2019/) |
+| 2019-20 | Aug 2019 | CS612 | Graduate Systems | [Link](https://nipunbatra.github.io/os2019/) |
 | 2018-19 | Jan 2019 | ES654 | Machine Learning | [Link](https://nipunbatra.github.io/ml2019/) |
 | 2018-19 | Aug 2018 | CS301 | Operating Systems | [Link](https://nipunbatra.github.io/os2018/) <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1024px-YouTube_full-color_icon_%282017%29.svg.png" alt="YouTube" style="height: 1em; vertical-align: middle;"> |
+| 2018-19 | Aug 2018 | CS612 | Graduate Systems | [Link](https://nipunbatra.github.io/os2018/) |
