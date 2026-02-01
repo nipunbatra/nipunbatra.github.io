@@ -1,0 +1,23 @@
+{
+  "teaching.qmd": {
+    "teaching.html": "ed35e507"
+  },
+  "papers/index.qmd": {
+    "index.html": "d1e6df1b"
+  },
+  "group_pics.qmd": {
+    "group_pics.html": "bebd3702"
+  },
+  "news.qmd": {
+    "news.html": "177ca710"
+  },
+  "group.qmd": {
+    "group.html": "82b1f1eb"
+  },
+  "index.qmd": {
+    "index.html": "137a4fb3"
+  },
+  "media.qmd": {
+    "media.html": "d96d12c6"
+  }
+}

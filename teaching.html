@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teaching - Nipun Batra</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="common.css">
+  <style>
+    .page {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 100px 32px 60px;
+    }
+
+    h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      margin-bottom: 32px;
+      font-weight: 500;
+    }
+
+    .legend {
+      color: var(--muted);
+      margin-bottom: 24px;
+      font-size: 0.95rem;
+    }
+
+    .yt-icon {
+      height: 1em;
+      vertical-align: middle;
+      margin-left: 4px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+
+    th {
+      text-align: left;
+      padding: 14px 16px;
+      background: white;
+      border-bottom: 2px solid var(--line);
+      font-weight: 600;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--muted);
+    }
+
+    td {
+      padding: 16px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+
+    tr:hover { background: rgba(26, 26, 46, 0.02); }
+    td:last-child { white-space: nowrap; }
+
+    @media (max-width: 800px) {
+      table, thead, tbody, th, td, tr { display: block; }
+      thead { display: none; }
+      tr {
+        margin-bottom: 16px;
+        background: white;
+        border-radius: 12px;
+        padding: 16px;
+        border: 1px solid var(--line);
+      }
+      td { padding: 6px 0; border: none; }
+      td:first-child { font-weight: 600; color: var(--accent); }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="logo">Nipun Batra</a>
+      <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="https://sustainability-lab.github.io/papers/">Publications</a>
+        <a href="teaching.html" class="active">Teaching</a>
+        <a href="https://sustainability-lab.github.io">Research Group</a>
+        <a href="files/cv.pdf">CV</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page">
+    <h1>Teaching</h1>
+
+    <p class="legend">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1024px-YouTube_full-color_icon_%282017%29.svg.png" alt="YouTube" class="yt-icon"> = Lectures available on YouTube
+    </p>
+
+    <table>
+      <thead>
+        <tr><th>Year</th><th>Semester</th><th>Code</th><th>Course</th><th>Link</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>2025-26</td><td>Jan 2026</td><td>CS203</td><td>Software Tools and Techniques for AI</td><td><a href="https://nipunbatra.github.io/stt-ai-26/">Link</a> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1024px-YouTube_full-color_icon_%282017%29.svg.png" alt="YouTube" class="yt-icon"></td></tr>
+        <tr><td>2025-26</td><td>Jan 2026</td><td>ES119</td><td>Principles of AI</td><td><a href="https://sites.google.com/iitgn.ac.in/principles-ai-2026/home">Link</a></td></tr>
+        <tr><td>2025-26</td><td>Aug 2025</td><td>ES335</td><td>Machine Learning</td><td><a href="https://nipunbatra.github.io/ml2025/">Link</a></td></tr>
+        <tr><td>2024-25</td><td>Jan 2025</td><td>CS691</td><td>AI for Social Good</td><td><a href="https://nipunbatra.github.io/aisg25/">Link</a></td></tr>
+        <tr><td>2024-25</td><td>Jan 2025</td><td>ES114</td><td>Probability, Statistics, and Data Visualization</td><td><a href="https://nipunbatra.github.io/psdv25/">Link</a> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1024px-YouTube_full-color_icon_%282017%29.svg.png" alt="YouTube" class="yt-icon"></td></tr>
+        <tr><td>2024-25</td><td>Aug 2024</td><td>ES335</td><td>Machine Learning</td><td><a href="https://nipunbatra.github.io/ml2024-fall/">Link</a></td></tr>
+        <tr><td>2023-24</td><td>Jan 2024</td><td>ES335</td><td>Machine Learning</td><td><a href="https://nipunbatra.github.io/ml2024/">Link</a> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1024px-YouTube_full-color_icon_%282017%29.svg.png" alt="YouTube" class="yt-icon"></td></tr>
+        <tr><td>2023-24</td><td>Aug 2023</td><td>ES661</td><td>Probabilistic Machine Learning</td><td><a href="https://nipunbatra.github.io/pml2023/">Link</a> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1024px-YouTube_full-color_icon_%282017%29.svg.png" alt="YouTube" class="yt-icon"></td></tr>
+        <tr><td>2022-23</td><td>Jan 2023</td><td>ES654</td><td>Machine Learning</td><td><a href="https://nipunbatra.github.io/ml2023/">Link</a></td></tr>
+        <tr><td>2022-23</td><td>Winter 2022</td><td>ES112</td><td>Computing</td><td><a href="https://nipunbatra.github.io/comp22/">Link</a></td></tr>
+        <tr><td>2022-23</td><td>Aug 2022</td><td>CS691</td><td>Probabilistic Machine Learning</td><td><a href="https://nipunbatra.github.io/pml2022/">Link</a></td></tr>
+        <tr><td>2021-22</td><td>Jan 2022</td><td>ES654</td><td>Machine Learning</td><td><a href="https://nipunbatra.github.io/ml2022/">Link</a></td></tr>
+        <tr><td>2021-22</td><td>Winter 2021</td><td>ES112</td><td>Computing</td><td><a href="https://nipunbatra.notion.site/ES-102-Introduction-to-Computing-2021-Winter-5aa842ce18d34e0e9b2cc646b5325868">Link</a></td></tr>
+        <tr><td>2021-22</td><td>Aug 2021</td><td>CS691</td><td>Ubiquitous Computing</td><td><a href="https://www.craft.do/s/MAdQrLOO9ErCvc">Link</a></td></tr>
+        <tr><td>2020-21</td><td>Jan 2021</td><td>ES654</td><td>Machine Learning</td><td><a href="https://nipunbatra.github.io/ml2021/">Link</a></td></tr>
+        <tr><td>2020-21</td><td>Winter 2020</td><td>ES112</td><td>Introduction to Computing</td><td><a href="https://www.notion.so/ES-102-Introduction-to-Computing-7535a00a1b124c5cb6f2a46eb979540b">Link</a></td></tr>
+        <tr><td>2020-21</td><td>Aug 2020</td><td>CS301</td><td>Operating Systems</td><td><a href="https://nipunbatra.github.io/os2020/">Link</a></td></tr>
+        <tr><td>2020-21</td><td>Aug 2020</td><td>CS612</td><td>Graduate Systems</td><td><a href="https://nipunbatra.github.io/os2020/">Link</a></td></tr>
+        <tr><td>2019-20</td><td>Jan 2020</td><td>ES654</td><td>Machine Learning</td><td><a href="https://nipunbatra.github.io/ml2020/">Link</a> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1024px-YouTube_full-color_icon_%282017%29.svg.png" alt="YouTube" class="yt-icon"></td></tr>
+        <tr><td>2019-20</td><td>Aug 2019</td><td>CS301</td><td>Operating Systems</td><td><a href="https://nipunbatra.github.io/os2019/">Link</a></td></tr>
+        <tr><td>2019-20</td><td>Aug 2019</td><td>CS612</td><td>Graduate Systems</td><td><a href="https://nipunbatra.github.io/os2019/">Link</a></td></tr>
+        <tr><td>2018-19</td><td>Jan 2019</td><td>ES654</td><td>Machine Learning</td><td><a href="https://nipunbatra.github.io/ml2019/">Link</a></td></tr>
+        <tr><td>2018-19</td><td>Aug 2018</td><td>CS301</td><td>Operating Systems</td><td><a href="https://nipunbatra.github.io/os2018/">Link</a> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1024px-YouTube_full-color_icon_%282017%29.svg.png" alt="YouTube" class="yt-icon"></td></tr>
+        <tr><td>2018-19</td><td>Aug 2018</td><td>CS612</td><td>Graduate Systems</td><td><a href="https://nipunbatra.github.io/os2018/">Link</a></td></tr>
+      </tbody>
+    </table>
+
+    <footer>
+      Nipun Batra &middot; Computer Science &middot; IIT Gandhinagar
+    </footer>
+  </div>
+
+</body>
+</html>
