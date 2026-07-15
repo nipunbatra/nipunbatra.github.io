@@ -3,29 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#fffefc">
+  <meta name="author" content="Nipun Batra">
   <title>Teaching - Nipun Batra</title>
+  <meta name="description" content="Courses, lecture materials, and short machine-learning videos by Nipun Batra at IIT Gandhinagar.">
+  <link rel="canonical" href="https://nipunbatra.github.io/teaching.html">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%231a1a2e%22/><text x=%2232%22 y=%2242%22 text-anchor=%22middle%22 font-family=%22Georgia%22 font-size=%2233%22 fill=%22white%22>NB</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <script>
+    (function () {
+      let saved;
+      try { saved = localStorage.getItem('theme'); } catch (error) { saved = null; }
+      const theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.dataset.theme = theme;
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', theme === 'dark' ? '#171622' : '#fffefc');
+    })();
+  </script>
   <link rel="stylesheet" href="common.css">
   <style>
     .page {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 100px 32px 60px;
+      width: min(var(--container), calc(100% - 48px));
+      margin: auto;
+      padding: 102px 0 72px;
     }
 
+    .page-heading { margin-bottom: 26px; }
+    .eyebrow {
+      margin: 0 0 6px;
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
     h1 {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(2rem, 4vw, 2.8rem);
-      margin-bottom: 32px;
+      margin: 0;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(2.8rem, 5.6vw, 4.25rem);
       font-weight: 500;
+      line-height: 1;
+      letter-spacing: -0.04em;
     }
 
     .legend {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      margin: 15px 0 0;
       color: var(--muted);
-      margin-bottom: 24px;
-      font-size: 0.95rem;
+      font-size: 0.88rem;
     }
 
     .yt-icon {
@@ -34,88 +63,199 @@
       margin-left: 4px;
     }
 
+    .legend .yt-icon { margin-left: 0; }
+    .playlist-feature {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 28px;
+      align-items: center;
+      margin-bottom: 30px;
+      padding: 22px 24px;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: 12px;
+      background: var(--paper);
+    }
+
+    .playlist-kicker {
+      margin: 0 0 4px;
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .playlist-feature h2,
+    .course-heading h2 {
+      margin: 0;
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 500;
+      text-wrap: balance;
+    }
+
+    .playlist-feature h2 {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 1.5rem;
+    }
+
+    .playlist-feature h2 .yt-icon { height: 1.05em; margin: 0; }
+    .playlist-feature p { margin: 3px 0 0; color: var(--muted); font-size: 0.92rem; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      padding: 8px 15px;
+      border: 1px solid var(--ink);
+      border-radius: 8px;
+      color: var(--paper);
+      background: var(--ink);
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .button:hover { color: #fff; border-color: var(--accent); background: var(--accent); transform: translateY(-2px); }
+    .button:active { transform: translateY(0) scale(0.98); }
+    .course-heading {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin: 0 0 10px;
+    }
+
+    .course-heading h2 { font-size: 1.55rem; }
     table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
+      font-variant-numeric: tabular-nums;
     }
 
     th {
       text-align: left;
-      padding: 14px 16px;
-      background: var(--paper);
-      border-bottom: 2px solid var(--line);
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
       font-weight: 600;
-      font-size: 0.8rem;
+      font-size: 0.72rem;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.08em;
       color: var(--muted);
     }
 
+    th:first-child,
+    td:first-child { padding-left: 0; }
+    th:last-child,
+    td:last-child { padding-right: 0; }
+    th:nth-child(1) { width: 116px; }
+    th:nth-child(2) { width: 132px; }
+    th:nth-child(3) { width: 98px; }
+    th:nth-child(5) { width: 92px; }
     td {
-      padding: 16px;
+      padding: 13px 14px;
       border-bottom: 1px solid var(--line);
       vertical-align: top;
     }
 
-    tr:hover { background: var(--line); }
+    tbody tr { transition: background-color 0.2s ease; }
+    tbody tr:hover { background: var(--accent-soft); }
     td:last-child { white-space: nowrap; }
+    td a { color: var(--accent); text-underline-offset: 3px; }
+    td a:hover { text-decoration: underline; }
 
-    @media (max-width: 800px) {
+    @media (max-width: 700px) {
+      .page { width: min(100% - 40px, var(--container)); padding: 98px 0 56px; }
+      .page-heading { margin-bottom: 24px; }
+      h1 { font-size: clamp(2.65rem, 14vw, 3.55rem); }
+      .legend { margin-top: 14px; line-height: 1.45; }
+      .playlist-feature { grid-template-columns: 1fr; gap: 18px; margin-bottom: 30px; padding: 20px; }
+      .playlist-feature h2 { font-size: 1.4rem; }
+      .playlist-feature p { font-size: 0.9rem; line-height: 1.55; }
+      .button { min-height: 44px; padding: 10px 17px; justify-self: start; }
+      .course-heading { margin-bottom: 14px; }
+      .course-heading h2 { font-size: 1.45rem; }
       table, thead, tbody, th, td, tr { display: block; }
       thead { display: none; }
       tr {
-        margin-bottom: 16px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 7px 14px;
+        margin-bottom: 12px;
         background: var(--paper);
         border-radius: 12px;
-        padding: 16px;
+        padding: 18px 16px;
         border: 1px solid var(--line);
       }
-      td { padding: 6px 0; border: none; }
-      td:first-child { font-weight: 600; color: var(--accent); }
+      td { padding: 0; border: none; }
+      td:first-child { padding-left: 0; font-weight: 600; color: var(--accent); }
+      td:nth-child(2) { text-align: right; color: var(--muted); }
+      td:nth-child(3) { grid-column: 1 / -1; color: var(--muted); font-size: 0.76rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; }
+      td:nth-child(4) { grid-column: 1 / -1; font-family: "Playfair Display", Georgia, serif; font-size: 1.06rem; line-height: 1.4; }
+      td:nth-child(5) { grid-column: 1 / -1; margin-top: 3px; white-space: normal; }
+    }
+
+    @keyframes rise-in {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .page-heading,
+      .playlist-feature,
+      .course-list { animation: rise-in 0.58s cubic-bezier(0.16, 1, 0.3, 1) backwards; }
+      .playlist-feature { animation-delay: 0.06s; }
+      .course-list { animation-delay: 0.11s; }
     }
   </style>
 </head>
 <body>
-  <nav>
-    <div class="nav-inner">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav-inner" aria-label="Primary navigation">
       <a href="index.html" class="logo">Nipun Batra</a>
-      <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">
-        <span></span>
-        <span></span>
-        <span></span>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="nav-links" aria-expanded="false">
+        <span></span><span></span><span></span>
       </button>
-      <div class="nav-links">
+      <div class="nav-links" id="nav-links">
         <a href="index.html">Home</a>
         <a href="https://sustainability-lab.github.io/papers/">Publications</a>
-        <a href="teaching.html" class="active">Teaching</a>
-        <a href="https://sustainability-lab.github.io">Research Group</a>
+        <a href="teaching.html" class="active" aria-current="page">Teaching</a>
+        <a href="https://sustainability-lab.github.io/">Research Group</a>
         <a href="https://nipunbatra.github.io/cv/cv.pdf">CV</a>
         <a href="https://nipunbatra.github.io/blog/">Blog</a>
-        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
-          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-        </button>
+        <button class="theme-toggle" type="button" aria-label="Switch theme" title="Switch theme">◐</button>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
-  <div class="page">
-    <h1>Teaching</h1>
+  <main class="page" id="main">
+    <header class="page-heading">
+      <p class="eyebrow">Courses &amp; lectures</p>
+      <h1>Teaching</h1>
+      <p class="legend">
+        <img src="images/youtube-icon.svg" alt="" class="yt-icon"> Lectures available on YouTube
+      </p>
+    </header>
 
-    <p class="legend">
-      <img src="images/youtube-icon.svg" alt="YouTube" class="yt-icon"> = Lectures available on YouTube
-    </p>
+    <section class="playlist-feature" aria-labelledby="playlist-title">
+      <div>
+        <p class="playlist-kicker">Featured playlist</p>
+        <h2 id="playlist-title"><img src="images/youtube-icon.svg" alt="" class="yt-icon">3-Minute ML</h2>
+        <p>Bite-sized ML/AI concepts explained in about three minutes each.</p>
+      </div>
+      <a class="button" href="https://www.youtube.com/playlist?list=PLftoLyLEwECCHBep8LyFJ_9LKlabPHmUZ">Watch the playlist</a>
+    </section>
 
-    <div style="background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%); border-radius: 16px; padding: 36px; text-align: center; color: white; margin-bottom: 32px;">
-      <h2 style="font-family: 'Playfair Display', serif; font-size: 1.6rem; margin-bottom: 8px;">
-        <img src="images/youtube-icon.svg" alt="YouTube" style="height: 1.2em; vertical-align: middle; margin-right: 8px;">3-Minute ML
-      </h2>
-      <p style="opacity: 0.9; margin-bottom: 18px; font-size: 1rem;">Bite-sized ML/AI concepts explained in ~3 minutes each.</p>
-      <a href="https://www.youtube.com/playlist?list=PLftoLyLEwECCHBep8LyFJ_9LKlabPHmUZ" style="display: inline-block; background: white; color: #c0392b; padding: 10px 24px; border-radius: 999px; font-weight: 500; font-size: 0.9rem; text-decoration: none;">Watch the Playlist</a>
-    </div>
-
-    <table>
+    <section class="course-list" aria-labelledby="courses-title">
+      <div class="course-heading">
+        <h2 id="courses-title">Course archive</h2>
+      </div>
+      <table>
       <thead>
         <tr><th>Year</th><th>Semester</th><th>Code</th><th>Course</th><th>Link</th></tr>
       </thead>
@@ -145,31 +285,55 @@
         <tr><td>2018-19</td><td>Aug 2018</td><td>CS301</td><td>Operating Systems</td><td><a href="https://nipunbatra.github.io/os2018/">Link</a> <img src="images/youtube-icon.svg" alt="YouTube" class="yt-icon"></td></tr>
         <tr><td>2018-19</td><td>Aug 2018</td><td>CS612</td><td>Graduate Systems</td><td><a href="https://nipunbatra.github.io/os2018/">Link</a></td></tr>
       </tbody>
-    </table>
+      </table>
+    </section>
+  </main>
 
-    <footer>
-      Nipun Batra &middot; Computer Science &middot; IIT Gandhinagar
-    </footer>
-  </div>
+  <footer>Nipun Batra &middot; Computer Science &middot; IIT Gandhinagar</footer>
 
   <script>
-    function toggleTheme() {
-      const html = document.documentElement;
-      const current = html.getAttribute('data-theme');
-      const next = current === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
+    const menuButton = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const themeButton = document.querySelector('.theme-toggle');
+    const themeColor = document.querySelector('meta[name="theme-color"]');
+
+    function updateThemeControl(theme) {
+      const nextTheme = theme === 'dark' ? 'light' : 'dark';
+      const label = `Switch to ${nextTheme} theme`;
+      themeButton.setAttribute('aria-label', label);
+      themeButton.setAttribute('title', label);
+      themeColor.setAttribute('content', theme === 'dark' ? '#171622' : '#fffefc');
     }
 
-    // Load saved theme or use system preference
-    (function() {
-      const saved = localStorage.getItem('theme');
-      if (saved) {
-        document.documentElement.setAttribute('data-theme', saved);
-      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.documentElement.setAttribute('data-theme', 'dark');
+    function closeMenu() {
+      navLinks.classList.remove('open');
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.setAttribute('aria-label', 'Open navigation');
+    }
+
+    menuButton.addEventListener('click', () => {
+      const open = !navLinks.classList.contains('open');
+      navLinks.classList.toggle('open', open);
+      menuButton.setAttribute('aria-expanded', String(open));
+      menuButton.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && navLinks.classList.contains('open')) {
+        closeMenu();
+        menuButton.focus();
       }
-    })();
+    });
+
+    updateThemeControl(document.documentElement.dataset.theme || 'light');
+
+    themeButton.addEventListener('click', () => {
+      const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+      document.documentElement.dataset.theme = next;
+      try { localStorage.setItem('theme', next); } catch (error) { /* Theme still applies for this visit. */ }
+      updateThemeControl(next);
+    });
   </script>
 </body>
 </html>
