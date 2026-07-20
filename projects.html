@@ -6,7 +6,7 @@
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#fffefc">
   <meta name="author" content="Nipun Batra">
-  <title>Projects - Nipun Batra</title>
+  <title>Open Source - Nipun Batra</title>
   <meta name="description" content="Open-source tools, teaching resources, and personal AI experiments by Nipun Batra.">
   <link rel="canonical" href="https://nipunbatra.github.io/projects.html">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%231a1a2e%22/><text x=%2232%22 y=%2242%22 text-anchor=%22middle%22 font-family=%22Georgia%22 font-size=%2233%22 fill=%22white%22>NB</text></svg>">
@@ -308,7 +308,7 @@
         <a href="index.html">Home</a>
         <a href="https://sustainability-lab.github.io/papers/">Publications</a>
         <a href="teaching.html">Teaching</a>
-        <a href="projects.html" class="active" aria-current="page">Projects</a>
+        <a href="projects.html" class="active" aria-current="page">Open Source</a>
         <a href="https://sustainability-lab.github.io/">Research Group</a>
         <a href="https://nipunbatra.github.io/cv/cv.pdf">CV</a>
         <a href="https://nipunbatra.github.io/blog/">Blog</a>
@@ -320,8 +320,8 @@
   <main class="page" id="main">
     <header class="page-heading">
       <div>
-        <p class="eyebrow">Open source &amp; experiments</p>
-        <h1>Projects</h1>
+        <p class="eyebrow">Tools · teaching · experiments</p>
+        <h1>Open Source</h1>
       </div>
       <div class="page-intro">
         <p>A working index of tools, teaching resources, and personal AI experiments I build and maintain. It is curated rather than exhaustive.</p>
@@ -330,19 +330,19 @@
     </header>
 
     <div class="project-search" role="search">
-      <label class="sr-only" for="project-search">Search projects by name, description, or tag</label>
+      <label class="sr-only" for="project-search">Search open-source work by name, description, or tag</label>
       <input id="project-search" type="search" placeholder="Search by name, description, or tag" autocomplete="off" spellcheck="false">
-      <p class="search-status" id="search-status" aria-live="polite">29 projects</p>
+      <p class="search-status" id="search-status" aria-live="polite">29 entries</p>
     </div>
 
-    <nav class="type-nav" aria-label="Project types">
+    <nav class="type-nav" aria-label="Open-source categories">
       <a href="#tools"><span data-count-for="tools">16</span><strong>Tools &amp; apps</strong></a>
       <a href="#learning"><span data-count-for="learning">11</span><strong>Learning &amp; teaching</strong></a>
       <a href="#experiments"><span data-count-for="experiments">2</span><strong>Experiments &amp; prototypes</strong></a>
     </nav>
 
     <section class="empty-state" id="empty-state" aria-live="polite" hidden>
-      <h2>No matching projects</h2>
+      <h2>No matches</h2>
       <p>Try a broader term such as privacy, teaching, WebGPU, video, or agents.</p>
     </section>
 
@@ -513,7 +513,7 @@
         }
       });
 
-      searchStatus.textContent = `${total} ${total === 1 ? 'project' : 'projects'}`;
+      searchStatus.textContent = `${total} ${total === 1 ? 'entry' : 'entries'}`;
       typeNav.hidden = total === 0;
       emptyState.hidden = total !== 0;
     }
