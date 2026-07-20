@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#fffefc">
   <meta name="author" content="Nipun Batra">
   <title>Projects - Nipun Batra</title>
-  <meta name="description" content="Open-source tools, teaching resources, and research software by Nipun Batra.">
+  <meta name="description" content="Open-source tools, teaching resources, and personal AI experiments by Nipun Batra.">
   <link rel="canonical" href="https://nipunbatra.github.io/projects.html">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%231a1a2e%22/><text x=%2232%22 y=%2242%22 text-anchor=%22middle%22 font-family=%22Georgia%22 font-size=%2233%22 fill=%22white%22>NB</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -75,10 +75,43 @@
     }
     .text-link:hover { text-decoration: underline; }
 
+    .project-search {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .project-search input {
+      width: 100%;
+      min-height: 54px;
+      padding: 14px 3px;
+      border: 0;
+      border-radius: 4px;
+      color: var(--ink);
+      background: transparent;
+      font: inherit;
+      font-size: 0.94rem;
+    }
+
+    .project-search input::placeholder { color: var(--muted); opacity: 0.8; }
+    .project-search input:focus-visible { background: var(--accent-soft); outline-offset: -3px; }
+    .search-status {
+      min-width: 104px;
+      margin: 0;
+      padding: 4px 2px 4px 20px;
+      border-left: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.75rem;
+      font-variant-numeric: tabular-nums;
+      text-align: right;
+      white-space: nowrap;
+    }
+
     .type-nav {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
     }
 
@@ -96,6 +129,7 @@
     .type-nav a + a { border-left: 1px solid var(--line); }
     .type-nav a:hover { color: var(--accent); background: var(--accent-soft); }
     .type-nav a:active { background: var(--paper-soft); }
+    .type-nav a[aria-disabled="true"] { opacity: 0.42; pointer-events: none; }
     .type-nav span { color: var(--accent); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; }
     .type-nav strong { font-family: "Playfair Display", Georgia, serif; font-size: 1.05rem; font-weight: 500; }
 
@@ -162,7 +196,29 @@
     .project-copy h3 { margin: 0; color: var(--ink); font-size: 1.17rem; font-weight: 500; line-height: 1.3; }
     .project-item:hover h3 { color: var(--accent); }
     .project-copy p { max-width: 62ch; margin: 3px 0 0; color: var(--muted); font-size: 0.83rem; line-height: 1.52; text-wrap: pretty; }
-    .project-meta { color: var(--muted); font-size: 0.72rem; font-weight: 500; white-space: nowrap; }
+    .project-tags {
+      max-width: 220px;
+      color: var(--accent);
+      font-size: 0.68rem;
+      font-weight: 600;
+      line-height: 1.45;
+      text-align: right;
+      text-transform: lowercase;
+      white-space: nowrap;
+    }
+
+    .project-item[hidden],
+    .project-section[hidden],
+    .empty-state[hidden],
+    .type-nav[hidden] { display: none; }
+
+    .empty-state {
+      padding: 54px 0 58px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .empty-state h2 { margin: 0; font-size: 1.65rem; font-weight: 500; }
+    .empty-state p { max-width: 44ch; margin: 7px 0 0; color: var(--muted); font-size: 0.9rem; }
 
     .archive-strip {
       display: grid;
@@ -203,6 +259,9 @@
       .page-heading { grid-template-columns: 1fr; gap: 17px; margin-bottom: 28px; }
       h1 { font-size: clamp(2.65rem, 14vw, 3.55rem); }
       .page-intro p { font-size: 0.94rem; }
+      .project-search { grid-template-columns: minmax(0, 1fr) auto; }
+      .project-search input { min-height: 52px; font-size: 0.9rem; }
+      .search-status { min-width: 88px; padding-left: 13px; }
       .type-nav { grid-template-columns: 1fr; }
       .type-nav a { padding: 14px 2px; }
       .type-nav a + a { border-top: 1px solid var(--line); border-left: 0; }
@@ -212,7 +271,7 @@
       .project-item { grid-template-columns: minmax(0, 1fr) 12px; gap: 11px; padding: 14px 2px; }
       .project-copy { grid-column: 1; grid-row: 1; }
       .project-item::after { grid-column: 2; grid-row: 1; align-self: start; margin-top: 6px; }
-      .project-meta { grid-column: 1; grid-row: 2; }
+      .project-tags { grid-column: 1; grid-row: 2; max-width: none; text-align: left; white-space: normal; }
       .project-copy h3 { font-size: 1.11rem; }
       .project-copy p { font-size: 0.82rem; }
       .project-item:hover { transform: none; }
@@ -265,16 +324,27 @@
         <h1>Projects</h1>
       </div>
       <div class="page-intro">
-        <p>A working index of tools, teaching resources, and research software I build and maintain. It is curated rather than exhaustive.</p>
+        <p>A working index of tools, teaching resources, and personal AI experiments I build and maintain. It is curated rather than exhaustive.</p>
         <a class="text-link" href="https://github.com/nipunbatra?tab=repositories">Browse every repository on GitHub</a>
       </div>
     </header>
 
+    <div class="project-search" role="search">
+      <label class="sr-only" for="project-search">Search projects by name, description, or tag</label>
+      <input id="project-search" type="search" placeholder="Search by name, description, or tag" autocomplete="off" spellcheck="false">
+      <p class="search-status" id="search-status" aria-live="polite">29 projects</p>
+    </div>
+
     <nav class="type-nav" aria-label="Project types">
-      <a href="#tools"><span>12</span><strong>Tools &amp; apps</strong></a>
-      <a href="#learning"><span>10</span><strong>Learning &amp; teaching</strong></a>
-      <a href="#research"><span>10</span><strong>Research software</strong></a>
+      <a href="#tools"><span data-count-for="tools">13</span><strong>Tools &amp; apps</strong></a>
+      <a href="#learning"><span data-count-for="learning">10</span><strong>Learning &amp; teaching</strong></a>
+      <a href="#experiments"><span data-count-for="experiments">6</span><strong>Experiments &amp; prototypes</strong></a>
     </nav>
+
+    <section class="empty-state" id="empty-state" aria-live="polite" hidden>
+      <h2>No matching projects</h2>
+      <p>Try a broader term such as privacy, teaching, WebGPU, video, or agents.</p>
+    </section>
 
     <section class="project-section" id="tools" aria-labelledby="tools-title">
       <div class="section-label">
@@ -284,40 +354,43 @@
       </div>
       <div class="project-list">
         <a class="project-item" href="https://github.com/nipunbatra/pulp">
-          <div class="project-copy"><h3>Pulp</h3><p>An agent-driven design canvas with a Rust/WASM engine and real HTML/CSS output.</p></div><span class="project-meta">TypeScript · WASM</span>
+          <div class="project-copy"><h3>Pulp</h3><p>An agent-driven design canvas with a Rust/WASM engine and real HTML/CSS output.</p></div><span class="project-tags">agents · design · wasm</span>
         </a>
         <a class="project-item" href="https://github.com/nipunbatra/vaanika">
-          <div class="project-copy"><h3>Vaanika</h3><p>Clone a voice from a short clip, fully on-device with WebGPU and WASM.</p></div><span class="project-meta">TypeScript · WebGPU</span>
+          <div class="project-copy"><h3>Vaanika</h3><p>Clone a voice from a short clip, fully on-device with WebGPU and WASM.</p></div><span class="project-tags">privacy · audio · webgpu</span>
         </a>
         <a class="project-item" href="https://github.com/nipunbatra/better-ql">
-          <div class="project-copy"><h3>Better Quick Look</h3><p>Richer Finder previews for Markdown, code, data files, archives, and folders.</p></div><span class="project-meta">Swift · macOS</span>
+          <div class="project-copy"><h3>Better Quick Look</h3><p>Richer Finder previews for Markdown, code, data files, archives, and folders.</p></div><span class="project-tags">macos · productivity · swift</span>
         </a>
         <a class="project-item" href="https://github.com/nipunbatra/redacat">
-          <div class="project-copy"><h3>Redacat</h3><p>True image and PDF redaction in the browser; files never leave the device.</p></div><span class="project-meta">JavaScript · WASM</span>
+          <div class="project-copy"><h3>Redacat</h3><p>True image and PDF redaction in the browser; files never leave the device.</p></div><span class="project-tags">privacy · pdf · wasm</span>
         </a>
         <a class="project-item" href="https://github.com/nipunbatra/shaant">
-          <div class="project-copy"><h3>Shaant</h3><p>Remove background noise from videos locally using RNNoise, DeepFilterNet, and ffmpeg.wasm.</p></div><span class="project-meta">JavaScript · Audio</span>
+          <div class="project-copy"><h3>Shaant</h3><p>Remove background noise from videos locally using RNNoise, DeepFilterNet, and ffmpeg.wasm.</p></div><span class="project-tags">privacy · audio · wasm</span>
         </a>
         <a class="project-item" href="https://github.com/nipunbatra/pastiche">
-          <div class="project-copy"><h3>Pastiche</h3><p>Neural style transfer that runs locally with ONNX Runtime WASM.</p></div><span class="project-meta">JavaScript · ONNX</span>
+          <div class="project-copy"><h3>Pastiche</h3><p>Neural style transfer that runs locally with ONNX Runtime WASM.</p></div><span class="project-tags">browser ml · onnx · images</span>
         </a>
         <a class="project-item" href="https://github.com/nipunbatra/video-subtitle-overlay">
-          <div class="project-copy"><h3>Video subtitle overlay</h3><p>Play local video with synced subtitles and persistent metadata for screen sharing.</p></div><span class="project-meta">HTML · Video</span>
+          <div class="project-copy"><h3>Video subtitle overlay</h3><p>Play local video with synced subtitles and persistent metadata for screen sharing.</p></div><span class="project-tags">video · subtitles · accessibility</span>
         </a>
         <a class="project-item" href="https://github.com/nipunbatra/vidvaani">
-          <div class="project-copy"><h3>Vidvaani</h3><p>Dub YouTube videos into Hindi using Whisper and Gemini text-to-speech.</p></div><span class="project-meta">HTML · Speech</span>
+          <div class="project-copy"><h3>Vidvaani</h3><p>Dub YouTube videos into Hindi using Whisper and Gemini text-to-speech.</p></div><span class="project-tags">speech · translation · video</span>
         </a>
         <a class="project-item" href="https://github.com/nipunbatra/quizforge">
-          <div class="project-copy"><h3>Quizforge</h3><p>Generate shuffled Typst exam sets, answer keys, and grading CSVs from one master.</p></div><span class="project-meta">Typst · Education</span>
+          <div class="project-copy"><h3>Quizforge</h3><p>Generate shuffled Typst exam sets, answer keys, and grading CSVs from one master.</p></div><span class="project-tags">assessment · typst · teaching</span>
         </a>
         <a class="project-item" href="https://github.com/nipunbatra/video-trim-metadata-store">
-          <div class="project-copy"><h3>Video trim metadata store</h3><p>Trim Drive recordings in the browser and save them back with metadata.</p></div><span class="project-meta">TypeScript · Video</span>
+          <div class="project-copy"><h3>Video trim metadata store</h3><p>Trim Drive recordings in the browser and save them back with metadata.</p></div><span class="project-tags">video · privacy · browser</span>
         </a>
         <a class="project-item" href="https://github.com/nipunbatra/setwise">
-          <div class="project-copy"><h3>Setwise</h3><p>Create randomized, print-ready LaTeX quizzes from reusable question sets.</p></div><span class="project-meta">Python · LaTeX</span>
+          <div class="project-copy"><h3>Setwise</h3><p>Create randomized, print-ready LaTeX quizzes from reusable question sets.</p></div><span class="project-tags">assessment · latex · teaching</span>
         </a>
         <a class="project-item" href="https://github.com/nipunbatra/Bodh">
-          <div class="project-copy"><h3>Bodh</h3><p>Turn Markdown into polished PDF presentations with live preview and themes.</p></div><span class="project-meta">Python · Presentations</span>
+          <div class="project-copy"><h3>Bodh</h3><p>Turn Markdown into polished PDF presentations with live preview and themes.</p></div><span class="project-tags">presentations · markdown · pdf</span>
+        </a>
+        <a class="project-item" href="https://github.com/nipunbatra/pythor">
+          <div class="project-copy"><h3>Pythor</h3><p>A small bridge bringing familiar R-style data workflows to Python.</p></div><span class="project-tags">python · data · r</span>
         </a>
       </div>
     </section>
@@ -330,74 +403,62 @@
       </div>
       <div class="project-list">
         <a class="project-item" href="https://github.com/nipunbatra/llm-from-scratch">
-          <div class="project-copy"><h3>LLM from scratch</h3><p>A six-part educational series that builds a language model piece by piece.</p></div><span class="project-meta">Notebooks · LLMs</span>
+          <div class="project-copy"><h3>LLM from scratch</h3><p>A six-part educational series that builds a language model piece by piece.</p></div><span class="project-tags">llms · from scratch · notebooks</span>
         </a>
         <a class="project-item" href="https://github.com/nipunbatra/vlm-from-scratch">
-          <div class="project-copy"><h3>VLM from scratch</h3><p>Inspectable notebooks for understanding and building vision-language models.</p></div><span class="project-meta">Notebooks · VLMs</span>
+          <div class="project-copy"><h3>VLM from scratch</h3><p>Inspectable notebooks for understanding and building vision-language models.</p></div><span class="project-tags">vlms · from scratch · notebooks</span>
         </a>
         <a class="project-item" href="https://github.com/nipunbatra/interactive-articles">
-          <div class="project-copy"><h3>Interactive articles</h3><p>Intuition-first technical articles with live, manipulable visual explanations.</p></div><span class="project-meta">HTML · Visual learning</span>
+          <div class="project-copy"><h3>Interactive articles</h3><p>Intuition-first technical articles with live, manipulable visual explanations.</p></div><span class="project-tags">visualization · articles · interactive</span>
         </a>
         <a class="project-item" href="https://github.com/nipunbatra/chalkdust">
-          <div class="project-copy"><h3>Chalkdust</h3><p>Native Typst figures for convolution, attention, receptive fields, and other ML concepts.</p></div><span class="project-meta">Typst · Diagrams</span>
+          <div class="project-copy"><h3>Chalkdust</h3><p>Native Typst figures for convolution, attention, receptive fields, and other ML concepts.</p></div><span class="project-tags">diagrams · typst · machine learning</span>
         </a>
         <a class="project-item" href="https://github.com/nipunbatra/autograd-playground">
-          <div class="project-copy"><h3>Autograd playground</h3><p>An interactive computational-graph explorer for learning backpropagation.</p></div><span class="project-meta">JavaScript · Autodiff</span>
+          <div class="project-copy"><h3>Autograd playground</h3><p>An interactive computational-graph explorer for learning backpropagation.</p></div><span class="project-tags">autodiff · visualization · interactive</span>
         </a>
         <a class="project-item" href="https://github.com/nipunbatra/CS-Research-Methods-Bootcamp">
-          <div class="project-copy"><h3>CS Research Methods Bootcamp</h3><p>A practical starting point for reading, designing, and communicating computer-science research.</p></div><span class="project-meta">HTML · Research</span>
+          <div class="project-copy"><h3>CS Research Methods Bootcamp</h3><p>A practical starting point for reading, designing, and communicating computer-science research.</p></div><span class="project-tags">research · methods · bootcamp</span>
         </a>
         <a class="project-item" href="https://github.com/nipunbatra/docker-ml-demos">
-          <div class="project-copy"><h3>Docker ML demos</h3><p>Five progressive examples, from hello-world containers to deployable ML apps.</p></div><span class="project-meta">Python · Docker</span>
+          <div class="project-copy"><h3>Docker ML demos</h3><p>Five progressive examples, from hello-world containers to deployable ML apps.</p></div><span class="project-tags">docker · deployment · machine learning</span>
         </a>
         <a class="project-item" href="https://github.com/nipunbatra/hf-spaces-deploy-tutorial">
-          <div class="project-copy"><h3>Hugging Face Spaces tutorial</h3><p>Step-by-step guides and templates for deploying Streamlit apps.</p></div><span class="project-meta">Python · Deployment</span>
+          <div class="project-copy"><h3>Hugging Face Spaces tutorial</h3><p>Step-by-step guides and templates for deploying Streamlit apps.</p></div><span class="project-tags">deployment · streamlit · hugging face</span>
         </a>
         <a class="project-item" href="https://github.com/nipunbatra/manim-animations">
-          <div class="project-copy"><h3>Manim animations</h3><p>Educational machine-learning animations with generated narration.</p></div><span class="project-meta">Python · Video</span>
+          <div class="project-copy"><h3>Manim animations</h3><p>Educational machine-learning animations with generated narration.</p></div><span class="project-tags">animation · video · machine learning</span>
         </a>
         <a class="project-item" href="https://github.com/nipunbatra/pathfinding-visualizer">
-          <div class="project-copy"><h3>Pathfinding visualizer</h3><p>Compare BFS, DFS, A*, Dijkstra, Greedy, and bidirectional search interactively.</p></div><span class="project-meta">HTML · Algorithms</span>
+          <div class="project-copy"><h3>Pathfinding visualizer</h3><p>Compare BFS, DFS, A*, Dijkstra, Greedy, and bidirectional search interactively.</p></div><span class="project-tags">algorithms · visualization · interactive</span>
         </a>
       </div>
     </section>
 
-    <section class="project-section" id="research" aria-labelledby="research-title">
+    <section class="project-section" id="experiments" aria-labelledby="experiments-title">
       <div class="section-label">
-        <p class="eyebrow">03 · Investigate</p>
-        <h2 id="research-title">Research software</h2>
-        <p>Code and prototypes for sustainability, sensing, energy, air quality, and AI systems.</p>
+        <p class="eyebrow">03 · Try</p>
+        <h2 id="experiments-title">Experiments &amp; prototypes</h2>
+        <p>Personal explorations of agents, local models, multimodal AI, and browser-native machine learning.</p>
       </div>
       <div class="project-list">
-        <a class="project-item" href="https://github.com/nilmtk/nilmtk">
-          <div class="project-copy"><h3>NILMTK</h3><p>An open-source toolkit for non-intrusive load monitoring research.</p></div><span class="project-meta">Python · Energy</span>
-        </a>
-        <a class="project-item" href="https://github.com/sustainability-lab/vayu">
-          <div class="project-copy"><h3>Vayu</h3><p>Tools for exploring and visualizing air-quality measurements.</p></div><span class="project-meta">Python · Air quality</span>
-        </a>
         <a class="project-item" href="https://github.com/nipunbatra/tiny-crcv-lab">
-          <div class="project-copy"><h3>Tiny CRCV lab</h3><p>A beginner-friendly WebGPU experiment for detecting vision-language hallucinations.</p></div><span class="project-meta">TypeScript · WebGPU</span>
+          <div class="project-copy"><h3>Tiny CRCV lab</h3><p>A beginner-friendly WebGPU experiment for detecting vision-language hallucinations.</p></div><span class="project-tags">vlms · hallucination · webgpu</span>
         </a>
         <a class="project-item" href="https://github.com/nipunbatra/auto-vlm">
-          <div class="project-copy"><h3>Auto VLM</h3><p>Autonomous experiments training a tiny multi-task vision-language model in MLX.</p></div><span class="project-meta">Python · MLX</span>
+          <div class="project-copy"><h3>Auto VLM</h3><p>Autonomous experiments training a tiny multi-task vision-language model in MLX.</p></div><span class="project-tags">vlms · agents · mlx</span>
         </a>
-        <a class="project-item" href="https://github.com/nipunbatra/pythor">
-          <div class="project-copy"><h3>Pythor</h3><p>A small bridge bringing familiar R-style data workflows to Python.</p></div><span class="project-meta">Python · Data</span>
+        <a class="project-item" href="https://github.com/nipunbatra/autoresearch">
+          <div class="project-copy"><h3>Autoresearch</h3><p>Experiments in agent-driven research loops and automated iteration.</p></div><span class="project-tags">agents · research · automation</span>
         </a>
-        <a class="project-item" href="https://github.com/nipunbatra/nir-camera-rpi">
-          <div class="project-copy"><h3>NIR camera on Raspberry Pi</h3><p>Low-light camera drivers, live capture, and breathing detection experiments.</p></div><span class="project-meta">Python · Sensing</span>
+        <a class="project-item" href="https://github.com/nipunbatra/ai-svg-compare">
+          <div class="project-copy"><h3>AI SVG compare</h3><p>Compare SVG generation across Gemini, Claude, and Codex to inspect model bias and style.</p></div><span class="project-tags">multimodal · evaluation · svg</span>
         </a>
-        <a class="project-item" href="https://github.com/nipunbatra/brick-kiln-labeling-tool">
-          <div class="project-copy"><h3>Brick-kiln labeling tool</h3><p>Label brick kilns in satellite imagery using a compact Streamlit workflow.</p></div><span class="project-meta">Python · GeoAI</span>
+        <a class="project-item" href="https://github.com/nipunbatra/hello-mcp">
+          <div class="project-copy"><h3>Hello MCP</h3><p>A visual demo of Gemini and local models using tools through MCP.</p></div><span class="project-tags">mcp · agents · local models</span>
         </a>
-        <a class="project-item" href="https://github.com/nipunbatra/Gemello">
-          <div class="project-copy"><h3>Gemello</h3><p>Research code for energy disaggregation with limited training data.</p></div><span class="project-meta">Notebooks · Energy</span>
-        </a>
-        <a class="project-item" href="https://github.com/nipunbatra/smart_meter">
-          <div class="project-copy"><h3>Smart meter</h3><p>Connect to and read Modbus-enabled smart meters using Python.</p></div><span class="project-meta">Python · Hardware</span>
-        </a>
-        <a class="project-item" href="https://github.com/nipunbatra/freq-nilm">
-          <div class="project-copy"><h3>Frequency NILM</h3><p>Experiments using high-frequency electrical measurements for load disaggregation.</p></div><span class="project-meta">Notebooks · Energy</span>
+        <a class="project-item" href="https://github.com/nipunbatra/vayuchat-webllm">
+          <div class="project-copy"><h3>Vayuchat WebLLM</h3><p>Natural-language data analysis with WebLLM and Pyodide, entirely in the browser.</p></div><span class="project-tags">webllm · data · browser ml</span>
         </a>
       </div>
     </section>
@@ -405,7 +466,7 @@
     <aside class="archive-strip" aria-labelledby="archive-title">
       <div>
         <h2 id="archive-title">The complete archive lives on GitHub</h2>
-        <p>Course editions, older research code, small experiments, and works in progress are all there.</p>
+        <p>Course editions, one-off experiments, old sites, and works in progress are all there.</p>
       </div>
       <a class="button" href="https://github.com/nipunbatra?tab=repositories">View all repositories</a>
     </aside>
@@ -418,6 +479,46 @@
     const navLinks = document.querySelector('.nav-links');
     const themeButton = document.querySelector('.theme-toggle');
     const themeColor = document.querySelector('meta[name="theme-color"]');
+    const searchInput = document.querySelector('#project-search');
+    const searchStatus = document.querySelector('#search-status');
+    const typeNav = document.querySelector('.type-nav');
+    const emptyState = document.querySelector('#empty-state');
+    const projectSections = Array.from(document.querySelectorAll('.project-section'));
+
+    function filterProjects() {
+      const terms = searchInput.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+      let total = 0;
+
+      projectSections.forEach(section => {
+        const items = Array.from(section.querySelectorAll('.project-item'));
+        let sectionTotal = 0;
+
+        items.forEach(item => {
+          const searchableText = item.textContent.toLowerCase();
+          const matches = terms.every(term => searchableText.includes(term));
+          item.hidden = !matches;
+          if (matches) sectionTotal += 1;
+        });
+
+        section.hidden = sectionTotal === 0;
+        total += sectionTotal;
+
+        const typeLink = typeNav.querySelector(`a[href="#${section.id}"]`);
+        const count = typeLink.querySelector('[data-count-for]');
+        count.textContent = String(sectionTotal);
+        if (sectionTotal === 0) {
+          typeLink.setAttribute('aria-disabled', 'true');
+        } else {
+          typeLink.removeAttribute('aria-disabled');
+        }
+      });
+
+      searchStatus.textContent = `${total} ${total === 1 ? 'project' : 'projects'}`;
+      typeNav.hidden = total === 0;
+      emptyState.hidden = total !== 0;
+    }
+
+    searchInput.addEventListener('input', filterProjects);
 
     function updateThemeControl(theme) {
       const nextTheme = theme === 'dark' ? 'light' : 'dark';
