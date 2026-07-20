@@ -99,7 +99,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 
 .logo:hover { color: var(--accent); }
-.nav-links { display: flex; align-items: center; gap: 28px; }
+.nav-links { display: flex; align-items: center; gap: 22px; }
 
 .nav-links a {
   position: relative;
