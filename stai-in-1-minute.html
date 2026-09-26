@@ -346,7 +346,7 @@
       </div>
       <div class="page-intro">
         <p>Short videos for CS 203 Software Tools and Techniques for AI at IIT Gandhinagar: one question per Short about the tools behind AI systems, answered in under a minute with a small example, in the same style as <a href="ml-in-1-minute.html">Machine learning in 1 minute</a>.</p>
-        <p>14 Shorts so far, with more on the way.</p>
+        <p>22 Shorts so far, with more on the way.</p>
         <div class="actions">
           <a class="button" href="https://www.youtube.com/playlist?list=PLVUr9iweHl_I">Watch the playlist</a>
           <a class="text-link" href="https://nipunbatra.github.io/stt-ai-26/">CS 203 course page (2026)</a>
@@ -357,7 +357,7 @@
     <div class="search" role="search">
       <label class="sr-only" for="video-search">Search the Shorts by question or topic</label>
       <input id="video-search" type="search" placeholder="Search, e.g. API" autocomplete="off" spellcheck="false" data-noun="Short" data-nouns="Shorts">
-      <p class="search-status" id="search-status" aria-live="polite">14 Shorts</p>
+      <p class="search-status" id="search-status" aria-live="polite">22 Shorts</p>
     </div>
 
 
@@ -450,10 +450,66 @@
           </div>
         </li>
         <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/0fr-c7lRq4Y/hqdefault.jpg" alt="Thumbnail: Rule A (right 80%) says positive; B (right 90%) says negative. Chance it&#x27;s positive?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/0fr-c7lRq4Y">Rule A (right 80%) says positive; B (right 90%) says negative. Chance it&#x27;s positive?</a></h3>
+            <p class="sr-only">Two labelling rules disagree about a review: rule A is right 80% of the time and says positive, rule B is right 90% of the time and says negative. Weighing each vote by its odds of being right (4 to 1 and 9 to 1) gives the positive side 4 shares and the negative side 9, so the chance it is positive is 4/13, about 31%. Combining rough rules this way is called weak supervision.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/wUE7B_cqauU/hqdefault.jpg" alt="Thumbnail: 10,000 labels: people at $0.30 each, an LLM at $0.002. How many times cheaper is it?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/wUE7B_cqauU">10,000 labels: people at $0.30 each, an LLM at $0.002. How many times cheaper is it?</a></h3>
+            <p class="sr-only">With the prices from the course slides, 10,000 labels cost 10,000 x $0.30 = $3,000 from people and 10,000 x $0.002 = $20 from an LLM, so the LLM is 150 times cheaper ($0.30 / $0.002 = 150). The LLM gives the first labels and people still check a sample: checking 100 by hand adds $30, and the $50 total is still 60 times less than $3,000.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/rsyuUBes9d8/hqdefault.jpg" alt="Thumbnail: Is it safe to turn a handwritten 6 upside down to get more training data?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/rsyuUBes9d8">Is it safe to turn a handwritten 6 upside down to get more training data?</a></h3>
+            <p class="sr-only">Turning images is a common way to get more training data, but a real handwritten 6 from MNIST, turned 180 degrees, looks like a 9 while its label still says 6. That example would teach the model that a 9&#x27;s shape is a 6. A change is only safe if it keeps the answer the same; for digits the course slides allow turns of less than 15 degrees.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/xzk9ACoqip0/hqdefault.jpg" alt="Thumbnail: CutMix pastes a 16 × 16 dog patch into a 32 × 32 cat photo. What is the new label?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/xzk9ACoqip0">CutMix pastes a 16 × 16 dog patch into a 32 × 32 cat photo. What is the new label?</a></h3>
+            <p class="sr-only">CutMix pastes a patch from one image into another and mixes the labels by area. A 16 by 16 dog patch covers 256 of the 1,024 pixels in a 32 by 32 cat photo, a quarter, so the new label is 75% cat and 25% dog, not 50/50. A patch 16 wide and 32 tall covers half the photo, and then the label is 50/50.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/_b3DSOEHX-E/hqdefault.jpg" alt="Thumbnail: Is flipping images left to right a safe way to get more training data?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/_b3DSOEHX-E">Is flipping images left to right a safe way to get more training data?</a></h3>
+            <p class="sr-only">A flipped photo of a cat is still a cat, because real cats face either way, so a left-right flip is safe for a cat-or-dog task. A flipped chest X-ray puts the heart on the wrong side, and a flipped letter b reads as d, so there the flip changes the answer. Whether a change is safe depends on the task: keep only changes that keep the answer the same.</p>
+          </div>
+        </li>
+        <li class="video tall">
           <div class="thumb"><img src="https://i.ytimg.com/vi/LvZmp_wXvM4/hqdefault.jpg" alt="Thumbnail: Next word: great 60%, good 30%, fine 10%. At temperature 0, how often is it &quot;great&quot;?" loading="lazy" decoding="async"></div>
           <div class="video-copy">
             <h3><a href="https://youtube.com/shorts/LvZmp_wXvM4">Next word: great 60%, good 30%, fine 10%. At temperature 0, how often is it &quot;great&quot;?</a></h3>
             <p class="sr-only">An LLM gives every possible next word a chance; in this example &quot;great&quot; gets 60%, &quot;good&quot; 30% and &quot;fine&quot; 10%. At temperature 1 it draws by those chances, so about 6 answers in 10 are &quot;great&quot;. At temperature 0 it always takes the most likely word, so &quot;great&quot; comes back 10 times out of 10, which is why labelling and classification use temperature 0.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/FB0w4rlFSWU/hqdefault.jpg" alt="Thumbnail: Free tier: 15 requests a minute. How long to label 900 reviews, one per request?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/FB0w4rlFSWU">Free tier: 15 requests a minute. How long to label 900 reviews, one per request?</a></h3>
+            <p class="sr-only">With the free-tier limit from the course slides, 15 requests a minute, labelling 900 reviews one per request takes 900 / 15 = 60 minutes, an hour of waiting on the limit. Batching 50 reviews into one request needs only 900 / 50 = 18 requests, which fit in 18 / 15 = 1.2 minutes at the same limit.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/bX9GdP6mWTw/hqdefault.jpg" alt="Thumbnail: A free tier gives 1 million tokens a day. About how many words is that?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/bX9GdP6mWTw">A free tier gives 1 million tokens a day. About how many words is that?</a></h3>
+            <p class="sr-only">An LLM reads and bills text in tokens, and the rule of thumb in the course slides is about 75 words per 100 tokens. So a free tier of 1,000,000 tokens a day is about 750,000 words; 4 million would be the characters, at about 4 characters per token. A 300-word review is about 400 tokens, so a million tokens covers about 2,500 such reviews.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/rCF1LVPCHK4/hqdefault.jpg" alt="Thumbnail: Predicting tomorrow&#x27;s stock move: split 200 days at random into train and test?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/rCF1LVPCHK4">Predicting tomorrow&#x27;s stock move: split 200 days at random into train and test?</a></h3>
+            <p class="sr-only">With 200 days of stock prices (the random walk from the course slides), a random split puts 40 days in test, and test day 124 comes before 59 of the training days, so the model has already seen what came next. For time-ordered data, split by time: train on the past, test on the future, as scikit-learn&#x27;s TimeSeriesSplit does.</p>
           </div>
         </li>
         <li class="video tall">
