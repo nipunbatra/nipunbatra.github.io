@@ -64,29 +64,9 @@
     }
 
     .legend .yt-icon { margin-left: 0; }
-    .playlist-feature {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      gap: 28px;
-      align-items: center;
-      margin-bottom: 30px;
-      padding: 22px 24px;
-      border: 1px solid var(--line);
-      border-left: 4px solid var(--accent);
-      border-radius: 12px;
-      background: var(--paper);
-    }
+    .video-series { margin-bottom: 40px; }
 
-    .playlist-kicker {
-      margin: 0 0 4px;
-      color: var(--accent);
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    .playlist-feature h2,
+    .video-series h2,
     .course-heading h2 {
       margin: 0;
       font-family: "Playfair Display", Georgia, serif;
@@ -94,42 +74,83 @@
       text-wrap: balance;
     }
 
-    .playlist-feature h2 {
+    .video-series h2 { margin-bottom: 12px; font-size: 1.55rem; }
+    .series-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .series-card {
+      position: relative;
       display: flex;
-      align-items: center;
-      gap: 9px;
-      font-size: 1.5rem;
+      flex-direction: column;
+      padding: 16px 18px 17px;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: 12px;
+      background: var(--paper);
+      transition: border-color 0.2s ease, transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .playlist-feature h2 .yt-icon { height: 1.05em; margin: 0; }
-    .playlist-feature p { margin: 3px 0 0; color: var(--muted); font-size: 0.92rem; }
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 40px;
-      padding: 8px 15px;
-      border: 1px solid var(--ink);
-      border-radius: 8px;
-      color: var(--paper);
-      background: var(--ink);
-      font-size: 0.82rem;
+    .series-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .series-card.soon {
+      padding-left: 21px;
+      border: 1px dashed var(--line);
+      background: transparent;
+    }
+    .series-card.soon:hover { border-color: var(--muted); }
+    .series-kicker {
+      margin: 0 0 5px;
+      color: var(--accent);
+      font-size: 0.7rem;
       font-weight: 600;
-      text-decoration: none;
-      white-space: nowrap;
-      transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
     }
 
-    .button:hover { color: #fff; border-color: var(--accent); background: var(--accent); transform: translateY(-2px); }
-    .button:active { transform: translateY(0) scale(0.98); }
+    .series-card.soon .series-kicker { color: var(--muted); }
+    .series-card h3 {
+      margin: 0;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.14rem;
+      font-weight: 500;
+      line-height: 1.28;
+      text-wrap: balance;
+    }
+
+    .series-card h3 a { color: var(--ink); text-decoration: none; transition: color 0.2s ease; }
+    .series-card h3 a::after { content: ""; position: absolute; inset: 0; border-radius: 12px; }
+    .series-card:hover h3 a { color: var(--accent); }
+    .series-card h3 a:focus-visible { outline: none; }
+    .series-card h3 a:focus-visible::after { outline: 3px solid var(--accent); outline-offset: 3px; }
+    .series-desc { margin: 5px 0 0; color: var(--muted); font-size: 0.84rem; line-height: 1.5; }
+    .series-cta {
+      margin-top: auto;
+      padding-top: 12px;
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .series-cta::after { content: " \2192"; }
+    .series-card.soon h3 a,
+    .series-card.soon .series-cta { color: var(--muted); }
+    .series-card.soon:hover h3 a { color: var(--ink); }
     .course-heading {
       display: flex;
+      flex-wrap: wrap;
       align-items: baseline;
       justify-content: space-between;
-      margin: 0 0 10px;
+      gap: 4px 20px;
+      margin: 0 0 6px;
     }
 
     .course-heading h2 { font-size: 1.55rem; }
+    .course-heading .legend { margin: 0; }
     table {
       width: 100%;
       border-collapse: collapse;
@@ -152,51 +173,78 @@
     td:first-child { padding-left: 0; }
     th:last-child,
     td:last-child { padding-right: 0; }
-    th:nth-child(1) { width: 116px; }
-    th:nth-child(2) { width: 132px; }
-    th:nth-child(3) { width: 98px; }
-    th:nth-child(5) { width: 92px; }
+    thead th:nth-child(1) { width: 132px; }
+    thead th:nth-child(2) { width: 98px; }
+    thead th:nth-child(4) { width: 136px; }
+    .year-row th {
+      padding: 26px 0 8px;
+      color: var(--ink);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.08rem;
+      font-weight: 500;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
     td {
-      padding: 13px 14px;
+      padding: 12px 14px;
       border-bottom: 1px solid var(--line);
       vertical-align: top;
     }
 
-    tbody tr { transition: background-color 0.2s ease; }
-    tbody tr:hover { background: var(--accent-soft); }
+    tbody tr:not(.year-row) { transition: background-color 0.2s ease; }
+    tbody tr:not(.year-row):hover { background: var(--accent-soft); }
+    td:nth-child(2) { color: var(--muted); font-size: 0.84rem; letter-spacing: 0.03em; }
     td:last-child { white-space: nowrap; }
     td a { color: var(--accent); text-underline-offset: 3px; }
     td a:hover { text-decoration: underline; }
+    .tag {
+      display: inline-block;
+      margin-left: 8px;
+      padding: 1px 8px;
+      border-radius: 999px;
+      color: var(--accent);
+      background: var(--accent-soft);
+      font-size: 0.66rem;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      vertical-align: 1px;
+    }
 
     @media (max-width: 700px) {
       .page { width: min(100% - 40px, var(--container)); padding: 98px 0 56px; }
       .page-heading { margin-bottom: 24px; }
       h1 { font-size: clamp(2.65rem, 14vw, 3.55rem); }
-      .legend { margin-top: 14px; line-height: 1.45; }
-      .playlist-feature { grid-template-columns: 1fr; gap: 18px; margin-bottom: 30px; padding: 20px; }
-      .playlist-feature h2 { font-size: 1.4rem; }
-      .playlist-feature p { font-size: 0.9rem; line-height: 1.55; }
-      .button { min-height: 44px; padding: 10px 17px; justify-self: start; }
-      .course-heading { margin-bottom: 14px; }
+      .legend { line-height: 1.45; }
+      .video-series { margin-bottom: 34px; }
+      .video-series h2 { font-size: 1.45rem; }
+      .series-grid { grid-template-columns: 1fr; gap: 10px; }
+      .series-card { padding: 14px 16px 15px; }
+      .series-card.soon { padding-left: 19px; }
+      .series-card:hover { transform: none; }
+      .series-cta { padding-top: 8px; }
+      .course-heading { margin-bottom: 4px; }
       .course-heading h2 { font-size: 1.45rem; }
       table, thead, tbody, th, td, tr { display: block; }
       thead { display: none; }
-      tr {
+      .year-row th { padding: 20px 0 10px; border-bottom: 0; }
+      tr:not(.year-row) {
         display: grid;
         grid-template-columns: 1fr auto;
-        gap: 7px 14px;
-        margin-bottom: 12px;
+        gap: 5px 14px;
+        margin-bottom: 10px;
         background: var(--paper);
         border-radius: 12px;
-        padding: 18px 16px;
+        padding: 15px 16px;
         border: 1px solid var(--line);
       }
       td { padding: 0; border: none; }
-      td:first-child { padding-left: 0; font-weight: 600; color: var(--accent); }
-      td:nth-child(2) { text-align: right; color: var(--muted); }
-      td:nth-child(3) { grid-column: 1 / -1; color: var(--muted); font-size: 0.76rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; }
-      td:nth-child(4) { grid-column: 1 / -1; font-family: "Playfair Display", Georgia, serif; font-size: 1.06rem; line-height: 1.4; }
-      td:nth-child(5) { grid-column: 1 / -1; margin-top: 3px; white-space: normal; }
+      td:nth-child(1) { grid-column: 2; grid-row: 1; text-align: right; color: var(--muted); font-size: 0.84rem; }
+      td:nth-child(2) { grid-column: 1; grid-row: 1; padding-left: 0; color: var(--accent); font-size: 0.76rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; }
+      td:nth-child(3) { grid-column: 1 / -1; font-family: "Playfair Display", Georgia, serif; font-size: 1.06rem; line-height: 1.4; }
+      td:nth-child(4) { grid-column: 1 / -1; margin-top: 2px; white-space: normal; }
+      .tag { font-family: "Work Sans", system-ui, sans-serif; }
     }
 
     @keyframes rise-in {
@@ -206,9 +254,9 @@
 
     @media (prefers-reduced-motion: no-preference) {
       .page-heading,
-      .playlist-feature,
+      .video-series,
       .course-list { animation: rise-in 0.58s cubic-bezier(0.16, 1, 0.3, 1) backwards; }
-      .playlist-feature { animation-delay: 0.06s; }
+      .video-series { animation-delay: 0.06s; }
       .course-list { animation-delay: 0.11s; }
     }
   </style>
@@ -238,55 +286,99 @@
     <header class="page-heading">
       <p class="eyebrow">Courses &amp; lectures</p>
       <h1>Teaching</h1>
-      <p class="legend">
-        <img src="images/youtube-icon.svg" alt="" class="yt-icon"> Lectures available on YouTube
-      </p>
     </header>
 
-    <section class="playlist-feature" aria-labelledby="playlist-title">
-      <div>
-        <p class="playlist-kicker">Featured playlist</p>
-        <h2 id="playlist-title"><img src="images/youtube-icon.svg" alt="" class="yt-icon">3-Minute ML</h2>
-        <p>Bite-sized ML/AI concepts explained in about three minutes each.</p>
-      </div>
-      <a class="button" href="https://www.youtube.com/playlist?list=PLftoLyLEwECCHBep8LyFJ_9LKlabPHmUZ">Watch the playlist</a>
+    <section class="video-series" aria-labelledby="video-series-title">
+      <h2 id="video-series-title">Video series</h2>
+      <ul class="series-grid">
+        <li class="series-card">
+          <p class="series-kicker">YouTube playlist</p>
+          <h3><a href="https://www.youtube.com/playlist?list=PLftoLyLEwECCHBep8LyFJ_9LKlabPHmUZ">3-Minute ML</a></h3>
+          <p class="series-desc">ML and AI ideas, three minutes each.</p>
+          <span class="series-cta" aria-hidden="true">Open the playlist</span>
+        </li>
+        <li class="series-card">
+          <p class="series-kicker">Lecture summaries</p>
+          <h3><a href="dl-in-3-minutes.html">Deep learning in 3 minutes</a></h3>
+          <p class="series-desc">ES 667 lectures, three minutes each.</p>
+          <span class="series-cta" aria-hidden="true">Browse the videos</span>
+        </li>
+        <li class="series-card">
+          <p class="series-kicker">YouTube Shorts</p>
+          <h3><a href="ml-in-1-minute.html">Machine learning in 1 minute</a></h3>
+          <p class="series-desc">One question, answered in under a minute.</p>
+          <span class="series-cta" aria-hidden="true">Browse the Shorts</span>
+        </li>
+        <li class="series-card soon">
+          <p class="series-kicker">Coming soon</p>
+          <h3><a href="psdv-in-1-minute.html">Probability and statistics in 1 minute</a></h3>
+          <p class="series-desc">Shorts for ES 114, in the same style.</p>
+          <span class="series-cta" aria-hidden="true">See the plan</span>
+        </li>
+      </ul>
     </section>
 
     <section class="course-list" aria-labelledby="courses-title">
       <div class="course-heading">
         <h2 id="courses-title">Course archive</h2>
+        <p class="legend"><img src="images/youtube-icon.svg" alt="" class="yt-icon"> Lectures available on YouTube</p>
       </div>
       <table>
-      <thead>
-        <tr><th>Year</th><th>Semester</th><th>Code</th><th>Course</th><th>Link</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>2026-27</td><td>Aug 2026</td><td>ES667</td><td>Deep Learning</td><td><a href="https://nipunbatra.github.io/dl-2026/">Link</a></td></tr>
-        <tr><td>2025-26</td><td>Jan 2026</td><td>CS203</td><td>Software Tools and Techniques for AI</td><td><a href="https://nipunbatra.github.io/stt-ai-26/">Link</a> <img src="images/youtube-icon.svg" alt="YouTube" class="yt-icon"></td></tr>
-        <tr><td>2025-26</td><td>Jan 2026</td><td>ES119</td><td>Principles of AI</td><td><a href="https://nipunbatra.github.io/principles-ai-26/">Link</a></td></tr>
-        <tr><td>2025-26</td><td>Aug 2025</td><td>ES335</td><td>Machine Learning</td><td><a href="https://nipunbatra.github.io/ml2025/">Link</a></td></tr>
-        <tr><td>2024-25</td><td>Jan 2025</td><td>CS691</td><td>AI for Social Good</td><td><a href="https://nipunbatra.github.io/aisg25/">Link</a></td></tr>
-        <tr><td>2024-25</td><td>Jan 2025</td><td>ES114</td><td>Probability, Statistics, and Data Visualization</td><td><a href="https://nipunbatra.github.io/psdv25/">Link</a> <img src="images/youtube-icon.svg" alt="YouTube" class="yt-icon"></td></tr>
-        <tr><td>2024-25</td><td>Aug 2024</td><td>ES335</td><td>Machine Learning</td><td><a href="https://nipunbatra.github.io/ml2024-fall/">Link</a></td></tr>
-        <tr><td>2023-24</td><td>Jan 2024</td><td>ES335</td><td>Machine Learning</td><td><a href="https://nipunbatra.github.io/ml2024/">Link</a> <img src="images/youtube-icon.svg" alt="YouTube" class="yt-icon"></td></tr>
-        <tr><td>2023-24</td><td>Aug 2023</td><td>ES661</td><td>Probabilistic Machine Learning</td><td><a href="https://nipunbatra.github.io/pml2023/">Link</a> <img src="images/youtube-icon.svg" alt="YouTube" class="yt-icon"></td></tr>
-        <tr><td>2022-23</td><td>Jan 2023</td><td>ES654</td><td>Machine Learning</td><td><a href="https://nipunbatra.github.io/ml2023/">Link</a></td></tr>
-        <tr><td>2022-23</td><td>Winter 2022</td><td>ES112</td><td>Computing</td><td><a href="https://nipunbatra.github.io/comp22/">Link</a></td></tr>
-        <tr><td>2022-23</td><td>Aug 2022</td><td>CS691</td><td>Probabilistic Machine Learning</td><td><a href="https://nipunbatra.github.io/pml2022/">Link</a></td></tr>
-        <tr><td>2021-22</td><td>Jan 2022</td><td>ES654</td><td>Machine Learning</td><td><a href="https://nipunbatra.github.io/ml2022/">Link</a></td></tr>
-        <tr><td>2021-22</td><td>Winter 2021</td><td>ES112</td><td>Computing</td><td><a href="https://nipunbatra.notion.site/ES-102-Introduction-to-Computing-2021-Winter-5aa842ce18d34e0e9b2cc646b5325868">Link</a></td></tr>
-        <tr><td>2021-22</td><td>Aug 2021</td><td>CS691</td><td>Ubiquitous Computing</td><td><a href="https://www.craft.do/s/MAdQrLOO9ErCvc">Link</a></td></tr>
-        <tr><td>2020-21</td><td>Jan 2021</td><td>ES654</td><td>Machine Learning</td><td><a href="https://nipunbatra.github.io/ml2021/">Link</a></td></tr>
-        <tr><td>2020-21</td><td>Winter 2020</td><td>ES112</td><td>Introduction to Computing</td><td><a href="https://www.notion.so/ES-102-Introduction-to-Computing-7535a00a1b124c5cb6f2a46eb979540b">Link</a></td></tr>
-        <tr><td>2020-21</td><td>Aug 2020</td><td>CS301</td><td>Operating Systems</td><td><a href="https://nipunbatra.github.io/os2020/">Link</a></td></tr>
-        <tr><td>2020-21</td><td>Aug 2020</td><td>CS612</td><td>Graduate Systems</td><td><a href="https://nipunbatra.github.io/os2020/">Link</a></td></tr>
-        <tr><td>2019-20</td><td>Jan 2020</td><td>ES654</td><td>Machine Learning</td><td><a href="https://nipunbatra.github.io/ml2020/">Link</a> <img src="images/youtube-icon.svg" alt="YouTube" class="yt-icon"></td></tr>
-        <tr><td>2019-20</td><td>Aug 2019</td><td>CS301</td><td>Operating Systems</td><td><a href="https://nipunbatra.github.io/os2019/">Link</a></td></tr>
-        <tr><td>2019-20</td><td>Aug 2019</td><td>CS612</td><td>Graduate Systems</td><td><a href="https://nipunbatra.github.io/os2019/">Link</a></td></tr>
-        <tr><td>2018-19</td><td>Jan 2019</td><td>ES654</td><td>Machine Learning</td><td><a href="https://nipunbatra.github.io/ml2019/">Link</a></td></tr>
-        <tr><td>2018-19</td><td>Aug 2018</td><td>CS301</td><td>Operating Systems</td><td><a href="https://nipunbatra.github.io/os2018/">Link</a> <img src="images/youtube-icon.svg" alt="YouTube" class="yt-icon"></td></tr>
-        <tr><td>2018-19</td><td>Aug 2018</td><td>CS612</td><td>Graduate Systems</td><td><a href="https://nipunbatra.github.io/os2018/">Link</a></td></tr>
-      </tbody>
+        <thead>
+          <tr><th scope="col">Semester</th><th scope="col">Code</th><th scope="col">Course</th><th scope="col">Materials</th></tr>
+        </thead>
+        <tbody>
+          <tr class="year-row"><th scope="rowgroup" colspan="4">2026-27</th></tr>
+          <tr class="current"><td>Aug 2026</td><td>ES667</td><td>Deep Learning <span class="tag">Current</span></td><td><a href="https://nipunbatra.github.io/dl-2026/">Course site</a></td></tr>
+        </tbody>
+        <tbody>
+          <tr class="year-row"><th scope="rowgroup" colspan="4">2025-26</th></tr>
+          <tr><td>Jan 2026</td><td>CS203</td><td>Software Tools and Techniques for AI</td><td><a href="https://nipunbatra.github.io/stt-ai-26/">Course site</a> <img src="images/youtube-icon.svg" alt="Lectures on YouTube" title="Lectures available on YouTube" class="yt-icon"></td></tr>
+          <tr><td>Jan 2026</td><td>ES119</td><td>Principles of AI</td><td><a href="https://nipunbatra.github.io/principles-ai-26/">Course site</a></td></tr>
+          <tr><td>Aug 2025</td><td>ES335</td><td>Machine Learning</td><td><a href="https://nipunbatra.github.io/ml2025/">Course site</a></td></tr>
+        </tbody>
+        <tbody>
+          <tr class="year-row"><th scope="rowgroup" colspan="4">2024-25</th></tr>
+          <tr><td>Jan 2025</td><td>CS691</td><td>AI for Social Good</td><td><a href="https://nipunbatra.github.io/aisg25/">Course site</a></td></tr>
+          <tr><td>Jan 2025</td><td>ES114</td><td>Probability, Statistics, and Data Visualization</td><td><a href="https://nipunbatra.github.io/psdv25/">Course site</a> <img src="images/youtube-icon.svg" alt="Lectures on YouTube" title="Lectures available on YouTube" class="yt-icon"></td></tr>
+          <tr><td>Aug 2024</td><td>ES335</td><td>Machine Learning</td><td><a href="https://nipunbatra.github.io/ml2024-fall/">Course site</a></td></tr>
+        </tbody>
+        <tbody>
+          <tr class="year-row"><th scope="rowgroup" colspan="4">2023-24</th></tr>
+          <tr><td>Jan 2024</td><td>ES335</td><td>Machine Learning</td><td><a href="https://nipunbatra.github.io/ml2024/">Course site</a> <img src="images/youtube-icon.svg" alt="Lectures on YouTube" title="Lectures available on YouTube" class="yt-icon"></td></tr>
+          <tr><td>Aug 2023</td><td>ES661</td><td>Probabilistic Machine Learning</td><td><a href="https://nipunbatra.github.io/pml2023/">Course site</a> <img src="images/youtube-icon.svg" alt="Lectures on YouTube" title="Lectures available on YouTube" class="yt-icon"></td></tr>
+        </tbody>
+        <tbody>
+          <tr class="year-row"><th scope="rowgroup" colspan="4">2022-23</th></tr>
+          <tr><td>Jan 2023</td><td>ES654</td><td>Machine Learning</td><td><a href="https://nipunbatra.github.io/ml2023/">Course site</a></td></tr>
+          <tr><td>Winter 2022</td><td>ES112</td><td>Computing</td><td><a href="https://nipunbatra.github.io/comp22/">Course site</a></td></tr>
+          <tr><td>Aug 2022</td><td>CS691</td><td>Probabilistic Machine Learning</td><td><a href="https://nipunbatra.github.io/pml2022/">Course site</a></td></tr>
+        </tbody>
+        <tbody>
+          <tr class="year-row"><th scope="rowgroup" colspan="4">2021-22</th></tr>
+          <tr><td>Jan 2022</td><td>ES654</td><td>Machine Learning</td><td><a href="https://nipunbatra.github.io/ml2022/">Course site</a></td></tr>
+          <tr><td>Winter 2021</td><td>ES112</td><td>Computing</td><td><a href="https://nipunbatra.notion.site/ES-102-Introduction-to-Computing-2021-Winter-5aa842ce18d34e0e9b2cc646b5325868">Course site</a></td></tr>
+          <tr><td>Aug 2021</td><td>CS691</td><td>Ubiquitous Computing</td><td><a href="https://www.craft.do/s/MAdQrLOO9ErCvc">Course site</a></td></tr>
+        </tbody>
+        <tbody>
+          <tr class="year-row"><th scope="rowgroup" colspan="4">2020-21</th></tr>
+          <tr><td>Jan 2021</td><td>ES654</td><td>Machine Learning</td><td><a href="https://nipunbatra.github.io/ml2021/">Course site</a></td></tr>
+          <tr><td>Winter 2020</td><td>ES112</td><td>Introduction to Computing</td><td><a href="https://www.notion.so/ES-102-Introduction-to-Computing-7535a00a1b124c5cb6f2a46eb979540b">Course site</a></td></tr>
+          <tr><td>Aug 2020</td><td>CS301</td><td>Operating Systems</td><td><a href="https://nipunbatra.github.io/os2020/">Course site</a></td></tr>
+          <tr><td>Aug 2020</td><td>CS612</td><td>Graduate Systems</td><td><a href="https://nipunbatra.github.io/os2020/">Course site</a></td></tr>
+        </tbody>
+        <tbody>
+          <tr class="year-row"><th scope="rowgroup" colspan="4">2019-20</th></tr>
+          <tr><td>Jan 2020</td><td>ES654</td><td>Machine Learning</td><td><a href="https://nipunbatra.github.io/ml2020/">Course site</a> <img src="images/youtube-icon.svg" alt="Lectures on YouTube" title="Lectures available on YouTube" class="yt-icon"></td></tr>
+          <tr><td>Aug 2019</td><td>CS301</td><td>Operating Systems</td><td><a href="https://nipunbatra.github.io/os2019/">Course site</a></td></tr>
+          <tr><td>Aug 2019</td><td>CS612</td><td>Graduate Systems</td><td><a href="https://nipunbatra.github.io/os2019/">Course site</a></td></tr>
+        </tbody>
+        <tbody>
+          <tr class="year-row"><th scope="rowgroup" colspan="4">2018-19</th></tr>
+          <tr><td>Jan 2019</td><td>ES654</td><td>Machine Learning</td><td><a href="https://nipunbatra.github.io/ml2019/">Course site</a></td></tr>
+          <tr><td>Aug 2018</td><td>CS301</td><td>Operating Systems</td><td><a href="https://nipunbatra.github.io/os2018/">Course site</a> <img src="images/youtube-icon.svg" alt="Lectures on YouTube" title="Lectures available on YouTube" class="yt-icon"></td></tr>
+          <tr><td>Aug 2018</td><td>CS612</td><td>Graduate Systems</td><td><a href="https://nipunbatra.github.io/os2018/">Course site</a></td></tr>
+        </tbody>
       </table>
     </section>
   </main>
