@@ -346,7 +346,7 @@
       </div>
       <div class="page-intro">
         <p>Short videos for ES 114 Probability, Statistics and Data Visualization at IIT Gandhinagar: one question per Short, answered in under a minute with a small example, in the same style as <a href="ml-in-1-minute.html">Machine learning in 1 minute</a>.</p>
-        <p>13 Shorts so far, with more on the way.</p>
+        <p>21 Shorts so far, with more on the way.</p>
         <div class="actions">
           <a class="button" href="https://www.youtube.com/playlist?list=PLc_dUTLURe5w">Watch the playlist</a>
           <a class="text-link" href="https://nipunbatra.github.io/psdv25/">ES 114 course page (2025)</a>
@@ -357,7 +357,7 @@
     <div class="search" role="search">
       <label class="sr-only" for="video-search">Search the Shorts by question or topic</label>
       <input id="video-search" type="search" placeholder="Search, e.g. variance" autocomplete="off" spellcheck="false" data-noun="Short" data-nouns="Shorts">
-      <p class="search-status" id="search-status" aria-live="polite">13 Shorts</p>
+      <p class="search-status" id="search-status" aria-live="polite">21 Shorts</p>
     </div>
 
 
@@ -461,6 +461,62 @@
           <div class="video-copy">
             <h3><a href="https://youtube.com/shorts/1e5LC-S3NGs">A box has 10 eggs, each cracked with chance 10%. Most likely number of cracked eggs?</a></h3>
             <p class="sr-only">No cracked eggs needs all 10 to stay whole: 0.9 multiplied 10 times, 34.9%. Exactly one cracked egg is 0.1 x 0.9^9 = 3.87% for any given egg, and it can be any of the 10, so 38.7%, the most likely count; two cracked eggs (45 pairs) is 19.4%. This count of yes results in 10 tries with the same chance each is the binomial.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/HFveI0NmZSw/hqdefault.jpg" alt="Thumbnail: A help desk averages 6 calls an hour. Which is more likely: 5 calls or 6?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/HFveI0NmZSw">A help desk averages 6 calls an hour. Which is more likely: 5 calls or 6?</a></h3>
+            <p class="sr-only">Calls that arrive at random, 6 an hour on average, follow the Poisson distribution: no calls at all has chance 0.25%, and each extra call multiplies the chance by 6 divided by the new count. The step from 5 calls to 6 is 6/6 = 1, so exactly 5 and exactly 6 calls are equally likely, 16.1% each. With an average of 4, 3 and 4 calls tie at 19.5%.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/4BdDYk6tdvc/hqdefault.jpg" alt="Thumbnail: Roll a die until you get a six. Which number of rolls is most likely?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/4BdDYk6tdvc">Roll a die until you get a six. Which number of rolls is most likely?</a></h3>
+            <p class="sr-only">A six on the very first roll has chance 1/6 = 16.7%. Stopping on roll 2 needs a miss first, 5/6 x 1/6 = 13.9%, and every extra roll multiplies the chance by 5/6 again, so 6 rolls has only 6.7%. The count of tries until the first success is the geometric distribution: 1 roll is the most likely count, even though the average is 6 rolls.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/vdGxDY9gkPM/hqdefault.jpg" alt="Thumbnail: Prices end in random paise. Round to the nearest rupee. Average size of the error?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/vdGxDY9gkPM">Prices end in random paise. Round to the nearest rupee. Average size of the error?</a></h3>
+            <p class="sr-only">Rounding to the nearest rupee moves a price by at most 50 paise: Rs 12.30 moves 30 paise, Rs 12.85 moves 15, Rs 12.50 moves the full 50. With random paise every error size from 0 to 50 is equally likely, a uniform spread, so the average size is the middle, 25 paise (20 example prices ending 00, 05, ..., 95 give 500 / 20 = 25). The signed error, up or down, averages 0.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/JcRAcNxZ380/hqdefault.jpg" alt="Thumbnail: Waits at a counter average 10 minutes (exponential). What share wait under 10?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/JcRAcNxZ380">Waits at a counter average 10 minutes (exponential). What share wait under 10?</a></h3>
+            <p class="sr-only">With exponential waits that average 10 minutes, the share still waiting is multiplied by 0.368 (1/e) every 10 minutes: 36.8% still wait at 10 minutes, so about 63.2% are done in less than the average. Half are done by 6.9 minutes, but a few long waits (13.5% wait over 20 minutes) pull the average up to 10. A long tail on one side like this makes a spread skewed.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/0F4o5dvmGwE/hqdefault.jpg" alt="Thumbnail: Marks follow a bell curve: average 70, spread (SD) 8. What share score above 86?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/0F4o5dvmGwE">Marks follow a bell curve: average 70, spread (SD) 8. What share score above 86?</a></h3>
+            <p class="sr-only">Measured with the standard deviation as a ruler, 86 is (86 - 70) / 8 = 2 SDs above the average. On any bell curve 95.4% of values lie within 2 SDs, so 4.6% lie outside, half on each side: about 2.3% score above 86. The same ruler gives 15.9% above 1 SD (78) and 0.13% above 3 SDs (94).</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/0IZaS9gqAq0/hqdefault.jpg" alt="Thumbnail: Can a probability density be bigger than 1?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/0IZaS9gqAq0">Can a probability density be bigger than 1?</a></h3>
+            <p class="sr-only">For a random number from 0 to 2 with every value equally likely, the density is a flat line at height 0.5, and chances are areas under it: the whole area is 2 x 0.5 = 1, and 0.5 to 1 has chance 0.5 x 0.5 = 25%. Squeeze the range to 0 to 0.5 and the height must rise to 2 to keep the area at 1. A density is chance per unit of x, so it can pass 1; the areas, which are the chances, never do.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/w3qt7z7kNRw/hqdefault.jpg" alt="Thumbnail: A loaded die: faces 1 to 4 take slices of 0 to 1 in order. Which face gets 0.45?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/w3qt7z7kNRw">A loaded die: faces 1 to 4 take slices of 0 to 1 in order. Which face gets 0.45?</a></h3>
+            <p class="sr-only">A loaded die shows faces 1 to 4 with chances 0.1, 0.2, 0.3 and 0.4. Laid end to end from 0 to 1, the slices end at the running totals 0.1, 0.3, 0.6 and 1, so a random number of 0.45 lands on face 3: past 0.3 but not past 0.6. That running total of the chances is the CDF, and it is how a computer turns one random number into a roll of the die.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/SmYPUwFYcD4/hqdefault.jpg" alt="Thumbnail: 10 people get their hats back, shuffled. On average, how many get their own?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/SmYPUwFYcD4">10 people get their hats back, shuffled. On average, how many get their own?</a></h3>
+            <p class="sr-only">With 3 people there are 6 ways to hand the hats back, with 3, 1, 1, 1, 0 and 0 matches: 6 matches in 6 ways, an average of 1. Each person gets their own hat with chance 1/3, and 1/3 + 1/3 + 1/3 = 1; with 10 people each has chance 1/10, and 10 x 1/10 = 1. Averages add even when the events are linked: this is linearity of expectation.</p>
           </div>
         </li>
       </ul>

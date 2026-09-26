@@ -346,7 +346,7 @@
       </div>
       <div class="page-intro">
         <p>Short videos for CS 203 Software Tools and Techniques for AI at IIT Gandhinagar: one question per Short about the tools behind AI systems, answered in under a minute with a small example, in the same style as <a href="ml-in-1-minute.html">Machine learning in 1 minute</a>.</p>
-        <p>6 Shorts so far, with more on the way.</p>
+        <p>14 Shorts so far, with more on the way.</p>
         <div class="actions">
           <a class="button" href="https://www.youtube.com/playlist?list=PLVUr9iweHl_I">Watch the playlist</a>
           <a class="text-link" href="https://nipunbatra.github.io/stt-ai-26/">CS 203 course page (2026)</a>
@@ -357,7 +357,7 @@
     <div class="search" role="search">
       <label class="sr-only" for="video-search">Search the Shorts by question or topic</label>
       <input id="video-search" type="search" placeholder="Search, e.g. API" autocomplete="off" spellcheck="false" data-noun="Short" data-nouns="Shorts">
-      <p class="search-status" id="search-status" aria-live="polite">6 Shorts</p>
+      <p class="search-status" id="search-status" aria-live="polite">14 Shorts</p>
     </div>
 
 
@@ -380,6 +380,27 @@
           </div>
         </li>
         <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/VZiODGchfFg/hqdefault.jpg" alt="Thumbnail: An API sends {&quot;year&quot;: &quot;2010&quot;}. What does data[&quot;year&quot;] + 1 give?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/VZiODGchfFg">An API sends {&quot;year&quot;: &quot;2010&quot;}. What does data[&quot;year&quot;] + 1 give?</a></h3>
+            <p class="sr-only">In JSON a value in quotes is a string, so {&quot;year&quot;: &quot;2010&quot;} holds the four characters 2, 0, 1, 0 and not the number 2010. In Python, text + text joins (&quot;2010&quot; + &quot;1&quot; is &quot;20101&quot;) and number + number adds, but text + number raises a TypeError. Convert first: int(data[&quot;year&quot;]) + 1 gives 2011.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/h8-PNytK2WI/hqdefault.jpg" alt="Thumbnail: A request fails 4 times. You wait 1 s, then double the wait. Total wait before try 5?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/h8-PNytK2WI">A request fails 4 times. You wait 1 s, then double the wait. Total wait before try 5?</a></h3>
+            <p class="sr-only">When an API says 429 Too Many Requests, a common fix is to wait and retry, doubling the wait after each failure. After 4 failures the waits are 1, 2, 4 and 8 seconds, so you have waited 1 + 2 + 4 + 8 = 15 seconds before try 5. In Python that is time.sleep(2 ** attempt), and a fifth failure would mean a 16 second wait.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/vzswZlaAxxs/hqdefault.jpg" alt="Thumbnail: A page has 3 titles: 2 in movie cards, 1 in a sidebar. How many match &quot;.movie .title&quot;?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/vzswZlaAxxs">A page has 3 titles: 2 in movie cards, 1 in a sidebar. How many match &quot;.movie .title&quot;?</a></h3>
+            <p class="sr-only">A web page is boxes inside boxes. On an example page with two movie cards and a sidebar, each holding one title, BeautifulSoup&#x27;s soup.select(&quot;.movie .title&quot;) returns 2, because the space means a .title inside a .movie. The selector &quot;.title&quot; alone returns all 3, and &quot;.sidebar .title&quot; returns 1.</p>
+          </div>
+        </li>
+        <li class="video tall">
           <div class="thumb"><img src="https://i.ytimg.com/vi/O0KYjYxScOc/hqdefault.jpg" alt="Thumbnail: A Pydantic model says year is an int. You pass the text &quot;2010&quot;. What happens?" loading="lazy" decoding="async"></div>
           <div class="video-copy">
             <h3><a href="https://youtube.com/shorts/O0KYjYxScOc">A Pydantic model says year is an int. You pass the text &quot;2010&quot;. What happens?</a></h3>
@@ -387,10 +408,45 @@
           </div>
         </li>
         <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/Jsl5IpbqVDY/hqdefault.jpg" alt="Thumbnail: A UTF-8 file says Amélie. You open it as Latin-1. What do you see?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/Jsl5IpbqVDY">A UTF-8 file says Amélie. You open it as Latin-1. What do you see?</a></h3>
+            <p class="sr-only">A file stores text as bytes, and the encoding is the rule between letters and bytes. UTF-8 writes the é in Amélie as two bytes, C3 A9, so the 6 letters take 7 bytes. Latin-1 reads every byte as its own letter, C3 as Ã and A9 as ©, so you see AmÃ©lie; open the file with encoding=&quot;utf-8&quot; and it reads correctly.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/4PS31BgDWHM/hqdefault.jpg" alt="Thumbnail: The header has 3 columns. How many pieces does split(&quot;,&quot;) cut this CSV row into?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/4PS31BgDWHM">The header has 3 columns. How many pieces does split(&quot;,&quot;) cut this CSV row into?</a></h3>
+            <p class="sr-only">The row Inception,2010,A mind-bending, complex thriller sits under a header with 3 columns, but line.split(&quot;,&quot;) cuts at all 3 commas and gives 4 pieces, because the description has a comma of its own. A field that holds a comma must be quoted, &quot;A mind-bending, complex thriller&quot;, and read with csv.reader, which then gives 3 fields.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/kzjyot2zemU/hqdefault.jpg" alt="Thumbnail: 1,000 movies: 13 lack a year, 108 a rating, 366 box office. How many complete rows?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/kzjyot2zemU">1,000 movies: 13 lack a year, 108 a rating, 366 box office. How many complete rows?</a></h3>
+            <p class="sr-only">In a table of 1,000 movies, 13 have no year, 108 no rating and 366 no box-office value. Dropping every row with a gap keeps at most 634, the rows that have box office, and only 1,000 - 13 - 108 - 366 = 513 if no two gaps share a row. This table kept 521, about half the data, with no error or warning.</p>
+          </div>
+        </li>
+        <li class="video tall">
           <div class="thumb"><img src="https://i.ytimg.com/vi/2Kz9kqVPB_s/hqdefault.jpg" alt="Thumbnail: Two annotators agree on 8 of 10 emails. Is 80% agreement impressive?" loading="lazy" decoding="async"></div>
           <div class="video-copy">
             <h3><a href="https://youtube.com/shorts/2Kz9kqVPB_s">Two annotators agree on 8 of 10 emails. Is 80% agreement impressive?</a></h3>
             <p class="sr-only">Two people label the same 10 emails as spam or not, and each says spam 6 times. If both just guessed at that rate they would still agree 0.6 x 0.6 + 0.4 x 0.4 = 52% of the time, so their 80% is only 28 points above chance. Cohen&#x27;s kappa measures agreement beyond chance: (80 - 52) / (100 - 52) = 0.58, which counts as moderate.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/Jj2fVNI7U9o/hqdefault.jpg" alt="Thumbnail: Two annotators box one object, one box half a box right. Overlap ÷ area they cover?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/Jj2fVNI7U9o">Two annotators box one object, one box half a box right. Overlap ÷ area they cover?</a></h3>
+            <p class="sr-only">Two annotators draw 100 by 100 pixel boxes around the same object, one shifted 50 pixels to the right. They share 50 x 100 = 5,000 pixels and together cover 150 x 100 = 15,000, so their intersection over union (IoU) is 5,000 / 15,000 = 1/3, under the 0.5 line where two boxes count as a match. Shifted only a quarter box, the IoU is 7,500 / 12,500 = 0.6.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/b7DJ7tOCRgU/hqdefault.jpg" alt="Thumbnail: Model: 99% positive, 98% negative, 52% positive. Which review is worth a paid label?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/b7DJ7tOCRgU">Model: 99% positive, 98% negative, 52% positive. Which review is worth a paid label?</a></h3>
+            <p class="sr-only">A review model is 99% sure &quot;Best movie ever! 10/10!&quot; is positive, 98% sure &quot;Terrible waste of time.&quot; is negative, and only 52% sure &quot;It was okay, I guess.&quot; is positive. How unsure it is, 100% minus its bigger chance, comes to 1%, 2% and 48%, so a paid label teaches it most on the 52% review. Labelling what the model is least sure of is called uncertainty sampling.</p>
           </div>
         </li>
         <li class="video tall">
