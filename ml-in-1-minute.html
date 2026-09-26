@@ -346,7 +346,7 @@
       </div>
       <div class="page-intro">
         <p>One question per Short, answered in under a minute with a small example you can check. The questions follow the order of the machine learning course I teach at IIT Gandhinagar, from what it means for a computer to learn up to neural networks.</p>
-        <p>29 Shorts so far, with more on the way.</p>
+        <p>42 Shorts so far, with more on the way.</p>
         <div class="actions">
           <a class="button" href="https://www.youtube.com/playlist?list=PLNKjEaQxBYLU">Watch the playlist</a>
           <a class="text-link" href="https://nipunbatra.github.io/ml-teaching/">Slides and notebooks</a>
@@ -357,15 +357,16 @@
     <div class="search" role="search">
       <label class="sr-only" for="video-search">Search the Shorts by question or topic</label>
       <input id="video-search" type="search" placeholder="Search, e.g. recall" autocomplete="off" spellcheck="false" data-noun="Short" data-nouns="Shorts">
-      <p class="search-status" id="search-status" aria-live="polite">29 Shorts</p>
+      <p class="search-status" id="search-status" aria-live="polite">42 Shorts</p>
     </div>
 
     <nav class="topic-nav" aria-label="Topics">
       <ul>
-        <li><a href="#basics">Basics <span data-count-for="basics">4</span></a></li>
-        <li><a href="#evaluation">Evaluation <span data-count-for="evaluation">9</span></a></li>
-        <li><a href="#decision-trees">Decision trees <span data-count-for="decision-trees">4</span></a></li>
-        <li><a href="#model-fit">Model fit and validation <span data-count-for="model-fit">1</span></a></li>
+        <li><a href="#basics">Basics <span data-count-for="basics">5</span></a></li>
+        <li><a href="#evaluation">Evaluation <span data-count-for="evaluation">12</span></a></li>
+        <li><a href="#decision-trees">Decision trees <span data-count-for="decision-trees">6</span></a></li>
+        <li><a href="#model-fit">Model fit and validation <span data-count-for="model-fit">5</span></a></li>
+        <li><a href="#ensembles">Ensembles <span data-count-for="ensembles">3</span></a></li>
         <li><a href="#regression">Regression <span data-count-for="regression">2</span></a></li>
         <li><a href="#maths">Maths <span data-count-for="maths">1</span></a></li>
         <li><a href="#optimization">Optimization <span data-count-for="optimization">2</span></a></li>
@@ -413,6 +414,13 @@
             <p class="sr-only">Tomato quality has two possible answers, good or bad, and a loan is yes or no: that is classification. Campus energy use is a number, like 30, 32 or 40 kWh, and a new answer can land anywhere on the scale: that is regression. Of spam, cat-dog-bird photos, house prices and tumors, only house prices ask for a number.</p>
           </div>
         </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/9L4GmMWMZJ8/hqdefault.jpg" alt="Thumbnail: A decision tree gets 100% on its training data. Does that tell you its test score?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/9L4GmMWMZJ8">A decision tree gets 100% on its training data. Does that tell you its test score?</a></h3>
+            <p class="sr-only">A decision tree is grown on 455 of the 569 tumors in the Wisconsin breast cancer data and gets all 455 right: 100%. On the 114 tumors it never saw, it gets 104 right: 91.2%. Only data kept out of training, a test set, gives an honest score.</p>
+          </div>
+        </li>
       </ul>
     </section>
     <section class="video-section" id="evaluation" aria-labelledby="evaluation-title">
@@ -426,6 +434,13 @@
           <div class="video-copy">
             <h3><a href="https://youtube.com/shorts/IMrH-hsz7Kg">A test is 99% accurate. Is it a good test?</a></h3>
             <p class="sr-only">1,000 people are tested and only 10 are sick. A lazy test calls everyone healthy, so 990 of its 1,000 answers are right: 99% accuracy. Every one of its 10 wrong answers is a sick person it missed.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/s_gTn-gMX4Q/hqdefault.jpg" alt="Thumbnail: A model says &#x27;good&#x27; but the tomato is bad. What is that mistake called?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/s_gTn-gMX4Q">A model says &#x27;good&#x27; but the tomato is bad. What is that mistake called?</a></h3>
+            <p class="sr-only">A model that looks for good tomatoes is tested on 8 tomatoes and gets 5 right and 3 wrong. Twice it calls a bad tomato good, a false alarm (false positive); once it calls a good tomato bad, a miss (false negative). The confusion matrix puts all four counts in one grid: 3, 2, 1 and 2.</p>
           </div>
         </li>
         <li class="video tall">
@@ -454,6 +469,20 @@
           <div class="video-copy">
             <h3><a href="https://youtube.com/shorts/dYKAiz817-c">Model 1: precision 0.70, recall 0.85. Model 2: the reverse. Which job needs Model 1?</a></h3>
             <p class="sr-only">Model 1 has precision 0.70 and recall 0.85, so it misses 15 of every 100 real cases but 30 of every 100 alarms are false. Model 2 is the other way round. At airport security a missed threat costs the most, so that job needs Model 1; spam filters and card fraud checks suffer more from false alarms.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/KA7kpgzwqwM/hqdefault.jpg" alt="Thumbnail: A detector flags scores of 0.5 or more. Raise the bar to 0.7. What usually happens?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/KA7kpgzwqwM">A detector flags scores of 0.5 or more. Raise the bar to 0.7. What usually happens?</a></h3>
+            <p class="sr-only">In this example a detector scores 10 satellite images, and 5 of them show a brick kiln. Flagging scores of 0.5 or more finds 4 kilns with 2 false alarms; raising the bar to 0.7 finds 3 kilns with 1 false alarm. Precision rises from 67% to 75% while recall falls from 80% to 60%.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/-0wYWzMXR0o/hqdefault.jpg" alt="Thumbnail: A perfect model has an ROC AUC of 1. What does a coin-flipping model get?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/-0wYWzMXR0o">A perfect model has an ROC AUC of 1. What does a coin-flipping model get?</a></h3>
+            <p class="sr-only">A perfect model catches every sick person before it flags any healthy one, so the area under its ROC curve is 1. In this example a coin that says sick half the time flags, on average, half of the sick and half of the healthy people, and every coin lands on the diagonal. The area under the diagonal is half the square, so a coin&#x27;s ROC AUC is 0.5.</p>
           </div>
         </li>
         <li class="video tall">
@@ -507,6 +536,13 @@
           </div>
         </li>
         <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/MAGjthTQHYA/hqdefault.jpg" alt="Thumbnail: A group is half yes, half no. What is its Gini impurity?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/MAGjthTQHYA">A group is half yes, half no. What is its Gini impurity?</a></h3>
+            <p class="sr-only">Gini impurity is 1 minus the squared share of each label. A group of 4 yes and 0 no scores 1 - 1² - 0² = 0, and a half-and-half group scores 1 - 0.5² - 0.5² = 0.5, the most a two-label group can reach. The 14 tennis days, 9 yes and 5 no, score 1 - (9/14)² - (5/14)² = 0.459.</p>
+          </div>
+        </li>
+        <li class="video tall">
           <div class="thumb"><img src="https://i.ytimg.com/vi/ulg16au4iP8/hqdefault.jpg" alt="Thumbnail: Temperatures 40, 48, 60, 72, 80, 90. Where should a decision tree try to split?" loading="lazy" decoding="async"></div>
           <div class="video-copy">
             <h3><a href="https://youtube.com/shorts/ulg16au4iP8">Temperatures 40, 48, 60, 72, 80, 90. Where should a decision tree try to split?</a></h3>
@@ -520,6 +556,13 @@
             <p class="sr-only">Example: three rows of a campus energy table, 30, 32 and 40 kWh, end up in one leaf of a regression tree. Guessing 32 gives a total squared miss of 4 + 0 + 64 = 68; guessing 34 gives 16 + 4 + 36 = 56, the lowest of any guess. 34 is the mean, (30 + 32 + 40) / 3, so the leaf predicts the mean.</p>
           </div>
         </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/HMLXrTRsYF4/hqdefault.jpg" alt="Thumbnail: Does a deeper decision tree always do better on new data?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/HMLXrTRsYF4">Does a deeper decision tree always do better on new data?</a></h3>
+            <p class="sr-only">Trees of depth 1 to 7 are trained on 398 tumours from scikit-learn&#x27;s breast cancer data and tested on 171 they never saw. Training accuracy climbs to 100% at depth 7, but accuracy on the new tumours peaks at 96.5% at depth 3 and falls to 92.4%. The deepest tree memorizes its training data: overfitting.</p>
+          </div>
+        </li>
       </ul>
     </section>
     <section class="video-section" id="model-fit" aria-labelledby="model-fit-title">
@@ -529,10 +572,67 @@
       </div>
       <ul class="video-list">
         <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/87LLvx0fFkU/hqdefault.jpg" alt="Thumbnail: Three curves fit the same 16 points. Which will predict new points best?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/87LLvx0fFkU">Three curves fit the same 16 points. Which will predict new points best?</a></h3>
+            <p class="sr-only">Example: 16 points on a wave plus random noise, fitted with a straight line, a degree-3 curve and a degree-15 curve that passes through every point. On 40 new points the average squared error is 0.28 for the line, 0.07 for the smooth curve and 5.49 for the wiggly one. The line is too simple (underfitting); the wiggly curve copies the noise (overfitting).</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/-RqnwZDuuLI/hqdefault.jpg" alt="Thumbnail: Refit a line and a wiggly curve on 5 new samples. Whose predictions jump more?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/-RqnwZDuuLI">Refit a line and a wiggly curve on 5 new samples. Whose predictions jump more?</a></h3>
+            <p class="sr-only">Example: 5 samples of 16 points from the same wave plus random noise, each fitted with a straight line and a degree-15 curve. At x = 0.25, where the true value is 1.00, the line&#x27;s 5 predictions spread over only 0.08 but average 0.36, while the curve&#x27;s spread over 0.58 and average 0.83. The line has high bias; the curve has high variance.</p>
+          </div>
+        </li>
+        <li class="video tall">
           <div class="thumb"><img src="https://i.ytimg.com/vi/NL-ROrSIonI/hqdefault.jpg" alt="Thumbnail: 100 data points, 5-fold cross-validation. How many train the model each round?" loading="lazy" decoding="async"></div>
           <div class="video-copy">
             <h3><a href="https://youtube.com/shorts/NL-ROrSIonI">100 data points, 5-fold cross-validation. How many train the model each round?</a></h3>
             <p class="sr-only">Split 100 data points into 5 blocks of 20. In each of 5 rounds, one block is kept for testing and the model trains on the other 4 blocks: 4 x 20 = 80 points. Over the 5 rounds every point is tested exactly once, and the five test scores are averaged.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/FnYRy5v1D_o/hqdefault.jpg" alt="Thumbnail: You scale with the mean of all the data, then cross-validate. Is the test score honest?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/FnYRy5v1D_o">You scale with the mean of all the data, then cross-validate. Is the test score honest?</a></h3>
+            <p class="sr-only">In this example 5 points (1, 3, 5, 7 and 24) go through 5-fold cross-validation, and this round 24 is the test point. The mean of all 5 points is 8, but the 4 training points alone give 4, so scaling with 8 lets the test point shape the training data. That is data leakage: compute the mean on the training folds only, then apply it to the test fold.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/tfj-ich7JKU/hqdefault.jpg" alt="Thumbnail: 100 points, 10 positive, 5 random folds of 20. What is the chance a fold gets none?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/tfj-ich7JKU">100 points, 10 positive, 5 random folds of 20. What is the chance a fold gets none?</a></h3>
+            <p class="sr-only">Shuffle 100 points, 10 of them positive, into 5 folds of 20. A given fold gets no positives when all 20 of its picks are negatives: (90/100)(89/99)...(71/81) = 0.095, about 1 in 10, and the chance that at least one of the 5 folds gets none is 43%. Stratified cross-validation deals the positives and negatives separately, so every fold keeps the 10% share: 2 positives and 18 negatives.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="video-section" id="ensembles" aria-labelledby="ensembles-title">
+      <div class="section-label">
+        <h2 id="ensembles-title">Ensembles</h2>
+        <p>Combining many models into one.</p>
+      </div>
+      <ul class="video-list">
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/xbQwEKc8SQk/hqdefault.jpg" alt="Thumbnail: Draw 100 times from 100 items, putting each back. How many different items?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/xbQwEKc8SQk">Draw 100 times from 100 items, putting each back. How many different items?</a></h3>
+            <p class="sr-only">Draw 100 times from 100 items, putting each one back. Any one item is missed by all 100 draws with chance 0.99 to the power 100 = 0.366, so on average only 63.4 different items make it in; in one example draw, 64 did and 36 were never picked. This is a bootstrap sample, and bagging trains one model on each such sample and lets them vote.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/u8Vuvh2XXRU/hqdefault.jpg" alt="Thumbnail: 3 models, each wrong 30% of the time, take a vote. How often is the vote wrong?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/u8Vuvh2XXRU">3 models, each wrong 30% of the time, take a vote. How often is the vote wrong?</a></h3>
+            <p class="sr-only">Three models are each wrong 30% of the time, with independent mistakes, and take a majority vote. The vote is wrong only when 2 or 3 of them are: 3 × 0.3 × 0.3 × 0.7 + 0.3 × 0.3 × 0.3 = 0.216, so 21.6%, and 16.3% with 5 models. If all three make the same mistakes, the vote stays at 30%, which is why a random forest trains each tree on different rows and features.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/xEgDVuNX1bw/hqdefault.jpg" alt="Thumbnail: A model gets 2 of 10 points wrong. In boosting, which does the next one focus on?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/xEgDVuNX1bw">A model gets 2 of 10 points wrong. In boosting, which does the next one focus on?</a></h3>
+            <p class="sr-only">Example: 10 points, each starting with weight 0.1. A one-split model gets 2 of them wrong, so AdaBoost doubles their weights, halves the rest and rescales: the 2 missed points now weigh 0.25 each, half of all the weight. The next model gets both of them right, and after three rounds the weighted vote gets all 10 points right.</p>
           </div>
         </li>
       </ul>
