@@ -346,7 +346,7 @@
       </div>
       <div class="page-intro">
         <p>One question per Short, answered in under a minute with a small example you can check. The questions follow the order of the machine learning course I teach at IIT Gandhinagar, from what it means for a computer to learn up to neural networks.</p>
-        <p>57 Shorts so far, with more on the way.</p>
+        <p>73 Shorts so far, with more on the way.</p>
         <div class="actions">
           <a class="button" href="https://www.youtube.com/playlist?list=PLNKjEaQxBYLU">Watch the playlist</a>
           <a class="text-link" href="https://nipunbatra.github.io/ml-teaching/">Slides and notebooks</a>
@@ -357,23 +357,24 @@
     <div class="search" role="search">
       <label class="sr-only" for="video-search">Search the Shorts by question or topic</label>
       <input id="video-search" type="search" placeholder="Search, e.g. recall" autocomplete="off" spellcheck="false" data-noun="Short" data-nouns="Shorts">
-      <p class="search-status" id="search-status" aria-live="polite">57 Shorts</p>
+      <p class="search-status" id="search-status" aria-live="polite">73 Shorts</p>
     </div>
 
     <nav class="topic-nav" aria-label="Topics">
       <ul>
-        <li><a href="#basics">Basics <span data-count-for="basics">5</span></a></li>
+        <li><a href="#basics">Basics <span data-count-for="basics">7</span></a></li>
         <li><a href="#evaluation">Evaluation <span data-count-for="evaluation">12</span></a></li>
-        <li><a href="#decision-trees">Decision trees <span data-count-for="decision-trees">6</span></a></li>
-        <li><a href="#model-fit">Model fit and validation <span data-count-for="model-fit">5</span></a></li>
+        <li><a href="#decision-trees">Decision trees <span data-count-for="decision-trees">7</span></a></li>
+        <li><a href="#model-fit">Model fit and validation <span data-count-for="model-fit">7</span></a></li>
         <li><a href="#ensembles">Ensembles <span data-count-for="ensembles">3</span></a></li>
-        <li><a href="#regression">Regression <span data-count-for="regression">5</span></a></li>
-        <li><a href="#maths">Maths <span data-count-for="maths">1</span></a></li>
-        <li><a href="#optimization">Optimization <span data-count-for="optimization">3</span></a></li>
+        <li><a href="#regression">Regression <span data-count-for="regression">6</span></a></li>
+        <li><a href="#maths">Maths <span data-count-for="maths">2</span></a></li>
+        <li><a href="#optimization">Optimization <span data-count-for="optimization">4</span></a></li>
         <li><a href="#classification">Classification <span data-count-for="classification">4</span></a></li>
-        <li><a href="#neural-networks">Neural networks <span data-count-for="neural-networks">8</span></a></li>
-        <li><a href="#other-models">Other models <span data-count-for="other-models">4</span></a></li>
-        <li><a href="#unsupervised">Unsupervised <span data-count-for="unsupervised">1</span></a></li>
+        <li><a href="#neural-networks">Neural networks <span data-count-for="neural-networks">10</span></a></li>
+        <li><a href="#other-models">Other models <span data-count-for="other-models">8</span></a></li>
+        <li><a href="#unsupervised">Unsupervised <span data-count-for="unsupervised">2</span></a></li>
+        <li><a href="#reinforcement">Reinforcement learning <span data-count-for="reinforcement">1</span></a></li>
       </ul>
     </nav>
 
@@ -403,10 +404,24 @@
           </div>
         </li>
         <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/Wec2hBbMx-0/hqdefault.jpg" alt="Thumbnail: Same fruits, no labels. Can a computer still group them?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/Wec2hBbMx-0">Same fruits, no labels. Can a computer still group them?</a></h3>
+            <p class="sr-only">Example: 12 fruits plotted by redness and size, first with their labels (6 oranges, 6 apples) and then with no labels at all. With labels, a model learns a border and labels a new fruit; that is supervised learning. With no labels, fruits that sit close together still fall into 2 groups, which is unsupervised learning, though it cannot name them.</p>
+          </div>
+        </li>
+        <li class="video tall">
           <div class="thumb"><img src="https://i.ytimg.com/vi/LxuHgdlfNWQ/hqdefault.jpg" alt="Thumbnail: Is the sample number a useful feature for predicting a tomato&#x27;s quality?" loading="lazy" decoding="async"></div>
           <div class="video-copy">
             <h3><a href="https://youtube.com/shorts/LxuHgdlfNWQ">Is the sample number a useful feature for predicting a tomato&#x27;s quality?</a></h3>
             <p class="sr-only">Four tomatoes are described by colour, size and texture, and each row has a sample number from 1 to 4. In this table samples 1 and 2 are good and 3 and 4 are bad, but number the same rows in another order and that pattern breaks while the tomatoes stay the same. Sample numbers are labels for the rows, so they are usually not a useful feature, though they can help with tracking, such as finding which batch a delayed truck carried.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/s-kd-Xa9WQM/hqdefault.jpg" alt="Thumbnail: Colour is red, green or blue. Code it as 1, 2, 3 for a linear model?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/s-kd-Xa9WQM">Colour is red, green or blue. Code it as 1, 2, 3 for a linear model?</a></h3>
+            <p class="sr-only">Coded as 1, 2, 3, the colours look like amounts: green sits halfway between red and blue, and blue counts 3 times red. In an example where red, green and blue shirts sell 7, 9 and 2 (hundred), a straight line on the codes predicts 8.5, 6 and 3.5, missing green by 3. One-hot encoding gives each colour its own 0/1 column, so each colour gets its own weight and the fit is exact.</p>
           </div>
         </li>
         <li class="video tall">
@@ -565,6 +580,13 @@
             <p class="sr-only">Trees of depth 1 to 7 are trained on 398 tumours from scikit-learn&#x27;s breast cancer data and tested on 171 they never saw. Training accuracy climbs to 100% at depth 7, but accuracy on the new tumours peaks at 96.5% at depth 3 and falls to 92.4%. The deepest tree memorizes its training data: overfitting.</p>
           </div>
         </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/fiR-i-IekcI/hqdefault.jpg" alt="Thumbnail: A fully grown decision tree is cut back to fewer leaves. Can it do better on new data?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/fiR-i-IekcI">A fully grown decision tree is cut back to fewer leaves. Can it do better on new data?</a></h3>
+            <p class="sr-only">On scikit-learn&#x27;s breast cancer data, a decision tree grown until every training tumour is right has 16 leaves, 6 of them holding only 1 or 2 tumours, and gets 92.4% of new tumours right. Pruning it back to 7 leaves lowers training accuracy from 100% to 97.0% but raises accuracy on new tumours to 95.9%. How far to cut was picked by testing on held-out training data.</p>
+          </div>
+        </li>
       </ul>
     </section>
     <section class="video-section" id="model-fit" aria-labelledby="model-fit-title">
@@ -588,10 +610,24 @@
           </div>
         </li>
         <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/3FCUfMnkToM/hqdefault.jpg" alt="Thumbnail: Add a column of dice rolls to a linear regression. Can its training error go up?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/3FCUfMnkToM">Add a column of dice rolls to a linear regression. Can its training error go up?</a></h3>
+            <p class="sr-only">Example: a linear regression fits 8 points with a training error of 0.78. Adding a column of dice rolls, pure noise, drops its training error to 0.37, because the fit can always give the new column a weight of 0 and never does worse on its own data. On 8 new points the same change raises the error from 0.46 to 1.79, which is why input columns are chosen by how they do on new data.</p>
+          </div>
+        </li>
+        <li class="video tall">
           <div class="thumb"><img src="https://i.ytimg.com/vi/NL-ROrSIonI/hqdefault.jpg" alt="Thumbnail: 100 data points, 5-fold cross-validation. How many train the model each round?" loading="lazy" decoding="async"></div>
           <div class="video-copy">
             <h3><a href="https://youtube.com/shorts/NL-ROrSIonI">100 data points, 5-fold cross-validation. How many train the model each round?</a></h3>
             <p class="sr-only">Split 100 data points into 5 blocks of 20. In each of 5 rounds, one block is kept for testing and the model trains on the other 4 blocks: 4 x 20 = 80 points. Over the 5 rounds every point is tested exactly once, and the five test scores are averaged.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/o6ITPv-CqHw/hqdefault.jpg" alt="Thumbnail: Rows sorted: 80 Yes, 20 No. Train on the first 80, test on the last 20. Will it work?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/o6ITPv-CqHw">Rows sorted: 80 Yes, 20 No. Train on the first 80, test on the last 20. Will it work?</a></h3>
+            <p class="sr-only">A dataset of 100 rows is sorted by class: the first 80 are Yes and the last 20 are No. Split it 80/20 without shuffling and the model trains on 80 Yes rows only, then is tested on 20 No rows, a class it never saw, and gets 0 of 20 right. After one random shuffle the same split gives 64 Yes and 16 No for training, and 16 Yes and 4 No for testing.</p>
           </div>
         </li>
         <li class="video tall">
@@ -680,6 +716,13 @@
             <p class="sr-only">In this example the best fit has weights 2 and 0.4. With the same penalty strength of 4, ridge (a penalty on squared weights) shrinks them to 1 and 0.2, while lasso (a penalty on their sizes) gives 1.5 and exactly 0. Lasso keeps the weights inside a diamond whose corners sit on the axes, and the error rings first touch it at a corner, where one weight is 0; ridge&#x27;s circle has no corners.</p>
           </div>
         </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/Ykb0prWnNKA/hqdefault.jpg" alt="Thumbnail: Sales 3, 5, 4, 6, 5, 7, 6, 8. A model uses the last 2 days. What does it predict next?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/Ykb0prWnNKA">Sales 3, 5, 4, 6, 5, 7, 6, 8. A model uses the last 2 days. What does it predict next?</a></h3>
+            <p class="sr-only">Example: daily sales of 3, 5, 4, 6, 5, 7, 6 and 8. Sliding a 3-day window along the series makes a table of 6 rows, each with the day before and yesterday as inputs and the next day as the target. A linear regression fits all 6 rows exactly with the rule today = the day before + 1, so it forecasts 6 + 1 = 7, while copying yesterday would say 8.</p>
+          </div>
+        </li>
       </ul>
     </section>
     <section class="video-section" id="maths" aria-labelledby="maths-title">
@@ -693,6 +736,13 @@
           <div class="video-copy">
             <h3><a href="https://youtube.com/shorts/DarRr7BSzpg">u = (1, 2, 3), v = (1, 0, 2). What is the rank of the 3 by 3 matrix u vᵀ?</a></h3>
             <p class="sr-only">Example: u = (1, 2, 3) and v = (1, 0, 2). Multiplying every number in u by every number in v gives the 3 by 3 matrix u vᵀ with rows (1, 0, 2), (2, 0, 4) and (3, 0, 6). Every row is a multiple of (1, 0, 2), so there is only one independent row and the rank is 1, as it is for any u vᵀ built from two non-zero vectors.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/KzkzlZmdacM/hqdefault.jpg" alt="Thumbnail: Priya never rated Sholay. Can the other ratings predict hers?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/KzkzlZmdacM">Priya never rated Sholay. Can the other ratings predict hers?</a></h3>
+            <p class="sr-only">Example: Arjun, Priya and Ravi rate Sholay, Swades and Interstellar, and one rating is missing. Give each person 2 numbers (Priya: 1, 2) and each movie 2 numbers (Sholay: 2, 0), so a rating is 1 × 2 + 2 × 0. These numbers give back all 8 known ratings and fill the blank with 2; writing the table as two small ones like this is matrix factorization.</p>
           </div>
         </li>
       </ul>
@@ -722,6 +772,13 @@
           <div class="video-copy">
             <h3><a href="https://youtube.com/shorts/Sm0PMOkrzOc">Each step nudges a line toward one random point. Does the error drop every step?</a></h3>
             <p class="sr-only">Three points (1, 1), (2, 2) and (3, 3), a starting line y = 4 and step size 0.1. Using only (1, 1), the error on all three points falls from 4.67 to 1.75; the next step, using only (2, 2), raises it to 1.88. Over 20 random picks the error rose on 11 steps, while using all three points per step it fell on every one: stochastic gradient descent is cheap and noisy, and heads downhill on average.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/h4mQb_M31Yc/hqdefault.jpg" alt="Thumbnail: Gradient descent stops where the slope is 0. Is that the lowest point?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/h4mQb_M31Yc">Gradient descent stops where the slope is 0. Is that the lowest point?</a></h3>
+            <p class="sr-only">On a single bowl, f(x) = x², gradient descent from x = 3 rolls down to x = 0, the lowest point. On the example curve f(x) = 3x⁴ + 4x³ − 12x², started at x = 2, it stops at x = 1 where f = −5, while the lowest point is −32 at x = −2. A curve is convex when a straight line between any two of its points never dips below it, and on a convex curve slope 0 always means the lowest point.</p>
           </div>
         </li>
       </ul>
@@ -818,10 +875,24 @@
           </div>
         </li>
         <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/gETMPtpDpL4/hqdefault.jpg" alt="Thumbnail: Two 70 x 70 boxes, one shifted 20 right and 20 down. How much do they overlap?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/gETMPtpDpL4">Two 70 x 70 boxes, one shifted 20 right and 20 down. How much do they overlap?</a></h3>
+            <p class="sr-only">A true box and a detector&#x27;s box are both 70 by 70 pixels, the second shifted 20 right and 20 down. They share 50 by 50 = 2,500 square pixels and together cover 4,900 + 4,900 - 2,500 = 7,300, so their intersection over union (IoU) is 2,500 / 7,300 = 0.34, below the usual 0.5 bar for a match. Shifted only 10 and 10, the IoU is 3,600 / 6,200 = 0.58, which counts.</p>
+          </div>
+        </li>
+        <li class="video tall">
           <div class="thumb"><img src="https://i.ytimg.com/vi/m8fmnP209Pg/hqdefault.jpg" alt="Thumbnail: What happens to gradients in a simple RNN during backpropagation?" loading="lazy" decoding="async"></div>
           <div class="video-copy">
             <h3><a href="https://youtube.com/shorts/m8fmnP209Pg">What happens to gradients in a simple RNN during backpropagation?</a></h3>
             <p class="sr-only">A simple RNN reads a sequence one step at a time and reuses the same weight at every step, so during backpropagation the gradient is multiplied by that weight once per step. Multiply by 0.5 twenty times and you get about 0.00000095; multiply by 1.5 twenty times and you get about 3,325. Below 1 the gradient vanishes, above 1 it explodes.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/NLmtPqhUoRI/hqdefault.jpg" alt="Thumbnail: A language model reads &quot;the cat sat on the&quot;. What does it output?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/NLmtPqhUoRI">A language model reads &quot;the cat sat on the&quot;. What does it output?</a></h3>
+            <p class="sr-only">Example: after &quot;the cat sat on the&quot;, a language model gives every word it knows a probability, such as mat 0.45, floor 0.25 and sofa 0.20, and they add up to 1. One word is picked by these chances and added to the text, then the model reads again: after &quot;mat&quot;, a full stop gets 0.55. This loop is next-token prediction.</p>
           </div>
         </li>
       </ul>
@@ -837,6 +908,20 @@
           <div class="video-copy">
             <h3><a href="https://youtube.com/shorts/7aNRgxZLpeE">New fruit: orange or apple? Its 3 nearest neighbours vote.</a></h3>
             <p class="sr-only">Example: known oranges and apples are plotted by redness and size, and a new fruit sits among them. Its closest neighbour, 1 grid square away, is a stray orange; the next two, 2 squares away, are apples. With k = 1 the new fruit is called an orange, but with k = 3 the vote is 2 to 1 for apple.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/7z-3IqkV2Hs/hqdefault.jpg" alt="Thumbnail: k-NN uses height (metres) and income (rupees). Which one decides who is nearest?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/7z-3IqkV2Hs">k-NN uses height (metres) and income (rupees). Which one decides who is nearest?</a></h3>
+            <p class="sr-only">Example: a new person is 1.70 m tall and earns Rs 50,000. Person A is 1.72 m and Rs 54,000, person B is 1.98 m and Rs 50,500. The raw distances are 4,000 and 500, so B looks nearest and height adds less than 0.0001. Scale both features to 0 to 1 first and the distances become 0.09 and 0.56, so A is nearest.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/YsG9ee92ebA/hqdefault.jpg" alt="Thumbnail: A million stored points: must k-NN compare a new point with every one?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/YsG9ee92ebA">A million stored points: must k-NN compare a new point with every one?</a></h3>
+            <p class="sr-only">A k-d tree splits the stored points in half, then in half again, so a new point answers a few yes/no questions and is compared only with the points in its own box. With 10 example points it checks 2 distances instead of 10. With 1,000,000 random points, 15 questions lead to a box of at most 31 points, and in 1,000 tests it found the true nearest neighbour 891 times.</p>
           </div>
         </li>
         <li class="video tall">
@@ -860,6 +945,20 @@
             <p class="sr-only">Example: two straight lines both split the blue points from the amber ones with no mistakes. Line A passes 0.5 away from its closest points; line B keeps them 1.41 away. That gap is the margin, and a support vector machine picks the line with the widest margin, so a new point near the blue ones still lands on the blue side.</p>
           </div>
         </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/KVhueVZVMWQ/hqdefault.jpg" alt="Thumbnail: Blue points sit inside a ring of amber. Can a straight line split them?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/KVhueVZVMWQ">Blue points sit inside a ring of amber. Can a straight line split them?</a></h3>
+            <p class="sr-only">Example: 5 blue points sit inside a ring of 8 amber points. No straight line splits them in (x, y); the best one still gets 4 of 13 wrong. Add a new feature, x² + y², and the blue points score 0 or 1 while the amber ones score 8 or 9, so one cut at 4 splits them, which is a circle of radius 2 back in the plane.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/iKQM_Qn4BSA/hqdefault.jpg" alt="Thumbnail: One amber point sits among the blue ones. Must the dividing line twist to fit it?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/iKQM_Qn4BSA">One amber point sits among the blue ones. Must the dividing line twist to fit it?</a></h3>
+            <p class="sr-only">Example: blue and amber points split cleanly by a straight line with a margin of 1.5, until one amber point sits among the blue ones. Keeping every point on its side twists the line and shrinks the margin to 0.34. A soft margin leaves that one point on the wrong side and keeps a margin of 2.05; the setting C, the price of each point on the wrong side, trades the two off (C = 100 versus C = 0.1 here).</p>
+          </div>
+        </li>
       </ul>
     </section>
     <section class="video-section" id="unsupervised" aria-labelledby="unsupervised-title">
@@ -873,6 +972,28 @@
           <div class="video-copy">
             <h3><a href="https://youtube.com/shorts/zYfdJlAAxiM">Points 1, 2, 3, 7, 8, 9, centres at 0 and 5: where are they after one k-means step?</a></h3>
             <p class="sr-only">Example: six points at 1, 2, 3, 7, 8 and 9, and k-means starts two centres at 0 and 5. Each point joins its closest centre, and 3 is closer to 5, so the right centre takes 3, 7, 8 and 9 and moves to their average, 6.75, while the left one moves to 1.5. On the next step 3 switches back, the centres settle at 2 and 8, and nothing switches after that.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/cVnPsrWj4Rs/hqdefault.jpg" alt="Thumbnail: More centres always lower k-means&#x27; error. So is the k with the lowest error the best?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/cVnPsrWj4Rs">More centres always lower k-means&#x27; error. So is the k with the lowest error the best?</a></h3>
+            <p class="sr-only">Example: 15 points in 3 clear groups. The k-means error (squared distances from each point to its centre, added up) is 298.7 with 1 centre, 134.5 with 2 and 12 with 3, then falls by less than 2 per extra centre, reaching 0 at k = 15 when every point is its own centre. So the lowest error is useless for choosing k; the elbow of the curve, here k = 3, marks the 3 groups.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="video-section" id="reinforcement" aria-labelledby="reinforcement-title">
+      <div class="section-label">
+        <h2 id="reinforcement-title">Reinforcement learning</h2>
+        <p>Learning from rewards instead of labels.</p>
+      </div>
+      <ul class="video-list">
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/y7KwXnlEt-s/hqdefault.jpg" alt="Thumbnail: No labels, only a reward at the end. What does the agent learn from?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/y7KwXnlEt-s">No labels, only a reward at the end. What does the agent learn from?</a></h3>
+            <p class="sr-only">Example: a robot in a 5-cell corridor moves left or right at random and gets +10 only when it reaches the flag; its first try takes 7 moves and only the last one is rewarded. Passing the reward back, each cell is worth 0.9 times the next one: 10, 9, 8.1 and 7.29, and moving toward the bigger value becomes its policy. That is reinforcement learning: no labels, just tries and rewards.</p>
           </div>
         </li>
       </ul>
