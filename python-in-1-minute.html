@@ -346,7 +346,7 @@
       </div>
       <div class="page-intro">
         <p>Short lessons for ES 112 Computing at IIT Gandhinagar, a first course in programming with Python. Each Short teaches one idea by running real code line by line, in under a minute.</p>
-        <p>48 Shorts so far, with more on the way.</p>
+        <p>77 Shorts so far, with more on the way.</p>
         <div class="actions">
           <a class="button" href="https://www.youtube.com/playlist?list=PLGGKtPe8t8G8">Watch the playlist</a>
           <a class="text-link" href="https://nipunbatra.github.io/comp22/">ES 112 course page (2022)</a>
@@ -357,7 +357,7 @@
     <div class="search" role="search">
       <label class="sr-only" for="video-search">Search the Shorts by question or topic</label>
       <input id="video-search" type="search" placeholder="Search, e.g. loop" autocomplete="off" spellcheck="false" data-noun="Short" data-nouns="Shorts">
-      <p class="search-status" id="search-status" aria-live="polite">48 Shorts</p>
+      <p class="search-status" id="search-status" aria-live="polite">77 Shorts</p>
     </div>
 
 
@@ -706,6 +706,209 @@
           <div class="video-copy">
             <h3><a href="https://youtube.com/shorts/xRFvZD96ONk">x = &quot;hello&quot;, then x[0] = &quot;a&quot;. What happens in Python?</a></h3>
             <p class="sr-only">Reading one letter of a string works: x[0] is h. But strings are immutable, which means they cannot be changed in place, so x[0] = &quot;a&quot; stops with TypeError: &#x27;str&#x27; object does not support item assignment. Build a new string instead: x = &quot;a&quot; + x[1:] makes aello and points x at it. A new string moves only one name: after s = &quot;december&quot;, t = s and s = &quot;november&quot;, print(s, t) shows november december.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/3nEbRodEK-0/hqdefault.jpg" alt="Thumbnail: Is &quot;1234&quot; greater than &quot;23&quot; in Python? True or False?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/3nEbRodEK-0">Is &quot;1234&quot; greater than &quot;23&quot; in Python? True or False?</a></h3>
+            <p class="sr-only">Python compares numbers by size, so 1234 greater than 23 prints True. Text is compared one character at a time from the left, like words in a dictionary, and the first characters that differ decide. &quot;1&quot; comes before &quot;2&quot;, so &quot;1234&quot; greater than &quot;23&quot; prints False, and &quot;b&quot; comes before &quot;f&quot;, so &quot;foo&quot; less than &quot;bar&quot; prints False too. Comparing a number with text, as in 22 greater than &quot;33&quot;, stops with a TypeError.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/yPaSYwwSiWA/hqdefault.jpg" alt="Thumbnail: How do you print 5.136 as 5.14, or 1000 as 1,000, in Python?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/yPaSYwwSiWA">How do you print 5.136 as 5.14, or 1000 as 1,000, in Python?</a></h3>
+            <p class="sr-only">An f-string puts values inside curly brackets, and what comes after the colon says how to write the number. With number = 5.136, f&quot;{number:.2f}&quot; keeps 2 digits after the point and prints 5.14. A comma adds thousands separators: 10000000000.239 with :,.2f prints 10,000,000,000.24, and 1000 with :, prints 1,000. The number itself does not change; only the printed text does.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/CmkQhgeC7Og/hqdefault.jpg" alt="Thumbnail: x = &quot;HELLo World&quot;, then x.lower(). Did x change?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/CmkQhgeC7Og">x = &quot;HELLo World&quot;, then x.lower(). Did x change?</a></h3>
+            <p class="sr-only">Strings in Python cannot change, so x.lower() builds a new lower-case string instead of changing x. On a line of its own that new string gets no name and is thrown away, so print(x) still shows HELLo World. Save the result, y = x.lower(), and print(y) shows hello world. Methods like isupper() only answer a question: x.isupper() is False and &quot;HELLO&quot;.isupper() is True.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/1IHzqOW-qr8/hqdefault.jpg" alt="Thumbnail: How do you add up the numbers in the text &quot;3,4,5,6,7,8,10&quot; in Python?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/1IHzqOW-qr8">How do you add up the numbers in the text &quot;3,4,5,6,7,8,10&quot; in Python?</a></h3>
+            <p class="sr-only">Numbers typed with commas arrive as one piece of text. x.split(&quot;,&quot;) cuts it at each comma into a list of text pieces, &#x27;3&#x27;, &#x27;4&#x27; and so on, and int(s) turns each piece into a number. The loop adds them as it goes: 3 + 4 + 5 + 6 + 7 + 8 + 10, so print(total) shows 43. Forget int() and + joins text instead: &quot;3&quot; + &quot;4&quot; is 34.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/oa_hzHYwEqY/hqdefault.jpg" alt="Thumbnail: Joining [&quot;Hello&quot;, &quot;World&quot;] with a loop: where does the extra space come from?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/oa_hzHYwEqY">Joining [&quot;Hello&quot;, &quot;World&quot;] with a loop: where does the extra space come from?</a></h3>
+            <p class="sr-only">The loop s = s + &quot; &quot; + x adds a space and then a word, and it does that for the first word too. So after two rounds s is &quot; Hello World&quot;, and print(&quot;[&quot; + s + &quot;]&quot;) shows [ Hello World] with a stray space at the front. &quot; &quot;.join(xs) puts the space only between the items and prints [Hello World]. Any text can go between: &quot;-&quot;.join([&quot;a&quot;, &quot;e&quot;, &quot;l&quot;, &quot;l&quot;, &quot;o&quot;]) gives a-e-l-l-o.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/-QKLxx5SE2Q/hqdefault.jpg" alt="Thumbnail: What does &quot;This is a good question.&quot;.replace(&quot;is&quot;, &quot;IS&quot;) give in Python?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/-QKLxx5SE2Q">What does &quot;This is a good question.&quot;.replace(&quot;is&quot;, &quot;IS&quot;) give in Python?</a></h3>
+            <p class="sr-only">replace looks for the letters, not for whole words. In &quot;This is a good question.&quot; the letters &quot;is&quot; appear twice, at the end of This and as the word is, so x.replace(&quot;is&quot;, &quot;IS&quot;) prints ThIS IS a good question. It returns a new string and x keeps the old text. To change only the word, put the spaces in the search: x.replace(&quot; is &quot;, &quot; IS &quot;) gives This IS a good question.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/no1u6mqf9bg/hqdefault.jpg" alt="Thumbnail: area_of_circle(10) + area_of_rect(5, 3): what does Python print?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/no1u6mqf9bg">area_of_circle(10) + area_of_rect(5, 3): what does Python print?</a></h3>
+            <p class="sr-only">def only stores a function: its name, its parameters and its body. Nothing in the body runs until you call it. area_of_circle(10) puts 10 into r, runs 3.14 * 10 * 10 and returns 314.0; area_of_rect(5, 3) puts 5 into l and 3 into b and returns 15. So the last line prints 329.0, a float because 3.14 is.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/wZ_1M6i5Kew/hqdefault.jpg" alt="Thumbnail: A function prints &quot;Imaginary.&quot; So what is stored in s1?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/wZ_1M6i5Kew">A function prints &quot;Imaginary.&quot; So what is stored in s1?</a></h3>
+            <p class="sr-only">describe_roots1(1, 1, 1) works out d = 1 - 4 = -3, and since d is below 0 it prints Imaginary. to the screen. The function has no return, so the call gives back None, and print(s1) shows None. Write return &quot;Imaginary.&quot; instead and s1 holds the text. print shows, return hands back: even a = print(&quot;Hello&quot;) leaves a as None.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/5aK6I_D2vTU/hqdefault.jpg" alt="Thumbnail: foo(0) matches neither the if nor the elif. What does it return?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/5aK6I_D2vTU">foo(0) matches neither the if nor the elif. What does it return?</a></h3>
+            <p class="sr-only">foo(3) checks whether 3 is greater than 0, which is True, so it returns &quot;positive&quot;. foo(0) checks whether 0 is greater than 0 and then whether it is less than 0, both False, and the body ends without reaching a return. A function that ends without return gives back None, so print(foo(3), foo(0)) shows positive None. Add a last line, return &quot;zero&quot;, and it prints positive zero.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/mpGTJy8q5Hc/hqdefault.jpg" alt="Thumbnail: Can a Python function return two values?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/mpGTJy8q5Hc">Can a Python function return two values?</a></h3>
+            <p class="sr-only">A function returns one value, but that value can be a tuple. divmod(7, 2) gives the tuple (3, 1), and q, r = divmod(7, 2) unpacks it, so print(q, r) shows 3 1. Your own function works the same way: predsucc(5) returns (4, 6), p, s = predsucc(5) gives 4 and 6, and print(p, s, predsucc(5)) shows 4 6 (4, 6). The comma makes the tuple: type((1)) is int, type((1,)) is tuple.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/o1-o5NHWyWY/hqdefault.jpg" alt="Thumbnail: for i, c in enumerate(&quot;abc&quot;): what does this loop print?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/o1-o5NHWyWY">for i, c in enumerate(&quot;abc&quot;): what does this loop print?</a></h3>
+            <p class="sr-only">enumerate(&quot;abc&quot;) pairs each item with its position: (0, &#x27;a&#x27;), (1, &#x27;b&#x27;), (2, &#x27;c&#x27;). Writing two names in the for loop, for i, c in ..., unpacks each pair, so print(i, c) shows 0 a, 1 b and 2 c. A list of pairs unpacks the same way: (1, 2) and (3, 4) into x and y print 3 and 7. Every item must be a pair; a lone (7,) stops the loop with a ValueError.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/OLpbbRkPx0I/hqdefault.jpg" alt="Thumbnail: The same map printed twice. Why is the second list empty?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/OLpbbRkPx0I">The same map printed twice. Why is the second list empty?</a></h3>
+            <p class="sr-only">map(succ, [1, 2, 3, 4]) does not make any values yet; it only remembers to call succ on each item. The first list(ys) asks for every value and prints [2, 3, 4, 5]. After that the map is used up, so the second list(ys) prints []. If you need the values twice, make a list once: ys = list(map(succ, xs)).</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/8AHS3UD-l04/hqdefault.jpg" alt="Thumbnail: Remove every word from a list inside a for loop. What is left?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/8AHS3UD-l04">Remove every word from a list inside a for loop. What is left?</a></h3>
+            <p class="sr-only">A for loop walks the list by position: 0, 1, 2 and so on, on the list as it is right now. Removing &quot;Is&quot; at position 0 shifts every word left, so position 1 is now &quot;a&quot; and &quot;this&quot; is never visited; then &quot;course?&quot; goes at position 2, and position 3 is past the end. So print(xs) shows [&#x27;this&#x27;, &#x27;good&#x27;]. Never change a list while looping over it: loop over xs.copy() and every word is removed, leaving [].</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/0wacsrY9NxU/hqdefault.jpg" alt="Thumbnail: sum = 0 in a loop, then sum([1, 2, 3]). Why does Python raise an error?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/0wacsrY9NxU">sum = 0 in a loop, then sum([1, 2, 3]). Why does Python raise an error?</a></h3>
+            <p class="sr-only">In Python a function is a value, and sum is just a name that points at the built-in sum function. sum = 0 moves that name to the number 0, and the loop makes it 3, so print(sum) shows 3. Then sum([1, 2, 3]) tries to call the number 3 and stops with TypeError: &#x27;int&#x27; object is not callable. Use another name, such as total, and sum([1, 2, 3]) gives 6.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/6u-Fk1Cjs-c/hqdefault.jpg" alt="Thumbnail: What does list(map(int, [&quot;1&quot;, &quot;245&quot;, &quot;129&quot;])) print in Python?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/6u-Fk1Cjs-c">What does list(map(int, [&quot;1&quot;, &quot;245&quot;, &quot;129&quot;])) print in Python?</a></h3>
+            <p class="sr-only">map takes a function and a list and calls the function on each item. list(map(int, xs)) turns the texts &quot;1&quot;, &quot;245&quot; and &quot;129&quot; into the numbers [1, 245, 129]. Your own function works the same way: with succ adding 1, list(map(succ, [1, 2, 3])) gives [2, 3, 4]. Write int, not int(): map needs the function itself, and map(int(), xs) fails with TypeError: &#x27;int&#x27; object is not callable.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/MXRdnzl7tTo/hqdefault.jpg" alt="Thumbnail: derivative(f) returns a new function. What does derivative(square)(5) print?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/MXRdnzl7tTo">derivative(f) returns a new function. What does derivative(square)(5) print?</a></h3>
+            <p class="sr-only">derivative(f) builds a new function df that remembers f and dx = 0.001, and returns it. So derivative(square) is df with f = square, and calling it with 5 works out (square(5.001) - square(5)) / 0.001. Python prints 10.001000000002591, close to the true slope 10 of x * x at 5. Newton&#x27;s method uses the same idea: for f(x) = x*x + x - 6 it finds the roots 2 and -3.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/VC_Ug48R9As/hqdefault.jpg" alt="Thumbnail: f sets its own y = x, and y = 0 outside it. What do print(f(2)) and print(y) show?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/VC_Ug48R9As">f sets its own y = x, and y = 0 outside it. What do print(f(2)) and print(y) show?</a></h3>
+            <p class="sr-only">Calling f(2) gives the call its own local names: x is 2 and a new local y is 2, so f returns 2 and print(f(2)) prints 2. When the call ends, those local names are gone. The y = 0 outside f is a global name that f never touched, so print(y) prints 0. Local names do not leak out: with no global y, print(y) after f(2) gives NameError: name &#x27;y&#x27; is not defined.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/XiVrkHTBtZ8/hqdefault.jpg" alt="Thumbnail: y = 3 outside, and y = y + x inside f. What happens when you call f(2)?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/XiVrkHTBtZ8">y = 3 outside, and y = y + x inside f. What happens when you call f(2)?</a></h3>
+            <p class="sr-only">Because f assigns to y, Python treats y as a local name everywhere inside f. So y = y + x reads the local y before it has a value, and f(2) stops with UnboundLocalError: cannot access local variable &#x27;y&#x27; where it is not associated with a value. Only reading works: return y + x uses the global y and gives 5. To change the global y, write global y first, and print(y) shows 5.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/E0ky2sTZT_Y/hqdefault.jpg" alt="Thumbnail: x = 10 outside, and f(x) prints x, sets x = 20, prints x. What does f(5) print?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/E0ky2sTZT_Y">x = 10 outside, and f(x) prints x, sets x = 20, prints x. What does f(5) print?</a></h3>
+            <p class="sr-only">Calling f(5) makes a local x that holds 5, because a parameter is a local name even when a global has the same name. The first print shows 5, x = 20 changes only the local x, and the second print shows 20, so the output is 5 20 (with a space at the end from end=&quot; &quot;). The global x stays 10 the whole time: add print(x) after the call and the full output is 5 20 10.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/A9H_Fs7mUy0/hqdefault.jpg" alt="Thumbnail: Two counters from one function, from 5 and 25. What does print(c1(), c2(), c1(), c2()) show?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/A9H_Fs7mUy0">Two counters from one function, from 5 and 25. What does print(c1(), c2(), c1(), c2()) show?</a></h3>
+            <p class="sr-only">make_counter(start) makes a tick function that remembers its own start box: a closure. So c1 = make_counter(5) and c2 = make_counter(25) keep two separate boxes, one holding 5 and one holding 25. Each call gives back its box&#x27;s value and adds 1 to it, so print(c1(), c2(), c1(), c2()) prints 5 25 6 26. A new counter starts again: print(make_counter(5)()) prints 5 every time.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/WKYdTC8Tyu4/hqdefault.jpg" alt="Thumbnail: h adds to a list it remembers. After h(1) to h(4), what does print(xs) show?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/WKYdTC8Tyu4">h adds to a list it remembers. After h(1) to h(4), what does print(xs) show?</a></h3>
+            <p class="sr-only">f(xs) returns a function g, and g remembers x, which names the same list as xs. Each call h(1), h(2), h(3), h(4) appends to that one list, so print(xs) prints [1, 2, 3, 4]. The closure keeps the object itself, not a copy. Writing x = x + [y] inside g instead makes x local to g, and h(1) stops with UnboundLocalError.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/vsCpFGFEFsk/hqdefault.jpg" alt="Thumbnail: Ten functions made in a loop, each returning i + x. What do fs[0](1) and fs[5](1) give?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/vsCpFGFEFsk">Ten functions made in a loop, each returning i + x. What do fs[0](1) and fs[5](1) give?</a></h3>
+            <p class="sr-only">The loop makes 10 functions, and each one&#x27;s body says return i + x. A function looks up i only when it runs, and by then the loop is over and i is 9. So fs[0](1) is 9 + 1 = 10, fs[5](1) is 10 too, and the line prints 10 10. One fix saves the value as a default when def runs: with def f(x, i=i): the same line prints 1 6.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/_lGM-SR2qDM/hqdefault.jpg" alt="Thumbnail: A for loop and a list comprehension build the squares of 1 to 10. Does xs == ys print True?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/_lGM-SR2qDM">A for loop and a list comprehension build the squares of 1 to 10. Does xs == ys print True?</a></h3>
+            <p class="sr-only">The loop starts with an empty list ys and appends x*x for x from 1 to 10. The list comprehension [x*x for x in range(1, 11)] says the same thing in one line, like set-builder notation in maths. Both hold the same items, so print(xs == ys) prints True and print(xs) shows [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]. A filter fits in too: keeping only the items above 95 from [90, 82, 83, 100, 102] gives [100, 102].</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/zQLNsaha_8s/hqdefault.jpg" alt="Thumbnail: Does order matter? {2, 3, 5, 7, 11} == {3, 5, 7, 11, 2} and [1, 2, 3] == [2, 1, 3]" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/zQLNsaha_8s">Does order matter? {2, 3, 5, 7, 11} == {3, 5, 7, 11, 2} and [1, 2, 3] == [2, 1, 3]</a></h3>
+            <p class="sr-only">Curly brackets make a set, a collection with no order, so two sets with the same items are equal and the first line prints True. Lists keep their order and compare position by position, so [1, 2, 3] == [2, 1, 3] prints False. The in operator asks whether an item is there: 3 in zs prints True. Sets can grow: after zs.add(13), print(zs) shows {2, 3, 5, 7, 11, 13}.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/CpTUB95IVE0/hqdefault.jpg" alt="Thumbnail: Three loops add 1, 3, 5, 7, 9. What does the for loop with range(1, 11, 2) print?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/CpTUB95IVE0">Three loops add 1, 3, 5, 7, 9. What does the for loop with range(1, 11, 2) print?</a></h3>
+            <p class="sr-only">range(1, 11, 2) counts 1, 3, 5, 7, 9, so s goes 1, 4, 9, 16, 25 and print(s) shows 25. The same sum takes 10 lines with a while loop, where i changes in two places, and 6 lines with a for loop that skips even numbers with continue. Any for loop can be written as a while, but the for is shorter and has fewer places to go wrong. Move one i = i + 1 below the continue in the while version and i stays at 2 forever.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/5sfPxkHsSgM/hqdefault.jpg" alt="Thumbnail: A dictionary of scores. What do scores[&quot;Beta&quot;] and scores[&quot;beta&quot;] print?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/5sfPxkHsSgM">A dictionary of scores. What do scores[&quot;Beta&quot;] and scores[&quot;beta&quot;] print?</a></h3>
+            <p class="sr-only">With two lists, names and scores, you have to search for Beta&#x27;s position before you can read its score. A dictionary stores key: value pairs and jumps straight to the key, so scores[&quot;Beta&quot;] prints 80. Keys must match exactly: &quot;beta&quot; with a small b is a different key, so scores[&quot;beta&quot;] stops with KeyError: &#x27;beta&#x27;. Check first with in: print(&quot;Beta&quot; in scores, &quot;beta&quot; in scores) prints True False.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/eCE5WdXhnHs/hqdefault.jpg" alt="Thumbnail: Count the words of &quot;the quick brown fox jumps over the lazy dog&quot;. What is in freq?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/eCE5WdXhnHs">Count the words of &quot;the quick brown fox jumps over the lazy dog&quot;. What is in freq?</a></h3>
+            <p class="sr-only">Start with an empty dictionary and go through text.split() word by word. A word seen before gets 1 added to its count; a new word is set to 1. Only &quot;the&quot; appears twice, so print(freq) shows {&#x27;the&#x27;: 2, &#x27;quick&#x27;: 1, &#x27;brown&#x27;: 1, &#x27;fox&#x27;: 1, &#x27;jumps&#x27;: 1, &#x27;over&#x27;: 1, &#x27;lazy&#x27;: 1, &#x27;dog&#x27;: 1}. Then print(freq[&quot;the&quot;], len(freq)) prints 2 8: the count for &quot;the&quot; and 8 different words.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/ynqB-SP2pJ4/hqdefault.jpg" alt="Thumbnail: Count the words of &quot;The dog saw the dog.&quot; with a dictionary. Is &quot;the&quot; counted 2 times?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/ynqB-SP2pJ4">Count the words of &quot;The dog saw the dog.&quot; with a dictionary. Is &quot;the&quot; counted 2 times?</a></h3>
+            <p class="sr-only">split() cuts only at spaces, so &quot;The dog saw the dog.&quot; gives the words The, dog, saw, the and dog. with its full stop. &quot;The&quot; and &quot;the&quot; differ by one capital letter and &quot;dog.&quot; is not &quot;dog&quot;, so they are different keys and print(freq) shows {&#x27;The&#x27;: 1, &#x27;dog&#x27;: 1, &#x27;saw&#x27;: 1, &#x27;the&#x27;: 1, &#x27;dog.&#x27;: 1}. The fix is two changes: loop over text.lower().split() and add w = w.strip(&quot;.,?!&quot;) as the first line in the loop. Then freq is {&#x27;the&#x27;: 2, &#x27;dog&#x27;: 2, &#x27;saw&#x27;: 1}.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/Y-PQL93Ztys/hqdefault.jpg" alt="Thumbnail: A dictionary code moves each letter 2 places. What does &quot;map&quot; become?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/Y-PQL93Ztys">A dictionary code moves each letter 2 places. What does &quot;map&quot; become?</a></h3>
+            <p class="sr-only">out = inp[2:] + inp[:2] is the alphabet moved 2 places, &quot;cdefghijklmnopqrstuvwxyzab&quot;. zip pairs the letters of inp and out, (&#x27;a&#x27;, &#x27;c&#x27;), (&#x27;b&#x27;, &#x27;d&#x27;) and so on, and dict turns the pairs into a lookup table, so m[&quot;a&quot;], m[&quot;y&quot;] and m[&quot;z&quot;] print c a b. Looking up each letter of &quot;map&quot; gives o, c and r, so the code prints ocr. The same table can be built with a loop: for i in range(len(inp)): m[inp[i]] = out[i].</p>
           </div>
         </li>
       </ul>
