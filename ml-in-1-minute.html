@@ -346,7 +346,7 @@
       </div>
       <div class="page-intro">
         <p>One question per Short, answered in under a minute with a small example you can check. The questions follow the order of the machine learning course I teach at IIT Gandhinagar, from what it means for a computer to learn up to neural networks.</p>
-        <p>73 Shorts so far, with more on the way.</p>
+        <p>91 Shorts so far, with more on the way.</p>
         <div class="actions">
           <a class="button" href="https://www.youtube.com/playlist?list=PLNKjEaQxBYLU">Watch the playlist</a>
           <a class="text-link" href="https://nipunbatra.github.io/ml-teaching/">Slides and notebooks</a>
@@ -357,24 +357,24 @@
     <div class="search" role="search">
       <label class="sr-only" for="video-search">Search the Shorts by question or topic</label>
       <input id="video-search" type="search" placeholder="Search, e.g. recall" autocomplete="off" spellcheck="false" data-noun="Short" data-nouns="Shorts">
-      <p class="search-status" id="search-status" aria-live="polite">73 Shorts</p>
+      <p class="search-status" id="search-status" aria-live="polite">91 Shorts</p>
     </div>
 
     <nav class="topic-nav" aria-label="Topics">
       <ul>
         <li><a href="#basics">Basics <span data-count-for="basics">7</span></a></li>
-        <li><a href="#evaluation">Evaluation <span data-count-for="evaluation">12</span></a></li>
-        <li><a href="#decision-trees">Decision trees <span data-count-for="decision-trees">7</span></a></li>
-        <li><a href="#model-fit">Model fit and validation <span data-count-for="model-fit">7</span></a></li>
-        <li><a href="#ensembles">Ensembles <span data-count-for="ensembles">3</span></a></li>
-        <li><a href="#regression">Regression <span data-count-for="regression">6</span></a></li>
+        <li><a href="#evaluation">Evaluation <span data-count-for="evaluation">13</span></a></li>
+        <li><a href="#decision-trees">Decision trees <span data-count-for="decision-trees">8</span></a></li>
+        <li><a href="#model-fit">Model fit and validation <span data-count-for="model-fit">8</span></a></li>
+        <li><a href="#ensembles">Ensembles <span data-count-for="ensembles">5</span></a></li>
+        <li><a href="#regression">Regression <span data-count-for="regression">8</span></a></li>
         <li><a href="#maths">Maths <span data-count-for="maths">2</span></a></li>
-        <li><a href="#optimization">Optimization <span data-count-for="optimization">4</span></a></li>
-        <li><a href="#classification">Classification <span data-count-for="classification">4</span></a></li>
-        <li><a href="#neural-networks">Neural networks <span data-count-for="neural-networks">10</span></a></li>
-        <li><a href="#other-models">Other models <span data-count-for="other-models">8</span></a></li>
-        <li><a href="#unsupervised">Unsupervised <span data-count-for="unsupervised">2</span></a></li>
-        <li><a href="#reinforcement">Reinforcement learning <span data-count-for="reinforcement">1</span></a></li>
+        <li><a href="#optimization">Optimization <span data-count-for="optimization">5</span></a></li>
+        <li><a href="#classification">Classification <span data-count-for="classification">5</span></a></li>
+        <li><a href="#neural-networks">Neural networks <span data-count-for="neural-networks">14</span></a></li>
+        <li><a href="#other-models">Other models <span data-count-for="other-models">11</span></a></li>
+        <li><a href="#unsupervised">Unsupervised <span data-count-for="unsupervised">3</span></a></li>
+        <li><a href="#reinforcement">Reinforcement learning <span data-count-for="reinforcement">2</span></a></li>
       </ul>
     </nav>
 
@@ -503,6 +503,13 @@
           </div>
         </li>
         <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/rXNd0EC4YA4/hqdefault.jpg" alt="Thumbnail: A tree fits its 400 training points exactly. Can it do worse than guessing the average?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/rXNd0EC4YA4">A tree fits its 400 training points exactly. Can it do worse than guessing the average?</a></h3>
+            <p class="sr-only">On 500 noisy points from a course notebook, always guessing the training average misses 100 new points by 0.40 (average squared miss). A decision tree grown until it gets all 400 training points exactly right misses the same new points by 0.51, so it does worse than the average guess. R² scores a model against that guess, 1 minus its error divided by the average guess&#x27;s error: 1 is perfect, 0 is no better, and the tree gets -0.30, while a straight line gets 0.39.</p>
+          </div>
+        </li>
+        <li class="video tall">
           <div class="thumb"><img src="https://i.ytimg.com/vi/sPgJwjXDqCY/hqdefault.jpg" alt="Thumbnail: Precision 100%, recall 10%, average 55%. Is that a fair score?" loading="lazy" decoding="async"></div>
           <div class="video-copy">
             <h3><a href="https://youtube.com/shorts/sPgJwjXDqCY">Precision 100%, recall 10%, average 55%. Is that a fair score?</a></h3>
@@ -587,6 +594,13 @@
             <p class="sr-only">On scikit-learn&#x27;s breast cancer data, a decision tree grown until every training tumour is right has 16 leaves, 6 of them holding only 1 or 2 tumours, and gets 92.4% of new tumours right. Pruning it back to 7 leaves lowers training accuracy from 100% to 97.0% but raises accuracy on new tumours to 95.9%. How far to cut was picked by testing on held-out training data.</p>
           </div>
         </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/AYiZVjONtKE/hqdefault.jpg" alt="Thumbnail: A tree with 3 levels of questions fits a sine wave. How many values can it predict?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/AYiZVjONtKE">A tree with 3 levels of questions fits a sine wave. How many values can it predict?</a></h3>
+            <p class="sr-only">A regression tree answers with the average of the points in each final group, its leaf. On 200 points of y = sin x, no question gives one value (error 0.50), one question at x = 3.14 gives 2 values, 0.63 and -0.63 (error 0.10), and 3 levels give 8 values, 2 times 2 times 2 (error 0.020). The fit is a staircase, and 4 levels give at most 16 steps.</p>
+          </div>
+        </li>
       </ul>
     </section>
     <section class="video-section" id="model-fit" aria-labelledby="model-fit-title">
@@ -614,6 +628,13 @@
           <div class="video-copy">
             <h3><a href="https://youtube.com/shorts/3FCUfMnkToM">Add a column of dice rolls to a linear regression. Can its training error go up?</a></h3>
             <p class="sr-only">Example: a linear regression fits 8 points with a training error of 0.78. Adding a column of dice rolls, pure noise, drops its training error to 0.37, because the fit can always give the new column a weight of 0 and never does worse on its own data. On 8 new points the same change raises the error from 0.46 to 1.79, which is why input columns are chosen by how they do on new data.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/zRa-xMk4ZjA/hqdefault.jpg" alt="Thumbnail: California housing has 8 columns. Trying every set, how many models do you train?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/zRa-xMk4ZjA">California housing has 8 columns. Trying every set, how many models do you train?</a></h3>
+            <p class="sr-only">Each of the 8 input columns of the California housing data is either in or out of a set, so there are 2 to the power 8 = 256 sets to train and score (one of them empty). With 20 columns that grows to 1,048,576. Forward selection adds the column that helps most, then the next, and trains only 8 + 7 + ... + 1 = 36 models, but it can miss the best set.</p>
           </div>
         </li>
         <li class="video tall">
@@ -673,6 +694,20 @@
             <p class="sr-only">Example: 10 points, each starting with weight 0.1. A one-split model gets 2 of them wrong, so AdaBoost doubles their weights, halves the rest and rescales: the 2 missed points now weigh 0.25 each, half of all the weight. The next model gets both of them right, and after three rounds the weighted vote gets all 10 points right.</p>
           </div>
         </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/V7ghwcvm5h4/hqdefault.jpg" alt="Thumbnail: In AdaBoost, a small model is wrong 90% of the time. How much say should it get?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/V7ghwcvm5h4">In AdaBoost, a small model is wrong 90% of the time. How much say should it get?</a></h3>
+            <p class="sr-only">AdaBoost lets many small models vote and gives each one a say. A model that is wrong 10% of the time gets 1.10, one wrong 30% of the time gets 0.42, and a coin flip, wrong 50% of the time, gets 0. A model that is wrong 90% of the time gets -1.10: its vote counts for the other side, and flipped it is right 90% of the time, as good as the 10% model.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/ckIMtVWY3c0/hqdefault.jpg" alt="Thumbnail: A random forest split sees 2 of 4 measurements. How often is the best one hidden?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/ckIMtVWY3c0">A random forest split sees 2 of 4 measurements. How often is the best one hidden?</a></h3>
+            <p class="sr-only">With 4 iris flower measurements and 2 picked at random for each split, there are 6 possible pairs, and 3 of them leave out any given measurement, so the best one is hidden half the time. On the 150 iris flowers, 100 trees that may use all 4 measurements all start with a petal question, while 100 trees that see 2 of 4 start with petal length 45 times, petal width 39 times and sepal length 16 times. Trees that differ make different mistakes, so the vote of the random forest cancels more of them.</p>
+          </div>
+        </li>
       </ul>
     </section>
     <section class="video-section" id="regression" aria-labelledby="regression-title">
@@ -721,6 +756,20 @@
           <div class="video-copy">
             <h3><a href="https://youtube.com/shorts/Ykb0prWnNKA">Sales 3, 5, 4, 6, 5, 7, 6, 8. A model uses the last 2 days. What does it predict next?</a></h3>
             <p class="sr-only">Example: daily sales of 3, 5, 4, 6, 5, 7, 6 and 8. Sliding a 3-day window along the series makes a table of 6 rows, each with the day before and yesterday as inputs and the next day as the target. A linear regression fits all 6 rows exactly with the rule today = the day before + 1, so it forecasts 6 + 1 = 7, while copying yesterday would say 8.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/IJvYQElsb2A/hqdefault.jpg" alt="Thumbnail: Four data sets share one best-fit line and the same average miss. Do they look alike?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/IJvYQElsb2A">Four data sets share one best-fit line and the same average miss. Do they look alike?</a></h3>
+            <p class="sr-only">Four data sets of 11 points each share the best-fit line y = 3 + 0.5x, an average y of 7.50, an average squared miss of 1.25 and a correlation of 0.82. Plotted, one is a noisy line, one a smooth curve that a parabola fits within 0.003, one a straight line with one far point, and in one a single point at x = 19 sets the slope. This is Anscombe&#x27;s quartet: plot the data before you trust a fit.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/470y2_2ngmM/hqdefault.jpg" alt="Thumbnail: Ridge with penalty 100 is fit to (1, 101) and (2, 102). What does it predict at x = 1?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/470y2_2ngmM">Ridge with penalty 100 is fit to (1, 101) and (2, 102). What does it predict at x = 1?</a></h3>
+            <p class="sr-only">The plain line y = 100 + x hits both points, but ridge regression with penalty 100 charges 100 times the squares of the intercept and the slope, 1,000,100 for that line. Ridge instead picks intercept 1.91 and slope 2.85, which misses by a lot but costs only 19,349, so it predicts 4.76 at x = 1 for a true value of 101. Leaving the intercept out of the charge gives 101.49 + 0.005x, which predicts 101.50 at both points.</p>
           </div>
         </li>
       </ul>
@@ -781,6 +830,13 @@
             <p class="sr-only">On a single bowl, f(x) = x², gradient descent from x = 3 rolls down to x = 0, the lowest point. On the example curve f(x) = 3x⁴ + 4x³ − 12x², started at x = 2, it stops at x = 1 where f = −5, while the lowest point is −32 at x = −2. A curve is convex when a straight line between any two of its points never dips below it, and on a convex curve slope 0 always means the lowest point.</p>
           </div>
         </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/JF3lNLcsPDA/hqdefault.jpg" alt="Thumbnail: Gradient descent needs 27 steps down x² from x = 4. How many does Newton&#x27;s method need?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/JF3lNLcsPDA">Gradient descent needs 27 steps down x² from x = 4. How many does Newton&#x27;s method need?</a></h3>
+            <p class="sr-only">On f(x) = x² from x = 4, gradient descent with step size 0.1 multiplies x by 0.8 each step and needs 27 steps to get within 0.01 of the bottom. Newton&#x27;s method uses the bend of the curve as well as its slope: 4 minus slope 8 divided by bend 2 is 0, the bottom in one jump. On x⁴, which is not a bowl, each Newton jump only cuts x to two thirds.</p>
+          </div>
+        </li>
       </ul>
     </section>
     <section class="video-section" id="classification" aria-labelledby="classification-title">
@@ -815,6 +871,13 @@
           <div class="video-copy">
             <h3><a href="https://youtube.com/shorts/5sR_yEo4Arg">Softmax turns the scores 2, 1, 0 into probabilities. What does the 0 class get?</a></h3>
             <p class="sr-only">Dividing each score by the total gives the class that scored 0 nothing, and turns a score of -1 into a negative share. Softmax instead takes e to each score (7.39, 2.72 and 1) and divides by their total, 11.11, giving 0.665, 0.245 and 0.090. Every class gets a positive share and the shares add to 1; the scores 2, 1, -1 give 0.71, 0.26 and 0.04.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/9jkEH0v8vmI/hqdefault.jpg" alt="Thumbnail: A straight line sorts tomatoes from oranges. Add one huge orange. Does the cut move?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/9jkEH0v8vmI">A straight line sorts tomatoes from oranges. Add one huge orange. Does the cut move?</a></h3>
+            <p class="sr-only">Seven fruits from a course notebook: tomatoes (0) at radius 0, 0.1, 0.2 and 0.3, oranges (1) at 0.6, 0.7 and 0.9. A straight line fit to the 0s and 1s crosses 0.5 at radius 0.45 and gets all 7 right. Add one easy orange at radius 2.5 and the line flattens (slope 1.47 to 0.45), the cut moves to 0.66, and the orange at 0.6 is called a tomato. Logistic regression&#x27;s S-curve levels off at 1, so its border stays near 0.45 (0.44 after).</p>
           </div>
         </li>
       </ul>
@@ -895,6 +958,34 @@
             <p class="sr-only">Example: after &quot;the cat sat on the&quot;, a language model gives every word it knows a probability, such as mat 0.45, floor 0.25 and sofa 0.20, and they add up to 1. One word is picked by these chances and added to the text, then the model reads again: after &quot;mat&quot;, a full stop gets 0.55. This loop is next-token prediction.</p>
           </div>
         </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/7_2tmvX6a1A/hqdefault.jpg" alt="Thumbnail: LeNet-5 has 61,706 weights. How many passes does backpropagation need for every slope?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/7_2tmvX6a1A">LeNet-5 has 61,706 weights. How many passes does backpropagation need for every slope?</a></h3>
+            <p class="sr-only">Nudging one weight up and down and re-running a network gives that weight&#x27;s slope, at 2 runs per weight: a 5-weight example needs 10 runs. LeNet-5, a classic digit reader, has 61,706 weights, so nudging needs 123,412 runs for every learning step. Backpropagation passes the slopes back through the network layer by layer, so one forward pass and one backward pass give all 61,706 slopes.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/Q1CsfdALa1I/hqdefault.jpg" alt="Thumbnail: The slope of 3x² + 2x + 1 at x = 2 is 14. Nudge x by 10⁻²⁰: what slope do you get?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/Q1CsfdALa1I">The slope of 3x² + 2x + 1 at x = 2 is 14. Nudge x by 10⁻²⁰: what slope do you get?</a></h3>
+            <p class="sr-only">Estimating the slope of f(x) = 3x² + 2x + 1 at x = 2 (true value 14) by nudging x by h gives 14.000000000000004 for h = 0.1, but 13.9977 for h = 10⁻¹³ and 14.2109 for h = 10⁻¹⁵. A computer keeps about 16 significant digits, so with h = 10⁻²⁰ the sum 2 + h is stored as exactly 2. Then f(2 + h) - f(2 - h) = 17 - 17 = 0, and the estimated slope is 0.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/Qk2hFkTAUQU/hqdefault.jpg" alt="Thumbnail: LeNet-5 learns 61,706 numbers in 5 layers. Where are most of them?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/Qk2hFkTAUQU">LeNet-5 learns 61,706 numbers in 5 layers. Where are most of them?</a></h3>
+            <p class="sr-only">LeNet-5, a classic digit reader, has 2 convolution layers and 3 fully connected layers. Each convolution filter reuses the same 5 x 5 weights at every spot in the image, so the two convolution layers need only 156 + 2,416 = 2,572 numbers (4.2%). The fully connected layers give every input and output pair its own weight: 48,120 + 10,164 + 850 = 59,134 of the 61,706 (95.8%). Done without sharing, the first layer alone would need 4,816,896 weights instead of 156.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/QvMoEG-RIsM/hqdefault.jpg" alt="Thumbnail: Freeze a trained image model, train only a 7,690-number last layer. Test accuracy?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/QvMoEG-RIsM">Freeze a trained image model, train only a 7,690-number last layer. Test accuracy?</a></h3>
+            <p class="sr-only">A big image model trained on other pictures is frozen: it turns each CIFAR-10 photo into 768 numbers and is never changed. Only a new last layer of 768 x 10 + 10 = 7,690 numbers learns the 10 classes, over 2 passes of the 50,000 training photos. In one run of the course notebook it went from 9.4% right on 500 test photos (guessing gets 10%) to 97.4%, 487 of 500: that is transfer learning.</p>
+          </div>
+        </li>
       </ul>
     </section>
     <section class="video-section" id="other-models" aria-labelledby="other-models-title">
@@ -939,6 +1030,20 @@
           </div>
         </li>
         <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/U5O0c7_6ANE/hqdefault.jpg" alt="Thumbnail: Point A is at (3, 0), point B at (2, 2). Which is nearer to (0, 0)?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/U5O0c7_6ANE">Point A is at (3, 0), point B at (2, 2). Which is nearer to (0, 0)?</a></h3>
+            <p class="sr-only">Example: A at (3, 0) and B at (2, 2). In a straight line (Euclidean distance), A is 3 away and B is the square root of 8, 2.83, so B is nearer. In city blocks (Manhattan distance), adding the steps along each axis, A is 3 away and B is 2 + 2 = 4, so A is nearer. k-NN labels a point by its nearest neighbours, so the distance you choose can change them.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/L3ZVqkeac1Q/hqdefault.jpg" alt="Thumbnail: All 4 overcast days were &quot;yes&quot;. What chance does naive Bayes give &quot;no&quot; to the next one?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/L3ZVqkeac1Q">All 4 overcast days were &quot;yes&quot;. What chance does naive Bayes give &quot;no&quot; to the next one?</a></h3>
+            <p class="sr-only">In the 14-day tennis data, all 4 overcast days were &quot;yes&quot;, so overcast appears on 0 of the 5 &quot;no&quot; days. For a new overcast, hot, humid, windy day, naive Bayes multiplies 5/14 by 0/5, 2/5, 4/5 and 3/5, so &quot;no&quot; gets 0%, even though the other three clues alone give &quot;no&quot; 81%. Add-one smoothing adds 1 to every count, overcast becomes 1/8 on &quot;no&quot; days, and &quot;no&quot; gets 44%.</p>
+          </div>
+        </li>
+        <li class="video tall">
           <div class="thumb"><img src="https://i.ytimg.com/vi/4bAWYzBy9gc/hqdefault.jpg" alt="Thumbnail: Both lines make 0 mistakes. Which is safer for new points?" loading="lazy" decoding="async"></div>
           <div class="video-copy">
             <h3><a href="https://youtube.com/shorts/4bAWYzBy9gc">Both lines make 0 mistakes. Which is safer for new points?</a></h3>
@@ -957,6 +1062,13 @@
           <div class="video-copy">
             <h3><a href="https://youtube.com/shorts/iKQM_Qn4BSA">One amber point sits among the blue ones. Must the dividing line twist to fit it?</a></h3>
             <p class="sr-only">Example: blue and amber points split cleanly by a straight line with a margin of 1.5, until one amber point sits among the blue ones. Keeping every point on its side twists the line and shrinks the margin to 0.34. A soft margin leaves that one point on the wrong side and keeps a margin of 2.05; the setting C, the price of each point on the wrong side, trades the two off (C = 100 versus C = 0.1 here).</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/uVKSXjSj9bA/hqdefault.jpg" alt="Thumbnail: An SVM&#x27;s border sits at 0. Remove the blue point at 2. Where is the border now?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/uVKSXjSj9bA">An SVM&#x27;s border sits at 0. Remove the blue point at 2. Where is the border now?</a></h3>
+            <p class="sr-only">Example: blue points at 1 and 2, amber points at -1 and -2 on a line. A support vector machine (SVM) puts its border in the middle of the widest gap: at 0, with a gap of 1 on each side. Remove the blue point at 2, or move it to 10, and the border stays at 0, because only the closest points, 1 and -1 (the support vectors), hold it in place. Remove the point at 1 instead and the border moves to (2 + (-1)) / 2 = 0.5.</p>
           </div>
         </li>
       </ul>
@@ -981,6 +1093,13 @@
             <p class="sr-only">Example: 15 points in 3 clear groups. The k-means error (squared distances from each point to its centre, added up) is 298.7 with 1 centre, 134.5 with 2 and 12 with 3, then falls by less than 2 per extra centre, reaching 0 at k = 15 when every point is its own centre. So the lowest error is useless for choosing k; the elbow of the curve, here k = 3, marks the 3 groups.</p>
           </div>
         </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/8aUfnTQGYMU/hqdefault.jpg" alt="Thumbnail: Six points in one clump, three in another, one alone. Must the lone point join a group?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/8aUfnTQGYMU">Six points in one clump, three in another, one alone. Must the lone point join a group?</a></h3>
+            <p class="sr-only">Example: six points in a tight clump near (1.5, 2), three near (10, 10) and one alone at (5, 5). DBSCAN calls a point crowded if at least 3 points, itself included, lie within 1.5 of it, and grows groups out from crowded points. The lone point&#x27;s nearest neighbour is 3.61 away, so no group reaches it and it is left out as noise: DBSCAN finds 2 groups, of 6 and 3, without being told how many.</p>
+          </div>
+        </li>
       </ul>
     </section>
     <section class="video-section" id="reinforcement" aria-labelledby="reinforcement-title">
@@ -994,6 +1113,13 @@
           <div class="video-copy">
             <h3><a href="https://youtube.com/shorts/y7KwXnlEt-s">No labels, only a reward at the end. What does the agent learn from?</a></h3>
             <p class="sr-only">Example: a robot in a 5-cell corridor moves left or right at random and gets +10 only when it reaches the flag; its first try takes 7 moves and only the last one is rewarded. Passing the reward back, each cell is worth 0.9 times the next one: 10, 9, 8.1 and 7.29, and moving toward the bigger value becomes its policy. That is reinforcement learning: no labels, just tries and rewards.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/7EgcNJe4jz4/hqdefault.jpg" alt="Thumbnail: A car too weak to climb the hill pushes right all the time. How many steps to the flag?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/7EgcNJe4jz4">A car too weak to climb the hill pushes right all the time. How many steps to the flag?</a></h3>
+            <p class="sr-only">In the MountainCar simulator, a car starts in a valley (position -0.45) with a flag on the right hilltop, and its engine is too weak to drive straight up. Pushing right every step, it rocks near the bottom and never reaches the flag, even in 10,000 steps. Pushing left for 50 steps first builds speed, and it reaches the flag at step 114 (in our run). The reward, -1 per step until the flag, gives no hint of this, so a learner has to explore moves that look wrong.</p>
           </div>
         </li>
       </ul>

@@ -346,7 +346,7 @@
       </div>
       <div class="page-intro">
         <p>Short videos for ES 114 Probability, Statistics and Data Visualization at IIT Gandhinagar: one question per Short, answered in under a minute with a small example, in the same style as <a href="ml-in-1-minute.html">Machine learning in 1 minute</a>.</p>
-        <p>48 Shorts so far, with more on the way.</p>
+        <p>53 Shorts so far, with more on the way.</p>
         <div class="actions">
           <a class="button" href="https://www.youtube.com/playlist?list=PLc_dUTLURe5w">Watch the playlist</a>
           <a class="text-link" href="https://nipunbatra.github.io/psdv25/">ES 114 course page (2025)</a>
@@ -357,7 +357,7 @@
     <div class="search" role="search">
       <label class="sr-only" for="video-search">Search the Shorts by question or topic</label>
       <input id="video-search" type="search" placeholder="Search, e.g. variance" autocomplete="off" spellcheck="false" data-noun="Short" data-nouns="Shorts">
-      <p class="search-status" id="search-status" aria-live="polite">48 Shorts</p>
+      <p class="search-status" id="search-status" aria-live="polite">53 Shorts</p>
     </div>
 
 
@@ -706,6 +706,41 @@
           <div class="video-copy">
             <h3><a href="https://youtube.com/shorts/Q0tK4TLugcU">Roll a die and square the number. What is the average of the squares?</a></h3>
             <p class="sr-only">The six squares are 1, 4, 9, 16, 25 and 36, which add up to 91, so their average is 91 / 6 = 15.17. Squaring the average face instead gives 3.5 x 3.5 = 12.25, because the big faces 25 and 36 pull the average of the squares up. The gap, 15.17 - 12.25 = 2.92, is the die&#x27;s variance: the average of the squared distances 6.25, 2.25, 0.25, 0.25, 2.25 and 6.25 from 3.5.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/n7AVQ9AfKFA/hqdefault.jpg" alt="Thumbnail: A coin lands heads 90% of the time. At least how many bits to store 1,000 flips?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/n7AVQ9AfKFA">A coin lands heads 90% of the time. At least how many bits to store 1,000 flips?</a></h3>
+            <p class="sr-only">A result with chance p carries log2(1/p) bits of surprise: a fair flip 1 bit, heads on our example coin (chance 0.9) 0.152 bits, and tails (chance 0.1) 3.32 bits. Weighted by how often each happens, that is 0.9 x 0.152 + 0.1 x 3.32 = 0.137 + 0.332 = 0.469 bits a flip, so 1,000 flips need about 469 bits on average, and no code can average fewer. This average surprise is the entropy: a fair coin needs 1,000 bits and a 99% coin only about 81.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/5wEmrwkochY/hqdefault.jpg" alt="Thumbnail: X and Y are independent, each between 10 and 11. Cosine similarity 0.999. Are they linked?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/5wEmrwkochY">X and Y are independent, each between 10 and 11. Cosine similarity 0.999. Are they linked?</a></h3>
+            <p class="sr-only">Every pair (X, Y) sits near (10.5, 10.5), so the arrows from 0 to the points all point the same way and the cosine similarity is 110.25 / 110.33 = 0.999. Subtract the averages, 10.5 each, and the arrows point every way: the cosine of the centred numbers, which is the correlation, is 0. Between 0 and 1 the same kind of independent pair scores a cosine of 0.75, and again a correlation of 0.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/ZEPzvFqQjCs/hqdefault.jpg" alt="Thumbnail: Points spread 5 across and 2 up, tilted. How much spread can one line keep?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/ZEPzvFqQjCs">Points spread 5 across and 2 up, tilted. How much spread can one line keep?</a></h3>
+            <p class="sr-only">Our example points have a spread (variance) of 5 across and 2 up, 7 in total, and they rise together (covariance 2), so the cloud tilts. Keeping only each point&#x27;s place along a flat line keeps a spread of 5; as the line turns, the spread it keeps rises to 6 at 26.6 degrees up and falls to 2 when the line points straight up. That best line is the principal component: one number per point keeps 6 of the 7, about 86%, and the line at right angles holds the other 1.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/uGImMGmxofQ/hqdefault.jpg" alt="Thumbnail: Next-letter weights add to 0.8. Scaled to add to 1, how often is &quot;e&quot; picked?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/uGImMGmxofQ">Next-letter weights add to 0.8. Scaled to add to 1, how often is &quot;e&quot; picked?</a></h3>
+            <p class="sr-only">In our example a program weighs the letter after &quot;appl&quot;: e 0.3, i 0.2, a 0.1, o 0.1, u 0.05 and end 0.05, which add to only 0.8. To make them add to 1 it divides each weight by the total, so every piece grows by the same factor 1 / 0.8 = 1.25 and e becomes 0.3 / 0.8 = 0.375, picked 37.5% of the time. The other shares become 25%, 12.5%, 12.5%, 6.25% and 6.25%; multiplying by 0.8 instead would shrink e to 24%.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/jtH8BPBUsj0/hqdefault.jpg" alt="Thumbnail: A box plot of 20 marks. How many of the 20 marks lie inside the box?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/jtH8BPBUsj0">A box plot of 20 marks. How many of the 20 marks lie inside the box?</a></h3>
+            <p class="sr-only">Our 20 example marks, sorted, run from 31 to 94. With NumPy&#x27;s default percentile rule, which Matplotlib&#x27;s box plot uses, the first quartile is 49.5 (between 48 and 50) and the third is 68.5 (between 68 and 70), so the box holds the 10 marks from 50 to 68: the middle half. Each whisker holds 5 marks, so the long right whisker from 70 to 94 shows spread, not a bigger count.</p>
           </div>
         </li>
       </ul>

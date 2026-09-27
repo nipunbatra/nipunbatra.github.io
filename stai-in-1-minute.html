@@ -346,7 +346,7 @@
       </div>
       <div class="page-intro">
         <p>Short videos for CS 203 Software Tools and Techniques for AI at IIT Gandhinagar: one question per Short about the tools behind AI systems, answered in under a minute with a small example, in the same style as <a href="ml-in-1-minute.html">Machine learning in 1 minute</a>.</p>
-        <p>35 Shorts so far, with more on the way.</p>
+        <p>49 Shorts so far, with more on the way.</p>
         <div class="actions">
           <a class="button" href="https://www.youtube.com/playlist?list=PLVUr9iweHl_I">Watch the playlist</a>
           <a class="text-link" href="https://nipunbatra.github.io/stt-ai-26/">CS 203 course page (2026)</a>
@@ -357,7 +357,7 @@
     <div class="search" role="search">
       <label class="sr-only" for="video-search">Search the Shorts by question or topic</label>
       <input id="video-search" type="search" placeholder="Search, e.g. API" autocomplete="off" spellcheck="false" data-noun="Short" data-nouns="Shorts">
-      <p class="search-status" id="search-status" aria-live="polite">35 Shorts</p>
+      <p class="search-status" id="search-status" aria-live="polite">49 Shorts</p>
     </div>
 
 
@@ -615,6 +615,104 @@
           <div class="video-copy">
             <h3><a href="https://youtube.com/shorts/0qtVfU09iu4">&quot;Square root of 144, plus Mumbai&#x27;s temperature in °F?&quot; How many tool calls?</a></h3>
             <p class="sr-only">An agent works in a loop: the model picks one step, your code runs the tool, and the result goes back for the next step. With one step per call, this question takes four calls: calculate gives 12.0, get_weather gives Mumbai&#x27;s 32 °C, convert_units turns that into 89.6 °F, and calculate adds 12.0 + 89.6 = 101.6; a fifth turn with no tool gives the answer. Gandhinagar&#x27;s temperature in °F takes two calls: 38 °C, then 100.4 °F.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/meAqkoLLQns/hqdefault.jpg" alt="Thumbnail: A label file gives a car&#x27;s box as [100, 200, 400, 300]. How wide is the car?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/meAqkoLLQns">A label file gives a car&#x27;s box as [100, 200, 400, 300]. How wide is the car?</a></h3>
+            <p class="sr-only">The same four numbers describe different boxes under different box formats. Read as x, y, width, height, the car box [100, 200, 400, 300] is 400 px wide and 300 px tall; read as two corners x1, y1, x2, y2, it is 400 - 100 = 300 px wide and 300 - 200 = 100 px tall. One 100 by 100 square in a 400 by 300 image is [50, 50, 150, 150] as corners, [50, 50, 100, 100] as corner plus size, and [0.25, 0.333, 0.25, 0.333] as centre plus size in fractions of the image.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/nOx5c1SWP_4/hqdefault.jpg" alt="Thumbnail: &quot;Not good at all&quot; is labelled POSITIVE. A model that never saw it says 92% NEGATIVE. Wrong?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/nOx5c1SWP_4">&quot;Not good at all&quot; is labelled POSITIVE. A model that never saw it says 92% NEGATIVE. Wrong?</a></h3>
+            <p class="sr-only">A review that says &quot;Not good at all&quot; carries the label POSITIVE, and a model that never trained on that row is 92% sure it is NEGATIVE, so the label is probably wrong. With 5-fold cross-validated predictions, every row is scored by a model trained on the other rows, so it cannot copy that row&#x27;s label. In the course demo, 53 of 357 digit labels were flipped on purpose; the checker flagged 56 rows, and 45 of them were real flips, 11 false alarms.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/gc4Rr9XR7dU/hqdefault.jpg" alt="Thumbnail: A photo 400 px wide is flipped left to right. Its nose box ran 180 to 250. Where is it now?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/gc4Rr9XR7dU">A photo 400 px wide is flipped left to right. Its nose box ran 180 to 250. Where is it now?</a></h3>
+            <p class="sr-only">When augmentation flips a photo, its labels have to move too. A left to right flip sends every x to 400 - x, so a nose box from x = 180 to 250 moves to 150 to 220: the right edge 250 becomes the new left edge 400 - 250 = 150, and the width stays 70. Keypoints need one more step: after a flip, the point labelled left knee sits where a right knee is, so its name must swap too.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/AEYUAc5fhO8/hqdefault.jpg" alt="Thumbnail: You try 100 tree depths and keep the best test score, 87%. Will new data give about 87%?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/AEYUAc5fhO8">You try 100 tree depths and keep the best test score, 87%. Will new data give about 87%?</a></h3>
+            <p class="sr-only">Picking the best of 100 test scores picks partly for luck, so the winner&#x27;s score overstates how good it is. In a simulated example where all 100 depths are truly 80% good and each is scored on 200 test items, the best one usually looks like 86.5% (85% to 88.5% in 90% of runs), but on new data it scores about 80%. The fix is a validation set: split 1,000 rows 600 / 200 / 200, choose settings on the 200 validation rows, and open the test set once, at the end.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/URNpO-k-2pU/hqdefault.jpg" alt="Thumbnail: You will try 100 learning rates from 0.001 to 1. Which way tries more values below 0.01?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/URNpO-k-2pU">You will try 100 learning rates from 0.001 to 1. Which way tries more values below 0.01?</a></h3>
+            <p class="sr-only">If every value from 0.001 to 1 is equally likely, only (0.01 - 0.001) / (1 - 0.001) = 0.9% of draws land below 0.01, about 1 in 100, and 90% land between 0.1 and 1. If every power of ten is equally likely instead, 0.001 to 0.01, 0.01 to 0.1 and 0.1 to 1 each get a third of the tries, about 33 of 100 below 0.01. That is a log scale, the usual way to search learning rates: a grid like [0.001, 0.01, 0.1], or suggest_float(..., log=True) in Optuna.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/rZvXF6CpCb8/hqdefault.jpg" alt="Thumbnail: 50 steps per trial. At step 2, trial 2 is at 46%, the others near 75%. Keep training it?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/rZvXF6CpCb8">50 steps per trial. At step 2, trial 2 is at 46%, the others near 75%. Keep training it?</a></h3>
+            <p class="sr-only">When tuning, some trials are clearly losing early. Here trial 1 was at 75% and trial 3 at 74% after 2 of 50 steps, and they finished at 84% and 83%; trial 2 was at 46%, 29 points behind. Stopping it at step 2 saves 50 - 2 = 48 steps for a new trial with new settings; Optuna calls this pruning and does it with trial.report and trial.should_prune.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/XUNawLPgBzM/hqdefault.jpg" alt="Thumbnail: You edit 3 files, run git add on one, then git commit. How many edits does the commit save?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/XUNawLPgBzM">You edit 3 files, run git add on one, then git commit. How many edits does the commit save?</a></h3>
+            <p class="sr-only">git commit saves only what git add put in the staging area, like a letter that goes out with only what is in the envelope. In a test repo, editing data.py, model.py and train.py, then running git add model.py and git commit, gives &quot;1 file changed&quot;, and git status still lists data.py and train.py as modified. Adding those two and committing again gives &quot;2 files changed&quot;.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/oKOL6O0cync/hqdefault.jpg" alt="Thumbnail: A Docker container saves model.pkl and exits. What is in outputs/ on your laptop?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/oKOL6O0cync">A Docker container saves model.pkl and exits. What is in outputs/ on your laptop?</a></h3>
+            <p class="sr-only">The course&#x27;s Docker demo trains a model inside a container and saves model.pkl and training_log.txt to /app/outputs, a folder in the container&#x27;s own files. Run it with a plain docker run and both files stay inside that container: ls outputs/ on your laptop finds nothing, and the next docker run starts again from the clean image. Add -v $(pwd)/outputs:/app/outputs and your laptop&#x27;s outputs/ folder is plugged into the container, so both files are still there after it exits.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/HnklLhkDDaw/hqdefault.jpg" alt="Thumbnail: 4 orders a week, Rs 500: premium in January, regular now. Will input charts show it?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/HnklLhkDDaw">4 orders a week, Rs 500: premium in January, regular now. Will input charts show it?</a></h3>
+            <p class="sr-only">In the course&#x27;s example, a food-delivery company labels customers premium or regular from their orders per week and average spend. After a free-delivery plan, the same 150 customers keep exactly the same numbers, so charts of the inputs do not move, but 39 of them go from premium to regular (a customer with 4 orders a week and Rs 500 is one). A model that learned January&#x27;s labels is now right on 111 of 150, or 74%, and only fresh labels show that drop. This is concept drift: same inputs, a new right answer.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/DL1OfUEkDAE/hqdefault.jpg" alt="Thumbnail: You open a Streamlit app and click Classify 10 times. How many times does the model load?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/DL1OfUEkDAE">You open a Streamlit app and click Classify 10 times. How many times does the model load?</a></h3>
+            <p class="sr-only">Streamlit runs your whole script again, top to bottom, every time someone clicks a button, so a model loaded at the top of the script loads again on every click. Opening the app and clicking Classify 10 times runs the script 11 times: 11 loads, and at 5 seconds a load (an example number) that is 55 seconds spent loading the same model. Wrap the load in @st.cache_resource and it runs once: 11 runs, 1 load, 5 seconds.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/geGWgsJXO0I/hqdefault.jpg" alt="Thumbnail: A CI test needs accuracy above 0.85. Laptop: 0.86. CI server: 0.84. Is the code broken?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/geGWgsJXO0I">A CI test needs accuracy above 0.85. Laptop: 0.86. CI server: 0.84. Is the code broken?</a></h3>
+            <p class="sr-only">A CI test runs by itself on every push, so it should pass whenever the code is right. Accuracy moves with the data, the hardware and the random seed: the course&#x27;s CI demo code, trained on the same data with ten different seeds, scores between 0.84 and 0.87, and a test that needs above 0.85 fails 6 of the 10 runs with nothing broken (0.86 and 0.84 in the question are example numbers). Test with a fixed seed, leave room for the wobble, or check rules that always hold, such as every prediction being 0 or 1, and log the score itself for tracking.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/0yuHYDr5S6g/hqdefault.jpg" alt="Thumbnail: A tiny 70 KB model is stored as 8-bit integers: now 22 KB. Does it run faster on a CPU?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/0yuHYDr5S6g">A tiny 70 KB model is stored as 8-bit integers: now 22 KB. Does it run faster on a CPU?</a></h3>
+            <p class="sr-only">The course notebook stores a small digit classifier&#x27;s weights as 8-bit integers, and the file drops from 70.0 KB to 22.0 KB, 3.2 times smaller. In the notebook&#x27;s run on a Colab CPU, a batch of 256 images took 0.45 ms before and 2.14 ms after: 4.8 times slower. Each 8-bit call also scales the inputs before the multiply and converts the result back, and on a model this small that extra work costs more than the cheaper multiply saves. Speed depends on the hardware, and on big models such as LLMs 8-bit is faster too.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/X8QPzX8N1_M/hqdefault.jpg" alt="Thumbnail: An LLM never saw your course notes, and they change weekly. How should it answer from them?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/X8QPzX8N1_M">An LLM never saw your course notes, and they change weekly. How should it answer from them?</a></h3>
+            <p class="sr-only">Asked &quot;Which week covered data drift?&quot;, an LLM that never saw your notes can only guess, and retraining it every week would still lag behind the notes. The course demo gives the model a search_notes tool instead: the model asks for a search, your code looks up &quot;data drift&quot; and returns &quot;Week 10: detecting distribution shift with KS test, PSI, chi-squared test&quot;, and the model answers &quot;Week 10&quot; from that text. Add one line to the notes and the next answer uses it, with no training. Looking things up first and then writing the answer from what came back is called RAG, retrieval-augmented generation.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/TdEwZ-Z9tzg/hqdefault.jpg" alt="Thumbnail: An agent may call the model 3 times. The question needs 3 tool calls. Does it answer?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/TdEwZ-Z9tzg">An agent may call the model 3 times. The question needs 3 tool calls. Does it answer?</a></h3>
+            <p class="sr-only">An AI agent works in a loop, and every step is one call to the model: it either asks for a tool or writes the answer. &quot;How much hotter is Delhi than Bangalore?&quot; takes get_weather twice (40 C and 28 C in the course demo&#x27;s mock data) and calculate for 40 - 28 = 12, and then a fourth call to write the answer. With max_steps=3 the loop stops after the third tool and returns &quot;Reached max steps without a final answer.&quot;; with the course notebook&#x27;s max_steps=5, even a question that needs 4 tools fits, 4 + 1 = 5.</p>
           </div>
         </li>
       </ul>
