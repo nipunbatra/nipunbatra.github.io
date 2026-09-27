@@ -346,7 +346,7 @@
       </div>
       <div class="page-intro">
         <p>Short lessons for ES 112 Computing at IIT Gandhinagar, a first course in programming with Python. Each Short teaches one idea by running real code line by line, in under a minute.</p>
-        <p>32 Shorts so far, with more on the way.</p>
+        <p>48 Shorts so far, with more on the way.</p>
         <div class="actions">
           <a class="button" href="https://www.youtube.com/playlist?list=PLGGKtPe8t8G8">Watch the playlist</a>
           <a class="text-link" href="https://nipunbatra.github.io/comp22/">ES 112 course page (2022)</a>
@@ -357,7 +357,7 @@
     <div class="search" role="search">
       <label class="sr-only" for="video-search">Search the Shorts by question or topic</label>
       <input id="video-search" type="search" placeholder="Search, e.g. loop" autocomplete="off" spellcheck="false" data-noun="Short" data-nouns="Shorts">
-      <p class="search-status" id="search-status" aria-live="polite">32 Shorts</p>
+      <p class="search-status" id="search-status" aria-live="polite">48 Shorts</p>
     </div>
 
 
@@ -594,6 +594,118 @@
           <div class="video-copy">
             <h3><a href="https://youtube.com/shorts/jugvgmbr9oY">x = [] then x.append(10) prints [10]. Why does y = y.append(10) make y None?</a></h3>
             <p class="sr-only">append changes a list in place: after x = [] and x.append(10), print(x) shows [10]. But append gives back None, so y = y.append(10) adds 10 to the list and then points y at that None, and print(y) prints None. Call append on its own line instead; the same trap catches print([2, 3].append(4)) and xs = [].extend([1, 2]), which both give None.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/xiUa3JnGHus/hqdefault.jpg" alt="Thumbnail: x.append([5, 6, 7]) or x.extend([5, 6, 7]): what does each list print?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/xiUa3JnGHus">x.append([5, 6, 7]) or x.extend([5, 6, 7]): what does each list print?</a></h3>
+            <p class="sr-only">append adds exactly one item, even when that item is a whole list, so x = [1, 2, 3, 4] followed by x.append([5, 6, 7]) prints [1, 2, 3, 4, [5, 6, 7]]. extend adds each item of the list one by one, so y.extend([5, 6, 7]) prints [1, 2, 3, 4, 5, 6, 7]. print(len(x), len(y)) shows 5 7. extend also walks through text: y.extend(&quot;5&quot;) adds the text &#x27;5&#x27; as a new item.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/ttYCYmk-YBU/hqdefault.jpg" alt="Thumbnail: x = [1] * 2 and y = x * 2. What does print(x, y) show in Python?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/ttYCYmk-YBU">x = [1] * 2 and y = x * 2. What does print(x, y) show in Python?</a></h3>
+            <p class="sr-only">The * sign on a list repeats it, so [1] * 2 is [1, 1] and y = x * 2 is [1, 1, 1, 1]: print(x, y) shows [1, 1] [1, 1, 1, 1]. A list inside a list counts as one item, so len([[1, 2], 3]) is 2. The + sign joins two lists, [2, 3] + [4, 5] gives [2, 3, 4, 5], but a list plus a number is a TypeError.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/PP0TTa0kYZA/hqdefault.jpg" alt="Thumbnail: x = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;]. Which letters does x[1:4] give in Python?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/PP0TTa0kYZA">x = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;]. Which letters does x[1:4] give in Python?</a></h3>
+            <p class="sr-only">A slice x[start:stop] starts at position start and stops before position stop, so x[1:4] takes positions 1, 2 and 3 and prints [&#x27;b&#x27;, &#x27;c&#x27;, &#x27;d&#x27;]. With no start it begins at 0, so x[:3] prints [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;]. Strings slice the same way: &quot;Hello, World!&quot;[1:4] is ell. A third number is the step: x[::2] gives [&#x27;a&#x27;, &#x27;c&#x27;, &#x27;e&#x27;].</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/ao1rqxHIcSA/hqdefault.jpg" alt="Thumbnail: x = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;]. What do x[::-1], x[4:0:-1] and x[4:-1:-1] give?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/ao1rqxHIcSA">x = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;]. What do x[::-1], x[4:0:-1] and x[4:-1:-1] give?</a></h3>
+            <p class="sr-only">A slice with a step of -1 walks from right to left, so x[::-1] reverses the list: [&#x27;e&#x27;, &#x27;d&#x27;, &#x27;c&#x27;, &#x27;b&#x27;, &#x27;a&#x27;]. It still stops before its stop, so x[4:0:-1] leaves out position 0 and gives [&#x27;e&#x27;, &#x27;d&#x27;, &#x27;c&#x27;, &#x27;b&#x27;]. As a position, -1 means the last one, 4, so x[4:-1:-1] starts and stops at the same place and gives []. Try &quot;hello world&quot;[20:-3:-2]: it prints d.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/9GlO2i5THAc/hqdefault.jpg" alt="Thumbnail: x has 5 items. Which crashes in Python: x[0:10], x[4:2] or x[10]?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/9GlO2i5THAc">x has 5 items. Which crashes in Python: x[0:10], x[4:2] or x[10]?</a></h3>
+            <p class="sr-only">A slice that runs past the end just stops at the end, so x[0:10] on a 5-item list prints all 5: [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;, &#x27;d&#x27;, &#x27;e&#x27;]. A slice whose start comes after its stop gives an empty list, so x[4:2] prints []. Reading one position that does not exist is an error: x[10] gives IndexError: list index out of range. Strings behave the same way.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/3S2iIvCtluY/hqdefault.jpg" alt="Thumbnail: f = f * i for i in range(11) should give 10 factorial. Why does it print 0?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/3S2iIvCtluY">f = f * i for i in range(11) should give 10 factorial. Why does it print 0?</a></h3>
+            <p class="sr-only">range(11) gives 0, 1, 2 up to 10: it starts at 0 and stops before 11. So the first round of the loop multiplies f by 0, f becomes 0, and 0 times anything stays 0: the code prints 0. Start at 1 with range(1, 11) and it prints 3628800, which is 10 factorial. Try print(list(range(0, 10, 2))): it prints [0, 2, 4, 6, 8].</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/N-7kR7gq-ns/hqdefault.jpg" alt="Thumbnail: x = 10.0, then for x in range(2): print x, add 1, print x. What prints?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/N-7kR7gq-ns">x = 10.0, then for x in range(2): print x, add 1, print x. What prints?</a></h3>
+            <p class="sr-only">The for line gives the loop name its next value at the start of every round, so x = 10.0 is replaced by 0. Round 1 prints 0, sets x to 1 and prints 1. In round 2 the for line sets x to 1 again, not 2, so it prints 1 and then 2: the output is 0,1,1,2, on one line. Changing x inside the loop does not change which values come next.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/FVCxmNaFJuQ/hqdefault.jpg" alt="Thumbnail: All prefixes of [1, 2, 3] with range(len(xs)). What does print(ys) show?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/FVCxmNaFJuQ">All prefixes of [1, 2, 3] with range(len(xs)). What does print(ys) show?</a></h3>
+            <p class="sr-only">range(len(xs)) is range(3), which gives 0, 1 and 2. Each round appends the slice xs[:i], so ys gets [], [1] and [1, 2], and print(ys) shows [[], [1], [1, 2]]. i never reaches 3, so the full list [1, 2, 3] is missing. Loop over range(len(xs) + 1) and it prints [[], [1], [1, 2], [1, 2, 3]].</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/hfNjOvqG2_Y/hqdefault.jpg" alt="Thumbnail: highest = 0, then keep the biggest of [-5, -2, -9]. What does it print?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/hfNjOvqG2_Y">highest = 0, then keep the biggest of [-5, -2, -9]. What does it print?</a></h3>
+            <p class="sr-only">The loop keeps the biggest value seen so far in highest, which starts at 0. Every item of [-5, -2, -9] is below 0, so x is never bigger than highest and the code prints 0, a number that is not even in the list. Start with the first item instead, highest = xs[0], and it prints -2. max(xs) also gives -2.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/DM8SelrY0HQ/hqdefault.jpg" alt="Thumbnail: xs[i] = xs[i] - xs[i-1] for each i on [1, 2, 3, 4]. What does print(xs) show?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/DM8SelrY0HQ">xs[i] = xs[i] - xs[i-1] for each i on [1, 2, 3, 4]. What does print(xs) show?</a></h3>
+            <p class="sr-only">The loop replaces each item after the first by itself minus the one before, and we expect [1, 1, 1, 1]. At i = 1 it computes 2 - 1 = 1, but at i = 2 it reads the new xs[1], which is now 1, so it computes 3 - 1 = 2, and at i = 3 it computes 4 - 2 = 2. It prints [1, 1, 2, 2] because it reads values it already changed. Going backwards with range(3, 0, -1) prints [1, 1, 1, 1].</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/8-pFJ-_lz44/hqdefault.jpg" alt="Thumbnail: x = [1, 2, 3], y = x, y[1] = 4. What does print(x) show?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/8-pFJ-_lz44">x = [1, 2, 3], y = x, y[1] = 4. What does print(x) show?</a></h3>
+            <p class="sr-only">In Python, a name is a label on an object. After x = [1, 2, 3] and y = x, both names point to the same list, and id(x) and id(y) print the same number. So y[1] = 4 changes that one list, and print(x) and print(y) both show [1, 4, 3]. For a separate list, write y = x.copy(): then print(x) still shows [1, 2, 3].</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/3zUulZPGpWs/hqdefault.jpg" alt="Thumbnail: x = 600, y = x, y = y + 2. Does x change? What does print(x, y) show?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/3zUulZPGpWs">x = 600, y = x, y = y + 2. Does x change? What does print(x, y) show?</a></h3>
+            <p class="sr-only">In Python a name points at an object. After x = 600 and y = x, both names point at the same int, and x is y is True. y = y + 2 builds a new int, 602, and moves only y&#x27;s arrow, so x is y becomes False and print(x, y) shows 600 602. An int never changes in place. A list can: with x = [600], y = x and y[0] = y[0] + 2, print(x) shows [602].</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/_2UusLvTMrk/hqdefault.jpg" alt="Thumbnail: x = [[1, 2], [3, 4]], y = x.copy(), y[0][0] = 99. What does print(x) show?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/_2UusLvTMrk">x = [[1, 2], [3, 4]], y = x.copy(), y[0][0] = 99. What does print(x) show?</a></h3>
+            <p class="sr-only">x.copy() makes a new outer list, so x is y is False, but the new list points at the same two inner lists, so x[0] is y[0] is True. Then y[0][0] = 99 changes the shared inner list, and print(x) shows [[99, 2], [3, 4]]. For a copy that shares nothing, use deepcopy from the copy module: after y = deepcopy(x) and y[0][0] = 4, x is still [[1, 2], [3, 4]].</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/jc1z1goG_EE/hqdefault.jpg" alt="Thumbnail: row = [0, 0, 0], matrix = [row, row, row], matrix[0][0] = 1. What prints?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/jc1z1goG_EE">row = [0, 0, 0], matrix = [row, row, row], matrix[0][0] = 1. What prints?</a></h3>
+            <p class="sr-only">matrix = [row, row, row] does not make three rows: it holds three arrows to one row object. So matrix[0][0] = 1 changes that one row, and print(matrix) shows [[1, 0, 0], [1, 0, 0], [1, 0, 0]]. To get three separate rows, build the matrix from row.copy() three times: then the same change prints [[1, 0, 0], [0, 0, 0], [0, 0, 0]].</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/d0FBNsoLpKI/hqdefault.jpg" alt="Thumbnail: a = [400, 500], b = [400, 500], c = a. What does print(a == b, a is b, a is c) show?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/d0FBNsoLpKI">a = [400, 500], b = [400, 500], c = a. What does print(a == b, a is b, a is c) show?</a></h3>
+            <p class="sr-only">a and b are two separate lists that hold the same numbers, and c = a gives a&#x27;s list a second name. == compares values, so a == b is True. is asks whether two names point at the same object, so a is b is False and a is c is True: the line prints True False True. is compares id numbers, so print(id(a) == id(c)) prints True.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/xRFvZD96ONk/hqdefault.jpg" alt="Thumbnail: x = &quot;hello&quot;, then x[0] = &quot;a&quot;. What happens in Python?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/xRFvZD96ONk">x = &quot;hello&quot;, then x[0] = &quot;a&quot;. What happens in Python?</a></h3>
+            <p class="sr-only">Reading one letter of a string works: x[0] is h. But strings are immutable, which means they cannot be changed in place, so x[0] = &quot;a&quot; stops with TypeError: &#x27;str&#x27; object does not support item assignment. Build a new string instead: x = &quot;a&quot; + x[1:] makes aello and points x at it. A new string moves only one name: after s = &quot;december&quot;, t = s and s = &quot;november&quot;, print(s, t) shows november december.</p>
           </div>
         </li>
       </ul>
