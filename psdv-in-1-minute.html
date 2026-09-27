@@ -346,7 +346,7 @@
       </div>
       <div class="page-intro">
         <p>Short videos for ES 114 Probability, Statistics and Data Visualization at IIT Gandhinagar: one question per Short, answered in under a minute with a small example, in the same style as <a href="ml-in-1-minute.html">Machine learning in 1 minute</a>.</p>
-        <p>39 Shorts so far, with more on the way.</p>
+        <p>48 Shorts so far, with more on the way.</p>
         <div class="actions">
           <a class="button" href="https://www.youtube.com/playlist?list=PLc_dUTLURe5w">Watch the playlist</a>
           <a class="text-link" href="https://nipunbatra.github.io/psdv25/">ES 114 course page (2025)</a>
@@ -357,7 +357,7 @@
     <div class="search" role="search">
       <label class="sr-only" for="video-search">Search the Shorts by question or topic</label>
       <input id="video-search" type="search" placeholder="Search, e.g. variance" autocomplete="off" spellcheck="false" data-noun="Short" data-nouns="Shorts">
-      <p class="search-status" id="search-status" aria-live="polite">39 Shorts</p>
+      <p class="search-status" id="search-status" aria-live="polite">48 Shorts</p>
     </div>
 
 
@@ -643,6 +643,69 @@
           <div class="video-copy">
             <h3><a href="https://youtube.com/shorts/01FrFOZdPt4">Nine earn Rs 30,000 each, one earns Rs 300,000. What is the average pay?</a></h3>
             <p class="sr-only">In our example the ten pays add up to 9 x 30,000 + 300,000 = 570,000, so the average is 570,000 / 10 = 57,000, and 9 of the 10 people earn less than that. Sorted, the middle two pays are both 30,000, so the median is 30,000. If the top pay were 3,000,000 the average would jump to 327,000 while the median would stay at 30,000.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/YBYI3Tp56sI/hqdefault.jpg" alt="Thumbnail: Roll one die. What is the chance of an even number or a number above 3?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/YBYI3Tp56sI">Roll one die. What is the chance of an even number or a number above 3?</a></h3>
+            <p class="sr-only">Even numbers are 3 of the 6 faces (2, 4, 6) and numbers above 3 are another 3 (4, 5, 6), so adding gives 3/6 + 3/6 = 100%, yet a 1 or a 3 is in neither. Faces 4 and 6 are in both and were counted twice, so take them away once: 3/6 + 3/6 - 2/6 = 4/6, about 67%. This is the union, A or B or both: add the two chances, then take away the overlap.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/fW5L2AfgzT4/hqdefault.jpg" alt="Thumbnail: One die: &quot;it shows 1&quot; and &quot;it shows 2&quot; can never happen together. Are they independent?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/fW5L2AfgzT4">One die: &quot;it shows 1&quot; and &quot;it shows 2&quot; can never happen together. Are they independent?</a></h3>
+            <p class="sr-only">Two events are independent when knowing one happened does not change the chance of the other. On one die the chance of a 2 is 1/6, but once you know the die shows 1 it drops to 0. Independent events would have a chance of both equal to 1/6 x 1/6 = 1/36, while here both at once is impossible, so 0. Events that cannot happen together, called mutually exclusive, rule each other out, so they are not independent.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/H7Ph13SDhEU/hqdefault.jpg" alt="Thumbnail: 50% of passwords are digits, 30% letters, 20% symbols. What share get hacked?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/H7Ph13SDhEU">50% of passwords are digits, 30% letters, 20% symbols. What share get hacked?</a></h3>
+            <p class="sr-only">In our example 50% of passwords are digits only, 30% letters only and 20% use symbols, and 10%, 5% and 2% of each kind get hacked. Picture 1,000 passwords: 50 of the 500 digit passwords, 15 of the 300 letter ones and 4 of the 200 symbol ones get hacked, 69 in all, so 6.9%. That is 0.5 x 10% + 0.3 x 5% + 0.2 x 2%, the law of total probability: weight each group&#x27;s rate by the group&#x27;s share. Adding the rates gives 17% and their plain average 5.7%, and both are wrong.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/iaQRyyzvrNc/hqdefault.jpg" alt="Thumbnail: 5% are sick. Which test upgrade makes a positive result more trustworthy?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/iaQRyyzvrNc">5% are sick. Which test upgrade makes a positive result more trustworthy?</a></h3>
+            <p class="sr-only">A test catches 90% of sick people and flags 5% of healthy ones, and 5% of people are sick. Picture 2,000 people: 100 are sick and 1,900 healthy, so 90 sick and 95 healthy people test positive, and only 90 of 185 positives (48.6%) are sick. Catching 99% of the sick adds 9 true positives and lifts that to 51.0%; flagging only 1% of the healthy cuts the false alarms from 95 to 19 and lifts it to 82.6%. Specificity, the share of healthy people the test clears, matters most when most people are healthy.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/kQGvSterlbQ/hqdefault.jpg" alt="Thumbnail: Pick a number from 0 to 1 at random and square it. Chance the square is below 0.25?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/kQGvSterlbQ">Pick a number from 0 to 1 at random and square it. Chance the square is below 0.25?</a></h3>
+            <p class="sr-only">A computer picks a number between 0 and 1, every value equally likely, and squares it. The square is below 0.25 exactly when the number is below 0.5, because 0.5 x 0.5 = 0.25, so the chance is 50%; a million simulated numbers give 50.0%. The squares pile up near 0: the four quarters from 0 to 1 get 50%, 20.7%, 15.9% and 13.4% of them. A function of a random number, a transformation, has chances of its own: the square is below 0.5 with chance 70.7%, since that needs a number below 0.707.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/ZN0wGk-mioc/hqdefault.jpg" alt="Thumbnail: 10,000 bits, each wrong with chance 1 in 10,000. Chance the block has no errors?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/ZN0wGk-mioc">10,000 bits, each wrong with chance 1 in 10,000. Chance the block has no errors?</a></h3>
+            <p class="sr-only">In our example a block has 10,000 bits and each bit goes wrong with chance 1 in 10,000, so a block gets 10,000 x 1/10,000 = 1 error on average. For no errors every bit must be fine, and 0.9999 multiplied 10,000 times is 0.368, about 37% (the same as 1/e). This is the Poisson approximation: with many tries and a tiny chance each, the average alone sets the chances, here 36.8% for no errors, 36.8% for one, 18.4% for two, and 92.0% for two or fewer.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/Lrk2fFARKBw/hqdefault.jpg" alt="Thumbnail: Normal or Laplace, same centre and same SD of 1: which gives more values beyond 3?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/Lrk2fFARKBw">Normal or Laplace, same centre and same SD of 1: which gives more values beyond 3?</a></h3>
+            <p class="sr-only">A normal curve and a sharp-peaked Laplace curve have the same centre and the same SD of 1 (we scale the Laplace to make its SD 1). More than 3 away from the centre, either side, the normal puts 0.27% of its values and the Laplace 1.44%, about 5.3 times more. More than 1 away the order flips: normal 31.7%, Laplace 24.3%. The SD alone does not tell you how heavy a curve&#x27;s tails are, so check how often extreme values happen.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/NUhGM-_DDF4/hqdefault.jpg" alt="Thumbnail: Heads (30%) wins Rs 10, tails loses Rs 5. After 100 plays, who comes out ahead?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/NUhGM-_DDF4">Heads (30%) wins Rs 10, tails loses Rs 5. After 100 plays, who comes out ahead?</a></h3>
+            <p class="sr-only">In our example game heads comes up 30% of the time and wins Rs 10, while tails loses Rs 5. Each play is worth 0.3 x 10 - 0.7 x 5 = 3 - 3.5 = -0.5 rupees on average, so 100 plays cost the player about Rs 50 and the shop keeps it. Heads pays double, but tails comes up more than twice as often; to break even heads would need to come up 1 in 3 times. It is an average: 22.1% of players still get 34 or more heads and end ahead.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/Q0tK4TLugcU/hqdefault.jpg" alt="Thumbnail: Roll a die and square the number. What is the average of the squares?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/Q0tK4TLugcU">Roll a die and square the number. What is the average of the squares?</a></h3>
+            <p class="sr-only">The six squares are 1, 4, 9, 16, 25 and 36, which add up to 91, so their average is 91 / 6 = 15.17. Squaring the average face instead gives 3.5 x 3.5 = 12.25, because the big faces 25 and 36 pull the average of the squares up. The gap, 15.17 - 12.25 = 2.92, is the die&#x27;s variance: the average of the squared distances 6.25, 2.25, 0.25, 0.25, 2.25 and 6.25 from 3.5.</p>
           </div>
         </li>
       </ul>
