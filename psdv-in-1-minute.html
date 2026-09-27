@@ -346,7 +346,7 @@
       </div>
       <div class="page-intro">
         <p>Short videos for ES 114 Probability, Statistics and Data Visualization at IIT Gandhinagar: one question per Short, answered in under a minute with a small example, in the same style as <a href="ml-in-1-minute.html">Machine learning in 1 minute</a>.</p>
-        <p>29 Shorts so far, with more on the way.</p>
+        <p>39 Shorts so far, with more on the way.</p>
         <div class="actions">
           <a class="button" href="https://www.youtube.com/playlist?list=PLc_dUTLURe5w">Watch the playlist</a>
           <a class="text-link" href="https://nipunbatra.github.io/psdv25/">ES 114 course page (2025)</a>
@@ -357,7 +357,7 @@
     <div class="search" role="search">
       <label class="sr-only" for="video-search">Search the Shorts by question or topic</label>
       <input id="video-search" type="search" placeholder="Search, e.g. variance" autocomplete="off" spellcheck="false" data-noun="Short" data-nouns="Shorts">
-      <p class="search-status" id="search-status" aria-live="polite">29 Shorts</p>
+      <p class="search-status" id="search-status" aria-live="polite">39 Shorts</p>
     </div>
 
 
@@ -573,6 +573,76 @@
           <div class="video-copy">
             <h3><a href="https://youtube.com/shorts/4INNtWarVVk">7 heads in 10 fair flips. After 1,000 more flips, what share of heads do you expect?</a></h3>
             <p class="sr-only">A fair coin has no memory, so the next 1,000 flips give about 500 heads, and the expected total is 7 + 500 = 507 heads of 1,010 flips, or 50.2%. The 2 heads above half never go away, but they become a smaller and smaller share: 70% after 10 flips, 51.8% after 110, 50.2% after 1,010. This is the law of large numbers: the share settles near 50% by dilution, not by correction.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/GUjPjs7kuik/hqdefault.jpg" alt="Thumbnail: A fair coin. Which is more likely to give 60% or more heads: 10 flips or 100 flips?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/GUjPjs7kuik">A fair coin. Which is more likely to give 60% or more heads: 10 flips or 100 flips?</a></h3>
+            <p class="sr-only">Ten flips of a fair coin have 1,024 equally likely orders, and 386 of them have 6 or more heads, so 60% or more heads comes up 37.7% of the time. With 100 flips, 60 or more heads has a chance of only 2.8%, because the share of heads bunches near 50%. Small samples swing more: 7 heads in 10 is common, 70 in 100 is rare.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/0rz2IjGJzqg/hqdefault.jpg" alt="Thumbnail: One die: each face equally likely. Add up 10 dice. What shape do the totals make?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/0rz2IjGJzqg">One die: each face equally likely. Add up 10 dice. What shape do the totals make?</a></h3>
+            <p class="sr-only">One die is flat: each face has 1 way in 6. Two dice already make a triangle, because a total of 7 can be made 6 ways out of 36 while 2 and 12 have 1 way each. With 10 dice there are 60,466,176 orders; a total of 35 can be made 4,395,456 ways (7.3%) and a total of 10 only 1 way, so the chart is a bell, as the central limit theorem says.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/pK65Iy3K_1Q/hqdefault.jpg" alt="Thumbnail: Run a random-number generator twice from the same seed. Same numbers?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/pK65Iy3K_1Q">Run a random-number generator twice from the same seed. Same numbers?</a></h3>
+            <p class="sr-only">A simple random-number generator makes each number from the last with one formula: next x = (1664525 x + 1013904223), keep the remainder after dividing by 2,147,483,647. Starting from seed 42 it gives 0.505, 0.177, 0.297, 0.369 on every run, while seed 7 gives a different list; NumPy&#x27;s generator with seed 42 also repeats 0.774, 0.439, 0.859. Such pseudo-random numbers come from a formula yet look random: 1,000 of them land about 100 in each tenth of 0 to 1.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/9rQ4BqUT2jY/hqdefault.jpg" alt="Thumbnail: A poll of 100 people is good to about ±10 points. How many for ±5 points?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/9rQ4BqUT2jY">A poll of 100 people is good to about ±10 points. How many for ±5 points?</a></h3>
+            <p class="sr-only">In our example a town is split exactly 50/50, and 96.5% of random polls of 100 people land between 40% and 60%, so the poll is good to about plus or minus 10 points. Polls of 200 people are good to about plus or minus 7 points, and polls of 400 people to plus or minus 5. The standard error, a poll&#x27;s typical miss, shrinks with the square root of the number of people, so halving the margin takes 4 times the people.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/HmnXA5h0c2k/hqdefault.jpg" alt="Thumbnail: A coin lands 7 heads in 10 flips. Which chance of heads makes that most likely?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/HmnXA5h0c2k">A coin lands 7 heads in 10 flips. Which chance of heads makes that most likely?</a></h3>
+            <p class="sr-only">If each flip is heads with chance p, the chance of exactly 7 heads in 10 is 120 x p^7 x (1 - p)^3, where 120 counts the orders of 7 heads and 3 tails. That gives 11.7% for p = 0.5, 26.7% for p = 0.7 and 5.7% for p = 0.9, and the curve over every p peaks at 0.7. This curve is the likelihood, the chance of the data under each guess; for 3 heads in 10 it peaks at 0.3.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/wH5zS3gNgNQ/hqdefault.jpg" alt="Thumbnail: Python multiplies 1,100 chances of 0.5 together. What does it get?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/wH5zS3gNgNQ">Python multiplies 1,100 chances of 0.5 together. What does it get?</a></h3>
+            <p class="sr-only">Each chance of 0.5 halves the running product: 0.5 to the 1,000 is still 9.3e-302, but Python&#x27;s smallest positive number is about 5e-324, reached at 0.5 to the 1,074. The true value of 0.5 to the 1,100 is 7.4e-332, so Python rounds it to exactly 0. Adding logs instead gives 1,100 x log 0.5 = -762.5, an ordinary number, which is why libraries return log probabilities.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/UJwZGhBWKjU/hqdefault.jpg" alt="Thumbnail: The new bar looks 3 times taller than the old one. How much did sales grow?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/UJwZGhBWKjU">The new bar looks 3 times taller than the old one. How much did sales grow?</a></h3>
+            <p class="sr-only">In our example sales go from 50 to 52, but the chart&#x27;s axis starts at 49, so the bars are drawn 1 and 3 units tall and the new one looks 3 times taller. Redrawn from 0, the bars are 50 and 52 and the real growth is 2 / 50 = 4%. Bar lengths only compare fairly from a baseline of 0: 200 then 204 on an axis from 198 also looks 3 times taller, for 2% growth.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/Y68ITiNTluE/hqdefault.jpg" alt="Thumbnail: The line climbs the same height each year. Did it grow the same each year?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/Y68ITiNTluE">The line climbs the same height each year. Did it grow the same each year?</a></h3>
+            <p class="sr-only">In our example users go from 10 to 100 to 1,000, drawn on a log-scale axis, so the line climbs the same height each year. Year 1 adds 90 users and year 2 adds 900, ten times as much: on a log scale equal steps mean equal ratios, here x10 each year. On the same kind of axis, doubling every year (1, 2, 4, 8, 16) is a straight line.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/2l8vO716I_8/hqdefault.jpg" alt="Thumbnail: Class A: 66, 68, 70, 72, 74. Class B: 40, 45, 70, 95, 100. Which average is higher?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/2l8vO716I_8">Class A: 66, 68, 70, 72, 74. Class B: 40, 45, 70, 95, 100. Which average is higher?</a></h3>
+            <p class="sr-only">Both example classes add up to 350, so both averages are 350 / 5 = 70. Class A&#x27;s scores sit 4, 2, 0, 2 and 4 points from 70, class B&#x27;s sit 30, 25, 0, 25 and 30 points away, so the standard deviation is 2.8 points for A and 24.7 for B. A bar chart of the two averages shows two equal bars; a plot of every score shows the difference.</p>
+          </div>
+        </li>
+        <li class="video tall">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/01FrFOZdPt4/hqdefault.jpg" alt="Thumbnail: Nine earn Rs 30,000 each, one earns Rs 300,000. What is the average pay?" loading="lazy" decoding="async"></div>
+          <div class="video-copy">
+            <h3><a href="https://youtube.com/shorts/01FrFOZdPt4">Nine earn Rs 30,000 each, one earns Rs 300,000. What is the average pay?</a></h3>
+            <p class="sr-only">In our example the ten pays add up to 9 x 30,000 + 300,000 = 570,000, so the average is 570,000 / 10 = 57,000, and 9 of the 10 people earn less than that. Sorted, the middle two pays are both 30,000, so the median is 30,000. If the top pay were 3,000,000 the average would jump to 327,000 while the median would stay at 30,000.</p>
           </div>
         </li>
       </ul>
