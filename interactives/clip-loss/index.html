@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7f2">
+  <meta name="description" content="Follow every number in CLIP's contrastive loss, from paired examples to real gradient updates. An interactive, offline-ready teaching lab.">
+  <title>How CLIP Learns · The Contrastive Loss</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 40 40%22%3E%3Crect width=%2240%22 height=%2240%22 rx=%2220%22 fill=%22%23203b35%22/%3E%3Cpath d=%22m14 28 8-16m-4 16 8-16%22 stroke=%22%23f6f7f2%22 stroke-width=%222%22/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#lesson">Skip to lesson</a>
+  <div class="app">
+    <header class="topbar">
+      <a class="brand" href="#data" aria-label="How CLIP learns, first step"><span class="brand-mark" aria-hidden="true">∥</span><span>THE LEARNING LAB <span class="brand-divider">/</span> <strong>CLIP</strong></span></a>
+      <div class="top-actions">
+        <button id="focus-toggle" class="quiet" aria-pressed="false"><span aria-hidden="true">◎</span> Focus mode</button>
+        <button id="math-toggle" class="quiet" aria-expanded="false" aria-controls="math-drawer">ƒ Math</button>
+        <button id="controls-toggle" class="quiet" aria-expanded="false" aria-controls="controls-drawer">Controls <span aria-hidden="true">⌘</span></button>
+      </div>
+    </header>
+    <nav id="stage-nav" class="stage-nav" aria-label="Lesson stages"></nav>
+    <main id="lesson" tabindex="-1">
+      <div class="lesson-heading">
+        <div><div class="eyebrow"><span id="chapter">01 / THE DATA</span><span class="toy-badge">Every number comes from the vectors</span></div>
+        <h1 id="stage-title">How CLIP learns.</h1><p id="stage-description"></p></div>
+        <div class="lesson-side"><span class="eyebrow">THE CONTRASTIVE LOSS, STEP BY STEP</span><p id="stage-takeaway"></p></div>
+      </div>
+      <div class="try-strip"><span class="try-mark" aria-hidden="true">↳</span><div><strong id="try-label">Start here</strong><p id="try-description"></p></div><button id="try-action" class="text-button"></button></div>
+      <section id="batch-journey" class="batch-journey" hidden aria-label="Sampling training batches">
+        <div class="batch-journey-header"><div><span class="eyebrow">12 matched pairs</span><h2>Which pairs are in this batch?</h2></div><span id="batch-counter" class="batch-counter"></span></div>
+        <div id="batch-pool" class="batch-pool"></div>
+        <div class="batch-selection-row"><div class="batch-current"><span id="batch-phase">Selected for this calculation</span><strong id="batch-selection"></strong></div><div class="batch-next"><span id="batch-progress"></span><span id="up-next"></span></div><button id="next-batch" class="secondary">Pick next batch →</button></div>
+        <div class="batch-explanation-row"><p id="batch-explanation"></p><label id="rotate-batch-label" class="checkbox-label"><input id="rotate-batches" type="checkbox" checked> New batch each update</label></div>
+      </section>
+      <section id="dataset-view" aria-label="Paired dataset">
+        <div class="section-line"><span>12 paired examples <span class="muted">/ a miniature dataset</span></span><span class="legend-dot">Same index = a positive pair</span></div>
+        <div id="dataset-grid" class="dataset-grid"></div>
+        <div class="dataset-bottom"><p>The image and caption at the same dataset index are a <strong>positive pair</strong>.</p><button class="primary" data-action="next">Choose a minibatch <span>→</span></button></div>
+      </section>
+      <section id="workspace" class="workspace" hidden aria-label="Interactive calculation">
+        <aside class="source-rail">
+          <div class="section-line"><span id="source-title">THE MINIBATCH</span><span id="batch-badge">N = 3</span></div>
+          <div id="batch-controls" class="batch-controls"><label>Batch size <select id="batch-size"><option value="2">2</option><option value="3" selected>3</option></select></label><button id="shuffle" class="quiet">Shuffle pairs ↻</button></div>
+          <div id="source-pairs"></div>
+          <div id="source-note" class="small-note"></div>
+          <div id="geometry-wrap" hidden><div class="section-line"><span>SHARED EMBEDDING SPACE</span><span>3D</span></div><div id="geometry"></div><p class="geometry-hint">Drag to rotate · solid I, dashed T<br><span>Projection of unit vectors in 3D</span></p></div>
+        </aside>
+        <section class="matrix-panel">
+          <div class="section-line"><span id="matrix-title">ALL PAIRWISE COMPARISONS</span><button id="precision-toggle" class="text-button" title="Show eight decimal places. Calculations always use full floating-point precision." aria-pressed="false">Rounded · 3 dp</button></div>
+          <div id="direction-switch" class="segmented" hidden><button data-direction="row" aria-pressed="true">Image → Text <span>across rows →</span></button><button data-direction="column" aria-pressed="false">Text → Image <span>down columns ↓</span></button></div>
+          <div id="matrix-equation" class="matrix-equation"></div>
+          <div id="main-matrix" class="matrix-host"></div>
+          <div id="vector-view" hidden></div>
+          <p id="matrix-caption" class="matrix-caption"></p><button id="matrix-sweep" class="text-button matrix-sweep" hidden>Build every comparison →</button>
+          <div id="temperature-control" class="temperature-control" hidden><div><label for="temperature">Temperature <i>τ</i></label><output id="temperature-value">0.50</output></div><input id="temperature" type="range" min="0.05" max="1" step="0.01" value="0.5"><div class="range-labels"><span>0.05 · sharper</span><span>1.0 · softer</span></div><button id="clip-temperature" class="text-button">Use CLIP-like τ = 0.07 ↗</button></div>
+          <div id="training-controls" hidden><div class="train-actions"><button id="one-step" class="secondary">One gradient step</button><button id="ten-steps" class="secondary">Train 10 steps</button><button id="play" class="primary">▶ Train</button><button id="reset-training" class="quiet">Reset ↻</button></div><label class="speed-label">Speed <select id="speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label></div>
+        </section>
+        <aside id="calculation-panel" class="calculation-panel" aria-label="Selected calculation"></aside>
+      </section>
+      <section id="provenance" class="provenance" hidden aria-label="Trace a number through the calculation">
+        <div class="section-line"><span>FOLLOW ONE NUMBER <span id="trace-pair" class="muted"></span></span><button id="expand-calculations" class="text-button" aria-expanded="false">Expand calculations +</button></div>
+        <div id="provenance-chain" class="provenance-chain"></div>
+        <div id="full-calculations" hidden></div>
+      </section>
+      <section id="live-probabilities" class="live-probabilities" hidden aria-label="Live probability matrices"><div><div class="section-line">IMAGE → TEXT · ROW PROBABILITIES</div><div id="live-row" class="matrix-host"></div></div><div><div class="section-line">TEXT → IMAGE · COLUMN PROBABILITIES</div><div id="live-column" class="matrix-host"></div></div><div class="probability-explainer"><h2>Compare both retrieval directions.</h2><p>Both probability matrices update after every gradient step. The diagonal entries are the probabilities of the correct partners.</p><p>Each row on the left sums to 1. Each column on the right sums to 1.</p></div></section>
+      <section id="comparison" class="comparison" hidden aria-label="Before and after training"></section>
+      <section id="algorithm-summary" class="algorithm-summary" hidden><h2>Put the steps together.</h2><ol><li>Take <i>N</i> matching image and text pairs.</li><li>Encode both modalities into vectors and normalize each vector.</li><li>Compare every image with every text: <i>N</i>² cosine similarities.</li><li>Scale by temperature, then apply softmax across rows and down columns.</li><li>Take the negative log of each correct match’s probability; average both directions.</li><li>Backpropagate through both encoders. Repeat with the next batch.</li></ol><p>Training makes matched image and text representations easier to distinguish from mismatched pairs.</p></section>
+    </main>
+    <footer class="step-footer"><button id="previous" class="quiet">← Previous</button><div><span id="step-count">Step 1 of 11</span><span class="keyboard-hint">← → to explore <span>·</span> Space to play / pause</span></div><button id="next" class="primary">Next <span>→</span></button></footer>
+    <div class="credit">A toy model with computed gradients · <a href="https://arxiv.org/abs/2103.00020" target="_blank" rel="noopener">Radford et al., 2021 ↗</a></div>
+  </div>
+  <dialog id="controls-drawer" class="drawer"><div class="drawer-heading"><h2>Instructor controls</h2><button data-close="controls-drawer" aria-label="Close controls">×</button></div><p>Settings apply to every calculation in the lesson.</p><label>Temperature τ <input id="settings-temperature" type="number" min="0.05" max="1" step="0.01" value="0.5"></label><label>Learning rate <input id="learning-rate" type="number" min="0.001" max="1" step="0.01" value="0.25"></label><label>Decimal places <select id="decimal-places"><option value="3">3 · classroom</option><option value="5">5 · detailed</option><option value="8">8 · extended precision</option></select></label><label class="checkbox-label"><input id="show-equations" type="checkbox" checked> Show equations</label><label class="checkbox-label"><input id="show-calculations" type="checkbox"> Show all calculations</label><button id="autoplay" class="secondary">▶ Auto-play the story</button><button id="reset-all" class="quiet">Reset everything ↻</button><p class="small-note">Shortcuts: ← / → stages, Space play / pause, R reset. Controls and vector selection also work with the keyboard.</p></dialog>
+  <dialog id="math-drawer" class="drawer math-drawer"><div class="drawer-heading"><h2>The math, at a glance</h2><button data-close="math-drawer" aria-label="Close math">×</button></div><p><i>N</i> matched pairs. Each row is one vector. All logs are natural.</p><div class="reference-equations"><p><span>Normalize</span>Îᵢ = Iᵢ / ‖Iᵢ‖₂ &nbsp; T̂ⱼ = Tⱼ / ‖Tⱼ‖₂</p><p><span>Cosine similarity</span>Sᵢⱼ = Îᵢᵀ T̂ⱼ</p><p><span>Logits</span>Lᵢⱼ = Sᵢⱼ / τ</p><p><span>Across rows →</span>Pᵢⱼ = exp(Lᵢⱼ) / ∑ₖ exp(Lᵢₖ)</p><p><span>Down columns ↓</span>Qᵢⱼ = exp(Lᵢⱼ) / ∑ₖ exp(Lₖⱼ)</p><p><span>Image → Text</span>ℒᵢ→ₜ = −(1/N) ∑ᵢ log Pᵢᵢ</p><p><span>Text → Image</span>ℒₜ→ᵢ = −(1/N) ∑ᵢ log Qᵢᵢ</p><p class="reference-final"><span>Symmetric CLIP loss</span>ℒ = ½ (ℒᵢ→ₜ + ℒₜ→ᵢ)</p></div><p class="small-note">Implementation uses exp(x − max(x)) for numerical stability. Extended precision displays eight decimal places; calculations always use full JavaScript floating-point precision.</p><a href="https://github.com/openai/CLIP" target="_blank" rel="noopener">Original CLIP code ↗</a></dialog>
+  <div id="announcement" class="sr-only" role="status" aria-live="polite"></div>
+</body>
+</html>
