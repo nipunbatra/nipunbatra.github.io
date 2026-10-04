@@ -23,8 +23,8 @@ const visible = (doc, selector) => [...doc.querySelectorAll(selector)].filter(ro
 const main = page('teaching.html');
 const doc = main.window.document;
 assert.equal(doc.querySelectorAll('[data-course]').length, 25);
-assert.equal(doc.querySelectorAll('.recording-link').length, 6);
-assert.equal(doc.querySelectorAll('.collection').length, 22);
+assert.equal(doc.querySelectorAll('.recording-link').length, 7);
+assert.equal(doc.querySelectorAll('.collection').length, 21);
 assert.equal(doc.querySelectorAll('.sheet-group').length, 5);
 assert.equal(doc.querySelectorAll('.sheet-list a').length, 86);
 assert.equal(doc.querySelectorAll('.course-table .course-sheets').length, 5);
@@ -60,7 +60,7 @@ input(main, '[data-recordings]', true, 'change');
 assert.equal(visible(doc, '[data-course]').length, 1);
 doc.querySelector('[data-clear-course]').click();
 input(main, '[data-recordings]', true, 'change');
-assert.equal(visible(doc, '[data-course]').length, 6);
+assert.equal(visible(doc, '[data-course]').length, 7);
 input(main, '[data-course-query]', 'not a real course');
 assert.equal(visible(doc, '[data-course]').length, 0);
 assert.equal(visible(doc, '[data-year-group]').length, 0);
@@ -95,15 +95,15 @@ assert.equal(doc.documentElement.dataset.theme, 'light');
 
 const library = page('teaching-videos.html', '?collection=seven-ideas-ml');
 const lib = library.window.document;
-assert.equal(lib.querySelectorAll('[data-video]').length, 593);
-assert.equal(visible(lib, '[data-video]').length, 7);
-assert.equal(lib.querySelector('[data-video-count]').textContent, '7 videos');
+assert.equal(lib.querySelectorAll('[data-video]').length, 600);
+assert.equal(visible(lib, '[data-video]').length, 8);
+assert.equal(lib.querySelector('[data-video-count]').textContent, '8 videos');
 assert.match(lib.querySelector('#directory-heading').textContent, /Seven Ideas/);
 input(library, '[data-collection-filter]', '', 'change');
 assert.equal(visible(lib, '[data-video]').length, 30);
 lib.querySelector('[data-more-videos]').click();
 assert.equal(visible(lib, '[data-video]').length, 60);
-input(library, '[data-collection-filter]', 'ml-history', 'change');
+input(library, '[data-collection-filter]', 'indian-scientists', 'change');
 assert.equal(visible(lib, '[data-video]').length, 1);
 const linked = page('teaching-videos.html', '?q=representations');
 assert.match(linked.window.document.querySelector('[data-results]').textContent, /Seven Ways/);
@@ -148,12 +148,18 @@ for (const filename of ['teaching.html', 'teaching-videos.html']) {
   assert.equal(/Listed|↗|>Films</.test(read(filename)), false);
 }
 const noJS = new JSDOM(read('teaching-videos.html')).window.document;
-assert.equal(visible(noJS, '[data-video]').length, 593);
-assert.equal(new Set(catalog.videos.map(v => v.id)).size, 593);
+assert.equal(visible(noJS, '[data-video]').length, 600);
+assert.equal(new Set(catalog.videos.map(v => v.id)).size, 600);
 const seven = catalog.collections.find(c => c.id === 'seven-ideas-ml');
-assert.equal(seven.video_ids.length, 7);
-assert.equal(seven.video_ids.includes('CwfzBxAv_mE'), false);
+assert.equal(seven.video_ids.length, 8);
+assert.equal(seven.video_ids.includes('CwfzBxAv_mE'), true);
 assert.equal(seven.url, 'https://www.youtube.com/playlist?list=PLDhLa2ZdfNzw');
+assert.equal(catalog.collections.some(c => ['ml-history', 'ml-2019-extras'].includes(c.id)), false);
+assert.doesNotMatch(read('teaching.html'), /No public videos|2019 extras/);
+const currentDL = catalog.courses.find(c => c.code === 'ES667' && c.semester === 'Aug 2026');
+assert.equal(currentDL.recordings, true);
+assert.equal(currentDL.recording_url, 'https://www.youtube.com/playlist?list=PLGRBnxCA2r9c');
+assert.equal(catalog.collections.find(c => c.id === 'dl-2026').video_ids.length, 7);
 assert.equal(catalog.collections.some(c => /films|research|lab talks|nilmtk/i.test(c.title)), false);
 
 // The original table is the source of truth for semester and recording flags.
@@ -168,6 +174,8 @@ if (fs.existsSync(oldPath)) {
       url: row.cells[3].querySelector('a').getAttribute('href'),
       recordings: !!row.querySelector('.yt-icon')
     })));
+  // The current DL playlist was explicitly made public after the original table.
+  original.find(c => c.code === 'ES667' && c.semester === 'Aug 2026').recordings = true;
   assert.deepEqual(catalog.courses.map(({year,semester,code,title,url,recordings}) => ({year,semester,code,title,url,recordings})), original);
 }
 const hashesPath = path.join(root, 'design-explorations/source-hashes.json');

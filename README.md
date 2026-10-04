@@ -11,7 +11,7 @@ Personal website for Nipun Batra - Associate Professor, Computer Science, IIT Ga
 ├── teaching.html   # Courses by semester and video collections
 ├── teaching-videos.html # Searchable teaching video directory
 ├── teaching.css / teaching.js # Teaching page styles and filters
-├── data/teaching/catalog.json # Curated courses, collections and public videos
+├── data/teaching/catalog.json # Curated courses, collections and accessible videos
 ├── data/teaching/cheatsheets.json # Course associations and individual PDF links
 ├── teaching-cheatsheets/ # PDFs not yet available from the course websites
 ├── scripts/build_teaching.py # Generates both teaching pages
@@ -29,8 +29,9 @@ course and video; JavaScript adds search, collection filters and pagination.
 Keep semester-specific recording links separate from general topic playlists.
 `recordings: false` means no recording link is listed, not that recordings do not
 exist. A video may belong to several collections but appears once in the directory.
-The catalog contains public video metadata only; it never needs YouTube credentials
-in the browser. Every teaching playlist appears on the landing page, including
+The catalog contains public teaching resources, including unlisted lectures that
+are accessible through an instructor-approved public playlist. It never needs
+YouTube credentials in the browser. Every available teaching playlist appears on the landing page, including
 course recordings and the public “Seven Ideas in Machine Learning” playlist.
 Lab promotion and research collections are not part of the teaching catalog.
 

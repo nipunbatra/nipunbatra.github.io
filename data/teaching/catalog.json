@@ -7,8 +7,10 @@
       "code": "ES667",
       "title": "Deep Learning",
       "url": "https://nipunbatra.github.io/dl-2026/",
-      "recordings": false,
-      "cheatsheets_url": "teaching.html#sheets-dl-2026"
+      "recordings": true,
+      "cheatsheets_url": "teaching.html#sheets-dl-2026",
+      "recording_url": "https://www.youtube.com/playlist?list=PLGRBnxCA2r9c",
+      "recording_destination": "playlist"
     },
     {
       "year": "2025-26",
@@ -223,7 +225,7 @@
     {
       "id": "seven-ideas-ml",
       "title": "Seven Ideas in Machine Learning",
-      "description": "Equations, probability, linear algebra, computing, representations, losses and sequences.",
+      "description": "Visual explanations of ML, with a two-minute history to set the scene.",
       "section": "Visual explanations",
       "cover": 11,
       "url": "https://www.youtube.com/playlist?list=PLDhLa2ZdfNzw",
@@ -235,18 +237,7 @@
         "-shWf-IymME",
         "SYzonAWqXlc",
         "8qILFQccgk0",
-        "QK5-ewJnmsg"
-      ]
-    },
-    {
-      "id": "ml-history",
-      "title": "A short history of machine learning",
-      "description": "Eighty years in two minutes.",
-      "section": "Visual explanations",
-      "cover": 10,
-      "url": "https://www.youtube.com/watch?v=CwfzBxAv_mE",
-      "playlist_id": null,
-      "video_ids": [
+        "QK5-ewJnmsg",
         "CwfzBxAv_mE"
       ]
     },
@@ -696,6 +687,24 @@
       ]
     },
     {
+      "id": "dl-2026",
+      "title": "Deep learning · 2026",
+      "description": "Full lectures from ES 667.",
+      "section": "Course recordings",
+      "cover": 1,
+      "url": "https://www.youtube.com/playlist?list=PLGRBnxCA2r9c",
+      "playlist_id": "PLGRBnxCA2r9c",
+      "video_ids": [
+        "sm2ZeDY8YDw",
+        "fRSLf13z6wo",
+        "ZVi1CzLFmzk",
+        "dobX7TW_DuE",
+        "ZaQ-gIYSv_A",
+        "I0Omc95jFiA",
+        "CIdlYRSvnWQ"
+      ]
+    },
+    {
       "id": "cs203-2026",
       "title": "Software tools for AI · 2026",
       "playlist_id": "PLftoLyLEwECBg6Rs3JnMAJCSwYcr3Xq1r",
@@ -896,16 +905,6 @@
         "MckXuex8xrM",
         "fqTeNEDrAlw"
       ]
-    },
-    {
-      "id": "ml-2019-extras",
-      "title": "Machine learning · 2019 extras",
-      "description": "No public videos currently available.",
-      "section": "Course recordings",
-      "cover": 15,
-      "url": "https://www.youtube.com/playlist?list=PLftoLyLEwECAWRShv8TXXAhOfHX1EX_x3",
-      "playlist_id": "PLftoLyLEwECAWRShv8TXXAhOfHX1EX_x3",
-      "video_ids": []
     },
     {
       "id": "aisg-2025",
@@ -4915,7 +4914,7 @@
       "published_at": "2026-09-28T09:15:20Z",
       "title": "Learning Machines: 80 Years of Machine Learning in 2 Minutes",
       "collections": [
-        "ml-history"
+        "seven-ideas-ml"
       ]
     },
     {
@@ -6944,6 +6943,76 @@
       "collections": [
         "summer-school-2025"
       ]
+    },
+    {
+      "id": "sm2ZeDY8YDw",
+      "title": "From Attention to Applications: Encoder, Decoder and Cross-Attention | Deep Learning",
+      "duration": "PT51M43S",
+      "url": "https://www.youtube.com/watch?v=sm2ZeDY8YDw",
+      "collections": [
+        "dl-2026"
+      ],
+      "published_at": "2026-10-01T11:09:42Z"
+    },
+    {
+      "id": "fRSLf13z6wo",
+      "title": "Self-Attention from First Principles | ES 667: Deep Learning",
+      "duration": "PT1H11M18S",
+      "url": "https://www.youtube.com/watch?v=fRSLf13z6wo",
+      "collections": [
+        "dl-2026"
+      ],
+      "published_at": "2026-09-16T04:00:45Z"
+    },
+    {
+      "id": "ZVi1CzLFmzk",
+      "title": "Language Modeling: From Characters to Next-Token Prediction | ES 667: Deep Learning",
+      "duration": "PT1H6M54S",
+      "url": "https://www.youtube.com/watch?v=ZVi1CzLFmzk",
+      "collections": [
+        "dl-2026"
+      ],
+      "published_at": "2026-09-11T15:25:48Z"
+    },
+    {
+      "id": "dobX7TW_DuE",
+      "title": "Momentum, RMSProp and Adam | ES 667: Deep Learning",
+      "duration": "PT23M30S",
+      "url": "https://www.youtube.com/watch?v=dobX7TW_DuE",
+      "collections": [
+        "dl-2026"
+      ],
+      "published_at": "2026-08-26T05:38:43Z"
+    },
+    {
+      "id": "ZaQ-gIYSv_A",
+      "title": "Momentum in Deep Learning | ES 667: Deep Learning",
+      "duration": "PT29M50S",
+      "url": "https://www.youtube.com/watch?v=ZaQ-gIYSv_A",
+      "collections": [
+        "dl-2026"
+      ],
+      "published_at": "2026-08-25T11:51:14Z"
+    },
+    {
+      "id": "I0Omc95jFiA",
+      "title": "Backpropagation and Autograd from Scratch | ES 667: Deep Learning",
+      "duration": "PT19M44S",
+      "url": "https://www.youtube.com/watch?v=I0Omc95jFiA",
+      "collections": [
+        "dl-2026"
+      ],
+      "published_at": "2026-08-24T10:27:09Z"
+    },
+    {
+      "id": "CIdlYRSvnWQ",
+      "title": "Optimization for Deep Learning | ES 667: Deep Learning",
+      "duration": "PT31M38S",
+      "url": "https://www.youtube.com/watch?v=CIdlYRSvnWQ",
+      "collections": [
+        "dl-2026"
+      ],
+      "published_at": "2026-08-23T12:34:00Z"
     }
   ]
 }

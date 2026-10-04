@@ -760,6 +760,20 @@
 .result-types button { border:1px solid var(--teaching-rule);border-radius:2px;background:transparent;padding:7px 10px;font-size:12px; }
 .result-types button[aria-pressed=true] { border-color:var(--teaching-ink);background:var(--teaching-ink);color:var(--teaching-paper); }
 .result-types button>span { margin-left:8px;font-variant-numeric:tabular-nums;opacity:.7; }
+.course-sheets::before,.sheet-list a::before,#cheatsheets-heading::before,.shortcut-label::before {
+  content:'';
+  display:inline-block;
+  width:14px;
+  height:17px;
+  margin-right:6px;
+  vertical-align:-3px;
+  background-color:var(--teaching-red);
+  -webkit-mask:url('images/teaching/document.svg') center/contain no-repeat;
+  mask:url('images/teaching/document.svg') center/contain no-repeat;
+}
+#cheatsheets-heading::before { width:19px;height:22px;margin-right:9px; }
+.sheet-list a { display:flex;align-items:flex-start; }
+.sheet-list a::before { flex:0 0 14px;margin-top:2px; }
 @media(max-width:760px) {
   .sheet-shortcuts { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 20px;padding:17px 0; }
   .sheet-shortcuts .shortcut-label { grid-column:1/-1;font-size:12px; }
