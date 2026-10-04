@@ -3,7 +3,7 @@ from html import escape
 import re
 
 SITE = 'https://nipunbatra.github.io/'
-VERSION = '20261004-swiss'
+VERSION = '20261004-wide'
 NAVIGATION = [
     ('index.html', 'Home'),
     ('https://sustainability-lab.github.io/papers/', 'Publications'),

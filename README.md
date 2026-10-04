@@ -30,6 +30,8 @@ Personal website for Nipun Batra - Associate Professor, Computer Science, IIT Ga
 
 The main site uses the selected Swiss red design: a shared left navigation on
 desktop, a compact header on smaller screens, and the same typography throughout.
+The desktop shell grows up to 1,560px on large monitors, with bounded paragraph
+lengths and side-by-side research and teaching sections from 1,400px onward.
 The Appearance selector follows the system by default; an explicit light or dark
 choice persists between pages. The archived alternatives remain in
 `design-explorations/` and are not dependencies of the production site.

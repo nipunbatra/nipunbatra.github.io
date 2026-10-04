@@ -13,8 +13,8 @@ const pages = ['index.html', 'teaching.html', 'teaching-videos.html', 'projects.
  await page.emulateMedia({ reducedMotion: 'reduce' });
  const errors = [], audit = [], shells = new Map();
  page.on('pageerror', e => errors.push(e.message));
- for (const width of [1440, 1024, 768, 390]) {
-  await page.setViewportSize({ width, height: width === 1440 ? 1100 : 844 });
+ for (const width of [2560, 1920, 1600, 1440, 1280, 1024, 768, 390]) {
+  await page.setViewportSize({ width, height: width >= 1440 ? 1100 : 844 });
   for (const mode of ['light', 'dark']) for (const file of pages) {
    await page.goto(base + file, { waitUntil: 'domcontentloaded' });
    await page.selectOption('#appearance', mode);
@@ -27,7 +27,7 @@ const pages = ['index.html', 'teaching.html', 'teaching-videos.html', 'projects.
      shell: { nav:bounds('.site-nav'), direction:nav.flexDirection, navFont:nav.fontFamily, navSize:nav.fontSize, titleFont:title.fontFamily, titleSize:title.fontSize, titleWeight:title.fontWeight },
      overflow:document.documentElement.scrollWidth > innerWidth,
      brokenImages:[...document.images].filter(i => new URL(i.src).origin === location.origin && !i.naturalWidth).map(i => i.src),
-     theme:document.documentElement.dataset.theme, header:bounds('.site-header'), courses:bounds('.course-table'), sidebar:bounds('.teaching-sidebar'), portrait:bounds('.portrait'), video:bounds('.video-thumb')
+     theme:document.documentElement.dataset.theme, frame:bounds('.site-frame'), header:bounds('.site-header'), courses:bounds('.course-table'), sidebar:bounds('.teaching-sidebar'), portrait:bounds('.portrait'), video:bounds('.video-thumb'), bio:bounds('.bio p'), conversations:bounds('.conversations'), discovery:[...document.querySelectorAll('.discovery>section')].map(s => ({x:s.getBoundingClientRect().x,y:s.getBoundingClientRect().y}))
     };
    });
    const label = `${file} ${mode} ${width}px`;
@@ -44,13 +44,20 @@ const pages = ['index.html', 'teaching.html', 'teaching-videos.html', 'projects.
     }
     for (const property of ['direction','navFont','navSize','titleFont','titleSize','titleWeight']) assert.equal(layout.shell[property], home.shell[property], `${label}: ${property} differs from Home`);
    }
-   if (width === 1440 && file === 'teaching.html') {
+   if (width >= 1440 && file === 'teaching.html') {
     assert.ok(layout.courses.width >= 565, 'Course table remains readable beside the menu');
-    assert.ok(Math.abs(layout.sidebar.width - 280) < 2, 'Compact playlist column');
+    assert.ok(layout.sidebar.width >= 280 && layout.sidebar.width <= 360, 'Playlist column grows within readable bounds');
     assert.ok(layout.courses.x > layout.header.right, 'Courses sit beside the left navigation');
    }
-   if (width === 1440 && file === 'index.html') assert.ok(Math.abs(layout.portrait.width - layout.video.width) < 2, 'Portrait and interview alignment');
-   if ([1440,390].includes(width) && ['index.html','teaching.html','projects.html','ml-in-1-minute.html'].includes(file)) {
+   if (width >= 1440 && file === 'index.html') assert.ok(Math.abs(layout.portrait.width - layout.conversations.width) < 2, 'Portrait and interview group alignment');
+   if (width >= 1600) {
+    assert.ok(layout.frame.width >= 1500 && layout.frame.width <= 1560, 'Wide monitor space is used without stretching indefinitely');
+    if (file === 'index.html') {
+     assert.ok(layout.bio.width < 800, 'Biography lines remain readable');
+     assert.ok(Math.abs(layout.discovery[0].y - layout.discovery[1].y) < 2 && layout.discovery[1].x > layout.discovery[0].x, 'Research and Teaching sit side by side');
+    }
+   }
+   if ([2560,1920,1440,390].includes(width) && ['index.html','teaching.html','projects.html','ml-in-1-minute.html'].includes(file)) {
     await page.screenshot({ path:path.join(output, `${file.replace('.html','')}-${mode}-${width}.jpg`), type:'jpeg', quality:85, fullPage:file === 'index.html' });
    }
    audit.push({ file, width, mode, ...layout });
