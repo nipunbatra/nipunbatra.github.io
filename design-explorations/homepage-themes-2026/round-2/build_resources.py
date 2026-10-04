@@ -42,7 +42,7 @@ for name in ['teaching.html', 'teaching-videos.html', 'projects.html']:
     page = re.sub(r'<main\b[^>]*>.*?</main>', lambda _: main, home, count=1, flags=re.S)
     label = {'teaching.html': 'Teaching', 'teaching-videos.html': 'Teaching videos', 'projects.html': 'Open source'}[name]
     page = re.sub(r'<title>.*?</title>', f'<title>{label} · Website preview · Nipun Batra</title>', page)
-    page = page.replace('<body>', '<body class="resource-page ' + ('projects-preview' if name == 'projects.html' else 'teaching-body') + '">')
+    page = page.replace('<body class="home-page">', '<body class="resource-page ' + ('projects-preview' if name == 'projects.html' else 'teaching-body') + '">')
     header = re.search(r'<header class="site-header">.*?</header>', page, re.S).group()
     updated = header.replace('href="#main"', 'href="index.html"').replace(' aria-current="page"', '')
     active = 'projects.html' if name == 'projects.html' else 'teaching.html'
@@ -62,7 +62,7 @@ for name in ['teaching.html', 'teaching-videos.html', 'projects.html']:
             item['url'] = rebase(item['url'])
         encoded = json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('<', '\\u003c')
         scripts = '<script id="teaching-search-data" type="application/json">' + encoded + '</script><script src="../../../teaching.js" defer></script>'
-    page = page.replace('<link rel="stylesheet" href="preview.css">', styles + '<link rel="stylesheet" href="preview.css"><link rel="stylesheet" href="resources.css">')
+    page = page.replace('<link rel="stylesheet" href="preview.css?v=20261004-match">', styles + '<link rel="stylesheet" href="preview.css?v=20261004-match"><link rel="stylesheet" href="resources.css?v=20261004-match">')
     page = page.replace('</body>', scripts + '</body>')
     (HERE / name).write_text(page)
     print('Built themed preview:', name)

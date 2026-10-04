@@ -1,25 +1,41 @@
-/* Reuse the existing resource layouts, with the selected preview's typography and colors. */
+/* Keep the selected semester index geometry: a full-width masthead and one
+   compact illustrated playlist column. Homepage rails must not nest here. */
 html[data-design] {
-  --line:var(--rule);
-  --paper-soft:var(--soft);
-  --accent-soft:var(--soft);
-  --teaching-paper:var(--paper);
-  --teaching-ink:var(--ink);
-  --teaching-muted:var(--muted);
-  --teaching-rule:var(--rule);
-  --teaching-wash:var(--soft);
-  --teaching-red:var(--accent);
-  --teaching-sans:var(--body);
-  --teaching-serif:var(--heading);
+ --line:var(--rule);--paper-soft:var(--soft);--accent-soft:var(--soft);
+ --teaching-paper:var(--paper);--teaching-ink:var(--ink);
+ --teaching-muted:var(--muted);--teaching-rule:var(--rule);
+ --teaching-wash:var(--soft);--teaching-red:var(--accent);
+ --teaching-sans:var(--body);--teaching-serif:var(--resource-heading);
 }
 .resource-page { background:var(--paper);color:var(--ink);font-family:var(--body); }
-.resource-page #main { width:100%;max-width:none;min-width:0;margin:0;padding:36px 0 30px; }
-.resource-page .teaching-intro h1 { font:500 48px/1.1 var(--heading); }
-.resource-page .teaching-columns { grid-template-columns:minmax(0,1fr) 290px;gap:30px; }
+.resource-page .site-frame { display:block;width:min(1256px,calc(100% - 88px)); }
+.resource-page .site-header { border-bottom:1px solid var(--ink);padding:24px 0 22px; }
+.resource-page .site-name { font:28px/1.25 var(--resource-heading); }
+.resource-page .site-nav { font-size:12px;gap:26px; }
+.resource-page #main { width:100%;max-width:none;min-width:0;margin:0;padding:29px 0 24px;border:0; }
+.resource-page .teaching-intro h1 { font:54px/1.08 var(--resource-heading);letter-spacing:-.025em; }
+.resource-page .teaching-columns { grid-template-columns:minmax(0,1fr) 358px;gap:42px; }
+.resource-page .teaching-sidebar { padding-left:27px; }
+.resource-page .course-name>a:not(.course-sheets),
+.resource-page .collection h4>a,
+.resource-page .sheet-list a { color:var(--ink); }
+.resource-page .course-name>a:not(.course-sheets):hover,
+.resource-page .collection h4>a:hover,
+.resource-page .sheet-list a:hover { color:var(--accent); }
+.resource-page .course-name>a:not(.course-sheets) { font-size:14px; }
+.resource-page .collection h4 { font-size:13px; }
+.resource-page .collection-group>h3 { font-size:14px; }
+.resource-page .course-heading h2,.resource-page .sidebar-heading h2 { font:500 21px/1.2 var(--body);letter-spacing:-.035em; }
+.resource-page .current-course { font:11px/1.5 var(--body);margin:5px 0 0; }
+.resource-page .sheet-shortcuts { gap:15px 28px; }
+.resource-page .sheet-group summary { padding:19px 0; }
+.resource-page .teaching-page section,.resource-page .sheet-group { scroll-margin-top:24px; }
 .resource-page .site-footer { text-align:left;width:100%; }
-html[data-design="swiss"] .resource-page #main { padding-left:28px; }
+html[data-design="index"] .resource-page .site-header { border-color:var(--accent); }
+html[data-design="index"] .resource-page .teaching-intro h1 { font-size:48px;font-weight:600; }
+html[data-design="forest"] .resource-page .site-name { font-family:Georgia,serif;font-size:26px; }
 .projects-preview .page-heading { gap:35px; }
-.projects-preview h1,.projects-preview h2,.projects-preview h3,.projects-preview .type-nav strong { font-family:var(--heading); }
+.projects-preview h1,.projects-preview h2,.projects-preview h3,.projects-preview .type-nav strong { font-family:var(--resource-heading); }
 .projects-preview .section-label { font:inherit;letter-spacing:normal;margin:0;top:25px; }
 .projects-preview .project-section { gap:35px; }
 .projects-preview .project-item { grid-template-columns:minmax(0,1fr) auto; }
@@ -28,20 +44,28 @@ html[data-design="swiss"] .resource-page #main { padding-left:28px; }
 .projects-preview .archive-strip { border-radius:0; }
 .projects-preview .type-nav a { padding:14px 12px; }
 @media(max-width:1100px) {
- .resource-page .teaching-columns { grid-template-columns:minmax(0,1fr) 260px;gap:22px; }
+ .resource-page .site-frame { width:calc(100% - 56px); }
+ .resource-page .teaching-columns { grid-template-columns:minmax(0,1fr) 308px;gap:25px; }
+ .resource-page .teaching-sidebar { padding-left:21px; }
+ .resource-page .site-nav { gap:18px; }
  .projects-preview .page-heading { grid-template-columns:1fr;gap:18px; }
  .projects-preview .project-section { grid-template-columns:1fr;gap:22px; }
  .projects-preview .section-label { position:static; }
 }
-@media(max-width:850px) {
- html[data-design="swiss"] .resource-page #main { padding-left:0; }
- .resource-page #main { padding-top:28px; }
+@media(max-width:900px) {
+ .resource-page .site-nav { padding-top:16px;gap:12px 20px; }
 }
 @media(max-width:760px) {
+ .resource-page .site-frame { width:calc(100% - 36px); }
+ .resource-page #main { padding-top:25px; }
  .resource-page .teaching-columns { display:block; }
- .resource-page .teaching-intro h1 { font-size:40px; }
+ .resource-page .teaching-sidebar { padding:25px 0 0; }
+ .resource-page .teaching-intro h1,html[data-design="index"] .resource-page .teaching-intro h1 { font-size:47px; }
  .resource-page .teaching-intro { display:block; }
  .resource-page .library-search { max-width:none;width:100%;margin-top:22px; }
+ .resource-page .course-name>a:not(.course-sheets) { font-size:16px; }
+ .resource-page .collection h4 { font-size:14px; }
+ .resource-page .sheet-shortcuts { gap:10px 20px; }
  .projects-preview .project-item { grid-template-columns:1fr;gap:8px; }
  .projects-preview .project-tags { max-width:none;text-align:left; }
  .projects-preview .type-nav { grid-template-columns:1fr; }
