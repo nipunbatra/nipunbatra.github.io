@@ -24,7 +24,7 @@ const main = page('teaching.html');
 const doc = main.window.document;
 assert.equal(doc.querySelectorAll('[data-course]').length, 25);
 assert.equal(doc.querySelectorAll('.recording-link').length, 7);
-assert.equal(doc.querySelectorAll('.collection').length, 21);
+assert.equal(doc.querySelectorAll('.collection').length, 19);
 assert.equal(doc.querySelectorAll('.sheet-group').length, 5);
 assert.equal(doc.querySelectorAll('.sheet-list a').length, 86);
 assert.equal(doc.querySelectorAll('.course-table .course-sheets').length, 5);
@@ -38,7 +38,7 @@ for (const shortcut of doc.querySelectorAll('.sheet-shortcuts a')) {
 }
 assert.deepEqual([...doc.querySelectorAll('.collection-group>h3')].map(el => el.textContent), [
   'Visual explanations', 'One-minute lessons', 'Three-minute lessons', 'Course recordings',
-  'Science & everyday systems', 'Practical tutorials', 'Workshops'
+  'Science & everyday systems', 'Practical tutorials'
 ]);
 doc.querySelector('.course-sheets').click();
 assert.equal(doc.querySelector('#sheets-dl-2026').open, true);
@@ -95,7 +95,7 @@ assert.equal(doc.documentElement.dataset.theme, 'light');
 
 const library = page('teaching-videos.html', '?collection=seven-ideas-ml');
 const lib = library.window.document;
-assert.equal(lib.querySelectorAll('[data-video]').length, 600);
+assert.equal(lib.querySelectorAll('[data-video]').length, 562);
 assert.equal(visible(lib, '[data-video]').length, 8);
 assert.equal(lib.querySelector('[data-video-count]').textContent, '8 videos');
 assert.match(lib.querySelector('#directory-heading').textContent, /Seven Ideas/);
@@ -148,14 +148,16 @@ for (const filename of ['teaching.html', 'teaching-videos.html']) {
   assert.equal(/Listed|↗|>Films</.test(read(filename)), false);
 }
 const noJS = new JSDOM(read('teaching-videos.html')).window.document;
-assert.equal(visible(noJS, '[data-video]').length, 600);
-assert.equal(new Set(catalog.videos.map(v => v.id)).size, 600);
+assert.equal(visible(noJS, '[data-video]').length, 562);
+assert.equal(new Set(catalog.videos.map(v => v.id)).size, 562);
 const seven = catalog.collections.find(c => c.id === 'seven-ideas-ml');
 assert.equal(seven.video_ids.length, 8);
 assert.equal(seven.video_ids.includes('CwfzBxAv_mE'), true);
 assert.equal(seven.url, 'https://www.youtube.com/playlist?list=PLDhLa2ZdfNzw');
-assert.equal(catalog.collections.some(c => ['ml-history', 'ml-2019-extras'].includes(c.id)), false);
-assert.doesNotMatch(read('teaching.html'), /No public videos|2019 extras/);
+assert.equal(catalog.collections.some(c => ['ml-history', 'ml-2019-extras', 'ipad', 'summer-school-2025'].includes(c.id)), false);
+for (const filename of ['teaching.html', 'teaching-videos.html']) {
+  assert.doesNotMatch(read(filename), /No public videos|2019 extras|iPad tips|ACM India Summer School|AI for social good summer school/);
+}
 const currentDL = catalog.courses.find(c => c.code === 'ES667' && c.semester === 'Aug 2026');
 assert.equal(currentDL.recordings, true);
 assert.equal(currentDL.recording_url, 'https://www.youtube.com/playlist?list=PLGRBnxCA2r9c');
