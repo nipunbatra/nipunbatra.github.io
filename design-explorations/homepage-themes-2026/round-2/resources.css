@@ -1,0 +1,49 @@
+/* Reuse the existing resource layouts, with the selected preview's typography and colors. */
+html[data-design] {
+  --line:var(--rule);
+  --paper-soft:var(--soft);
+  --accent-soft:var(--soft);
+  --teaching-paper:var(--paper);
+  --teaching-ink:var(--ink);
+  --teaching-muted:var(--muted);
+  --teaching-rule:var(--rule);
+  --teaching-wash:var(--soft);
+  --teaching-red:var(--accent);
+  --teaching-sans:var(--body);
+  --teaching-serif:var(--heading);
+}
+.resource-page { background:var(--paper);color:var(--ink);font-family:var(--body); }
+.resource-page #main { width:100%;max-width:none;min-width:0;margin:0;padding:36px 0 30px; }
+.resource-page .teaching-intro h1 { font:500 48px/1.1 var(--heading); }
+.resource-page .teaching-columns { grid-template-columns:minmax(0,1fr) 290px;gap:30px; }
+.resource-page .site-footer { text-align:left;width:100%; }
+html[data-design="swiss"] .resource-page #main { padding-left:28px; }
+.projects-preview .page-heading { gap:35px; }
+.projects-preview h1,.projects-preview h2,.projects-preview h3,.projects-preview .type-nav strong { font-family:var(--heading); }
+.projects-preview .section-label { font:inherit;letter-spacing:normal;margin:0;top:25px; }
+.projects-preview .project-section { gap:35px; }
+.projects-preview .project-item { grid-template-columns:minmax(0,1fr) auto; }
+.projects-preview .project-item::after { display:none; }
+.projects-preview .project-item:hover,.projects-preview .project-item:active { transform:none; }
+.projects-preview .archive-strip { border-radius:0; }
+.projects-preview .type-nav a { padding:14px 12px; }
+@media(max-width:1100px) {
+ .resource-page .teaching-columns { grid-template-columns:minmax(0,1fr) 260px;gap:22px; }
+ .projects-preview .page-heading { grid-template-columns:1fr;gap:18px; }
+ .projects-preview .project-section { grid-template-columns:1fr;gap:22px; }
+ .projects-preview .section-label { position:static; }
+}
+@media(max-width:850px) {
+ html[data-design="swiss"] .resource-page #main { padding-left:0; }
+ .resource-page #main { padding-top:28px; }
+}
+@media(max-width:760px) {
+ .resource-page .teaching-columns { display:block; }
+ .resource-page .teaching-intro h1 { font-size:40px; }
+ .resource-page .teaching-intro { display:block; }
+ .resource-page .library-search { max-width:none;width:100%;margin-top:22px; }
+ .projects-preview .project-item { grid-template-columns:1fr;gap:8px; }
+ .projects-preview .project-tags { max-width:none;text-align:left; }
+ .projects-preview .type-nav { grid-template-columns:1fr; }
+ .projects-preview .type-nav a+a { border-left:0;border-top:1px solid var(--rule); }
+}
