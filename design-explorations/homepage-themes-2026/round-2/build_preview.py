@@ -7,8 +7,8 @@ import re
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 source = (ROOT / 'index.html').read_text()
-bio = re.search(r'<div class="bio-copy">(.*?)</div>', source, re.S).group(1).strip()
-social = re.search(r'<div class="social-links"[^>]*>(.*?)</div>', source, re.S).group(1).strip()
+bio = re.search(r'<div class="[^"\n]*\bbio-copy\b[^"\n]*">(.*?)</div>', source, re.S).group(1).strip()
+social = re.search(r'<(?:nav|div) class="[^"\n]*\bsocial-links\b[^"\n]*"[^>]*>(.*?)</(?:nav|div)>', source, re.S).group(1).strip()
 # Small, consistent profile icons, as in the selected reference boards.
 icons = {
     'Email': '<rect x="2" y="4" width="20" height="16" rx="1"/><path d="m2 5 10 8 10-8"/>',

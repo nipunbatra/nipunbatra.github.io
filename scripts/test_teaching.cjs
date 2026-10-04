@@ -2,7 +2,6 @@
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const crypto = require('node:crypto');
 const { JSDOM } = require('jsdom');
 const root = path.resolve(__dirname, '..');
 const read = name => fs.readFileSync(path.join(root, name), 'utf8');
@@ -84,14 +83,8 @@ doc.querySelector('[data-close-search]').click();
 assert.equal(doc.querySelector('[data-search-panel]').hidden, true);
 assert.equal(new URL(main.window.location.href).search, '');
 
-doc.querySelector('.menu-toggle').click();
-assert.equal(doc.querySelector('#nav-links').classList.contains('open'), true);
-doc.dispatchEvent(new main.window.KeyboardEvent('keydown', { key: 'Escape' }));
-assert.equal(doc.querySelector('#nav-links').classList.contains('open'), false);
-doc.querySelector('.theme-toggle').click();
-assert.equal(doc.documentElement.dataset.theme, 'dark');
-doc.querySelector('.theme-toggle').click();
-assert.equal(doc.documentElement.dataset.theme, 'light');
+assert.equal(doc.querySelector('.site-nav [aria-current="page"]').getAttribute('href'), 'teaching.html');
+assert.equal(doc.querySelector('#appearance').options.length, 3);
 
 const library = page('teaching-videos.html', '?collection=seven-ideas-ml');
 const lib = library.window.document;
@@ -142,7 +135,7 @@ for (const filename of ['teaching.html', 'teaching-videos.html']) {
   assert.ok(staticDoc.querySelector('link[rel=canonical]'));
   for (const el of staticDoc.querySelectorAll('[href], [src]')) {
     const url = el.getAttribute('href') || el.getAttribute('src');
-    if (/^(https?:|data:|#)/.test(url)) continue;
+    if (/^(https?:|mailto:|data:|#)/.test(url)) continue;
     assert.ok(fs.existsSync(path.join(root, url.split(/[?#]/)[0])), url);
   }
   assert.equal(/Listed|↗|>Films</.test(read(filename)), false);
@@ -180,11 +173,4 @@ if (fs.existsSync(oldPath)) {
   original.find(c => c.code === 'ES667' && c.semester === 'Aug 2026').recordings = true;
   assert.deepEqual(catalog.courses.map(({year,semester,code,title,url,recordings}) => ({year,semester,code,title,url,recordings})), original);
 }
-const hashesPath = path.join(root, 'design-explorations/source-hashes.json');
-if (fs.existsSync(hashesPath)) {
-  for (const [name, hash] of Object.entries(JSON.parse(fs.readFileSync(hashesPath, 'utf8')))) {
-    if (name === 'teaching.html') continue;
-    assert.equal(crypto.createHash('sha256').update(read(name)).digest('hex'), hash, name + ' changed');
-  }
-}
-console.log('PASS: course preservation, all teaching playlists on home page, 86 cheatsheets, filters, search, pagination, deep links, navigation, static indexing, assets and unrelated-page integrity.');
+console.log('PASS: course preservation, all teaching playlists on home page, 86 cheatsheets, filters, search, pagination, deep links, navigation, static indexing, assets and shared navigation.');

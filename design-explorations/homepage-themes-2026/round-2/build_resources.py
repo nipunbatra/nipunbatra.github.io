@@ -38,6 +38,7 @@ footer = re.search(r'<footer class="site-footer">.*?</footer>', home, re.S).grou
 for name in ['teaching.html', 'teaching-videos.html', 'projects.html']:
     source = published(name)
     main = re.search(r'<main\b[^>]*>.*?</main>', source, re.S).group()
+    main = re.sub(r'<footer class="site-footer">.*?</footer>', '', main, flags=re.S)
     main = rebase_attributes(main).replace('</main>', footer + '</main>')
     page = re.sub(r'<main\b[^>]*>.*?</main>', lambda _: main, home, count=1, flags=re.S)
     label = {'teaching.html': 'Teaching', 'teaching-videos.html': 'Teaching videos', 'projects.html': 'Open source'}[name]
@@ -51,10 +52,12 @@ for name in ['teaching.html', 'teaching-videos.html', 'projects.html']:
     styles = '<link rel="stylesheet" href="../../../common.css">'
     scripts = ''
     if name == 'projects.html':
-        styles += re.search(r'<style>.*?</style>', source, re.S).group()
+        inline_styles = re.search(r'<style>.*?</style>', source, re.S)
+        styles += inline_styles.group() if inline_styles else '<link rel="stylesheet" href="../../../projects.css">'
         scripts = '<script src="projects-filter.js" defer></script>'
-        search = re.search(r"    const searchInput =.*?(?=    function updateThemeControl)", source, re.S).group()
-        (HERE / 'projects-filter.js').write_text('(() => {\n' + search + '\nfilterProjects();\n})();\n')
+        search = re.search(r"    const searchInput =.*?(?=    function updateThemeControl)", source, re.S)
+        filtering = '(() => {\n' + search.group() + '\nfilterProjects();\n})();\n' if search else published('projects.js')
+        (HERE / 'projects-filter.js').write_text(filtering)
     else:
         styles += '<link rel="stylesheet" href="../../../teaching.css">'
         data = json.loads(re.search(r'<script id="teaching-search-data" type="application/json">(.*?)</script>', source, re.S)[1])

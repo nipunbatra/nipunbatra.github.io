@@ -4,6 +4,7 @@ from collections import OrderedDict
 from html import escape as e
 import json
 import re
+from site_layout import render_page
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = json.loads((ROOT/'data/teaching/catalog.json').read_text())
@@ -23,11 +24,6 @@ def duration_seconds(value):
 
 def link(url, label, cls='', attrs=''):
     return f'<a href="{e(url,quote=True)}" class="{cls}" {attrs}>{label}</a>'
-
-def nav():
-    return '''<header class="site-header"><nav class="nav-inner" aria-label="Primary navigation">
-    <a href="index.html" class="logo">Nipun Batra</a><button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="nav-links" aria-expanded="false"><span></span><span></span><span></span></button>
-    <div class="nav-links" id="nav-links"><a href="index.html">Home</a><a href="https://sustainability-lab.github.io/papers/">Publications</a><a href="teaching.html" class="active" aria-current="page">Teaching</a><a href="projects.html">Open Source</a><a href="https://sustainability-lab.github.io/">Research Group</a><a href="https://nipunbatra.github.io/cv/cv.pdf">CV</a><a href="https://nipunbatra.github.io/blog/">Blog</a><button class="theme-toggle" type="button" aria-label="Switch theme" title="Switch theme">◐</button></div></nav></header>'''
 
 def course_table():
     groups=OrderedDict()
@@ -99,8 +95,15 @@ def page(body,title,description,filename):
     for v in DATA['videos']: index.append({'kind':'Video','title':v['title'],'url':v['url'],'meta':duration(v['duration'])+' · '+' · '.join(COLLECTIONS[c]['title'] for c in v['collections']),'groups':v['collections']})
     index_json=json.dumps(index,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c')
     schema={'@context':'https://schema.org','@type':'CollectionPage','name':title,'url':'https://nipunbatra.github.io/'+filename,'description':description,'author':{'@type':'Person','name':'Nipun Batra'}}
-    return f'''<!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><meta name="theme-color" content="#fffefa"><meta name="author" content="Nipun Batra"><title>{e(title)} - Nipun Batra</title><meta name="description" content="{e(description,quote=True)}"><link rel="canonical" href="https://nipunbatra.github.io/{filename}"><link rel="icon" href="data:,"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&amp;family=Work+Sans:wght@400;500;600&amp;family=DM+Sans:wght@400;500;600&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="common.css"><link rel="stylesheet" href="teaching.css"><script>(function(){{let saved;try{{saved=localStorage.getItem('theme')}}catch(e){{}}document.documentElement.dataset.theme=saved||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');}})();</script><script type="application/ld+json">{json.dumps(schema)}</script><script src="teaching.js" defer></script></head><body class="teaching-body"><a class="skip-link" href="#main">Skip to content</a>{nav()}<main class="teaching-page" id="main">{body}</main><footer class="teaching-footer">Nipun Batra · Computer Science · IIT Gandhinagar</footer><script id="teaching-search-data" type="application/json">{index_json}</script></body></html>'''
+    return render_page(
+        f'<main class="teaching-page" id="main">{body}</main>',
+        title=title+' - Nipun Batra', description=description, filename=filename,
+        body_class='resource-page teaching-body', active='teaching.html',
+        styles=('common.css', 'teaching.css'), scripts=('teaching.js',),
+        extra_head='<script type="application/ld+json">'+json.dumps(schema)+'</script>',
+        after_main='<script id="teaching-search-data" type="application/json">'+index_json+'</script>',
+    )
+
 
 main='''<header class="teaching-intro"><div><p class="teaching-eyebrow">IIT Gandhinagar</p><h1>Teaching</h1><p>My courses, videos and cheatsheets.</p></div>'''+search_ui()+'''</header><nav class="section-jumps" aria-label="Teaching sections"><a href="#courses">Courses</a><a href="#series">Video collections</a><a href="#cheatsheets">Cheatsheets</a><a href="teaching-videos.html">All teaching videos</a></nav>'''+sheet_shortcuts()+search_results()+'''<div class="teaching-columns"><div class="teaching-left"><section class="teaching-courses" id="courses"><header class="course-heading"><h2>Courses at IIT Gandhinagar</h2><span>2018–2026</span></header><p class="section-note">Each semester links to its course page and materials.</p><div class="course-filters"><label>Find a course<input data-course-query type="search" placeholder="Course, code or year"></label><label class="recorded-filter"><input data-recordings type="checkbox"> With recordings</label><button type="button" data-clear-course>Clear</button></div><p class="course-count" data-course-count role="status" aria-live="polite">25 course offerings</p>'''+course_table()+'''<p class="course-empty" data-course-empty hidden>No courses match. Try another word or clear the filters.</p><p class="recording-note">“Not linked” means a recording link hasn’t been added here.</p></section>'''+cheatsheets()+'''</div>'''+sidebar()+'''</div>'''
 (ROOT/'teaching.html').write_text(page(main,'Teaching','Courses at IIT Gandhinagar by semester, cheatsheets, lecture recordings, and visual lessons on machine learning, mathematics, Python and software tools.','teaching.html'))
