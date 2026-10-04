@@ -1,0 +1,22 @@
+{
+  "bio_html": "<p>Nipun Batra is an Associate Professor in <a href=\"https://cs.iitgn.ac.in/\">Computer Science</a> at <a href=\"https://iitgn.ac.in/\">IIT Gandhinagar</a>, where he leads the <a href=\"https://sustainability-lab.github.io/\">Sustainability Lab</a>. He previously completed his postdoc at the University of Virginia and his PhD from IIIT Delhi as a TCS PhD fellow.</p>\n            <p>His group develops AI-powered solutions for critical sustainability challenges including smart buildings, air quality monitoring, and wearable healthcare technologies.</p>\n            <p>His work has received several <a href=\"https://sustainability-lab.github.io/awards.html\">awards</a>, including Best Paper Runner-Up at ACM BuildSys 2026, ACM eEnergy Test of Time Award 2025, ACM SIGEnergy Rising Star Award 2025, Excellence in Teaching Award at IITGN 2025, Young Alumni Award from IIIT Delhi 2023, Best PhD Presentation at ACM SenSys 2015, Best Demo at ACM BuildSys 2014, and Best Video Nominee at ACM KDD 2016.</p>",
+  "bio_paragraphs": [
+    "Nipun Batra is an Associate Professor in Computer Science at IIT Gandhinagar, where he leads the Sustainability Lab. He previously completed his postdoc at the University of Virginia and his PhD from IIIT Delhi as a TCS PhD fellow.",
+    "His group develops AI-powered solutions for critical sustainability challenges including smart buildings, air quality monitoring, and wearable healthcare technologies.",
+    "His work has received several awards, including Best Paper Runner-Up at ACM BuildSys 2026, ACM eEnergy Test of Time Award 2025, ACM SIGEnergy Rising Star Award 2025, Excellence in Teaching Award at IITGN 2025, Young Alumni Award from IIIT Delhi 2023, Best PhD Presentation at ACM SenSys 2015, Best Demo at ACM BuildSys 2014, and Best Video Nominee at ACM KDD 2016."
+  ],
+  "videos": [
+    {
+      "title": "From IIIT-Delhi to AI & sustainability researcher",
+      "label": "IIIT-Delhi · AlumX Ep. 05",
+      "url": "https://youtu.be/_pCP6ZvH1VM",
+      "image": "images/iiitd-podcast.jpg"
+    },
+    {
+      "title": "Prof. Nipun Batra | TEDxConversations",
+      "label": "TEDxIITGandhinagar · Season 2",
+      "url": "https://www.youtube.com/watch?v=-pyj8cTdUK4",
+      "image": "images/tedx-conversation.jpg"
+    }
+  ]
+}
