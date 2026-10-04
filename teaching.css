@@ -32,10 +32,10 @@
   margin:auto;
   padding:104px 0 48px
 }
-.teaching-page h1,.teaching-page h2,.teaching-page h3,.teaching-page p {
+.teaching-page h1,.teaching-page h2,.teaching-page h3,.teaching-page h4,.teaching-page p {
   margin:0
 }
-.teaching-page h1,.teaching-page h2,.teaching-page h3 {
+.teaching-page h1,.teaching-page h2,.teaching-page h3,.teaching-page h4 {
   text-wrap:balance
 }
 .teaching-page a {
@@ -293,7 +293,7 @@
 .collection-group {
   margin-bottom:28px
 }
-.collection-group>h2 {
+.collection-group>h3 {
   font-size:16px;
   font-weight:500;
   letter-spacing:-.02em;
@@ -308,7 +308,7 @@
   padding:14px 0;
   border-bottom:1px solid var(--teaching-rule)
 }
-.collection h3 {
+.collection h4 {
   font-size:14px;
   font-weight:500;
   line-height:1.3;
@@ -511,7 +511,7 @@
     grid-template-columns:86px minmax(0,1fr);
     gap:12px
   }
-  .collection h3 {
+  .collection h4 {
     font-size:13px
   }
 }
@@ -651,10 +651,10 @@
     gap:16px;
     padding:15px 0
   }
-  .collection h3 {
+  .collection h4 {
     font-size:15px
   }
-  .collection-group>h2 {
+  .collection-group>h3 {
     font-size:19px
   }
   .teaching-page .collection-meta,.teaching-page .collection-description {
@@ -733,4 +733,39 @@
   .sheet-list a { font-size:14px; }
   .course-name>a.course-sheets { padding:8px 0;font-size:12px; }
   .sheet-group summary { min-height:48px; }
+}
+
+/* Compact entry points keep the full archives easy to reach. */
+.sheet-shortcuts {
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:16px 28px;
+  padding:18px 0;
+  border-bottom:1px solid var(--teaching-rule);
+}
+.sheet-shortcuts .shortcut-label {
+  font-size:11px;
+  color:var(--teaching-muted);
+  line-height:1.45;
+  margin-right:10px;
+}
+.sheet-shortcuts a { font-size:12px;line-height:1.4; }
+.sheet-shortcuts a>span { display:block;font-size:11px;color:var(--teaching-muted);margin-top:3px; }
+.sidebar-heading { display:flex;justify-content:space-between;align-items:baseline;gap:15px;margin-bottom:22px; }
+.sidebar-heading h2 { font-size:20px;font-weight:500;letter-spacing:-.025em; }
+.sidebar-heading>span { font-size:11px;color:var(--teaching-muted);white-space:nowrap; }
+.sheet-group summary small { display:block;font-size:11px;color:var(--teaching-muted);font-weight:400;margin-top:5px; }
+.result-types { display:flex;flex-wrap:wrap;gap:6px;margin-top:18px; }
+.result-types button { border:1px solid var(--teaching-rule);border-radius:2px;background:transparent;padding:7px 10px;font-size:12px; }
+.result-types button[aria-pressed=true] { border-color:var(--teaching-ink);background:var(--teaching-ink);color:var(--teaching-paper); }
+.result-types button>span { margin-left:8px;font-variant-numeric:tabular-nums;opacity:.7; }
+@media(max-width:760px) {
+  .sheet-shortcuts { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 20px;padding:17px 0; }
+  .sheet-shortcuts .shortcut-label { grid-column:1/-1;font-size:12px; }
+  .sheet-shortcuts .shortcut-label br { display:none; }
+  .sheet-shortcuts a { padding:5px 0;font-size:13px; }
+  .sidebar-heading { margin-bottom:20px; }
+  .sidebar-heading h2 { font-size:22px; }
+  .result-types button { min-height:44px; }
 }

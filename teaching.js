@@ -14,9 +14,12 @@ function initTeaching(root = document, options = {}) {
   const directory = one('.video-directory');
   const collection = one('[data-collection-filter]');
   let resultLimit = 12;
+  let resultType = 'all';
   let selectedGroup = '';
   let videoLimit = 30;
   const params = new URLSearchParams(options.queryString ?? window.location.search);
+  const typeButtons = all('[data-result-type]');
+  if (typeButtons.some(button => button.dataset.resultType === params.get('type'))) resultType = params.get('type');
 
   function openSheets(hash) {
     if (!hash.startsWith('#sheets-')) return;
@@ -39,6 +42,7 @@ function initTeaching(root = document, options = {}) {
     const url = new URL(window.location.href);
     const q = query.value.trim();
     if (q) url.searchParams.set('q', q); else url.searchParams.delete('q');
+    if (q && resultType !== 'all') url.searchParams.set('type', resultType); else url.searchParams.delete('type');
     if (collection?.value) url.searchParams.set('collection', collection.value);
     else url.searchParams.delete('collection');
     window.history.replaceState(null, '', url);
@@ -50,11 +54,18 @@ function initTeaching(root = document, options = {}) {
     panel.hidden = !active;
     if (directory) directory.hidden = active;
     if (!active) return;
-    const found = index.filter(item => {
+    const matchesQuery = index.filter(item => {
       if (selectedGroup && !item.groups?.includes(selectedGroup)) return false;
       if (collection?.value && item.kind === 'Video' && !item.groups?.includes(collection.value)) return false;
       return matches([item.title, item.meta, item.terms].join(' '), q);
     });
+    typeButtons.forEach(button => {
+      const type = button.dataset.resultType;
+      const count = type === 'all' ? matchesQuery.length : matchesQuery.filter(item => item.kind === type).length;
+      button.querySelector('[data-type-count]').textContent = String(count);
+      button.setAttribute('aria-pressed', String(type === resultType));
+    });
+    const found = matchesQuery.filter(item => resultType === 'all' || item.kind === resultType);
     results.replaceChildren();
     found.slice(0, resultLimit).forEach(item => {
       const article = doc.createElement('article');
@@ -72,9 +83,9 @@ function initTeaching(root = document, options = {}) {
     });
     one('[data-result-count]').textContent = found.length
       ? `${found.length} result${found.length === 1 ? '' : 's'}${q ? ` for “${q}”` : ''}`
-      : 'No matches. Try a topic, course code or year.';
+      : resultType === 'all' ? 'No matches. Try a topic, course code or year.' : 'No matches in this category. Choose All or try another topic.';
     moreResults.hidden = found.length <= resultLimit;
-    moreResults.textContent = `Show more results (${found.length - resultLimit} remaining)`;
+    moreResults.textContent = `Show more results (${Math.max(0, found.length - resultLimit)} remaining)`;
   }
 
   function search() {
@@ -84,11 +95,18 @@ function initTeaching(root = document, options = {}) {
     updateURL();
   }
   query.addEventListener('input', search);
+  typeButtons.forEach(button => button.addEventListener('click', () => {
+    resultType = button.dataset.resultType;
+    resultLimit = 12;
+    renderSearch();
+    updateURL();
+  }));
   form.addEventListener('submit', event => { event.preventDefault(); search(); });
   moreResults.addEventListener('click', () => { resultLimit += 24; renderSearch(); });
   one('[data-close-search]').addEventListener('click', () => {
     query.value = '';
     selectedGroup = '';
+    resultType = 'all';
     renderSearch();
     updateURL();
     query.focus();
@@ -163,6 +181,7 @@ function initTeaching(root = document, options = {}) {
   return {
     showCollection(id) {
       query.value = '';
+      resultType = 'all';
       selectedGroup = id;
       resultLimit = 30;
       if (!id) {

@@ -94,7 +94,125 @@
           "format": "PDF",
           "pages": 2
         }
-      ]
+      ],
+      "short_title": "Deep learning"
+    },
+    {
+      "id": "stt-2026",
+      "title": "Software tools for AI",
+      "course_code": "CS203",
+      "semester": "Jan 2026",
+      "course_url": "https://nipunbatra.github.io/stt-ai-26/",
+      "library_url": "https://nipunbatra.github.io/stt-ai-teaching/index.html",
+      "description": "Data, APIs, Git, experiments, deployment and AI agents.",
+      "sheets": [
+        {
+          "id": "ST01",
+          "title": "Collecting data over HTTP and APIs",
+          "url": "teaching-cheatsheets/stt-2026/ST01-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ST02",
+          "title": "Scraping web pages",
+          "url": "teaching-cheatsheets/stt-2026/ST02-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ST03",
+          "title": "Validating data before training",
+          "url": "teaching-cheatsheets/stt-2026/ST03-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ST04",
+          "title": "Labelling data",
+          "url": "teaching-cheatsheets/stt-2026/ST04-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ST05",
+          "title": "Labelling less: active learning, weak supervision, LLM labels",
+          "url": "teaching-cheatsheets/stt-2026/ST05-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ST06",
+          "title": "Data augmentation",
+          "url": "teaching-cheatsheets/stt-2026/ST06-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ST07",
+          "title": "LLM APIs and multimodal models",
+          "url": "teaching-cheatsheets/stt-2026/ST07-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ST08",
+          "title": "Evaluating models honestly",
+          "url": "teaching-cheatsheets/stt-2026/ST08-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ST09",
+          "title": "Tuning and experiment tracking",
+          "url": "teaching-cheatsheets/stt-2026/ST09-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ST10",
+          "title": "Reproducible runs: seeds, environments, Docker",
+          "url": "teaching-cheatsheets/stt-2026/ST10-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ST12",
+          "title": "Data drift and monitoring",
+          "url": "teaching-cheatsheets/stt-2026/ST12-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ST14",
+          "title": "Profiling and quantization",
+          "url": "teaching-cheatsheets/stt-2026/ST14-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ST15",
+          "title": "Building AI agents from scratch",
+          "url": "teaching-cheatsheets/stt-2026/ST15-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ST13",
+          "title": "From script to web app and API",
+          "url": "teaching-cheatsheets/stt-2026/ST13-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ST11",
+          "title": "Git for ML projects",
+          "url": "teaching-cheatsheets/stt-2026/ST11-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        }
+      ],
+      "short_title": "Software tools"
     },
     {
       "id": "ml-2025",
@@ -301,7 +419,125 @@
           "format": "PDF",
           "pages": 2
         }
-      ]
+      ],
+      "short_title": "Machine learning"
+    },
+    {
+      "id": "psdv-2025",
+      "title": "Probability, statistics & data visualization",
+      "course_code": "ES114",
+      "semester": "Jan 2025",
+      "course_url": "https://nipunbatra.github.io/psdv25/",
+      "library_url": "https://nipunbatra.github.io/psdv25/lectures.html",
+      "description": "Python, probability, distributions, expectation and data visualization.",
+      "sheets": [
+        {
+          "id": "PS01",
+          "title": "Arrays and tables: NumPy and Pandas",
+          "url": "teaching-cheatsheets/psdv-2025/PS01-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PS02",
+          "title": "Plotting and honest charts",
+          "url": "teaching-cheatsheets/psdv-2025/PS02-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PS03",
+          "title": "Sets, sample spaces and events",
+          "url": "teaching-cheatsheets/psdv-2025/PS03-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PS04",
+          "title": "Counting and the complement rule",
+          "url": "teaching-cheatsheets/psdv-2025/PS04-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PS05",
+          "title": "Conditional probability, independence and Bayes' rule",
+          "url": "teaching-cheatsheets/psdv-2025/PS05-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PS06",
+          "title": "Random variables and PMFs",
+          "url": "teaching-cheatsheets/psdv-2025/PS06-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PS07",
+          "title": "Discrete distributions",
+          "url": "teaching-cheatsheets/psdv-2025/PS07-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PS10",
+          "title": "Expectation and variance",
+          "url": "teaching-cheatsheets/psdv-2025/PS10-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PS09",
+          "title": "Continuous distributions and densities",
+          "url": "teaching-cheatsheets/psdv-2025/PS09-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PS08",
+          "title": "CDFs and sampling",
+          "url": "teaching-cheatsheets/psdv-2025/PS08-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PS11",
+          "title": "Joint distributions",
+          "url": "teaching-cheatsheets/psdv-2025/PS11-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PS12",
+          "title": "Covariance, correlation and the bivariate normal",
+          "url": "teaching-cheatsheets/psdv-2025/PS12-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PS13",
+          "title": "Sums of random variables, LLN and CLT",
+          "url": "teaching-cheatsheets/psdv-2025/PS13-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PS15",
+          "title": "Random vectors and PCA",
+          "url": "teaching-cheatsheets/psdv-2025/PS15-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PS14",
+          "title": "Likelihood and log probabilities",
+          "url": "teaching-cheatsheets/psdv-2025/PS14-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        }
+      ],
+      "short_title": "Probability & statistics"
     },
     {
       "id": "pml-2023",
@@ -424,239 +660,8 @@
           "format": "PDF",
           "pages": 2
         }
-      ]
-    },
-    {
-      "id": "psdv-2025",
-      "title": "Probability, statistics & data visualization",
-      "course_code": "ES114",
-      "semester": "Jan 2025",
-      "course_url": "https://nipunbatra.github.io/psdv25/",
-      "library_url": "https://nipunbatra.github.io/psdv25/lectures.html",
-      "description": "Python, probability, distributions, expectation and data visualization.",
-      "sheets": [
-        {
-          "id": "PS01",
-          "title": "Arrays and tables: NumPy and Pandas",
-          "url": "teaching-cheatsheets/psdv-2025/PS01-cheatsheet.pdf",
-          "format": "PDF",
-          "pages": 2
-        },
-        {
-          "id": "PS02",
-          "title": "Plotting and honest charts",
-          "url": "teaching-cheatsheets/psdv-2025/PS02-cheatsheet.pdf",
-          "format": "PDF",
-          "pages": 2
-        },
-        {
-          "id": "PS03",
-          "title": "Sets, sample spaces and events",
-          "url": "teaching-cheatsheets/psdv-2025/PS03-cheatsheet.pdf",
-          "format": "PDF",
-          "pages": 2
-        },
-        {
-          "id": "PS04",
-          "title": "Counting and the complement rule",
-          "url": "teaching-cheatsheets/psdv-2025/PS04-cheatsheet.pdf",
-          "format": "PDF",
-          "pages": 2
-        },
-        {
-          "id": "PS05",
-          "title": "Conditional probability, independence and Bayes' rule",
-          "url": "teaching-cheatsheets/psdv-2025/PS05-cheatsheet.pdf",
-          "format": "PDF",
-          "pages": 2
-        },
-        {
-          "id": "PS06",
-          "title": "Random variables and PMFs",
-          "url": "teaching-cheatsheets/psdv-2025/PS06-cheatsheet.pdf",
-          "format": "PDF",
-          "pages": 2
-        },
-        {
-          "id": "PS07",
-          "title": "Discrete distributions",
-          "url": "teaching-cheatsheets/psdv-2025/PS07-cheatsheet.pdf",
-          "format": "PDF",
-          "pages": 2
-        },
-        {
-          "id": "PS10",
-          "title": "Expectation and variance",
-          "url": "teaching-cheatsheets/psdv-2025/PS10-cheatsheet.pdf",
-          "format": "PDF",
-          "pages": 2
-        },
-        {
-          "id": "PS09",
-          "title": "Continuous distributions and densities",
-          "url": "teaching-cheatsheets/psdv-2025/PS09-cheatsheet.pdf",
-          "format": "PDF",
-          "pages": 2
-        },
-        {
-          "id": "PS08",
-          "title": "CDFs and sampling",
-          "url": "teaching-cheatsheets/psdv-2025/PS08-cheatsheet.pdf",
-          "format": "PDF",
-          "pages": 2
-        },
-        {
-          "id": "PS11",
-          "title": "Joint distributions",
-          "url": "teaching-cheatsheets/psdv-2025/PS11-cheatsheet.pdf",
-          "format": "PDF",
-          "pages": 2
-        },
-        {
-          "id": "PS12",
-          "title": "Covariance, correlation and the bivariate normal",
-          "url": "teaching-cheatsheets/psdv-2025/PS12-cheatsheet.pdf",
-          "format": "PDF",
-          "pages": 2
-        },
-        {
-          "id": "PS13",
-          "title": "Sums of random variables, LLN and CLT",
-          "url": "teaching-cheatsheets/psdv-2025/PS13-cheatsheet.pdf",
-          "format": "PDF",
-          "pages": 2
-        },
-        {
-          "id": "PS15",
-          "title": "Random vectors and PCA",
-          "url": "teaching-cheatsheets/psdv-2025/PS15-cheatsheet.pdf",
-          "format": "PDF",
-          "pages": 2
-        },
-        {
-          "id": "PS14",
-          "title": "Likelihood and log probabilities",
-          "url": "teaching-cheatsheets/psdv-2025/PS14-cheatsheet.pdf",
-          "format": "PDF",
-          "pages": 2
-        }
-      ]
-    },
-    {
-      "id": "stt-2026",
-      "title": "Software tools for AI",
-      "course_code": "CS203",
-      "semester": "Jan 2026",
-      "course_url": "https://nipunbatra.github.io/stt-ai-26/",
-      "library_url": "https://nipunbatra.github.io/stt-ai-teaching/index.html",
-      "description": "Data, APIs, Git, experiments, deployment and AI agents.",
-      "sheets": [
-        {
-          "id": "ST01",
-          "title": "Collecting data over HTTP and APIs",
-          "url": "teaching-cheatsheets/stt-2026/ST01-cheatsheet.pdf",
-          "format": "PDF",
-          "pages": 2
-        },
-        {
-          "id": "ST02",
-          "title": "Scraping web pages",
-          "url": "teaching-cheatsheets/stt-2026/ST02-cheatsheet.pdf",
-          "format": "PDF",
-          "pages": 2
-        },
-        {
-          "id": "ST03",
-          "title": "Validating data before training",
-          "url": "teaching-cheatsheets/stt-2026/ST03-cheatsheet.pdf",
-          "format": "PDF",
-          "pages": 2
-        },
-        {
-          "id": "ST04",
-          "title": "Labelling data",
-          "url": "teaching-cheatsheets/stt-2026/ST04-cheatsheet.pdf",
-          "format": "PDF",
-          "pages": 2
-        },
-        {
-          "id": "ST05",
-          "title": "Labelling less: active learning, weak supervision, LLM labels",
-          "url": "teaching-cheatsheets/stt-2026/ST05-cheatsheet.pdf",
-          "format": "PDF",
-          "pages": 2
-        },
-        {
-          "id": "ST06",
-          "title": "Data augmentation",
-          "url": "teaching-cheatsheets/stt-2026/ST06-cheatsheet.pdf",
-          "format": "PDF",
-          "pages": 2
-        },
-        {
-          "id": "ST07",
-          "title": "LLM APIs and multimodal models",
-          "url": "teaching-cheatsheets/stt-2026/ST07-cheatsheet.pdf",
-          "format": "PDF",
-          "pages": 2
-        },
-        {
-          "id": "ST08",
-          "title": "Evaluating models honestly",
-          "url": "teaching-cheatsheets/stt-2026/ST08-cheatsheet.pdf",
-          "format": "PDF",
-          "pages": 2
-        },
-        {
-          "id": "ST09",
-          "title": "Tuning and experiment tracking",
-          "url": "teaching-cheatsheets/stt-2026/ST09-cheatsheet.pdf",
-          "format": "PDF",
-          "pages": 2
-        },
-        {
-          "id": "ST10",
-          "title": "Reproducible runs: seeds, environments, Docker",
-          "url": "teaching-cheatsheets/stt-2026/ST10-cheatsheet.pdf",
-          "format": "PDF",
-          "pages": 2
-        },
-        {
-          "id": "ST12",
-          "title": "Data drift and monitoring",
-          "url": "teaching-cheatsheets/stt-2026/ST12-cheatsheet.pdf",
-          "format": "PDF",
-          "pages": 2
-        },
-        {
-          "id": "ST14",
-          "title": "Profiling and quantization",
-          "url": "teaching-cheatsheets/stt-2026/ST14-cheatsheet.pdf",
-          "format": "PDF",
-          "pages": 2
-        },
-        {
-          "id": "ST15",
-          "title": "Building AI agents from scratch",
-          "url": "teaching-cheatsheets/stt-2026/ST15-cheatsheet.pdf",
-          "format": "PDF",
-          "pages": 2
-        },
-        {
-          "id": "ST13",
-          "title": "From script to web app and API",
-          "url": "teaching-cheatsheets/stt-2026/ST13-cheatsheet.pdf",
-          "format": "PDF",
-          "pages": 2
-        },
-        {
-          "id": "ST11",
-          "title": "Git for ML projects",
-          "url": "teaching-cheatsheets/stt-2026/ST11-cheatsheet.pdf",
-          "format": "PDF",
-          "pages": 2
-        }
-      ]
+      ],
+      "short_title": "Probabilistic ML"
     }
   ]
 }

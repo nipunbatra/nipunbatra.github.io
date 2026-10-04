@@ -27,7 +27,19 @@ assert.equal(doc.querySelectorAll('.recording-link').length, 6);
 assert.equal(doc.querySelectorAll('.collection').length, 22);
 assert.equal(doc.querySelectorAll('.sheet-group').length, 5);
 assert.equal(doc.querySelectorAll('.sheet-list a').length, 86);
-assert.equal(doc.querySelectorAll('.course-sheets').length, 5);
+assert.equal(doc.querySelectorAll('.course-table .course-sheets').length, 5);
+assert.equal(doc.querySelectorAll('.sheet-shortcuts a').length, 5);
+for (const shortcut of doc.querySelectorAll('.sheet-shortcuts a')) {
+  const target = doc.querySelector(shortcut.hash);
+  assert.ok(target);
+  assert.match(target.querySelector('summary small').textContent, /(?:ES|CS)\d+ · (?:Jan|Aug) \d{4}/);
+  shortcut.click();
+  assert.equal(target.open, true);
+}
+assert.deepEqual([...doc.querySelectorAll('.collection-group>h3')].map(el => el.textContent), [
+  'Visual explanations', 'One-minute lessons', 'Three-minute lessons', 'Course recordings',
+  'Science & everyday systems', 'Practical tutorials', 'Workshops'
+]);
 doc.querySelector('.course-sheets').click();
 assert.equal(doc.querySelector('#sheets-dl-2026').open, true);
 const sheetsLink = page('teaching.html', '#sheets-stt-2026');
@@ -96,6 +108,30 @@ assert.equal(visible(lib, '[data-video]').length, 1);
 const linked = page('teaching-videos.html', '?q=representations');
 assert.match(linked.window.document.querySelector('[data-results]').textContent, /Seven Ways/);
 assert.equal(linked.window.document.querySelector('.video-directory').hidden, true);
+
+// Resource filters retain their query, reset pagination, and can be shared by URL.
+input(main, '#library-query', 'machine learning');
+doc.querySelector('[data-result-type=Cheatsheet]').click();
+assert.equal(doc.querySelectorAll('.search-result').length, 12);
+assert.ok([...doc.querySelectorAll('.search-result p')].every(el => el.textContent.startsWith('Cheatsheet ·')));
+assert.equal(new URL(main.window.location.href).searchParams.get('type'), 'Cheatsheet');
+assert.equal(doc.querySelector('[data-result-type=Cheatsheet]').getAttribute('aria-pressed'), 'true');
+doc.querySelector('[data-more-results]').click();
+assert.ok(doc.querySelectorAll('.search-result').length > 12);
+doc.querySelector('[data-result-type=Course]').click();
+assert.ok([...doc.querySelectorAll('.search-result p')].every(el => el.textContent.startsWith('Course ·')));
+assert.equal(doc.querySelector('[data-result-type=Cheatsheet]').getAttribute('aria-pressed'), 'false');
+input(main, '#library-query', 'Git');
+assert.equal(doc.querySelectorAll('.search-result').length, 0);
+assert.match(doc.querySelector('[data-result-count]').textContent, /Choose All/);
+doc.querySelector('[data-result-type=all]').click();
+assert.ok(doc.querySelectorAll('.search-result').length > 0);
+assert.equal(new URL(main.window.location.href).searchParams.has('type'), false);
+doc.querySelector('[data-close-search]').click();
+const filteredLink = page('teaching.html', '?q=autograd&type=Cheatsheet');
+const filteredDoc = filteredLink.window.document;
+assert.match(filteredDoc.querySelector('[data-results]').textContent, /Backpropagation & Autograd/);
+assert.ok([...filteredDoc.querySelectorAll('.search-result p')].every(el => el.textContent.startsWith('Cheatsheet ·')));
 
 // Crawlability, escaping, local assets and preservation are checked on the static pages.
 for (const filename of ['teaching.html', 'teaching-videos.html']) {
