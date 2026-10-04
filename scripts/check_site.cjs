@@ -51,8 +51,9 @@ const pages = ['index.html', 'teaching.html', 'teaching-videos.html', 'projects.
    }
    if (width >= 1440 && file === 'index.html') assert.ok(Math.abs(layout.portrait.width - layout.conversations.width) < 2, 'Portrait and interview group alignment');
    if (width >= 1600) {
-    assert.ok(layout.frame.width >= 1500 && layout.frame.width <= 1560, 'Wide monitor space is used without stretching indefinitely');
+    assert.ok(layout.frame.width >= 1200 && layout.frame.width <= 1240, 'Wide desktop layout stays moderately sized');
     if (file === 'index.html') {
+     assert.ok(layout.portrait.width <= 300, 'Portrait stays modest on large screens');
      assert.ok(layout.bio.width < 800, 'Biography lines remain readable');
      assert.ok(Math.abs(layout.discovery[0].y - layout.discovery[1].y) < 2 && layout.discovery[1].x > layout.discovery[0].x, 'Research and Teaching sit side by side');
     }

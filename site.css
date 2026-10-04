@@ -250,16 +250,14 @@ html[data-design="swiss"] .resource-page .course-table .term,html[data-design="s
 @media(max-width:600px) {
 html[data-design="swiss"] .resource-page .site-frame { width:calc(100% - 36px); }
 }
-/* Wide monitors get more useful columns, while paragraphs keep a reading measure. */
+/* A modest expansion on wide monitors keeps the portrait and text in proportion. */
 @media(min-width:1400px) {
- html[data-design="swiss"] :is(.home-page,.resource-page) .site-frame { width:min(1560px,calc(100% - 88px)); }
- html[data-design="swiss"] .home-page .site-frame { grid-template-columns:145px minmax(0,1fr) clamp(330px,25vw,440px); }
- html[data-design="swiss"] .home-page .bio p { font-size:20px; }
- html[data-design="swiss"] .home-page .video-pair { grid-template-columns:1fr 1fr;gap:20px; }
+ html[data-design="swiss"] :is(.home-page,.resource-page) .site-frame { width:min(1240px,calc(100% - 88px)); }
+ html[data-design="swiss"] .home-page .site-frame { grid-template-columns:145px minmax(0,1fr) 300px; }
  html[data-design="swiss"] .home-page .discovery { grid-template-columns:1fr 1fr;gap:36px; }
  html[data-design="swiss"] .home-page .discovery>section+section { border-top:0;border-left:1px solid var(--rule);padding:0 0 0 36px; }
- html[data-design="swiss"] .resource-page .teaching-columns { grid-template-columns:minmax(0,1fr) clamp(280px,23vw,360px); }
- html[data-design="swiss"] .resource-page .collection { grid-template-columns:108px minmax(0,1fr);gap:16px; }
+ html[data-design="swiss"] .resource-page .teaching-columns { grid-template-columns:minmax(0,1fr) 310px; }
+ html[data-design="swiss"] .resource-page .collection { grid-template-columns:96px minmax(0,1fr);gap:14px; }
  html[data-design="swiss"] .resource-page .course-name>a:not(.course-sheets) { font-size:16px; }
  html[data-design="swiss"] .resource-page .collection h4 { font-size:14px; }
 }
