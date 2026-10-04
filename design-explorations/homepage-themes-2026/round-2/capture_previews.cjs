@@ -15,9 +15,9 @@ const pages = ['index.html', 'teaching.html', 'teaching-videos.html', 'projects.
  const browser = await chromium.launch({ headless: true, ...(process.env.PREVIEW_BROWSER ? { executablePath: process.env.PREVIEW_BROWSER } : {}) });
  const page = await browser.newPage();
  await page.emulateMedia({ reducedMotion: 'reduce' });
- const errors = [], audit = [];
+ const errors = [], audit = [], swissShells = new Map();
  page.on('pageerror', error => errors.push(error.message));
- for (const width of [1440, 768, 390]) {
+ for (const width of [1440, 1024, 768, 390]) {
   await page.setViewportSize({ width, height: width === 1440 ? 1100 : 844 });
   for (const design of designs) for (const mode of ['light', 'dark']) for (const file of pages) {
    await page.goto(`${base}${file}?design=${design}&mode=${mode}`);
@@ -25,13 +25,32 @@ const pages = ['index.html', 'teaching.html', 'teaching-videos.html', 'projects.
    await page.locator('img').evaluateAll(images => Promise.all(images.map(img => img.decode().catch(() => {}))));
    const layout = await page.evaluate(() => {
     const bounds = selector => { const b = document.querySelector(selector)?.getBoundingClientRect(); return b ? { x: b.x, y: b.y, width: b.width, height: b.height, right: b.right, bottom: b.bottom } : null; };
-    return { overflow: document.documentElement.scrollWidth > innerWidth, brokenImages: [...document.images].filter(i => !i.naturalWidth).map(i => i.src), heading: document.querySelector('h1')?.textContent, header: bounds('.site-header'), courses: bounds('.course-table'), sidebar: bounds('.teaching-sidebar'), portrait: bounds('.portrait'), video: bounds('.video-thumb'), conversations: bounds('.conversations'), bio: bounds('.biography'), discovery: bounds('.discovery') };
+    const nav = document.querySelector('.site-nav'), h1 = document.querySelector('h1');
+    const navStyle = getComputedStyle(nav), titleStyle = getComputedStyle(h1);
+    const shell = { nav: bounds('.site-nav'), direction: navStyle.flexDirection, navFont: navStyle.fontFamily, navSize: navStyle.fontSize, titleFont: titleStyle.fontFamily, titleSize: titleStyle.fontSize, titleWeight: titleStyle.fontWeight };
+    return { shell, overflow: document.documentElement.scrollWidth > innerWidth, brokenImages: [...document.images].filter(i => !i.naturalWidth).map(i => i.src), heading: document.querySelector('h1')?.textContent, header: bounds('.site-header'), courses: bounds('.course-table'), sidebar: bounds('.teaching-sidebar'), portrait: bounds('.portrait'), video: bounds('.video-thumb'), conversations: bounds('.conversations'), bio: bounds('.biography'), discovery: bounds('.discovery') };
    });
    const name = `${design}-${mode}-${file.replace('.html', '')}`;
    assert.equal(layout.overflow, false, `${name} overflows at ${width}px`);
    assert.deepEqual(layout.brokenImages, [], `${name}: broken image`);
+   if (design === 'swiss') {
+    const key = `${width}-${mode}`;
+    if (file === 'index.html') swissShells.set(key, layout);
+    else {
+     const home = swissShells.get(key);
+     for (const dimension of ['x', 'y', 'width']) {
+      assert.ok(Math.abs(layout.header[dimension] - home.header[dimension]) < 2, `${name}: header ${dimension} differs from Home at ${width}px`);
+      assert.ok(Math.abs(layout.shell.nav[dimension] - home.shell.nav[dimension]) < 2, `${name}: menu ${dimension} differs from Home at ${width}px`);
+     }
+     for (const property of ['direction', 'navFont', 'navSize', 'titleFont', 'titleSize', 'titleWeight']) assert.equal(layout.shell[property], home.shell[property], `${name}: ${property} differs from Home at ${width}px`);
+    }
+   }
    if (width === 1440) {
-    if (file === 'teaching.html') {
+    if (file === 'teaching.html' && design === 'swiss') {
+     assert.ok(layout.courses.width >= 565, 'Swiss course table must remain readable beside its shared navigation');
+     assert.ok(Math.abs(layout.sidebar.width - 280) < 2, 'Swiss compact playlist column');
+     assert.ok(layout.courses.x > layout.header.right, 'Swiss courses must sit to the right of the homepage menu');
+    } else if (file === 'teaching.html') {
      assert.ok(layout.courses.width > 800, `${name}: courses squeezed`);
      assert.ok(Math.abs(layout.sidebar.width - 358) < 2, `${name}: playlist width changed`);
      assert.ok(Math.abs(layout.header.x - layout.courses.x) < 2, `${name}: extra navigation rail`);

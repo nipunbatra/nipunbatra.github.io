@@ -10,7 +10,7 @@ for design, label, board in styles:
         cards = []
         for slug, title, file in pages:
             url = f'{file}?design={design}&mode={mode}' + ('#cheatsheets' if slug=='cheatsheets' else '')
-            image = f'images/rendered/{design}-{mode}-{slug}.jpg'
+            image = f'images/rendered/{design}-{mode}-{slug}.jpg' + ('?v=20261004-shared-swiss' if design=='swiss' else '')
             cards.append(f'<article><div class="card-title"><h3>{title}</h3><a href="{escape(url)}">Open page</a></div><a class="screenshot" href="{escape(url)}"><img src="{image}" alt="{label}, {mode} mode: {title}, rendered in the browser" loading="lazy" width="1440" height="1100"></a><a class="full-image" href="{image}">View full screenshot</a></article>')
         sections.append(f'<section data-design="{design}" data-mode="{mode}" aria-labelledby="{design}-{mode}"><header><h2 id="{design}-{mode}">{label} · {mode.title()}</h2><a href="images/{board}">Original homepage mockup</a></header><div class="pages">'+''.join(cards)+'</div></section>')
 page = '''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,follow"><title>Website previews · Nipun Batra</title><style>

@@ -1,5 +1,5 @@
-/* Keep the selected semester index geometry: a full-width masthead and one
-   compact illustrated playlist column. Homepage rails must not nest here. */
+/* Resource content inherits the selected site shell; Swiss shares the
+   homepage rail and typography while retaining a compact semester index. */
 html[data-design] {
  --line:var(--rule);--paper-soft:var(--soft);--accent-soft:var(--soft);
  --teaching-paper:var(--paper);--teaching-ink:var(--ink);
@@ -70,4 +70,44 @@ html[data-design="forest"] .resource-page .site-name { font-family:Georgia,serif
  .projects-preview .project-tags { max-width:none;text-align:left; }
  .projects-preview .type-nav { grid-template-columns:1fr; }
  .projects-preview .type-nav a+a { border-left:0;border-top:1px solid var(--rule); }
+}
+
+/* The Swiss navigation itself is shared with Home in preview.css. */
+html[data-design="swiss"] .resource-page .site-frame {
+ width:min(1060px,calc(100% - 88px));display:grid;
+ grid-template-columns:145px minmax(0,1fr);gap:36px;padding-top:40px;
+}
+html[data-design="swiss"] .resource-page .site-header { grid-column:1;grid-row:1; }
+html[data-design="swiss"] .resource-page #main { grid-column:2;padding:0; }
+html[data-design="swiss"] .resource-page .teaching-columns { grid-template-columns:minmax(0,1fr) 280px;gap:28px; }
+html[data-design="swiss"] .resource-page .teaching-sidebar { padding-left:20px; }
+html[data-design="swiss"] .resource-page .collection { grid-template-columns:86px minmax(0,1fr);gap:12px; }
+html[data-design="swiss"] .resource-page .course-table .term { width:78px; }
+html[data-design="swiss"] .resource-page .recording { width:84px; }
+html[data-design="swiss"] .resource-page .course-heading h2,
+html[data-design="swiss"] .resource-page .sidebar-heading h2,
+html[data-design="swiss"] .resource-page .collection-group>h3,
+html[data-design="swiss"] .resource-page .directory-controls h2,
+html[data-design="swiss"] .resource-page .results-heading h2 { font-family:var(--heading);font-weight:600; }
+@media(max-width:1150px) {
+ html[data-design="swiss"] .resource-page .site-frame { width:calc(100% - 56px);grid-template-columns:125px minmax(0,1fr);gap:25px; }
+ html[data-design="swiss"] .resource-page .teaching-columns { grid-template-columns:minmax(0,1fr) 260px;gap:22px; }
+ html[data-design="swiss"] .resource-page .course-filters { flex-wrap:wrap;gap:10px 15px; }
+ html[data-design="swiss"] .resource-page .course-filters>label:first-child { flex-basis:100%; }
+ html[data-design="swiss"] .resource-page .recorded-filter,
+ html[data-design="swiss"] .resource-page .course-filters button { padding-bottom:0; }
+}
+@media(max-width:900px) {
+ html[data-design="swiss"] .resource-page .site-frame { display:block;width:calc(100% - 40px);padding-top:0; }
+ html[data-design="swiss"] .resource-page #main { padding-top:28px; }
+}
+@media(max-width:760px) {
+ html[data-design="swiss"] .resource-page .teaching-columns { display:block; }
+ html[data-design="swiss"] .resource-page .teaching-sidebar { padding:25px 0 0; }
+ html[data-design="swiss"] .resource-page .collection { grid-template-columns:108px minmax(0,1fr);gap:16px; }
+ html[data-design="swiss"] .resource-page .course-table .term,
+ html[data-design="swiss"] .resource-page .recording { width:auto; }
+}
+@media(max-width:600px) {
+ html[data-design="swiss"] .resource-page .site-frame { width:calc(100% - 36px); }
 }

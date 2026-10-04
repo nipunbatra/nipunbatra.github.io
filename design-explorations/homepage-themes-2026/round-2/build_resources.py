@@ -62,7 +62,7 @@ for name in ['teaching.html', 'teaching-videos.html', 'projects.html']:
             item['url'] = rebase(item['url'])
         encoded = json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('<', '\\u003c')
         scripts = '<script id="teaching-search-data" type="application/json">' + encoded + '</script><script src="../../../teaching.js" defer></script>'
-    page = page.replace('<link rel="stylesheet" href="preview.css?v=20261004-match">', styles + '<link rel="stylesheet" href="preview.css?v=20261004-match"><link rel="stylesheet" href="resources.css?v=20261004-match">')
+    page = page.replace('<link rel="stylesheet" href="preview.css?v=20261004-shared-swiss">', styles + '<link rel="stylesheet" href="preview.css?v=20261004-shared-swiss"><link rel="stylesheet" href="resources.css?v=20261004-shared-swiss">')
     page = page.replace('</body>', scripts + '</body>')
     (HERE / name).write_text(page)
     print('Built themed preview:', name)
