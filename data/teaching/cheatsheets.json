@@ -1,0 +1,662 @@
+{
+  "updated": "2026-10-04",
+  "groups": [
+    {
+      "id": "dl-2026",
+      "title": "Deep learning",
+      "course_code": "ES667",
+      "semester": "Aug 2026",
+      "course_url": "https://nipunbatra.github.io/dl-2026/",
+      "library_url": "https://nipunbatra.github.io/dl-teaching/slides.html",
+      "description": "Losses, gradients, optimization, regularization and attention.",
+      "sheets": [
+        {
+          "id": "S01",
+          "title": "Where Deep Learning Losses Come From I",
+          "url": "https://nipunbatra.github.io/dl-teaching/slides-pdf/S01-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "S02",
+          "title": "Where Deep Learning Losses Come From II",
+          "url": "https://nipunbatra.github.io/dl-teaching/slides-pdf/S02-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "S03",
+          "title": "Likelihood to Loss in Practice",
+          "url": "https://nipunbatra.github.io/dl-teaching/slides-pdf/S03-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "S04",
+          "title": "From Linear Models to Neural Networks",
+          "url": "https://nipunbatra.github.io/dl-teaching/slides-pdf/S04-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "S05",
+          "title": "Optimization I — Gradient Estimates & Step Sizes",
+          "url": "https://nipunbatra.github.io/dl-teaching/slides-pdf/S05-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "S06",
+          "title": "Backpropagation & Autograd from Scratch",
+          "url": "https://nipunbatra.github.io/dl-teaching/slides-pdf/S06-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "S07",
+          "title": "Optimization II — Momentum, RMSProp & Adam",
+          "url": "https://nipunbatra.github.io/dl-teaching/slides-pdf/S07-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "S08",
+          "title": "Vector, Matrix & Affine Autograd",
+          "url": "https://nipunbatra.github.io/dl-teaching/slides-pdf/S08-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "S09",
+          "title": "Valid Outputs by Design & Learning-Rate Schedules",
+          "url": "https://nipunbatra.github.io/dl-teaching/slides-pdf/S09-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "S10",
+          "title": "Generalization & Regularization",
+          "url": "https://nipunbatra.github.io/dl-teaching/slides-pdf/S10-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "P01",
+          "title": "From characters to next-token prediction",
+          "url": "https://nipunbatra.github.io/dl-teaching/slides-pdf/P01-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "P02",
+          "title": "Self-attention, from first principles",
+          "url": "https://nipunbatra.github.io/dl-teaching/slides-pdf/P02-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        }
+      ]
+    },
+    {
+      "id": "ml-2025",
+      "title": "Machine learning",
+      "course_code": "ES335",
+      "semester": "Aug 2025",
+      "course_url": "https://nipunbatra.github.io/ml2025/",
+      "library_url": "https://nipunbatra.github.io/ml2025/schedule.html",
+      "description": "Trees, regression, neural networks, clustering and support vector machines.",
+      "sheets": [
+        {
+          "id": "ML01",
+          "title": "Conventions and metrics",
+          "url": "https://nipunbatra.github.io/ml2025/cheatsheets/ML01-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ML02",
+          "title": "Decision trees I: entropy and information gain",
+          "url": "https://nipunbatra.github.io/ml2025/cheatsheets/ML02-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ML03",
+          "title": "Decision trees II: real inputs, real outputs, depth",
+          "url": "https://nipunbatra.github.io/ml2025/cheatsheets/ML03-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ML04",
+          "title": "Bias and variance",
+          "url": "https://nipunbatra.github.io/ml2025/cheatsheets/ML04-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ML05",
+          "title": "Cross-validation and hyperparameters",
+          "url": "https://nipunbatra.github.io/ml2025/cheatsheets/ML05-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ML06",
+          "title": "Ensembles: bagging, random forests, boosting",
+          "url": "https://nipunbatra.github.io/ml2025/cheatsheets/ML06-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ML07",
+          "title": "Maths for ML: gradients, rank, contours",
+          "url": "https://nipunbatra.github.io/ml2025/cheatsheets/ML07-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ML08",
+          "title": "Linear regression I: normal equation and geometry",
+          "url": "https://nipunbatra.github.io/ml2025/cheatsheets/ML08-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ML09",
+          "title": "Linear regression II: basis functions, collinearity, dummies",
+          "url": "https://nipunbatra.github.io/ml2025/cheatsheets/ML09-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ML10",
+          "title": "Gradient descent and SGD",
+          "url": "https://nipunbatra.github.io/ml2025/cheatsheets/ML10-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ML11",
+          "title": "Matrix factorisation for recommendations",
+          "url": "https://nipunbatra.github.io/ml2025/cheatsheets/ML11-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ML12",
+          "title": "Ridge regression",
+          "url": "https://nipunbatra.github.io/ml2025/cheatsheets/ML12-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ML13",
+          "title": "Lasso, subgradients and coordinate descent",
+          "url": "https://nipunbatra.github.io/ml2025/cheatsheets/ML13-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ML24",
+          "title": "Constrained optimisation and KKT",
+          "url": "https://nipunbatra.github.io/ml2025/cheatsheets/ML24-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ML14",
+          "title": "Logistic regression",
+          "url": "https://nipunbatra.github.io/ml2025/cheatsheets/ML14-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ML15",
+          "title": "Convexity, Hessians and Newton's method (IRLS)",
+          "url": "https://nipunbatra.github.io/ml2025/cheatsheets/ML15-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ML16",
+          "title": "Precision-recall curves",
+          "url": "https://nipunbatra.github.io/ml2025/cheatsheets/ML16-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ML17",
+          "title": "Multi-layer perceptrons",
+          "url": "https://nipunbatra.github.io/ml2025/cheatsheets/ML17-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ML18",
+          "title": "Automatic differentiation",
+          "url": "https://nipunbatra.github.io/ml2025/cheatsheets/ML18-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ML19",
+          "title": "Next-character prediction",
+          "url": "https://nipunbatra.github.io/ml2025/cheatsheets/ML19-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ML20",
+          "title": "Convolutional networks",
+          "url": "https://nipunbatra.github.io/ml2025/cheatsheets/ML20-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ML21",
+          "title": "Unsupervised learning: clustering and PCA",
+          "url": "https://nipunbatra.github.io/ml2025/cheatsheets/ML21-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ML23",
+          "title": "Reinforcement learning",
+          "url": "https://nipunbatra.github.io/ml2025/cheatsheets/ML23-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ML22",
+          "title": "K-nearest neighbours and approximate search",
+          "url": "https://nipunbatra.github.io/ml2025/cheatsheets/ML22-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ML25",
+          "title": "Support vector machines I: maximum margin",
+          "url": "https://nipunbatra.github.io/ml2025/cheatsheets/ML25-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ML26",
+          "title": "Support vector machines II: kernels and soft margin",
+          "url": "https://nipunbatra.github.io/ml2025/cheatsheets/ML26-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ML27",
+          "title": "Naive Bayes and Bayesian networks",
+          "url": "https://nipunbatra.github.io/ml2025/cheatsheets/ML27-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ML28",
+          "title": "Time-series forecasting and sequence models",
+          "url": "https://nipunbatra.github.io/ml2025/cheatsheets/ML28-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        }
+      ]
+    },
+    {
+      "id": "pml-2023",
+      "title": "Probabilistic machine learning",
+      "course_code": "ES661",
+      "semester": "Aug 2023",
+      "course_url": "https://nipunbatra.github.io/pml2023/",
+      "library_url": "https://nipunbatra.github.io/pml2023/schedule.html",
+      "description": "Bayesian models, sampling, variational inference and uncertainty.",
+      "sheets": [
+        {
+          "id": "PM01",
+          "title": "Probability refresher for ML",
+          "url": "teaching-cheatsheets/pml-2023/PM01-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PM02",
+          "title": "Maximum likelihood estimation",
+          "url": "teaching-cheatsheets/pml-2023/PM02-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PM03",
+          "title": "MLE for linear and logistic regression",
+          "url": "teaching-cheatsheets/pml-2023/PM03-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PM04",
+          "title": "MAP estimation and priors",
+          "url": "teaching-cheatsheets/pml-2023/PM04-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PM05",
+          "title": "Multivariate normal and Bayesian linear regression",
+          "url": "teaching-cheatsheets/pml-2023/PM05-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PM06",
+          "title": "Bayesian logistic regression",
+          "url": "teaching-cheatsheets/pml-2023/PM06-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PM07",
+          "title": "Laplace approximation",
+          "url": "teaching-cheatsheets/pml-2023/PM07-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PM08",
+          "title": "Sampling I: from uniform to any distribution",
+          "url": "teaching-cheatsheets/pml-2023/PM08-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PM15",
+          "title": "Neural processes",
+          "url": "teaching-cheatsheets/pml-2023/PM15-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PM09",
+          "title": "Sampling II: rejection and importance sampling",
+          "url": "teaching-cheatsheets/pml-2023/PM09-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PM10",
+          "title": "Markov chain Monte Carlo",
+          "url": "teaching-cheatsheets/pml-2023/PM10-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PM16",
+          "title": "Hidden Markov models",
+          "url": "teaching-cheatsheets/pml-2023/PM16-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PM13",
+          "title": "Active learning",
+          "url": "teaching-cheatsheets/pml-2023/PM13-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PM14",
+          "title": "Bayesian optimisation",
+          "url": "teaching-cheatsheets/pml-2023/PM14-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PM12",
+          "title": "Information theory",
+          "url": "teaching-cheatsheets/pml-2023/PM12-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PM11",
+          "title": "Variational inference",
+          "url": "teaching-cheatsheets/pml-2023/PM11-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        }
+      ]
+    },
+    {
+      "id": "psdv-2025",
+      "title": "Probability, statistics & data visualization",
+      "course_code": "ES114",
+      "semester": "Jan 2025",
+      "course_url": "https://nipunbatra.github.io/psdv25/",
+      "library_url": "https://nipunbatra.github.io/psdv25/lectures.html",
+      "description": "Python, probability, distributions, expectation and data visualization.",
+      "sheets": [
+        {
+          "id": "PS01",
+          "title": "Arrays and tables: NumPy and Pandas",
+          "url": "teaching-cheatsheets/psdv-2025/PS01-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PS02",
+          "title": "Plotting and honest charts",
+          "url": "teaching-cheatsheets/psdv-2025/PS02-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PS03",
+          "title": "Sets, sample spaces and events",
+          "url": "teaching-cheatsheets/psdv-2025/PS03-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PS04",
+          "title": "Counting and the complement rule",
+          "url": "teaching-cheatsheets/psdv-2025/PS04-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PS05",
+          "title": "Conditional probability, independence and Bayes' rule",
+          "url": "teaching-cheatsheets/psdv-2025/PS05-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PS06",
+          "title": "Random variables and PMFs",
+          "url": "teaching-cheatsheets/psdv-2025/PS06-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PS07",
+          "title": "Discrete distributions",
+          "url": "teaching-cheatsheets/psdv-2025/PS07-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PS10",
+          "title": "Expectation and variance",
+          "url": "teaching-cheatsheets/psdv-2025/PS10-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PS09",
+          "title": "Continuous distributions and densities",
+          "url": "teaching-cheatsheets/psdv-2025/PS09-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PS08",
+          "title": "CDFs and sampling",
+          "url": "teaching-cheatsheets/psdv-2025/PS08-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PS11",
+          "title": "Joint distributions",
+          "url": "teaching-cheatsheets/psdv-2025/PS11-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PS12",
+          "title": "Covariance, correlation and the bivariate normal",
+          "url": "teaching-cheatsheets/psdv-2025/PS12-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PS13",
+          "title": "Sums of random variables, LLN and CLT",
+          "url": "teaching-cheatsheets/psdv-2025/PS13-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PS15",
+          "title": "Random vectors and PCA",
+          "url": "teaching-cheatsheets/psdv-2025/PS15-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "PS14",
+          "title": "Likelihood and log probabilities",
+          "url": "teaching-cheatsheets/psdv-2025/PS14-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        }
+      ]
+    },
+    {
+      "id": "stt-2026",
+      "title": "Software tools for AI",
+      "course_code": "CS203",
+      "semester": "Jan 2026",
+      "course_url": "https://nipunbatra.github.io/stt-ai-26/",
+      "library_url": "https://nipunbatra.github.io/stt-ai-teaching/index.html",
+      "description": "Data, APIs, Git, experiments, deployment and AI agents.",
+      "sheets": [
+        {
+          "id": "ST01",
+          "title": "Collecting data over HTTP and APIs",
+          "url": "teaching-cheatsheets/stt-2026/ST01-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ST02",
+          "title": "Scraping web pages",
+          "url": "teaching-cheatsheets/stt-2026/ST02-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ST03",
+          "title": "Validating data before training",
+          "url": "teaching-cheatsheets/stt-2026/ST03-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ST04",
+          "title": "Labelling data",
+          "url": "teaching-cheatsheets/stt-2026/ST04-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ST05",
+          "title": "Labelling less: active learning, weak supervision, LLM labels",
+          "url": "teaching-cheatsheets/stt-2026/ST05-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ST06",
+          "title": "Data augmentation",
+          "url": "teaching-cheatsheets/stt-2026/ST06-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ST07",
+          "title": "LLM APIs and multimodal models",
+          "url": "teaching-cheatsheets/stt-2026/ST07-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ST08",
+          "title": "Evaluating models honestly",
+          "url": "teaching-cheatsheets/stt-2026/ST08-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ST09",
+          "title": "Tuning and experiment tracking",
+          "url": "teaching-cheatsheets/stt-2026/ST09-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ST10",
+          "title": "Reproducible runs: seeds, environments, Docker",
+          "url": "teaching-cheatsheets/stt-2026/ST10-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ST12",
+          "title": "Data drift and monitoring",
+          "url": "teaching-cheatsheets/stt-2026/ST12-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ST14",
+          "title": "Profiling and quantization",
+          "url": "teaching-cheatsheets/stt-2026/ST14-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ST15",
+          "title": "Building AI agents from scratch",
+          "url": "teaching-cheatsheets/stt-2026/ST15-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ST13",
+          "title": "From script to web app and API",
+          "url": "teaching-cheatsheets/stt-2026/ST13-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        },
+        {
+          "id": "ST11",
+          "title": "Git for ML projects",
+          "url": "teaching-cheatsheets/stt-2026/ST11-cheatsheet.pdf",
+          "format": "PDF",
+          "pages": 2
+        }
+      ]
+    }
+  ]
+}
