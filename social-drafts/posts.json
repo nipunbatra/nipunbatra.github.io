@@ -1,0 +1,95 @@
+{
+ "x_thread": [
+  {
+   "n": 1,
+   "text": "Over the last few years I have been putting my teaching online, and it is now all in one place: course sites, slides, cheat sheets, recordings and short videos. 562 videos so far, all free. A short tour below.\nSite: https://nipunbatra.github.io/teaching.html\nYouTube: https://www.youtube.com/@NipunBatra0",
+   "images": [
+    "01-teaching-page.png"
+   ]
+  },
+  {
+   "n": 2,
+   "text": "It starts with the courses. Every course I have taught at IIT Gandhinagar since 2018 is listed, with each semester's site linked. Machine Learning alone has run eight times.\nSite: https://nipunbatra.github.io/teaching.html#courses",
+   "images": [
+    "02-courses.png"
+   ]
+  },
+  {
+   "n": 3,
+   "text": "This semester it is Deep Learning. Each lecture has a slide handout, a classroom version, a cheat sheet and notebooks. Backprop comes down to one rule: multiply the arriving gradient by the local slope.\nSlides: https://nipunbatra.github.io/dl-teaching/slides.html\nCourse: https://nipunbatra.github.io/dl-2026/",
+   "images": [
+    "03-slide-backprop.png"
+   ]
+  },
+  {
+   "n": 4,
+   "text": "The cheat sheets are two pages each, meant to be printed. There are 86 so far, across five courses.\nSite: https://nipunbatra.github.io/teaching.html#cheatsheets",
+   "images": [
+    "04-cheatsheet-autograd.png"
+   ]
+  },
+  {
+   "n": 5,
+   "text": "If you prefer full lectures, about 158 are recorded, going back to Operating Systems in 2018. A good one to start with: backprop and autograd from scratch.\nSite: https://nipunbatra.github.io/teaching.html#dl-2026\nYouTube: https://www.youtube.com/watch?v=I0Omc95jFiA",
+   "images": [
+    "05-recordings.png"
+   ]
+  },
+  {
+   "n": 6,
+   "text": "Then the short ones: 270 one-minute videos, each built around one question. Try this before you watch.\n\nPoint A is at (3, 0) and point B at (2, 2). Which is closer to (0, 0)?\nSite: https://nipunbatra.github.io/ml-in-1-minute.html\nYouTube: https://www.youtube.com/watch?v=U5O0c7_6ANE",
+   "images": [
+    "06-one-minute.png"
+   ]
+  },
+  {
+   "n": 7,
+   "text": "Four one-minute series, each with its own page:\nMachine learning (91): https://nipunbatra.github.io/ml-in-1-minute.html\nProbability and statistics (53): https://nipunbatra.github.io/psdv-in-1-minute.html\nPython (77): https://nipunbatra.github.io/python-in-1-minute.html\nSoftware tools for AI (49): https://nipunbatra.github.io/stai-in-1-minute.html",
+   "images": []
+  },
+  {
+   "n": 8,
+   "text": "For more depth, the three-minute lessons take one idea and work a small example: 22 for Deep Learning, 87 for Machine Learning. The attention series starts with \"Why attention?\"\nSite: https://nipunbatra.github.io/dl-in-3-minutes.html\nYouTube: https://www.youtube.com/watch?v=61n3ejzg_8A",
+   "images": [
+    "07-three-minutes.png"
+   ]
+  },
+  {
+   "n": 9,
+   "text": "Seven Ideas in Machine Learning: eight visual episodes, about eight minutes each, on linear algebra, probability, loss functions, numerical computing, sequences and representations.\nSite: https://nipunbatra.github.io/teaching.html#seven-ideas-ml\nYouTube: https://www.youtube.com/watch?v=PBute2l1Xuo",
+   "images": [
+    "08-seven-ideas.png"
+   ]
+  },
+  {
+   "n": 10,
+   "text": "A newer series, How Things Work, explains the systems we use every day. Episode 1: what actually happens between typing a web address and seeing the page?\nSite: https://nipunbatra.github.io/teaching.html#how-things-work\nYouTube: https://www.youtube.com/watch?v=SyEQ-8mO3pY",
+   "images": [
+    "10-how-things-work.png"
+   ]
+  },
+  {
+   "n": 11,
+   "text": "And a series on Indian scientists. Episode 1 is about Anna Mani and how she measured the atmosphere.\nSite: https://nipunbatra.github.io/teaching.html#indian-scientists\nYouTube: https://www.youtube.com/watch?v=ar_QCBBvqtI",
+   "images": [
+    "09-anna-mani.png"
+   ]
+  },
+  {
+   "n": 12,
+   "text": "Also: practical tutorials on agentic coding, Python for data science and GitHub Pages. Everything is searchable from one page. If you teach or learn this material, I would like to hear what works for you.\nSite: https://nipunbatra.github.io/teaching.html#agentic-ai\nYouTube: https://www.youtube.com/@NipunBatra0",
+   "images": []
+  }
+ ],
+ "linkedin": {
+  "text": "Over the last few years I have been putting my teaching from IIT Gandhinagar online. It is now all in one place, and free to use: 25 course offerings, 562 videos and 86 cheat sheets since 2018.\n\nTeaching page: https://nipunbatra.github.io/teaching.html\nYouTube channel: https://www.youtube.com/@NipunBatra0\n\nThe main material first.\n\nCourses. Every course I have taught since 2018, with each semester's site linked.\nhttps://nipunbatra.github.io/teaching.html#courses\n\nSlides. For Deep Learning, each lecture has a slide handout, the version I present in class, a two-page cheat sheet and notebooks.\nLecture library: https://nipunbatra.github.io/dl-teaching/slides.html\nCourse site: https://nipunbatra.github.io/dl-2026/\n\nCheat sheets. Two pages each, meant to be printed, 86 across five courses.\nhttps://nipunbatra.github.io/teaching.html#cheatsheets\n\nRecordings. About 158 full lectures, from Operating Systems in 2018 to Deep Learning this semester.\nSite: https://nipunbatra.github.io/teaching.html#dl-2026\nYouTube: https://www.youtube.com/watch?v=I0Omc95jFiA\n\nThen the shorter videos.\n\nOne-minute lessons. 270 videos, each built around one question, such as: point A is at (3, 0) and point B is at (2, 2). Which is closer to (0, 0)?\nMachine learning: https://nipunbatra.github.io/ml-in-1-minute.html\nProbability and statistics: https://nipunbatra.github.io/psdv-in-1-minute.html\nPython: https://nipunbatra.github.io/python-in-1-minute.html\nSoftware tools for AI: https://nipunbatra.github.io/stai-in-1-minute.html\nExample on YouTube: https://www.youtube.com/watch?v=U5O0c7_6ANE\n\nThree-minute lessons. 22 for Deep Learning and 87 for Machine Learning, including a short series on attention.\nSite: https://nipunbatra.github.io/dl-in-3-minutes.html\nYouTube: https://www.youtube.com/watch?v=61n3ejzg_8A\n\nSeven Ideas in Machine Learning. Eight visual episodes on linear algebra, probability, loss functions, numerical computing, sequences and representations.\nSite: https://nipunbatra.github.io/teaching.html#seven-ideas-ml\nYouTube: https://www.youtube.com/watch?v=PBute2l1Xuo\n\nHow Things Work. Everyday systems explained; the first episode follows what happens between typing a web address and seeing the page.\nSite: https://nipunbatra.github.io/teaching.html#how-things-work\nYouTube: https://www.youtube.com/watch?v=SyEQ-8mO3pY\n\nIndian Scientists. The series began with Anna Mani and her work measuring the atmosphere.\nSite: https://nipunbatra.github.io/teaching.html#indian-scientists\nYouTube: https://www.youtube.com/watch?v=ar_QCBBvqtI\n\nPractical tutorials on agentic coding, Python for data science, and building a website with GitHub Pages.\nSite: https://nipunbatra.github.io/teaching.html#agentic-ai\n\nEverything is searchable from the teaching page. If you use any of it, I would be glad to hear how, and what would make it more useful.\n\n#MachineLearning #DeepLearning #Teaching #OpenEducation",
+  "images": [
+   "01-teaching-page.png",
+   "03-slide-backprop.png",
+   "04-cheatsheet-autograd.png",
+   "08-seven-ideas.png",
+   "10-how-things-work.png",
+   "06-one-minute.png"
+  ]
+ }
+}
