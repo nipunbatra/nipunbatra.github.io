@@ -8,11 +8,11 @@ Personal website for Nipun Batra - Associate Professor, Computer Science, IIT Ga
 
 ```
 ├── index.html      # Home page
-├── teaching.html   # Courses by semester and video collections
+├── teaching.html   # This semester, one row per course, playlists and cheatsheets
 ├── teaching-videos.html # Searchable teaching video directory
 ├── teaching.css / teaching.js # Teaching page styles and filters
-├── site.css / site.js # Swiss red layout and light/dark/system appearance
-├── projects.html / projects.css / projects.js # Searchable open-source projects
+├── site.css / site.js # Swiss red layout and the sun and moon light/dark switch
+├── projects.html / projects.css / projects.js # Searchable open-source index in three-column sections
 ├── *-in-*-minute*.html # Individual teaching video series
 ├── series.css / series.js # Video-series styles and search
 ├── data/teaching/catalog.json # Curated courses, collections and accessible videos
@@ -30,11 +30,18 @@ Personal website for Nipun Batra - Associate Professor, Computer Science, IIT Ga
 
 The main site uses the selected Swiss red design: a shared left navigation on
 desktop, a compact header on smaller screens, and the same typography throughout.
-The desktop shell grows up to 1,240px on large monitors, with a 300px portrait,
-bounded paragraph lengths and side-by-side research and teaching sections from
-1,400px onward.
-The Appearance selector follows the system by default; an explicit light or dark
-choice persists between pages. The archived alternatives remain in
+The desktop shell grows up to 1,240px on large monitors. Home shows the full
+biography and profile links with the portrait at the right, then Research and
+Teaching side by side (three illustrated rows each), then the two conversation
+videos. Teaching has one search box, a jump strip, a "This semester" feature,
+one row per course with a chip for each offering (filled: teaching now; red
+outline: lectures recorded; §: cheatsheets), a playlist grid grouped by section
+and the cheatsheets listed once. Open source lists each section as a three-column
+grid of entries with tag boxes.
+The sun and moon switch below the navigation follows the system setting until it
+is clicked; the explicit light or dark choice then persists between pages
+(`localStorage` key `theme`). The reference mockups for this layout are in
+`design-explorations/refined-index-2026/`. The archived alternatives remain in
 `design-explorations/` and are not dependencies of the production site.
 
 Edit homepage, project and video-series content inside their root HTML `<main>`
@@ -55,6 +62,9 @@ Screenshots and layout measurements are saved to `output/site-launch/`.
 Edit `data/teaching/catalog.json`, then run `python3 scripts/build_teaching.py`.
 The build uses Python's standard library. It writes ordinary HTML links for every
 course and video; JavaScript adds search, collection filters and pagination.
+The first course in the catalog is featured as "This semester"; its optional
+`related_collections` adds extra video links there. Offerings are grouped into one
+row per course title (`TITLE_ALIASES` in the build merges renamed courses).
 
 Keep semester-specific recording links separate from general topic playlists.
 `recordings: false` means no recording link is listed, not that recordings do not

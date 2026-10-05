@@ -25,24 +25,58 @@ def duration_seconds(value):
 def link(url, label, cls='', attrs=''):
     return f'<a href="{e(url,quote=True)}" class="{cls}" {attrs}>{label}</a>'
 
-def course_table():
-    groups=OrderedDict()
-    for course in DATA['courses']: groups.setdefault(course['year'],[]).append(course)
-    rows=''
-    for year,courses in groups.items():
-        rows+=f'<tbody data-year-group><tr class="year-row"><th colspan="3" scope="rowgroup">{year}</th></tr>'
-        for c in courses:
-            haystack=e(' '.join(c[k] for k in ['code','title','semester','year']),quote=True)
-            record=link(c['recording_url'],'Available','recording-link',f'aria-label="Recordings for {e(c["code"]+" "+c["semester"],quote=True)}"') if c['recordings'] else '<span class="unlinked">Not linked</span>'
-            if c['recordings'] and c['recording_destination']=='course page': record+='<small>On course page</small>'
-            current='<small class="current-course">Teaching now</small>' if c==DATA['courses'][0] else ''
-            sheets=link(c['cheatsheets_url'],'Cheatsheets','course-sheets') if c.get('cheatsheets_url') else ''
-            rows+=f'<tr data-course data-search="{haystack}" data-recorded="{str(c["recordings"]).lower()}"><td class="term">{c["semester"]}</td><td class="course-name"><span class="course-code">{c["code"]}</span>{link(c["url"],e(c["title"]))}{current}{sheets}</td><td class="recording"><span class="mobile-label">Recordings</span>{record}</td></tr>'
-        rows+='</tbody>'
-    return '<table class="course-table"><caption class="sr-only">IIT Gandhinagar courses by semester with recording availability.</caption><thead><tr><th scope="col">Semester</th><th scope="col">Course & materials</th><th scope="col">Recordings</th></tr></thead>'+rows+'</table>'
+# Offerings of one course share a row; later titles for the same course are aliased.
+TITLE_ALIASES = {'Introduction to Computing': 'Computing'}
+CURRENT = DATA['courses'][0]
 
-def collection_row(c):
-    count=len(c['video_ids']); meta=f'{count} video'+('s' if count != 1 else '') if count else 'No public videos'
+def spaced(code):
+    return re.sub(r'([A-Z]+)(\d+)', r'\1 \2', code)
+
+def sheet_group(course):
+    return next((g for g in SHEETS if g['course_code']==course['code'] and g['semester']==course['semester']), None)
+
+def course_rows():
+    rows=OrderedDict()
+    for c in DATA['courses']: rows.setdefault(TITLE_ALIASES.get(c['title'],c['title']),[]).append(c)
+    return [(title, offerings[::-1]) for title, offerings in rows.items()]
+
+def chip(c):
+    state='is-current' if c is CURRENT else 'is-recorded' if c['recordings'] else ''
+    notes=(['teaching now'] if c is CURRENT else [])+(['lectures recorded'] if c['recordings'] else [])+(['cheatsheets'] if c.get('cheatsheets_url') else [])
+    label=e(c['semester'].replace('Winter','Win'))+(' <span aria-hidden="true">§</span>' if c.get('cheatsheets_url') else '')
+    aria=e(f'{c["title"]}, {spaced(c["code"])}, {c["semester"]}'+''.join(', '+n for n in notes),quote=True)
+    return link(c['url'],label,f'offering {state}'.strip(),f'data-offering data-recorded="{str(c["recordings"]).lower()}" aria-label="{aria}"')
+
+def course_table():
+    rows=''
+    for title,offerings in course_rows():
+        codes=' / '.join(OrderedDict.fromkeys(spaced(c['code']) for c in offerings))
+        years=[re.search(r'\d{4}',c['semester']).group() for c in offerings]
+        span=years[0] if years[0]==years[-1] else f'{years[0]}–{years[-1]}'
+        haystack=e(' '.join([title]+[' '.join(c[k] for k in ['code','title','semester','year']) for c in offerings]),quote=True)
+        sheets=''.join(link(c['cheatsheets_url'],f'Cheatsheets · {c["semester"]}','course-sheets') for c in offerings if c.get('cheatsheets_url'))
+        rows+=(f'<tr data-course data-search="{haystack}"><th scope="row">{link(offerings[-1]["url"],e(title))}<span class="course-code">{codes}</span>{sheets}</th>'
+               f'<td class="num">{len(offerings)}×</td><td class="num">{span}</td><td><div class="chips">{" ".join(chip(c) for c in offerings)}</div></td></tr>')
+    legend=('<p class="chip-legend"><span class="offering is-current">Aug 2026</span> teaching now <span class="offering is-recorded">Jan 2024</span> lectures recorded '
+            '<span class="offering">Jan 2023</span> course site <span>§ cheatsheets</span></p>')
+    return ('<div class="table-wrap"><table class="course-table"><caption class="sr-only">IIT Gandhinagar courses, one row per course, with each semester offered.</caption>'
+            '<thead><tr><th scope="col">Course</th><th scope="col">Taught</th><th scope="col">Years</th><th scope="col">Offerings</th></tr></thead><tbody>'+rows+'</tbody></table></div>'+legend)
+
+def feature():
+    c=CURRENT; group=sheet_group(c)
+    recording=next((x for x in DATA['collections'] if x['url']==c.get('recording_url')),None)
+    cover=recording['cover'] if recording else 0
+    acts=link(c['url'],'Course site','button solid')
+    if recording: acts+=link(recording['url'],f'Lecture recordings · {len(recording["video_ids"])}','button')
+    if group: acts+=link('#sheets-'+group['id'],f'Cheatsheets · {len(group["sheets"])}','button course-sheets')
+    for cid in c.get('related_collections',[]):
+        x=COLLECTIONS[cid]; acts+=link(x['url'],f'{e(x["title"])} · {len(x["video_ids"])}','button')
+    description=f'<p>{spaced(c["code"])}. {e(group["description"])}</p>' if group else f'<p>{spaced(c["code"])}</p>'
+    return (f'<section class="feature" id="now" aria-labelledby="now-heading"><span class="collection-cover cover-{cover}" aria-hidden="true"></span><div>'
+            f'<p class="teaching-eyebrow">This semester · {c["semester"]}</p><h2 id="now-heading">{e(c["title"])}</h2>{description}<div class="actions">{acts}</div></div></section>')
+
+def collection_card(c):
+    count=len(c['video_ids']); meta=f'{count} video'+('s' if count != 1 else '')
     if c['section'] == 'Visual explanations':
         lengths=sorted([VIDEOS[v]['duration'] for v in c['video_ids']],key=duration_seconds)
         meta+=' · '+duration(lengths[0])
@@ -52,28 +86,27 @@ def collection_row(c):
         if c['url'] != youtube: meta+=' · '+link(youtube,'YouTube')
     cover=f'<span class="collection-cover cover-{c["cover"]}" role="img" aria-label="Illustration for {e(c["title"],quote=True)}"></span>'
     description=f'<p class="collection-description">{e(c["description"])}</p>' if c['description'] else ''
-    cover_link=link(c['url'],cover,'cover-link','aria-label="'+e(c['title'],quote=True)+'"')
-    return f'<article class="collection" data-collection-id="{c["id"]}">{cover_link}<div><h4>{link(c["url"],e(c["title"]))}</h4><p class="collection-meta">{meta}</p>{description}</div></article>'
+    cover_link=link(c['url'],cover,'cover-link','tabindex="-1" aria-hidden="true"')
+    return f'<article class="collection" data-collection-id="{c["id"]}">{cover_link}<h4>{link(c["url"],e(c["title"]))}</h4><p class="collection-meta">{meta}</p>{description}</article>'
 
-def sidebar():
+def playlists():
     groups=OrderedDict()
     for c in DATA['collections']:
         if c['cover'] is not None: groups.setdefault(c['section'],[]).append(c)
-    count=sum(bool(c.get('playlist_id')) for c in DATA['collections'])
-    heading=f'<header class="sidebar-heading"><h2>Playlists & series</h2><span>{count} playlists</span></header>'
-    return '<aside class="teaching-sidebar" id="series" aria-label="Teaching video collections">'+heading+''.join(f'<section class="collection-group"><h3>{e(name)}</h3>'+''.join(collection_row(c) for c in group)+'</section>' for name,group in groups.items())+link('teaching-videos.html','Browse all teaching videos','all-videos-link')+'</aside>'
-
-def sheet_shortcuts():
-    links=''.join(link('#sheets-'+g['id'],e(g['short_title'])+f'<span>{len(g["sheets"])} sheets</span>','course-sheets') for g in SHEETS)
-    return '<nav class="sheet-shortcuts" aria-label="Cheatsheets by course"><span class="shortcut-label">Cheatsheets <br>by course</span>'+links+'</nav>'
+    total=len(DATA['videos'])
+    body=''.join(f'<section class="collection-group"><h3>{e(name)}</h3><span class="group-count">{sum(len(c["video_ids"]) for c in group)} videos</span><div class="collection-grid">'
+                 +''.join(collection_card(c) for c in group)+'</div></section>' for name,group in groups.items())
+    # #series is kept for older links to the video collections.
+    return (f'<section class="teaching-videos" id="videos" aria-labelledby="series"><header class="course-heading"><h2 id="series">Videos</h2><span>{total} videos in {sum(len(g) for g in groups.values())} playlists</span></header>'
+            +body+link('teaching-videos.html',f'Browse all {total} teaching videos','all-videos-link')+'</section>')
 
 def cheatsheets():
     groups=''
     for g in SHEETS:
         items=''.join(f'<li>{link(s["url"],e(s["title"]))}<span>PDF · {s["pages"]} pages</span></li>' for s in g['sheets'])
-        groups+=f'<details class="sheet-group" id="sheets-{g["id"]}"><summary><span>{e(g["title"])}<small>{e(g["course_code"])} · {e(g["semester"])}</small></span><span>{len(g["sheets"])} PDFs</span></summary><div class="sheet-content"><p class="sheet-course">{link(g["course_url"],"Course page")} · {link(g["library_url"],"Lecture library")}</p><p class="sheet-description">{e(g["description"])}</p><ul class="sheet-list">{items}</ul></div></details>'
+        groups+=f'<details class="sheet-group" id="sheets-{g["id"]}"><summary><span>{e(g["title"])}<small>{e(g["course_code"])} · {e(g["semester"])}</small><em>{e(g["description"])}</em></span><span>{len(g["sheets"])} PDFs</span></summary><div class="sheet-content"><p class="sheet-course">{link(g["course_url"],"Course page")} · {link(g["library_url"],"Lecture library")}</p><ul class="sheet-list">{items}</ul></div></details>'
     count=sum(len(g['sheets']) for g in SHEETS)
-    return f'<section class="teaching-cheatsheets" id="cheatsheets" aria-labelledby="cheatsheets-heading"><header class="course-heading"><h2 id="cheatsheets-heading">Cheatsheets</h2><span>{count} sheets · PDF</span></header><p class="section-note">Two-page references from my courses. Choose a course to see its sheets, or search for a topic above.</p>{groups}</section>'
+    return f'<section class="teaching-cheatsheets" id="cheatsheets" aria-labelledby="cheatsheets-heading"><header class="course-heading"><h2 id="cheatsheets-heading">Cheatsheets</h2><span>{count} PDFs</span></header><p class="section-note">Two-page references from my courses. Open a course to see its sheets, or search for a topic above.</p>{groups}</section>'
 
 def search_ui():
     return '''<form class="library-search" action="teaching-videos.html" method="get" role="search"><label for="library-query">Search courses, videos and cheatsheets</label><div><input id="library-query" name="q" type="search" placeholder="Try Bayes, Python, or a course code"><button type="submit">Search</button></div></form>'''
@@ -105,7 +138,12 @@ def page(body,title,description,filename):
     )
 
 
-main='''<header class="teaching-intro"><div><p class="teaching-eyebrow">IIT Gandhinagar</p><h1>Teaching</h1><p>My courses, videos and cheatsheets.</p></div>'''+search_ui()+'''</header><nav class="section-jumps" aria-label="Teaching sections"><a href="#courses">Courses</a><a href="#series">Video collections</a><a href="#cheatsheets">Cheatsheets</a><a href="teaching-videos.html">All teaching videos</a></nav>'''+sheet_shortcuts()+search_results()+'''<div class="teaching-columns"><div class="teaching-left"><section class="teaching-courses" id="courses"><header class="course-heading"><h2>Courses at IIT Gandhinagar</h2><span>2018–2026</span></header><p class="section-note">Each semester links to its course page and materials.</p><div class="course-filters"><label>Find a course<input data-course-query type="search" placeholder="Course, code or year"></label><label class="recorded-filter"><input data-recordings type="checkbox"> With recordings</label><button type="button" data-clear-course>Clear</button></div><p class="course-count" data-course-count role="status" aria-live="polite">25 course offerings</p>'''+course_table()+'''<p class="course-empty" data-course-empty hidden>No courses match. Try another word or clear the filters.</p><p class="recording-note">“Not linked” means a recording link hasn’t been added here.</p></section>'''+cheatsheets()+'''</div>'''+sidebar()+'''</div>'''
+NVIDEOS=len(DATA['videos']); NSHEETS=sum(len(g['sheets']) for g in SHEETS)
+main=(f'''<header class="teaching-intro"><div><p class="teaching-eyebrow">IIT Gandhinagar</p><h1>Teaching</h1><p>{len(DATA['courses'])} course offerings, {NVIDEOS} videos and {NSHEETS} cheatsheets since 2018.</p></div>'''+search_ui()+'</header>'
+      f'<nav class="section-jumps" aria-label="Teaching sections"><a href="#now">This semester</a><a href="#courses">Courses</a><a href="#videos">Videos</a><a href="#cheatsheets">Cheatsheets</a><a href="teaching-videos.html">All {NVIDEOS} videos</a></nav>'
+      +search_results()+feature()
+      +'<section class="teaching-courses" id="courses" aria-labelledby="courses-heading"><header class="course-heading"><h2 id="courses-heading">Courses</h2><span>2018–2026</span></header><p class="section-note">One row per course. Each chip is one offering and links to that semester’s course site.</p>'
+      +course_table()+'</section>'+playlists()+cheatsheets())
 (ROOT/'teaching.html').write_text(page(main,'Teaching','Courses at IIT Gandhinagar by semester, cheatsheets, lecture recordings, and visual lessons on machine learning, mathematics, Python and software tools.','teaching.html'))
 options=''.join(f'<option value="{c["id"]}">{e(c["title"])}</option>' for c in DATA['collections'])
 library='''<header class="teaching-intro"><div><p class="teaching-eyebrow"><a href="teaching.html">Teaching</a></p><h1>Teaching videos</h1><p>Search by topic, or choose a collection.</p></div>'''+search_ui()+'''</header>'''+search_results()+f'''<section class="video-directory" aria-labelledby="directory-heading"><div class="directory-controls"><h2 id="directory-heading">All teaching videos</h2><label>Collection<select data-collection-filter><option value="">All collections</option>{options}</select></label></div><p class="video-count" data-video-count role="status">{len(DATA['videos'])} videos</p><div class="video-list">'''+''.join(video_row(v) for v in DATA['videos'])+'''</div><p data-video-empty hidden>No videos match this collection.</p><button class="load-more" data-more-videos type="button" hidden>Show more videos</button></section>'''

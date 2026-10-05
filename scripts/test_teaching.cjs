@@ -21,14 +21,23 @@ const visible = (doc, selector) => [...doc.querySelectorAll(selector)].filter(ro
 
 const main = page('teaching.html');
 const doc = main.window.document;
-assert.equal(doc.querySelectorAll('[data-course]').length, 25);
-assert.equal(doc.querySelectorAll('.recording-link').length, 7);
+assert.equal(doc.querySelectorAll('[data-course]').length, 11);
+assert.equal(doc.querySelectorAll('[data-offering]').length, 25);
+assert.deepEqual([...doc.querySelectorAll('[data-offering]')].map(a => a.href).sort(), catalog.courses.map(c => c.url).sort());
+assert.equal(doc.querySelectorAll('.offering.is-recorded[data-offering], .offering.is-current[data-offering]').length, 7);
+assert.equal(doc.querySelectorAll('.offering.is-current[data-offering]').length, 1);
+assert.equal(doc.querySelectorAll('[data-offering] [aria-hidden]').length, 5);
+assert.doesNotMatch(read('teaching.html'), /Not linked|data-course-query|sheet-shortcuts/);
+assert.equal(doc.querySelectorAll('input[type=search]').length, 1);
+assert.deepEqual([...doc.querySelectorAll('.section-jumps a')].map(a => a.getAttribute('href')).slice(0, 4), ['#now', '#courses', '#videos', '#cheatsheets']);
+assert.match(doc.querySelector('#now h2').textContent, new RegExp(catalog.courses[0].title));
+assert.ok(doc.querySelector(`#now a[href="${catalog.courses[0].url}"]`));
 assert.equal(doc.querySelectorAll('.collection').length, 19);
 assert.equal(doc.querySelectorAll('.sheet-group').length, 5);
 assert.equal(doc.querySelectorAll('.sheet-list a').length, 86);
+assert.equal(new Set([...doc.querySelectorAll('.sheet-list a')].map(a => a.href)).size, 86);
 assert.equal(doc.querySelectorAll('.course-table .course-sheets').length, 5);
-assert.equal(doc.querySelectorAll('.sheet-shortcuts a').length, 5);
-for (const shortcut of doc.querySelectorAll('.sheet-shortcuts a')) {
+for (const shortcut of doc.querySelectorAll('.course-table .course-sheets')) {
   const target = doc.querySelector(shortcut.hash);
   assert.ok(target);
   assert.match(target.querySelector('summary small').textContent, /(?:ES|CS)\d+ · (?:Jan|Aug) \d{4}/);
@@ -39,7 +48,7 @@ assert.deepEqual([...doc.querySelectorAll('.collection-group>h3')].map(el => el.
   'Visual explanations', 'One-minute lessons', 'Three-minute lessons', 'Course recordings',
   'Science & everyday systems', 'Practical tutorials'
 ]);
-doc.querySelector('.course-sheets').click();
+doc.querySelector('#now .course-sheets').click();
 assert.equal(doc.querySelector('#sheets-dl-2026').open, true);
 const sheetsLink = page('teaching.html', '#sheets-stt-2026');
 assert.equal(sheetsLink.window.document.querySelector('#sheets-stt-2026').open, true);
@@ -53,20 +62,6 @@ assert.match(doc.querySelector('[data-results]').textContent, /Cheatsheet/);
 input(main, '#library-query', 'autograd PDF');
 assert.match(doc.querySelector('[data-results]').textContent, /Backpropagation & Autograd/);
 doc.querySelector('[data-close-search]').click();
-input(main, '[data-course-query]', 'ES335');
-assert.equal(visible(doc, '[data-course]').length, 3);
-input(main, '[data-recordings]', true, 'change');
-assert.equal(visible(doc, '[data-course]').length, 1);
-doc.querySelector('[data-clear-course]').click();
-input(main, '[data-recordings]', true, 'change');
-assert.equal(visible(doc, '[data-course]').length, 7);
-input(main, '[data-course-query]', 'not a real course');
-assert.equal(visible(doc, '[data-course]').length, 0);
-assert.equal(visible(doc, '[data-year-group]').length, 0);
-assert.equal(doc.querySelector('[data-course-empty]').hidden, false);
-doc.querySelector('[data-clear-course]').click();
-assert.equal(visible(doc, '[data-course]').length, 25);
-
 input(main, '#library-query', 'representations');
 assert.match(doc.querySelector('[data-results]').textContent, /Seven Ways Machines Learn Representations/);
 assert.equal(new URL(main.window.location.href).searchParams.get('q'), 'representations');
@@ -84,7 +79,7 @@ assert.equal(doc.querySelector('[data-search-panel]').hidden, true);
 assert.equal(new URL(main.window.location.href).search, '');
 
 assert.equal(doc.querySelector('.site-nav [aria-current="page"]').getAttribute('href'), 'teaching.html');
-assert.equal(doc.querySelector('#appearance').options.length, 3);
+assert.equal(doc.querySelectorAll('.mode[role=switch]').length, 1);
 
 const library = page('teaching-videos.html', '?collection=seven-ideas-ml');
 const lib = library.window.document;
@@ -173,4 +168,4 @@ if (fs.existsSync(oldPath)) {
   original.find(c => c.code === 'ES667' && c.semester === 'Aug 2026').recordings = true;
   assert.deepEqual(catalog.courses.map(({year,semester,code,title,url,recordings}) => ({year,semester,code,title,url,recordings})), original);
 }
-console.log('PASS: course preservation, all teaching playlists on home page, 86 cheatsheets, filters, search, pagination, deep links, navigation, static indexing, assets and shared navigation.');
+console.log('PASS: course preservation (11 course rows, 25 offering chips), all teaching playlists on home page, 86 cheatsheets, filters, search, pagination, deep links, navigation, static indexing, assets and shared navigation.');

@@ -3,7 +3,7 @@
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><meta name="theme-color" content="#fffefa"><meta name="author" content="Nipun Batra">
 <title>Open Source - Nipun Batra</title><meta name="description" content="Open-source tools, teaching resources, and personal AI experiments by Nipun Batra."><link rel="canonical" href="https://nipunbatra.github.io/projects.html">
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-<script src="site.js?v=20261004-balanced"></script><link rel="stylesheet" href="common.css?v=20261004-balanced"><link rel="stylesheet" href="projects.css?v=20261004-balanced"><link rel="stylesheet" href="site.css?v=20261004-balanced"><script src="projects.js?v=20261004-balanced" defer></script>
+<script src="site.js?v=20261005-refined"></script><link rel="stylesheet" href="common.css?v=20261005-refined"><link rel="stylesheet" href="projects.css?v=20261005-refined"><link rel="stylesheet" href="site.css?v=20261005-refined"><script src="projects.js?v=20261005-refined" defer></script>
 <meta property="og:title" content="Open Source - Nipun Batra">
 <meta property="og:description" content="Open-source tools, teaching resources, and personal AI experiments by Nipun Batra.">
 <meta property="og:type" content="website">
@@ -13,161 +13,78 @@
 <meta name="twitter:card" content="summary_large_image"></head>
 <body class="resource-page projects-page"><a class="skip-link" href="#main">Skip to content</a><div class="site-frame"><header class="site-header"><a class="site-name" href="index.html" aria-label="Nipun Batra · Home"><span class="brand-name">Nipun Batra</span><span class="institution">IIT<br>GANDHINAGAR</span></a>
 <nav class="site-nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="https://sustainability-lab.github.io/papers/">Publications</a><a href="teaching.html">Teaching</a><a href="projects.html" aria-current="page">Open source</a><a href="https://sustainability-lab.github.io/">Research group</a><a href="https://nipunbatra.github.io/cv/cv.pdf">CV</a><a href="https://nipunbatra.github.io/blog/">Blog</a></nav>
-<label class="appearance-control" for="appearance"><span>Appearance</span><select id="appearance" aria-label="Color theme"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label></header>
+<button type="button" class="mode" role="switch" aria-checked="false" aria-label="Dark mode" title="Light or dark appearance"><span class="sky"></span><span class="stars"><b style="left:9px;top:6px"></b><b style="left:15px;top:15px"></b><b style="left:23px;top:8px;opacity:.7"></b></span><span class="knob"></span></button></header>
 <main class="page" id="main">
     <header class="page-heading">
       <div>
         <p class="eyebrow">Tools · teaching · experiments</p>
-        <h1>Open Source</h1>
+        <h1>Open source</h1>
+        <p class="page-intro">30 tools, teaching resources and experiments I build and maintain. A curated index; every repository is on GitHub.</p>
       </div>
-      <div class="page-intro">
-        <p>A working index of tools, teaching resources, and personal AI experiments I build and maintain. It is curated rather than exhaustive.</p>
-        <a class="text-link" href="https://github.com/nipunbatra?tab=repositories">Browse every repository on GitHub</a>
+      <div class="project-search" role="search">
+        <label class="sr-only" for="project-search">Search open-source work by name, description, or tag</label>
+        <input id="project-search" type="search" placeholder="Search by name, description or tag" autocomplete="off" spellcheck="false">
+        <p class="search-status" id="search-status" aria-live="polite">30 entries</p>
       </div>
     </header>
 
-    <div class="project-search" role="search">
-      <label class="sr-only" for="project-search">Search open-source work by name, description, or tag</label>
-      <input id="project-search" type="search" placeholder="Search by name, description, or tag" autocomplete="off" spellcheck="false">
-      <p class="search-status" id="search-status" aria-live="polite">29 entries</p>
-    </div>
-
-    <nav class="type-nav" aria-label="Open-source categories">
-      <a href="#tools"><span data-count-for="tools">16</span><strong>Tools &amp; apps</strong></a>
-      <a href="#learning"><span data-count-for="learning">11</span><strong>Learning &amp; teaching</strong></a>
-      <a href="#experiments"><span data-count-for="experiments">2</span><strong>Experiments &amp; prototypes</strong></a>
-    </nav>
+    <nav class="type-nav" aria-label="Open-source categories"><a href="#tools">Tools &amp; apps <span class="count" data-count-for="tools">17</span></a><a href="#learning">Learning &amp; teaching <span class="count" data-count-for="learning">11</span></a><a href="#experiments">Experiments &amp; prototypes <span class="count" data-count-for="experiments">2</span></a><a href="https://github.com/nipunbatra?tab=repositories">All repositories on GitHub</a></nav>
 
     <section class="empty-state" id="empty-state" aria-live="polite" hidden>
       <h2>No matches</h2>
-      <p>Try a broader term such as privacy, teaching, WebGPU, video, or agents.</p>
+      <p>Try a broader term such as privacy, teaching, video or agents.</p>
     </section>
 
     <section class="project-section" id="tools" aria-labelledby="tools-title">
-      <div class="section-label">
-        <p class="eyebrow">01 · Build</p>
-        <h2 id="tools-title">Tools &amp; apps</h2>
-        <p>Small, useful software—many privacy-first and entirely browser-based.</p>
-      </div>
+      <header class="section-head"><h2 id="tools-title">Tools &amp; apps <span class="count">17</span></h2><p>Small, useful software—many privacy-first and entirely browser-based.</p></header>
       <div class="project-list">
-        <a class="project-item" href="https://github.com/nipunbatra/pulp">
-          <div class="project-copy"><h3>Pulp</h3><p>An agent-driven design canvas with a Rust/WASM engine and real HTML/CSS output.</p></div><span class="project-tags">agents · design · wasm</span>
-        </a>
-        <a class="project-item" href="https://github.com/nipunbatra/vaanika">
-          <div class="project-copy"><h3>Vaanika</h3><p>Clone a voice from a short clip, fully on-device with WebGPU and WASM.</p></div><span class="project-tags">privacy · audio · webgpu</span>
-        </a>
-        <a class="project-item" href="https://github.com/nipunbatra/better-ql">
-          <div class="project-copy"><h3>Better Quick Look</h3><p>Richer Finder previews for Markdown, code, data files, archives, and folders.</p></div><span class="project-tags">macos · productivity · swift</span>
-        </a>
-        <a class="project-item" href="https://github.com/nipunbatra/github-pages-dns-fix">
-          <div class="project-copy"><h3>GitHub Pages DNS fix</h3><p>A reversible macOS split-DNS workaround for slow or unreachable GitHub Pages.</p></div><span class="project-tags">macos · dns · shell</span>
-        </a>
-        <a class="project-item" href="https://nipunbatra.github.io/scancat/">
-          <div class="project-copy"><h3>Scancat</h3><p>Scan documents with your webcam: live edge detection, straightening, cleanup, and a PDF — all in the browser.</p></div><span class="project-tags">privacy · scanner · webcam</span>
-        </a>
-        <a class="project-item" href="https://github.com/nipunbatra/redacat">
-          <div class="project-copy"><h3>Redacat</h3><p>True image and PDF redaction in the browser; files never leave the device.</p></div><span class="project-tags">privacy · pdf · wasm</span>
-        </a>
-        <a class="project-item" href="https://github.com/nipunbatra/shaant">
-          <div class="project-copy"><h3>Shaant</h3><p>Remove background noise from videos locally using RNNoise, DeepFilterNet, and ffmpeg.wasm.</p></div><span class="project-tags">privacy · audio · wasm</span>
-        </a>
-        <a class="project-item" href="https://github.com/nipunbatra/pastiche">
-          <div class="project-copy"><h3>Pastiche</h3><p>Neural style transfer that runs locally with ONNX Runtime WASM.</p></div><span class="project-tags">browser ml · onnx · images</span>
-        </a>
-        <a class="project-item" href="https://github.com/nipunbatra/collage-maker">
-          <div class="project-copy"><h3>Collage Maker</h3><p>Create polished photo collages in 15+ layouts with smart cropping, captions, and reusable styles.</p></div><span class="project-tags">photography · layouts · python</span>
-        </a>
-        <a class="project-item" href="https://github.com/nipunbatra/prompt2image">
-          <div class="project-copy"><h3>Prompt2image</h3><p>Generate images through a CLI or MCP server, with paper-size and orientation controls.</p></div><span class="project-tags">image generation · cli · mcp</span>
-        </a>
-        <a class="project-item" href="https://github.com/nipunbatra/video-subtitle-overlay">
-          <div class="project-copy"><h3>Video subtitle overlay</h3><p>Play local video with synced subtitles and persistent metadata for screen sharing.</p></div><span class="project-tags">video · subtitles · accessibility</span>
-        </a>
-        <a class="project-item" href="https://github.com/nipunbatra/vidvaani">
-          <div class="project-copy"><h3>Vidvaani</h3><p>Dub YouTube videos into Hindi using Whisper and Gemini text-to-speech.</p></div><span class="project-tags">speech · translation · video</span>
-        </a>
-        <a class="project-item" href="https://github.com/nipunbatra/quizforge">
-          <div class="project-copy"><h3>Quizforge</h3><p>Generate shuffled Typst exam sets, answer keys, and grading CSVs from one master.</p></div><span class="project-tags">assessment · typst · teaching</span>
-        </a>
-        <a class="project-item" href="https://github.com/nipunbatra/video-trim-metadata-store">
-          <div class="project-copy"><h3>Video trim metadata store</h3><p>Trim Drive recordings in the browser and save them back with metadata.</p></div><span class="project-tags">video · privacy · browser</span>
-        </a>
-        <a class="project-item" href="https://github.com/nipunbatra/setwise">
-          <div class="project-copy"><h3>Setwise</h3><p>Create randomized, print-ready LaTeX quizzes from reusable question sets.</p></div><span class="project-tags">assessment · latex · teaching</span>
-        </a>
-        <a class="project-item" href="https://github.com/nipunbatra/Bodh">
-          <div class="project-copy"><h3>Bodh</h3><p>Turn Markdown into polished PDF presentations with live preview and themes.</p></div><span class="project-tags">presentations · markdown · pdf</span>
-        </a>
-        <a class="project-item" href="https://github.com/nipunbatra/pythor">
-          <div class="project-copy"><h3>Pythor</h3><p>A small bridge bringing familiar R-style data workflows to Python.</p></div><span class="project-tags">python · data · r</span>
-        </a>
+        <a class="project-item" href="https://github.com/nipunbatra/pulp"><h3>Pulp</h3><p>An agent-driven design canvas with a Rust/WASM engine and real HTML/CSS output.</p><span class="project-tags"><span class="tag">agents</span> <span class="tag">design</span> <span class="tag">wasm</span></span></a>
+        <a class="project-item" href="https://github.com/nipunbatra/vaanika"><h3>Vaanika</h3><p>Clone a voice from a short clip, fully on-device with WebGPU and WASM.</p><span class="project-tags"><span class="tag">privacy</span> <span class="tag">audio</span> <span class="tag">webgpu</span></span></a>
+        <a class="project-item" href="https://github.com/nipunbatra/better-ql"><h3>Better Quick Look</h3><p>Richer Finder previews for Markdown, code, data files, archives, and folders.</p><span class="project-tags"><span class="tag">macos</span> <span class="tag">productivity</span> <span class="tag">swift</span></span></a>
+        <a class="project-item" href="https://github.com/nipunbatra/github-pages-dns-fix"><h3>GitHub Pages DNS fix</h3><p>A reversible macOS split-DNS workaround for slow or unreachable GitHub Pages.</p><span class="project-tags"><span class="tag">macos</span> <span class="tag">dns</span> <span class="tag">shell</span></span></a>
+        <a class="project-item" href="https://nipunbatra.github.io/scancat/"><h3>Scancat</h3><p>Scan documents with your webcam: live edge detection, straightening, cleanup, and a PDF — all in the browser.</p><span class="project-tags"><span class="tag">privacy</span> <span class="tag">scanner</span> <span class="tag">webcam</span></span></a>
+        <a class="project-item" href="https://github.com/nipunbatra/redacat"><h3>Redacat</h3><p>True image and PDF redaction in the browser; files never leave the device.</p><span class="project-tags"><span class="tag">privacy</span> <span class="tag">pdf</span> <span class="tag">wasm</span></span></a>
+        <a class="project-item" href="https://github.com/nipunbatra/shaant"><h3>Shaant</h3><p>Remove background noise from videos locally using RNNoise, DeepFilterNet, and ffmpeg.wasm.</p><span class="project-tags"><span class="tag">privacy</span> <span class="tag">audio</span> <span class="tag">wasm</span></span></a>
+        <a class="project-item" href="https://github.com/nipunbatra/pastiche"><h3>Pastiche</h3><p>Neural style transfer that runs locally with ONNX Runtime WASM.</p><span class="project-tags"><span class="tag">browser ml</span> <span class="tag">onnx</span> <span class="tag">images</span></span></a>
+        <a class="project-item" href="https://github.com/nipunbatra/collage-maker"><h3>Collage Maker</h3><p>Create polished photo collages in 15+ layouts with smart cropping, captions, and reusable styles.</p><span class="project-tags"><span class="tag">photography</span> <span class="tag">layouts</span> <span class="tag">python</span></span></a>
+        <a class="project-item" href="https://github.com/nipunbatra/prompt2image"><h3>Prompt2image</h3><p>Generate images through a CLI or MCP server, with paper-size and orientation controls.</p><span class="project-tags"><span class="tag">image generation</span> <span class="tag">cli</span> <span class="tag">mcp</span></span></a>
+        <a class="project-item" href="https://github.com/nipunbatra/video-subtitle-overlay"><h3>Video subtitle overlay</h3><p>Play local video with synced subtitles and persistent metadata for screen sharing.</p><span class="project-tags"><span class="tag">video</span> <span class="tag">subtitles</span> <span class="tag">accessibility</span></span></a>
+        <a class="project-item" href="https://github.com/nipunbatra/vidvaani"><h3>Vidvaani</h3><p>Dub YouTube videos into Hindi using Whisper and Gemini text-to-speech.</p><span class="project-tags"><span class="tag">speech</span> <span class="tag">translation</span> <span class="tag">video</span></span></a>
+        <a class="project-item" href="https://github.com/nipunbatra/quizforge"><h3>Quizforge</h3><p>Generate shuffled Typst exam sets, answer keys, and grading CSVs from one master.</p><span class="project-tags"><span class="tag">assessment</span> <span class="tag">typst</span> <span class="tag">teaching</span></span></a>
+        <a class="project-item" href="https://github.com/nipunbatra/video-trim-metadata-store"><h3>Video trim metadata store</h3><p>Trim Drive recordings in the browser and save them back with metadata.</p><span class="project-tags"><span class="tag">video</span> <span class="tag">privacy</span> <span class="tag">browser</span></span></a>
+        <a class="project-item" href="https://github.com/nipunbatra/setwise"><h3>Setwise</h3><p>Create randomized, print-ready LaTeX quizzes from reusable question sets.</p><span class="project-tags"><span class="tag">assessment</span> <span class="tag">latex</span> <span class="tag">teaching</span></span></a>
+        <a class="project-item" href="https://github.com/nipunbatra/Bodh"><h3>Bodh</h3><p>Turn Markdown into polished PDF presentations with live preview and themes.</p><span class="project-tags"><span class="tag">presentations</span> <span class="tag">markdown</span> <span class="tag">pdf</span></span></a>
+        <a class="project-item" href="https://github.com/nipunbatra/pythor"><h3>Pythor</h3><p>A small bridge bringing familiar R-style data workflows to Python.</p><span class="project-tags"><span class="tag">python</span> <span class="tag">data</span> <span class="tag">r</span></span></a>
       </div>
     </section>
 
     <section class="project-section" id="learning" aria-labelledby="learning-title">
-      <div class="section-label">
-        <p class="eyebrow">02 · Explain</p>
-        <h2 id="learning-title">Learning &amp; teaching</h2>
-        <p>Inspectable resources for learning machine learning, systems, and research practice.</p>
-      </div>
+      <header class="section-head"><h2 id="learning-title">Learning &amp; teaching <span class="count">11</span></h2><p>Inspectable resources for learning machine learning, systems, and research practice.</p><a class="section-aside" href="teaching.html">Courses, videos and cheatsheets are on Teaching</a></header>
       <div class="project-list">
-        <a class="project-item" href="https://github.com/nipunbatra/llm-from-scratch">
-          <div class="project-copy"><h3>LLM from scratch</h3><p>A six-part educational series that builds a language model piece by piece.</p></div><span class="project-tags">llms · from scratch · notebooks</span>
-        </a>
-        <a class="project-item" href="https://github.com/nipunbatra/vlm-from-scratch">
-          <div class="project-copy"><h3>VLM from scratch</h3><p>Inspectable notebooks for understanding and building vision-language models.</p></div><span class="project-tags">vlms · from scratch · notebooks</span>
-        </a>
-        <a class="project-item" href="https://github.com/nipunbatra/interactive-articles">
-          <div class="project-copy"><h3>Interactive articles</h3><p>Intuition-first technical articles with live, manipulable visual explanations.</p></div><span class="project-tags">visualization · articles · interactive</span>
-        </a>
-        <a class="project-item" href="https://github.com/nipunbatra/kg-maths">
-          <div class="project-copy"><h3>Maths &amp; Word Masti</h3><p>Two cheerful, voice-enabled browser games for early maths, phonics, and sight words.</p></div><span class="project-tags">early learning · games · browser</span>
-        </a>
-        <a class="project-item" href="https://github.com/nipunbatra/chalkdust">
-          <div class="project-copy"><h3>Chalkdust</h3><p>Native Typst figures for convolution, attention, receptive fields, and other ML concepts.</p></div><span class="project-tags">diagrams · typst · machine learning</span>
-        </a>
-        <a class="project-item" href="https://github.com/nipunbatra/autograd-playground">
-          <div class="project-copy"><h3>Autograd playground</h3><p>An interactive computational-graph explorer for learning backpropagation.</p></div><span class="project-tags">autodiff · visualization · interactive</span>
-        </a>
-        <a class="project-item" href="https://github.com/nipunbatra/CS-Research-Methods-Bootcamp">
-          <div class="project-copy"><h3>CS Research Methods Bootcamp</h3><p>A practical starting point for reading, designing, and communicating computer-science research.</p></div><span class="project-tags">research · methods · bootcamp</span>
-        </a>
-        <a class="project-item" href="https://github.com/nipunbatra/docker-ml-demos">
-          <div class="project-copy"><h3>Docker ML demos</h3><p>Five progressive examples, from hello-world containers to deployable ML apps.</p></div><span class="project-tags">docker · deployment · machine learning</span>
-        </a>
-        <a class="project-item" href="https://github.com/nipunbatra/hf-spaces-deploy-tutorial">
-          <div class="project-copy"><h3>Hugging Face Spaces tutorial</h3><p>Step-by-step guides and templates for deploying Streamlit apps.</p></div><span class="project-tags">deployment · streamlit · hugging face</span>
-        </a>
-        <a class="project-item" href="https://github.com/nipunbatra/manim-animations">
-          <div class="project-copy"><h3>Manim animations</h3><p>Educational machine-learning animations with generated narration.</p></div><span class="project-tags">animation · video · machine learning</span>
-        </a>
-        <a class="project-item" href="https://github.com/nipunbatra/pathfinding-visualizer">
-          <div class="project-copy"><h3>Pathfinding visualizer</h3><p>Compare BFS, DFS, A*, Dijkstra, Greedy, and bidirectional search interactively.</p></div><span class="project-tags">algorithms · visualization · interactive</span>
-        </a>
+        <a class="project-item" href="https://github.com/nipunbatra/llm-from-scratch"><h3>LLM from scratch</h3><p>A six-part educational series that builds a language model piece by piece.</p><span class="project-tags"><span class="tag">llms</span> <span class="tag">from scratch</span> <span class="tag">notebooks</span></span></a>
+        <a class="project-item" href="https://github.com/nipunbatra/vlm-from-scratch"><h3>VLM from scratch</h3><p>Inspectable notebooks for understanding and building vision-language models.</p><span class="project-tags"><span class="tag">vlms</span> <span class="tag">from scratch</span> <span class="tag">notebooks</span></span></a>
+        <a class="project-item" href="https://github.com/nipunbatra/interactive-articles"><h3>Interactive articles</h3><p>Intuition-first technical articles with live, manipulable visual explanations.</p><span class="project-tags"><span class="tag">visualization</span> <span class="tag">articles</span> <span class="tag">interactive</span></span></a>
+        <a class="project-item" href="https://github.com/nipunbatra/kg-maths"><h3>Maths &amp; Word Masti</h3><p>Two cheerful, voice-enabled browser games for early maths, phonics, and sight words.</p><span class="project-tags"><span class="tag">early learning</span> <span class="tag">games</span> <span class="tag">browser</span></span></a>
+        <a class="project-item" href="https://github.com/nipunbatra/chalkdust"><h3>Chalkdust</h3><p>Native Typst figures for convolution, attention, receptive fields, and other ML concepts.</p><span class="project-tags"><span class="tag">diagrams</span> <span class="tag">typst</span> <span class="tag">machine learning</span></span></a>
+        <a class="project-item" href="https://github.com/nipunbatra/autograd-playground"><h3>Autograd playground</h3><p>An interactive computational-graph explorer for learning backpropagation.</p><span class="project-tags"><span class="tag">autodiff</span> <span class="tag">visualization</span> <span class="tag">interactive</span></span></a>
+        <a class="project-item" href="https://github.com/nipunbatra/CS-Research-Methods-Bootcamp"><h3>CS Research Methods Bootcamp</h3><p>A practical starting point for reading, designing, and communicating computer-science research.</p><span class="project-tags"><span class="tag">research</span> <span class="tag">methods</span> <span class="tag">bootcamp</span></span></a>
+        <a class="project-item" href="https://github.com/nipunbatra/docker-ml-demos"><h3>Docker ML demos</h3><p>Five progressive examples, from hello-world containers to deployable ML apps.</p><span class="project-tags"><span class="tag">docker</span> <span class="tag">deployment</span> <span class="tag">machine learning</span></span></a>
+        <a class="project-item" href="https://github.com/nipunbatra/hf-spaces-deploy-tutorial"><h3>Hugging Face Spaces tutorial</h3><p>Step-by-step guides and templates for deploying Streamlit apps.</p><span class="project-tags"><span class="tag">deployment</span> <span class="tag">streamlit</span> <span class="tag">hugging face</span></span></a>
+        <a class="project-item" href="https://github.com/nipunbatra/manim-animations"><h3>Manim animations</h3><p>Educational machine-learning animations with generated narration.</p><span class="project-tags"><span class="tag">animation</span> <span class="tag">video</span> <span class="tag">machine learning</span></span></a>
+        <a class="project-item" href="https://github.com/nipunbatra/pathfinding-visualizer"><h3>Pathfinding visualizer</h3><p>Compare BFS, DFS, A*, Dijkstra, Greedy, and bidirectional search interactively.</p><span class="project-tags"><span class="tag">algorithms</span> <span class="tag">visualization</span> <span class="tag">interactive</span></span></a>
       </div>
     </section>
 
     <section class="project-section" id="experiments" aria-labelledby="experiments-title">
-      <div class="section-label">
-        <p class="eyebrow">03 · Try</p>
-        <h2 id="experiments-title">Experiments &amp; prototypes</h2>
-        <p>Personal explorations of multimodal AI, model behaviour, agents, and local tool use.</p>
-      </div>
+      <header class="section-head"><h2 id="experiments-title">Experiments &amp; prototypes <span class="count">2</span></h2><p>Personal explorations of multimodal AI, model behaviour, agents, and local tool use.</p></header>
       <div class="project-list">
-        <a class="project-item" href="https://github.com/nipunbatra/ai-svg-compare">
-          <div class="project-copy"><h3>AI SVG compare</h3><p>Compare SVG generation across Gemini, Claude, and Codex to inspect model bias and style.</p></div><span class="project-tags">multimodal · evaluation · svg</span>
-        </a>
-        <a class="project-item" href="https://github.com/nipunbatra/hello-mcp">
-          <div class="project-copy"><h3>Hello MCP</h3><p>A visual demo of Gemini and local models using tools through MCP.</p></div><span class="project-tags">mcp · agents · local models</span>
-        </a>
+        <a class="project-item" href="https://github.com/nipunbatra/ai-svg-compare"><h3>AI SVG compare</h3><p>Compare SVG generation across Gemini, Claude, and Codex to inspect model bias and style.</p><span class="project-tags"><span class="tag">multimodal</span> <span class="tag">evaluation</span> <span class="tag">svg</span></span></a>
+        <a class="project-item" href="https://github.com/nipunbatra/hello-mcp"><h3>Hello MCP</h3><p>A visual demo of Gemini and local models using tools through MCP.</p><span class="project-tags"><span class="tag">mcp</span> <span class="tag">agents</span> <span class="tag">local models</span></span></a>
       </div>
     </section>
 
     <aside class="archive-strip" aria-labelledby="archive-title">
-      <div>
-        <h2 id="archive-title">The complete archive lives on GitHub</h2>
-        <p>Course editions, one-off experiments, old sites, and works in progress are all there.</p>
-      </div>
+      <p><strong id="archive-title">The complete archive is on GitHub.</strong> <span>Course editions, one-off experiments and work in progress.</span></p>
       <a class="button" href="https://github.com/nipunbatra?tab=repositories">View all repositories</a>
     </aside>
   <footer class="site-footer"><span>Nipun Batra · IIT Gandhinagar</span><a href="mailto:nipun.batra@iitgn.ac.in">Email</a></footer></main></div></body></html>

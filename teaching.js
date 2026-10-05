@@ -112,27 +112,6 @@ function initTeaching(root = document, options = {}) {
     query.focus();
   });
 
-  const courseRows = all('[data-course]');
-  if (courseRows.length) {
-    const courseQuery = one('[data-course-query]');
-    const recordings = one('[data-recordings]');
-    function filterCourses() {
-      let count = 0;
-      courseRows.forEach(row => {
-        row.hidden = !matches(row.dataset.search, courseQuery.value) || (recordings.checked && row.dataset.recorded !== 'true');
-        if (!row.hidden) count++;
-      });
-      all('[data-year-group]').forEach(group => { group.hidden = !Array.from(group.querySelectorAll('[data-course]')).some(row => !row.hidden); });
-      one('[data-course-count]').textContent = `${count} course offering${count === 1 ? '' : 's'}`;
-      one('[data-course-empty]').hidden = count !== 0;
-    }
-    courseQuery.addEventListener('input', filterCourses);
-    recordings.addEventListener('change', filterCourses);
-    one('[data-clear-course]').addEventListener('click', () => {
-      courseQuery.value = ''; recordings.checked = false; filterCourses();
-    });
-  }
-
   if (directory) {
     const videos = all('[data-video]');
     function filterVideos() {

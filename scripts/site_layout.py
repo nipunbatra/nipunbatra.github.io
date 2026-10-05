@@ -3,7 +3,7 @@ from html import escape
 import re
 
 SITE = 'https://nipunbatra.github.io/'
-VERSION = '20261004-balanced'
+VERSION = '20261005-refined'
 NAVIGATION = [
     ('index.html', 'Home'),
     ('https://sustainability-lab.github.io/papers/', 'Publications'),
@@ -18,7 +18,12 @@ def navigation(active):
     links = ''.join(f'<a href="{escape(url, quote=True)}"' + (' aria-current="page"' if url == active else '') + f'>{label}</a>' for url, label in NAVIGATION)
     return '''<header class="site-header"><a class="site-name" href="index.html" aria-label="Nipun Batra · Home"><span class="brand-name">Nipun Batra</span><span class="institution">IIT<br>GANDHINAGAR</span></a>
 <nav class="site-nav" aria-label="Primary navigation">''' + links + '''</nav>
-<label class="appearance-control" for="appearance"><span>Appearance</span><select id="appearance" aria-label="Color theme"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label></header>'''
+''' + MODE_SWITCH + '</header>'
+
+# Sun and moon light/dark switch; site.js sets aria-checked before paint.
+MODE_SWITCH = ('<button type="button" class="mode" role="switch" aria-checked="false" aria-label="Dark mode" title="Light or dark appearance">'
+               '<span class="sky"></span><span class="stars"><b style="left:9px;top:6px"></b><b style="left:15px;top:15px"></b>'
+               '<b style="left:23px;top:8px;opacity:.7"></b></span><span class="knob"></span></button>')
 
 def footer():
     return '<footer class="site-footer"><span>Nipun Batra · IIT Gandhinagar</span><a href="mailto:nipun.batra@iitgn.ac.in">Email</a></footer>'

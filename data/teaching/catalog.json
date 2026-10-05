@@ -10,7 +10,8 @@
       "recordings": true,
       "cheatsheets_url": "teaching.html#sheets-dl-2026",
       "recording_url": "https://www.youtube.com/playlist?list=PLGRBnxCA2r9c",
-      "recording_destination": "playlist"
+      "recording_destination": "playlist",
+      "related_collections": ["dl-three-minutes"]
     },
     {
       "year": "2025-26",
